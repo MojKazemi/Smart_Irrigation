@@ -1,0 +1,8 @@
+{
+    "host" : "mqtt3.thingspeak.com",
+    "client_ID" : "EDQ8GjQ8KCUHLRMaNxs0CiM",
+    "username"  : "EDQ8GjQ8KCUHLRMaNxs0CiM",
+    "password"  : "6enC7wzkdQs1rvDaPTdcD+6Q",
+    "t_transport" : "websockets",
+    "t_port" : 80
+}
