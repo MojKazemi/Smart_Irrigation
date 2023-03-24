@@ -1,0 +1,143 @@
+{
+    "projectName": "SmartIrrigation",
+    "broker": {
+        "address": "mqtt.eclipseprojects.io",
+        "port": 1883
+    },
+    "baseTopic": "Irrigation",
+    "Users": {
+        "user1": {
+            "userID": "Moj",
+            "Farms": {
+                "farm1": {
+                    "farmID": "Farm1",
+                    "Sections": {
+                        "section1": {
+                            "sectionID": "Section1",
+                            "temp_threshold": 17,
+                            "mois_min_threshold": 11,
+                            "mois_max_threshold": 73,
+                            "Devices": {
+                                "Sensors": {
+                                    "sensor1": {
+                                        "SensorID": 1,
+                                        "SensorName": "DHT11",
+                                        "SensorType": "Temperature"
+                                    },
+                                    "sensor2": {
+                                        "SensorID": 2,
+                                        "SensorName": "SEN-13322",
+                                        "SensorType": "Soil_Moisture"
+                                    }
+                                },
+                                "Pump": {
+                                    "pumpID": 1,
+                                    "pumpName": "PMDC-12v-25w",
+                                    "power": 25,
+                                    "status": "off"
+                                }
+                            },
+                            "TS_ChannelID": "2073420"
+                        }
+                    }
+                }
+            }
+        },
+        "user2": {
+            "userID": "Hamed",
+            "Farms": {
+                "farm1": {
+                    "farmID": "Farm1",
+                    "Sections": {
+                        "section1": {
+                            "sectionID": "Section1",
+                            "temp_threshold": 18,
+                            "mois_min_threshold": 24,
+                            "mois_max_threshold": 73,
+                            "Devices": {
+                                "Sensors": {
+                                    "sensor1": {
+                                        "SensorID": 1,
+                                        "SensorName": "DHT11",
+                                        "SensorType": "Temperature"
+                                    },
+                                    "sensor2": {
+                                        "SensorID": 2,
+                                        "SensorName": "SEN-13322",
+                                        "SensorType": "Soil_Moisture"
+                                    }
+                                },
+                                "Pump": {
+                                    "pumpID": 1,
+                                    "pumpName": "PMDC-12v-25w",
+                                    "power": 25,
+                                    "status": "off"
+                                }
+                            },
+                            "TS_ChannelID": "2077771"
+                        }
+                    }
+                },
+                "farm2": {
+                    "farmID": "Farm2",
+                    "Sections": {
+                        "section1": {
+                            "sectionID": "Section1",
+                            "temp_threshold": 4,
+                            "mois_min_threshold": 31,
+                            "mois_max_threshold": 96,
+                            "Devices": {
+                                "Sensors": {
+                                    "sensor1": {
+                                        "SensorID": 1,
+                                        "SensorName": "DHT11",
+                                        "SensorType": "Temperature"
+                                    },
+                                    "sensor2": {
+                                        "SensorID": 2,
+                                        "SensorName": "SEN-13322",
+                                        "SensorType": "Soil_Moisture"
+                                    }
+                                },
+                                "Pump": {
+                                    "pumpID": 1,
+                                    "pumpName": "PMDC-12v-25w",
+                                    "power": 25,
+                                    "status": "on"
+                                }
+                            },
+                            "TS_ChannelID": "2077507"
+                        },
+                        "section2": {
+                            "sectionID": "Section2",
+                            "temp_threshold": 21,
+                            "mois_min_threshold": 41,
+                            "mois_max_threshold": 54,
+                            "Devices": {
+                                "Sensors": {
+                                    "sensor1": {
+                                        "SensorID": 1,
+                                        "SensorName": "DHT11",
+                                        "SensorType": "Temperature"
+                                    },
+                                    "sensor2": {
+                                        "SensorID": 2,
+                                        "SensorName": "SEN-13322",
+                                        "SensorType": "Soil_Moisture"
+                                    }
+                                },
+                                "Pump": {
+                                    "pumpID": 1,
+                                    "pumpName": "PMDC-12v-25w",
+                                    "power": 25,
+                                    "status": "off"
+                                }
+                            },
+                            "TS_ChannelID": "2077714"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
