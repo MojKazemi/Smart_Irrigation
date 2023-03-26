@@ -77,6 +77,10 @@ class MyRequest:
             f'{self._root}/catalog/threshold?userID={IDs["user"]}&farmID={IDs["farm"]}&sectionID={IDs["section"]}').json() 
         return thresh
 
+    def get_status(self,IDs):
+        status = requests.get(f'{self._root}/catalog/pump_status/?userID={IDs["user"]}&farmID={IDs["farm"]}&sectionID={IDs["section"]}').json()
+        return status
+
     def put_status(self,IDs, status):
         requests.put(f'{self._root}/catalog/pump_status/?userID={IDs["user"]}&farmID={IDs["farm"]}&sectionID={IDs["section"]}&status={status}')
     
@@ -84,6 +88,9 @@ class MyRequest:
         chID = requests.get(f'{self._root}/catalog/channelID?userID={userID}&farmID={farmID}&sectionID={secID}').json()
         _chID = chID['ch_ID']
         return _chID
+
+    def post_status(self,IDs, status):
+        requests.post(f'{self._root}/statistics/pump_status?userID={IDs["user"]}&farmID={IDs["farm"]}&sectionID={IDs["section"]}&status={status}')
 
 class ts_publish:
     def __init__(self, channel_ID = "2073420", ts_conf = 'ts_conf.json'):

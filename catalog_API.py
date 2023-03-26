@@ -1,6 +1,7 @@
 import json
 import cherrypy
-
+from datetime import datetime
+from cons_cal import consumption_calc as cons_cal
 class catalogAPI:
     exposed = True
 
@@ -8,6 +9,7 @@ class catalogAPI:
         pass
 
     def GET(self,*uri,**params):
+        
         if len(uri) >= 2 and uri[0] == 'catalog':
             with open('./catalog.json','r') as file:
                 catalog = json.load(file)
@@ -43,7 +45,6 @@ class catalogAPI:
                 except:
                     raise cherrypy.HTTPError(500,"Please enter a valid request")
 
-
             elif uri[1] == 'threshold':
                 thresh = {'temp':'','mois_min':'','mois_max':''}
                 # if len(params) == 3:
@@ -65,9 +66,7 @@ class catalogAPI:
                     return json.dumps(thresh)
                 except :
                         raise cherrypy.HTTPError(500,"Please enter a valid request for ex.: /catalog/threshold?userID=Moj&farmID=Farm1&sectionID=Section1")
-                # else:
-                    # return 'Insert userID, FarmID, and sectionID for ex.: /catalog/threshold?userID=user1&farmID=farm1&sectionID=section1'
-            
+                        
             elif uri[1] == 'channelID':
                 ch_ID = {}
                 try:
@@ -88,11 +87,76 @@ class catalogAPI:
                 except :
                         raise cherrypy.HTTPError(500,"Please enter a valid request for ex.: /catalog/threshold?userID=Moj&farmID=Farm1&sectionID=Section1")
 
+        elif uri[0] == 'statistic':
+            # with open('./catalog.json','r') as file:
+            #     catalog = json.load(file)
+
+            # with open('./pump_status.json') as file:
+            #     statis = json.load(file)
+                        
+            IDs = {
+                'userID': params['userID'],
+                'farmID': params['farmID'],
+                'sectionID': params['sectionID']
+                }
+                
+            #TODO get the price from catalog
+            cost = 0.12 
+
+            consumption = cons_cal('./pump_status.json',IDs, cost)
+
+            if uri[1] == 'period':
+                on_sec, power_cons = consumption.selective_time(start=params['start'],end=params['end'])
+                
+                return json.dumps(power_cons)
+            
+            elif uri[1] == 'day':
+
+                # Day should be present as %d/%m/%Y
+                _, power_cons = consumption.daily_usage(day=params['day'])
+
+                return json.dumps(power_cons)
+
+            elif uri[1] == 'month':
+                # Month should be present as '01/2023'
+
+                 _, power_cons = consumption.monthly_usage(month_year = params['month'])
+
+                 return json.dumps(power_cons)
+
+            elif uri[1] == 'year':
+
+                year_cost = consumption.yearly(params['year'])
+
+                return json.dumps(year_cost)
+
+
+
+
+
+
         else:
             return 'Your request is not valid'
 
-    def POST(self):
-        pass
+    def POST(self,*uri,**params):
+
+        if uri[0] == "statistics":
+
+            with open('./pump_status.json') as file:
+                    statis = json.load(file)
+
+            timestamp = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
+            _root = f"{params['userID']}/{params['farmID']}/{params['sectionID']}"
+
+            if uri[1] == "pump_status":
+                statis["pump_status"].append({"t": str(timestamp),
+                                            "r":_root ,
+                                            "status": params['status']})
+            
+                jsonFile = open("pump_status.json", "w+")
+                jsonFile.write(json.dumps(statis, indent=4))
+                jsonFile.close()
+        
 
     def PUT(self,*uri,**params):
         # Modify information
