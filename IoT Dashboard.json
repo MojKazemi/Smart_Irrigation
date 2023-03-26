@@ -1,0 +1,1920 @@
+[
+    {
+        "id": "0998292695b46f5e",
+        "type": "tab",
+        "label": "Home",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "2a5cdca7bbb39636",
+        "type": "tab",
+        "label": "Home-Live - consumption",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "5e6383022ba901b9",
+        "type": "tab",
+        "label": "Setting",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "81be408f5ef93f03",
+        "type": "group",
+        "z": "0998292695b46f5e",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "d8ada153107ff73c",
+            "4a1248b98b16fb7e",
+            "192b12b7ce6e6168",
+            "8b8a9a9f.71a008",
+            "5da5f5b6.5b01d4"
+        ],
+        "x": 854,
+        "y": 279,
+        "w": 452,
+        "h": 182
+    },
+    {
+        "id": "f26e18f67ba7d048",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "mqtt.eclipseprojects.io",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "b37b344a9463c1ad",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "0ca708bd9099f601",
+        "type": "ui_group",
+        "name": "User Interface",
+        "tab": "da280d668b2e4eac",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f5af14529f0caa82",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "d6d42a467721bbee",
+        "type": "ui_group",
+        "name": "Threshold",
+        "tab": "da280d668b2e4eac",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "da280d668b2e4eac",
+        "type": "ui_tab",
+        "name": "Setting",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "760d542e0573d812",
+        "type": "ui_group",
+        "name": "History of sensors",
+        "tab": "f5af14529f0caa82",
+        "order": 3,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "70fb6f524aecfe93",
+        "type": "ui_group",
+        "name": "Energy Consumption",
+        "tab": "f5af14529f0caa82",
+        "order": 4,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "872843d3cbac360c",
+        "type": "ui_group",
+        "name": "Sensor Live",
+        "tab": "f5af14529f0caa82",
+        "order": 2,
+        "disp": true,
+        "width": "5",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "14586b10d5460e28",
+        "type": "ui_group",
+        "name": "Situation",
+        "tab": "f5af14529f0caa82",
+        "order": 1,
+        "disp": true,
+        "width": "4",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "916344f8e027fd93",
+        "type": "ui_group",
+        "name": "Schedual",
+        "tab": "da280d668b2e4eac",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a8c22ba9.e3a698",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "67b508c8.9e9318",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "67b508c8.9e9318",
+        "type": "ui_tab",
+        "name": "Test-Time",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "e39126f3baeed809",
+        "type": "python3-function",
+        "z": "0998292695b46f5e",
+        "name": "",
+        "func": "import random\nmsg[\"payload\"] = {\n    'bn':'p4IoT/1/1',\n    'e':\n        [{\n            'n':'status',\n            'v':round(random.random()),\n            't':str(msg[\"payload\"]),\n            'unit':'bool'\n        }]\n    }\nreturn msg",
+        "outputs": 1,
+        "x": 410,
+        "y": 140,
+        "wires": [
+            [
+                "9c4814d1863cbf54"
+            ]
+        ]
+    },
+    {
+        "id": "cac2b3ce67839e45",
+        "type": "inject",
+        "z": "0998292695b46f5e",
+        "name": "ts",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "timestamp",
+        "payload": "",
+        "payloadType": "date",
+        "x": 230,
+        "y": 140,
+        "wires": [
+            [
+                "e39126f3baeed809"
+            ]
+        ]
+    },
+    {
+        "id": "9c4814d1863cbf54",
+        "type": "mqtt out",
+        "z": "0998292695b46f5e",
+        "name": "",
+        "topic": "p4IoT/Moj",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f26e18f67ba7d048",
+        "x": 620,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "99388eb2db8e83a2",
+        "type": "mqtt in",
+        "z": "0998292695b46f5e",
+        "name": "",
+        "topic": "p4IoT/Moj",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "f26e18f67ba7d048",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 240,
+        "y": 280,
+        "wires": [
+            [
+                "4e9833da42dbdd3f",
+                "19c75a982cefc154"
+            ]
+        ]
+    },
+    {
+        "id": "4e9833da42dbdd3f",
+        "type": "python3-function",
+        "z": "0998292695b46f5e",
+        "name": "",
+        "func": "tmp={}\ntmp[\"topic\"]=\"led status\"\ntmp[\"payload\"]=msg[\"payload\"][\"e\"][0][\"t\"]\nreturn tmp",
+        "outputs": 1,
+        "x": 430,
+        "y": 360,
+        "wires": [
+            [
+                "574482667ffe7f46"
+            ]
+        ]
+    },
+    {
+        "id": "574482667ffe7f46",
+        "type": "ui_chart",
+        "z": "0998292695b46f5e",
+        "d": true,
+        "name": "",
+        "group": "",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 630,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "19c75a982cefc154",
+        "type": "debug",
+        "z": "0998292695b46f5e",
+        "name": "debug 3",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 400,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "4e27f6bfa25e92b6",
+        "type": "http request",
+        "z": "0998292695b46f5e",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": true,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 630,
+        "y": 500,
+        "wires": [
+            [
+                "6084021616b371ff"
+            ]
+        ]
+    },
+    {
+        "id": "6084021616b371ff",
+        "type": "ui_text",
+        "z": "0998292695b46f5e",
+        "group": "14586b10d5460e28",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "The status of pump is",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 840,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "df1f5ab443de66ed",
+        "type": "function",
+        "z": "0998292695b46f5e",
+        "name": "Make Link status of pump",
+        "func": "if (msg.payload == \"trig\") {\n    let tmp = {};\n    let user = global.get(\"user\");\n    let farm = global.get(\"farm\");\n    let sec = global.get(\"section\");\n    global.set(\"pump_check\", \"off\");\n    tmp.method = \"GET\";\n    let link = `http://127.0.0.1:8080/catalog/pump_status?userID=${user}&farmID=${farm}&sectionID=${sec}`;\n    tmp.url = link;\n    return tmp;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nlet tmp = {};\nlet user = global.get(\"user\");\nlet farm = global.get(\"farm\");\nlet sec = global.get(\"section\");\ntmp.method = \"GET\";\nlet link = `http://127.0.0.1:8080/catalog/pump_status?userID=${user}&farmID=${farm}&sectionID=${sec}`;\ntmp.url = link;\nreturn tmp;",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 500,
+        "wires": [
+            [
+                "4e27f6bfa25e92b6"
+            ]
+        ]
+    },
+    {
+        "id": "ef5c5e5cfc1580aa",
+        "type": "inject",
+        "z": "0998292695b46f5e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "pump_check",
+        "payloadType": "global",
+        "x": 140,
+        "y": 500,
+        "wires": [
+            [
+                "df1f5ab443de66ed"
+            ]
+        ]
+    },
+    {
+        "id": "2cadd8db8499569f",
+        "type": "function",
+        "z": "0998292695b46f5e",
+        "name": "Make Link status of pump",
+        "func": "let tmp = {};\nlet user = global.get(\"user\");\nlet farm = global.get(\"farm\");\nlet sec = global.get(\"section\");\nglobal.set(\"pump_check\", \"off\");\ntmp.method = \"GET\";\nlet link = `http://127.0.0.1:8080/catalog/pump_status?userID=${user}&farmID=${farm}&sectionID=${sec}`;\ntmp.url = link;\nreturn tmp;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nlet tmp = {};\nlet user = global.get(\"user\");\nlet farm = global.get(\"farm\");\nlet sec = global.get(\"section\");\ntmp.method = \"GET\";\nlet link = `http://127.0.0.1:8080/catalog/pump_status?userID=${user}&farmID=${farm}&sectionID=${sec}`;\ntmp.url = link;\nreturn tmp;",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 460,
+        "wires": [
+            [
+                "4e27f6bfa25e92b6"
+            ]
+        ]
+    },
+    {
+        "id": "c17cc24359c14948",
+        "type": "ui_chart",
+        "z": "0998292695b46f5e",
+        "name": "",
+        "group": "760d542e0573d812",
+        "order": 4,
+        "width": "10",
+        "height": "7",
+        "label": "Moisture",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "dd HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "3",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 900,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7f5edf8bedf80540",
+        "type": "function",
+        "z": "0998292695b46f5e",
+        "name": "function 8",
+        "func": "let tmp = {};\nconst s_date = new Date(msg.payload.start);\nlet s_year = s_date.getFullYear();\nconst s_month = s_date.getMonth()+1;\nconst s_day = s_date.getDate();\n\nconst e_date = new Date(msg.payload.end);\nlet e_year = e_date.getFullYear();\nconst e_month = e_date.getMonth()+1;\nconst e_day = e_date.getDate();\n\nconst ch_ID = global.get(\"TS_CH_ID\");\n\ntmp.method = \"GET\";\nlet link = `https://api.thingspeak.com/channels/${ch_ID}/feeds.json?start=${s_year}-${s_month}-${s_day}%2000:00:00&end=${e_year}-${e_month}-${e_day}%2023:59:59`;\ntmp.url = link;\nreturn tmp;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 600,
+        "wires": [
+            [
+                "442f67f2f3c89d6e"
+            ]
+        ]
+    },
+    {
+        "id": "357beb5e9f6d0e49",
+        "type": "ui_date_picker",
+        "z": "0998292695b46f5e",
+        "name": "",
+        "label": "From",
+        "group": "760d542e0573d812",
+        "order": 1,
+        "width": "4",
+        "height": "1",
+        "passthru": true,
+        "topic": "start",
+        "topicType": "str",
+        "className": "",
+        "x": 70,
+        "y": 700,
+        "wires": [
+            [
+                "49fcdf7830ccad57"
+            ]
+        ]
+    },
+    {
+        "id": "98778549de196ff9",
+        "type": "ui_date_picker",
+        "z": "0998292695b46f5e",
+        "name": "",
+        "label": "To",
+        "group": "760d542e0573d812",
+        "order": 2,
+        "width": "4",
+        "height": "1",
+        "passthru": true,
+        "topic": "end",
+        "topicType": "str",
+        "className": "",
+        "x": 70,
+        "y": 740,
+        "wires": [
+            [
+                "49fcdf7830ccad57"
+            ]
+        ]
+    },
+    {
+        "id": "49fcdf7830ccad57",
+        "type": "join",
+        "z": "0998292695b46f5e",
+        "name": "",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": true,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 210,
+        "y": 720,
+        "wires": [
+            [
+                "7f5edf8bedf80540"
+            ]
+        ]
+    },
+    {
+        "id": "442f67f2f3c89d6e",
+        "type": "http request",
+        "z": "0998292695b46f5e",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": true,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 490,
+        "y": 600,
+        "wires": [
+            [
+                "aaebf4e2ddc8a3cc",
+                "5edfd25ee61735b3"
+            ]
+        ]
+    },
+    {
+        "id": "62452781e7e820be",
+        "type": "ui_chart",
+        "z": "0998292695b46f5e",
+        "name": "",
+        "group": "760d542e0573d812",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Temprature",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "dd HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 910,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aaebf4e2ddc8a3cc",
+        "type": "python3-function",
+        "z": "0998292695b46f5e",
+        "name": "",
+        "func": "from datetime import datetime\ntmp ={}\nchart = {\"series\":[],\"data\":[],\"labels\":[]}\ndata =[]\n\nimport_data = msg[\"payload\"][\"feeds\"]\nfor val in import_data:\n    datetime_obj = datetime.strptime(val[\"created_at\"], '%Y-%m-%dT%H:%M:%SZ')\n    timestamp = (datetime_obj - datetime(1970, 1, 1)).total_seconds()\n    # timestamp = datetime_obj.timestamp()\n    if val[\"field1\"] != None:\n        data.append({\"x\":val[\"created_at\"],\"y\":float(val[\"field1\"].replace('\"',''))})\n\nchart[\"series\"] = [\"A\"]\nchart[\"labels\"] = [\"\"]\n\nchart[\"data\"] = [data]\ntmp[\"payload\"] = [chart]\nreturn tmp",
+        "outputs": 1,
+        "x": 690,
+        "y": 600,
+        "wires": [
+            [
+                "62452781e7e820be"
+            ]
+        ]
+    },
+    {
+        "id": "5edfd25ee61735b3",
+        "type": "python3-function",
+        "z": "0998292695b46f5e",
+        "name": "",
+        "func": "from datetime import datetime\ntmp ={}\nchart = {\"series\":[],\"data\":[],\"labels\":[]}\ndata =[]\n\nimport_data = msg[\"payload\"][\"feeds\"]\nfor val in import_data:\n    datetime_obj = datetime.strptime(val[\"created_at\"], '%Y-%m-%dT%H:%M:%SZ')\n    timestamp = (datetime_obj - datetime(1970, 1, 1)).total_seconds()\n    # timestamp = datetime_obj.timestamp()\n    if val[\"field2\"] != None:\n        data.append({\"x\":val[\"created_at\"],\"y\":float(val[\"field2\"].replace('\"',''))})\n\nchart[\"series\"] = [\"A\"]\nchart[\"labels\"] = [\"\"]\n\nchart[\"data\"] = [data]\ntmp[\"payload\"] = [chart]\nreturn tmp",
+        "outputs": 1,
+        "x": 690,
+        "y": 680,
+        "wires": [
+            [
+                "c17cc24359c14948"
+            ]
+        ]
+    },
+    {
+        "id": "372c17dd8c26d8d8",
+        "type": "inject",
+        "z": "0998292695b46f5e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d8ada153107ff73c",
+        "type": "debug",
+        "z": "0998292695b46f5e",
+        "d": true,
+        "g": "81be408f5ef93f03",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1200,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "4a1248b98b16fb7e",
+        "type": "ui_text_input",
+        "z": "0998292695b46f5e",
+        "d": true,
+        "g": "81be408f5ef93f03",
+        "name": "",
+        "label": "time",
+        "tooltip": "",
+        "group": "760d542e0573d812",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "<html> <body>    <form>       <label for=\"meet\">Meeting Time :</label>       <input type=\"time\" id=\"time1\">    </form> </body> </html>",
+        "topicType": "msg",
+        "x": 1090,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "192b12b7ce6e6168",
+        "type": "ui_template",
+        "z": "0998292695b46f5e",
+        "d": true,
+        "g": "81be408f5ef93f03",
+        "group": "760d542e0573d812",
+        "name": "",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "format": "[{\"id\":\"8b8a9a9f.71a008\",\"type\":\"ui_template\",\"z\":\"ad83b1e7.07df28\",\"group\":\"a8c22ba9.e3a698\",\"name\":\"Time\nPicker\",\"order\":1,\"width\":\"6\",\"height\":\"1\",\"format\":\"<html>\\n\n\n<body>\\n <form>\\n <label for=\\\"meet\\\">Meeting Time :</label>\\n <input type=\\\"time\\\" id=\\\"time1\\\">\\n </form>\\n\\n <script>\n    \\n   $(function() {\\n      $('#time1').on('input', function() {\\n         var time = $(this).val();\\n         var msg = { payload: time };\\n         node.send(msg);\\n      });\\n   });\\n   \n  </script>\\n</body>\\n\n\n</html>\n\",\"storeOutMessages\":true,\"fwdInMessages\":true,\"templateScope\":\"local\",\"x\":620,\"y\":360,\"wires\":[[\"5da5f5b6.5b01d4\"]]},{\"id\":\"5da5f5b6.5b01d4\",\"type\":\"debug\",\"z\":\"ad83b1e7.07df28\",\"name\":\"\",\"active\":true,\"tosidebar\":true,\"console\":false,\"tostatus\":false,\"complete\":\"true\",\"targetType\":\"full\",\"statusVal\":\"\",\"statusType\":\"auto\",\"x\":860,\"y\":360,\"wires\":[]},{\"id\":\"a8c22ba9.e3a698\",\"type\":\"ui_group\",\"name\":\"Default\",\"tab\":\"67b508c8.9e9318\",\"order\":1,\"disp\":true,\"width\":\"6\",\"collapse\":false},{\"id\":\"67b508c8.9e9318\",\"type\":\"ui_tab\",\"name\":\"Home\",\"icon\":\"dashboard\",\"order\":1,\"disabled\":false,\"hidden\":false}]",
+        "storeOutMessages": true,
+        "fwdInMessages": false,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 940,
+        "y": 380,
+        "wires": [
+            [
+                "d8ada153107ff73c"
+            ]
+        ]
+    },
+    {
+        "id": "8b8a9a9f.71a008",
+        "type": "ui_template",
+        "z": "0998292695b46f5e",
+        "d": true,
+        "g": "81be408f5ef93f03",
+        "group": "a8c22ba9.e3a698",
+        "name": "Time Picker",
+        "order": 1,
+        "width": "6",
+        "height": "1",
+        "format": "<html>\n<body>\n   <form>\n      <label for=\"meet\">Meeting Time :</label>\n      <input type=\"time\" id=\"time1\">\n   </form>\n\n   <script>\n   $(function() {\n      $('#time1').on('input', function() {\n         var time = $(this).val();\n         var msg = { payload: time };\n         node.send(msg);\n      });\n   });\n   </script>\n</body>\n</html>",
+        "storeOutMessages": true,
+        "fwdInMessages": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 950,
+        "y": 320,
+        "wires": [
+            [
+                "5da5f5b6.5b01d4"
+            ]
+        ]
+    },
+    {
+        "id": "5da5f5b6.5b01d4",
+        "type": "debug",
+        "z": "0998292695b46f5e",
+        "d": true,
+        "g": "81be408f5ef93f03",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1190,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "eeb8137bfe9545a9",
+        "type": "function",
+        "z": "2a5cdca7bbb39636",
+        "name": "function 9",
+        "func": "let tmp = {};\n\nconst ch_ID = global.get(\"TS_CH_ID\");\n\ntmp.method = \"GET\";\nlet link = `https://api.thingspeak.com/channels/${ch_ID}/fields/1/last.json`;\ntmp.url = link;\nreturn tmp;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 260,
+        "y": 100,
+        "wires": [
+            [
+                "33d40c77ce5108a6"
+            ]
+        ]
+    },
+    {
+        "id": "33d40c77ce5108a6",
+        "type": "http request",
+        "z": "2a5cdca7bbb39636",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": true,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 410,
+        "y": 100,
+        "wires": [
+            [
+                "743b46840ee16812"
+            ]
+        ]
+    },
+    {
+        "id": "743b46840ee16812",
+        "type": "python3-function",
+        "z": "2a5cdca7bbb39636",
+        "name": "",
+        "func": "tmp={}\nval = msg['payload']['field1']\n# tmp[\"payload\"] =\ntmp[\"payload\"] = float(val.replace('\"',''))\nreturn tmp",
+        "outputs": 1,
+        "x": 590,
+        "y": 100,
+        "wires": [
+            [
+                "55aab9519eb7f30a"
+            ]
+        ]
+    },
+    {
+        "id": "ec33341ca706a163",
+        "type": "ui_button",
+        "z": "2a5cdca7bbb39636",
+        "name": "",
+        "group": "872843d3cbac360c",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Refresh",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 100,
+        "y": 100,
+        "wires": [
+            [
+                "eeb8137bfe9545a9",
+                "3b355525932c851b"
+            ]
+        ]
+    },
+    {
+        "id": "55aab9519eb7f30a",
+        "type": "ui_gauge",
+        "z": "2a5cdca7bbb39636",
+        "name": "",
+        "group": "872843d3cbac360c",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temp Live",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 790,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "3b355525932c851b",
+        "type": "function",
+        "z": "2a5cdca7bbb39636",
+        "name": "function 10",
+        "func": "let tmp = {};\n\nconst ch_ID = global.get(\"TS_CH_ID\");\n\ntmp.method = \"GET\";\nlet link = `https://api.thingspeak.com/channels/${ch_ID}/fields/2/last.json`;\ntmp.url = link;\nreturn tmp;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 250,
+        "y": 160,
+        "wires": [
+            [
+                "51663efd3b34374d"
+            ]
+        ]
+    },
+    {
+        "id": "51663efd3b34374d",
+        "type": "http request",
+        "z": "2a5cdca7bbb39636",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": true,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 410,
+        "y": 160,
+        "wires": [
+            [
+                "c7b69f69a41cabbe"
+            ]
+        ]
+    },
+    {
+        "id": "c7b69f69a41cabbe",
+        "type": "python3-function",
+        "z": "2a5cdca7bbb39636",
+        "name": "",
+        "func": "tmp={}\nval = msg['payload']['field2']\n# tmp[\"payload\"] =\ntmp[\"payload\"] = float(val.replace('\"',''))\nreturn tmp",
+        "outputs": 1,
+        "x": 580,
+        "y": 160,
+        "wires": [
+            [
+                "dc0bd0517833057f"
+            ]
+        ]
+    },
+    {
+        "id": "dc0bd0517833057f",
+        "type": "ui_gauge",
+        "z": "2a5cdca7bbb39636",
+        "name": "",
+        "group": "872843d3cbac360c",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Mois Live",
+        "label": "units",
+        "format": "{{value}}%",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 770,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "c9c0393dce0b831c",
+        "type": "function",
+        "z": "2a5cdca7bbb39636",
+        "name": "function 11",
+        "func": "let tmp = {};\nconst s_date = new Date(msg.payload.start);\nlet s_year = s_date.getFullYear();\nconst s_month = s_date.getMonth()+1;\nconst s_day = s_date.getDate();\n\nconst e_date = new Date(msg.payload.end);\nlet e_year = e_date.getFullYear();\nconst e_month = e_date.getMonth()+1;\nconst e_day = e_date.getDate();\n\nconst ch_ID = global.get(\"TS_CH_ID\");\n\ntmp.method = \"GET\";\nlet link = `https://api.thingspeak.com/channels/${ch_ID}/feeds.json?start=${s_year}-${s_month}-${s_day}%2000:00:00&end=${e_year}-${e_month}-${e_day}%2023:59:59`;\ntmp.url = link;\nreturn tmp;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 220,
+        "y": 360,
+        "wires": [
+            [
+                "fb59e967458bb44f"
+            ]
+        ]
+    },
+    {
+        "id": "5e1df0da91902ccf",
+        "type": "ui_date_picker",
+        "z": "2a5cdca7bbb39636",
+        "name": "",
+        "label": "From",
+        "group": "70fb6f524aecfe93",
+        "order": 1,
+        "width": "4",
+        "height": "1",
+        "passthru": true,
+        "topic": "start",
+        "topicType": "str",
+        "className": "",
+        "x": 90,
+        "y": 260,
+        "wires": [
+            [
+                "a8d72255fd7c0f00"
+            ]
+        ]
+    },
+    {
+        "id": "7a3ad05c3ecf1f51",
+        "type": "ui_date_picker",
+        "z": "2a5cdca7bbb39636",
+        "name": "",
+        "label": "To",
+        "group": "70fb6f524aecfe93",
+        "order": 2,
+        "width": "4",
+        "height": "1",
+        "passthru": true,
+        "topic": "end",
+        "topicType": "str",
+        "className": "",
+        "x": 90,
+        "y": 300,
+        "wires": [
+            [
+                "a8d72255fd7c0f00"
+            ]
+        ]
+    },
+    {
+        "id": "a8d72255fd7c0f00",
+        "type": "join",
+        "z": "2a5cdca7bbb39636",
+        "name": "",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": true,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 230,
+        "y": 280,
+        "wires": [
+            [
+                "c9c0393dce0b831c"
+            ]
+        ]
+    },
+    {
+        "id": "fb59e967458bb44f",
+        "type": "http request",
+        "z": "2a5cdca7bbb39636",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": true,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 390,
+        "y": 360,
+        "wires": [
+            [
+                "cf5ae3d357cc53bc"
+            ]
+        ]
+    },
+    {
+        "id": "106b8b2e17bfc0db",
+        "type": "ui_chart",
+        "z": "2a5cdca7bbb39636",
+        "name": "",
+        "group": "70fb6f524aecfe93",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Energy Consumption",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "dd HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 780,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cf5ae3d357cc53bc",
+        "type": "python3-function",
+        "z": "2a5cdca7bbb39636",
+        "name": "",
+        "func": "from datetime import datetime\ntmp ={}\nchart = {\"series\":[],\"data\":[],\"labels\":[]}\ndata =[]\n\nimport_data = msg[\"payload\"][\"feeds\"]\nfor val in import_data:\n    datetime_obj = datetime.strptime(val[\"created_at\"], '%Y-%m-%dT%H:%M:%SZ')\n    timestamp = (datetime_obj - datetime(1970, 1, 1)).total_seconds()\n    # timestamp = datetime_obj.timestamp()\n    if val[\"field1\"] != None:\n        data.append({\"x\":val[\"created_at\"],\"y\":float(val[\"field1\"].replace('\"',''))})\n\nchart[\"series\"] = [\"A\"]\nchart[\"labels\"] = [\"\"]\n\nchart[\"data\"] = [data]\ntmp[\"payload\"] = [chart]\nreturn tmp",
+        "outputs": 1,
+        "x": 570,
+        "y": 360,
+        "wires": [
+            [
+                "106b8b2e17bfc0db"
+            ]
+        ]
+    },
+    {
+        "id": "d79cd6da65ce9dba",
+        "type": "ui_slider",
+        "z": "5e6383022ba901b9",
+        "name": "",
+        "label": "Temprature   ",
+        "tooltip": "",
+        "group": "d6d42a467721bbee",
+        "order": 1,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "outs": "all",
+        "topic": "temp",
+        "topicType": "str",
+        "min": 0,
+        "max": "30",
+        "step": 1,
+        "className": "",
+        "x": 750,
+        "y": 380,
+        "wires": [
+            [
+                "4ddc932b6f8aa30a",
+                "394468a3d49587cb"
+            ]
+        ]
+    },
+    {
+        "id": "381cfc162991fc4a",
+        "type": "ui_slider",
+        "z": "5e6383022ba901b9",
+        "name": "",
+        "label": "Min Moisture",
+        "tooltip": "",
+        "group": "d6d42a467721bbee",
+        "order": 3,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "x": 750,
+        "y": 460,
+        "wires": [
+            [
+                "0c19cd5ef4b57023",
+                "cedbd7b05355ab2b"
+            ]
+        ]
+    },
+    {
+        "id": "c16df478e57b360c",
+        "type": "ui_slider",
+        "z": "5e6383022ba901b9",
+        "name": "",
+        "label": "Max Moisture",
+        "tooltip": "",
+        "group": "d6d42a467721bbee",
+        "order": 5,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "x": 740,
+        "y": 540,
+        "wires": [
+            [
+                "5edae9106f0d2222",
+                "ead796ef243eafe5"
+            ]
+        ]
+    },
+    {
+        "id": "4ddc932b6f8aa30a",
+        "type": "ui_text",
+        "z": "5e6383022ba901b9",
+        "group": "d6d42a467721bbee",
+        "order": 2,
+        "width": "6",
+        "height": "1",
+        "name": "",
+        "label": "Value:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 930,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "5edae9106f0d2222",
+        "type": "ui_text",
+        "z": "5e6383022ba901b9",
+        "group": "d6d42a467721bbee",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Value:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 930,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "0c19cd5ef4b57023",
+        "type": "ui_text",
+        "z": "5e6383022ba901b9",
+        "group": "d6d42a467721bbee",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Value:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 930,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "7d416a8a020a76fa",
+        "type": "http request",
+        "z": "5e6383022ba901b9",
+        "name": "",
+        "method": "use",
+        "ret": "txt",
+        "paytoqs": "body",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1130,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bf1d28b03efe2c52",
+        "type": "http request",
+        "z": "5e6383022ba901b9",
+        "name": "",
+        "method": "use",
+        "ret": "txt",
+        "paytoqs": "body",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1130,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "65c41416cc22108f",
+        "type": "http request",
+        "z": "5e6383022ba901b9",
+        "name": "",
+        "method": "use",
+        "ret": "txt",
+        "paytoqs": "body",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1130,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6f3ae41e230ebeaf",
+        "type": "ui_dropdown",
+        "z": "5e6383022ba901b9",
+        "name": "",
+        "label": "User ID:",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "0ca708bd9099f601",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [],
+        "payload": "",
+        "topic": "user",
+        "topicType": "str",
+        "className": "",
+        "x": 320,
+        "y": 140,
+        "wires": [
+            [
+                "603e47a486dd8b74"
+            ]
+        ]
+    },
+    {
+        "id": "1f13efec79dcab67",
+        "type": "http request",
+        "z": "5e6383022ba901b9",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://127.0.0.1:8080/catalog/user_details",
+        "tls": "",
+        "persist": true,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 270,
+        "y": 60,
+        "wires": [
+            [
+                "b7363c12bad6a529"
+            ]
+        ]
+    },
+    {
+        "id": "f9484e7b274f7dba",
+        "type": "ui_button",
+        "z": "5e6383022ba901b9",
+        "name": "",
+        "group": "0ca708bd9099f601",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Refresh User",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "date",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 90,
+        "y": 60,
+        "wires": [
+            [
+                "1f13efec79dcab67"
+            ]
+        ]
+    },
+    {
+        "id": "a6027178d05d3f16",
+        "type": "ui_dropdown",
+        "z": "5e6383022ba901b9",
+        "name": "",
+        "label": "Farm ID:",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "0ca708bd9099f601",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [],
+        "payload": "",
+        "topic": "farm",
+        "topicType": "str",
+        "className": "",
+        "x": 320,
+        "y": 220,
+        "wires": [
+            [
+                "46d79109dbf6bf78"
+            ]
+        ]
+    },
+    {
+        "id": "2baccf92d6fd1e3b",
+        "type": "ui_dropdown",
+        "z": "5e6383022ba901b9",
+        "name": "",
+        "label": "Section ID:",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "0ca708bd9099f601",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [],
+        "payload": "",
+        "topic": "section",
+        "topicType": "str",
+        "className": "",
+        "x": 330,
+        "y": 300,
+        "wires": [
+            [
+                "beb2f8624e316192"
+            ]
+        ]
+    },
+    {
+        "id": "b7363c12bad6a529",
+        "type": "function",
+        "z": "5e6383022ba901b9",
+        "name": "Def Catalog, Find user",
+        "func": "catalog = msg.payload;\nvar catalog = global.set(\"catalog\", catalog);\nvar dict = msg.payload;\nvar users = [];\nfor (var user in dict) {\n    for (var val in dict[user]) {\n        users.push(dict[user][val][\"userID\"]);\n    }\n}\n\nvar tmp = {};\ntmp.options = users;\ntmp.payload = msg.payload;\ntmp.topic = \"catalog\";\nreturn tmp;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 140,
+        "y": 140,
+        "wires": [
+            [
+                "6f3ae41e230ebeaf"
+            ]
+        ]
+    },
+    {
+        "id": "5e75839bbe6b9502",
+        "type": "function",
+        "z": "5e6383022ba901b9",
+        "name": "Find farms",
+        "func": "let tmp = {};\nvar catalog = global.get(\"catalog\");\nlet farms_list = [];\n\nfor (let user of Object.values(catalog)) {\n    for (let val of Object.values(user)) {\n        if (val.userID == global.get(\"user\")) {\n            let farms = val.Farms;\n            for (let farm of Object.values(farms)) {\n                farms_list.push(farm.farmID);\n            }\n        }\n    }\n}\n\ntmp.options = farms_list;\n// msg.payload = global.get(\"user\");\nreturn tmp;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 130,
+        "y": 220,
+        "wires": [
+            [
+                "a6027178d05d3f16"
+            ]
+        ]
+    },
+    {
+        "id": "46d79109dbf6bf78",
+        "type": "function",
+        "z": "5e6383022ba901b9",
+        "name": "Global farm",
+        "func": "global.set(\"farm\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 220,
+        "wires": [
+            [
+                "b86d359f869a3fcf"
+            ]
+        ]
+    },
+    {
+        "id": "beb2f8624e316192",
+        "type": "function",
+        "z": "5e6383022ba901b9",
+        "name": "Global sections, TS_ChannelID",
+        "func": "global.set(\"section\", msg.payload);\nglobal.set(\"pump_check\", \"trig\")\n\nvar catalog = global.get(\"catalog\");\nvar sec_list = [];\nfor (var user in catalog) {\n    for (var val in catalog[user]) {\n        if (catalog[user][val][\"userID\"] == global.get(\"user\")) {\n            var farms = catalog[user][val][\"Farms\"];\n            for (var farm in farms) {\n                if (farms[farm][\"farmID\"] == global.get(\"farm\")) {\n                    var sections = farms[farm][\"Sections\"];\n                    for (var sec in sections) {\n                        if (sections[sec][\"sectionID\"] == msg.payload) {\n                            global.set(\"TS_CH_ID\", sections[sec][\"TS_ChannelID\"])\n                        }\n                    }\n                }\n            }\n        }\n    }\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 300,
+        "wires": [
+            [
+                "23d078eef54b8950"
+            ]
+        ]
+    },
+    {
+        "id": "394468a3d49587cb",
+        "type": "function",
+        "z": "5e6383022ba901b9",
+        "name": "function 5",
+        "func": "let tmp = {};\nlet user = global.get(\"user\");\nlet farm = global.get(\"farm\");\nlet sec = global.get(\"section\");\n// var value = msg.payload.temp\n// const str = value.toString()\ntmp.method = \"PUT\";\nlet link = `http://127.0.0.1:8080/catalog/Temp_thresh/?userID=${user}&farmID=${farm}&sectionID=${sec}&value=${String(msg.payload)}`;\ntmp.url = link;\nreturn tmp;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 940,
+        "y": 380,
+        "wires": [
+            [
+                "7d416a8a020a76fa"
+            ]
+        ]
+    },
+    {
+        "id": "cedbd7b05355ab2b",
+        "type": "function",
+        "z": "5e6383022ba901b9",
+        "name": "function 6",
+        "func": "let tmp = {};\nlet user = global.get(\"user\");\nlet farm = global.get(\"farm\");\nlet sec = global.get(\"section\");\n// var value = msg.payload.temp\n// const str = value.toString()\ntmp.method = \"PUT\";\nlet link = `http://127.0.0.1:8080/catalog/Mois_min_thresh/?userID=${user}&farmID=${farm}&sectionID=${sec}&value=${String(msg.payload)}`;\ntmp.url = link;\nreturn tmp;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 940,
+        "y": 460,
+        "wires": [
+            [
+                "bf1d28b03efe2c52"
+            ]
+        ]
+    },
+    {
+        "id": "ead796ef243eafe5",
+        "type": "function",
+        "z": "5e6383022ba901b9",
+        "name": "function 7",
+        "func": "let tmp = {};\nlet user = global.get(\"user\");\nlet farm = global.get(\"farm\");\nlet sec = global.get(\"section\");\n// var value = msg.payload.temp\n// const str = value.toString()\ntmp.method = \"PUT\";\nlet link = `http://127.0.0.1:8080/catalog/Mois_max_thresh/?userID=${user}&farmID=${farm}&sectionID=${sec}&value=${String(msg.payload)}`;\ntmp.url = link;\nreturn tmp;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 940,
+        "y": 540,
+        "wires": [
+            [
+                "65c41416cc22108f"
+            ]
+        ]
+    },
+    {
+        "id": "b86d359f869a3fcf",
+        "type": "function",
+        "z": "5e6383022ba901b9",
+        "name": "Find sections",
+        "func": "var catalog = global.get(\"catalog\");\nvar sec_list = [];\nfor (var user in catalog) {\n    for (var val in catalog[user]) {\n        if (catalog[user][val][\"userID\"] == global.get(\"user\")) {\n            var farms = catalog[user][val][\"Farms\"];\n            for (var farm in farms) {\n                if (farms[farm][\"farmID\"] == global.get(\"farm\")) {\n                    var sections = farms[farm][\"Sections\"];\n                    for (var sec in sections) {\n                        sec_list.push(sections[sec][\"sectionID\"]);\n                    }\n                }\n            }\n        }\n    }\n}\n\nmsg.options = sec_list;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 130,
+        "y": 300,
+        "wires": [
+            [
+                "2baccf92d6fd1e3b"
+            ]
+        ]
+    },
+    {
+        "id": "603e47a486dd8b74",
+        "type": "function",
+        "z": "5e6383022ba901b9",
+        "name": "Global user",
+        "func": "global.set(\"user\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 140,
+        "wires": [
+            [
+                "5e75839bbe6b9502"
+            ]
+        ]
+    },
+    {
+        "id": "de23dd13224bb245",
+        "type": "inject",
+        "z": "5e6383022ba901b9",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 20,
+        "wires": [
+            [
+                "1f13efec79dcab67"
+            ]
+        ]
+    },
+    {
+        "id": "23d078eef54b8950",
+        "type": "function",
+        "z": "5e6383022ba901b9",
+        "name": "Create link Thresh",
+        "func": "// var tmp = {};\nlet user = global.get(\"user\");\nlet farm = global.get(\"farm\");\nlet sec = global.get(\"section\");\nmsg.method = \"GET\";\nmsg.url = `http://127.0.0.1:8080/catalog/threshold?userID=${user}&farmID=${farm}&sectionID=${sec}`\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 150,
+        "y": 380,
+        "wires": [
+            [
+                "29ea5a3c8d86879a"
+            ]
+        ]
+    },
+    {
+        "id": "29ea5a3c8d86879a",
+        "type": "http request",
+        "z": "5e6383022ba901b9",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 330,
+        "y": 380,
+        "wires": [
+            [
+                "d3eec01de2873cf3",
+                "c56e23cba4b4f388",
+                "56fda0b93858fc75"
+            ]
+        ]
+    },
+    {
+        "id": "d3eec01de2873cf3",
+        "type": "python3-function",
+        "z": "5e6383022ba901b9",
+        "name": "",
+        "func": "msg[\"payload\"]  = msg[\"payload\"][\"temp\"]\nreturn msg",
+        "outputs": 1,
+        "x": 550,
+        "y": 380,
+        "wires": [
+            [
+                "d79cd6da65ce9dba"
+            ]
+        ]
+    },
+    {
+        "id": "c56e23cba4b4f388",
+        "type": "python3-function",
+        "z": "5e6383022ba901b9",
+        "name": "",
+        "func": "msg[\"payload\"]  = msg[\"payload\"][\"mois_min\"]\nreturn msg",
+        "outputs": 1,
+        "x": 550,
+        "y": 460,
+        "wires": [
+            [
+                "381cfc162991fc4a"
+            ]
+        ]
+    },
+    {
+        "id": "56fda0b93858fc75",
+        "type": "python3-function",
+        "z": "5e6383022ba901b9",
+        "name": "",
+        "func": "msg[\"payload\"]  = msg[\"payload\"][\"mois_max\"]\nreturn msg",
+        "outputs": 1,
+        "x": 550,
+        "y": 540,
+        "wires": [
+            [
+                "c16df478e57b360c"
+            ]
+        ]
+    }
+]
