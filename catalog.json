@@ -14,9 +14,9 @@
                     "Sections": {
                         "section1": {
                             "sectionID": "Section1",
-                            "temp_threshold": 17,
-                            "mois_min_threshold": 11,
-                            "mois_max_threshold": 73,
+                            "temp_threshold": 12,
+                            "mois_min_threshold": 10,
+                            "mois_max_threshold": 40,
                             "Devices": {
                                 "Sensors": {
                                     "sensor1": {
@@ -51,9 +51,9 @@
                     "Sections": {
                         "section1": {
                             "sectionID": "Section1",
-                            "temp_threshold": 18,
-                            "mois_min_threshold": 24,
-                            "mois_max_threshold": 73,
+                            "temp_threshold": 15,
+                            "mois_min_threshold": 22,
+                            "mois_max_threshold": 58,
                             "Devices": {
                                 "Sensors": {
                                     "sensor1": {
@@ -71,7 +71,7 @@
                                     "pumpID": 1,
                                     "pumpName": "PMDC-12v-25w",
                                     "power": 25,
-                                    "status": "off"
+                                    "status": "on"
                                 }
                             },
                             "TS_ChannelID": "2077771"
