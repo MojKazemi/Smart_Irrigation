@@ -63,11 +63,14 @@ class MoistController:
         else:
             self.status = 'on'
 
-        self.my_req.put_status(self.IDs,self.status)
-        print(f'------>>>> become {self.status} <<<<<--------')
-        self.sendActStatus(self.status)
+        prev_status = self.my_req.get_status(self.IDs)
 
-    def sendActStatus(self, servo_stat):
+        if self.status != prev_status:
+            self.my_req.put_status(self.IDs,self.status)
+            print(f'------>>>> become {self.status} <<<<<--------')
+            self.sendActStatus(self.status)
+
+    def sendActStatus(self, pump_state):
         topic = '/'.join([self.baseTopic, self.IDs['user'], self.IDs['farm'],
                               self.IDs['section'], 'Devices', 'Pump_status'])
         print(topic)
@@ -80,11 +83,13 @@ class MoistController:
         }
         __message['bn'] = topic
         __message['e']['n'] = 'pump'
-        __message['e']['value'] = servo_stat
+        __message['e']['value'] = pump_state
         __message['e']['timestamp'] = str('{:%Y-%m-%d %H:%M:%S}'.format(datetime.datetime.now()))
         __message['e']['unit'] = 'boolean'
         
-        self.client.myPublish(topic, __message)      
+        self.client.myPublish(topic, __message)
+      
+        self.my_req.post_status(self.IDs, pump_state)
         
 
 if __name__ == "__main__":
