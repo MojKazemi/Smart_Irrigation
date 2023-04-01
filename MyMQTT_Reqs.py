@@ -89,8 +89,16 @@ class MyRequest:
         _chID = chID['ch_ID']
         return _chID
 
+    def get_control_status(self,IDs):
+        _status = requests.get(f'{self._root}/catalog/control_status/?userID={IDs["user"]}&farmID={IDs["farm"]}&sectionID={IDs["section"]}').json()
+        return _status
+
     def post_status(self,IDs, status):
         requests.post(f'{self._root}/statistics/pump_status?userID={IDs["user"]}&farmID={IDs["farm"]}&sectionID={IDs["section"]}&status={status}')
+
+    def get_manual_schedul(self,IDs):
+        _schedul = requests.get(f'{self._root}/catalog/manual_schedul/?userID={IDs["user"]}&farmID={IDs["farm"]}&sectionID={IDs["section"]}').json()
+        return _schedul
 
 class ts_publish:
     def __init__(self, channel_ID = "2073420", ts_conf = 'ts_conf.json'):
