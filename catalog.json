@@ -5,6 +5,7 @@
         "port": 1883
     },
     "baseTopic": "Irrigation",
+    "electrical_cost": 0.12,
     "Users": {
         "user1": {
             "userID": "Moj",
@@ -14,9 +15,10 @@
                     "Sections": {
                         "section1": {
                             "sectionID": "Section1",
-                            "temp_threshold": 12,
-                            "mois_min_threshold": 10,
-                            "mois_max_threshold": 40,
+                            "control_status": "manual",
+                            "temp_threshold": 6,
+                            "mois_min_threshold": 57,
+                            "mois_max_threshold": 81,
                             "Devices": {
                                 "Sensors": {
                                     "sensor1": {
@@ -33,11 +35,15 @@
                                 "Pump": {
                                     "pumpID": 1,
                                     "pumpName": "PMDC-12v-25w",
-                                    "power": 25,
+                                    "power": 0.025,
                                     "status": "off"
                                 }
                             },
-                            "TS_ChannelID": "2073420"
+                            "TS_ChannelID": "2073420",
+                            "manual_schedul": {
+                                "timers": [],
+                                "settings": {}
+                            }
                         }
                     }
                 }
@@ -51,9 +57,10 @@
                     "Sections": {
                         "section1": {
                             "sectionID": "Section1",
-                            "temp_threshold": 15,
-                            "mois_min_threshold": 22,
-                            "mois_max_threshold": 58,
+                            "control_status": "auto",
+                            "temp_threshold": 13,
+                            "mois_min_threshold": 12,
+                            "mois_max_threshold": 72,
                             "Devices": {
                                 "Sensors": {
                                     "sensor1": {
@@ -70,11 +77,15 @@
                                 "Pump": {
                                     "pumpID": 1,
                                     "pumpName": "PMDC-12v-25w",
-                                    "power": 25,
+                                    "power": 0.025,
                                     "status": "on"
                                 }
                             },
-                            "TS_ChannelID": "2077771"
+                            "TS_ChannelID": "2077771",
+                            "manual_schedul": {
+                                "timers": [],
+                                "settings": {}
+                            }
                         }
                     }
                 },
@@ -83,9 +94,10 @@
                     "Sections": {
                         "section1": {
                             "sectionID": "Section1",
-                            "temp_threshold": 4,
-                            "mois_min_threshold": 31,
-                            "mois_max_threshold": 96,
+                            "control_status": "auto",
+                            "temp_threshold": 17,
+                            "mois_min_threshold": 11,
+                            "mois_max_threshold": 35,
                             "Devices": {
                                 "Sensors": {
                                     "sensor1": {
@@ -102,14 +114,19 @@
                                 "Pump": {
                                     "pumpID": 1,
                                     "pumpName": "PMDC-12v-25w",
-                                    "power": 25,
-                                    "status": "on"
+                                    "power": 0.025,
+                                    "status": "off"
                                 }
                             },
-                            "TS_ChannelID": "2077507"
+                            "TS_ChannelID": "2077507",
+                            "manual_schedul": {
+                                "timers": [],
+                                "settings": {}
+                            }
                         },
                         "section2": {
                             "sectionID": "Section2",
+                            "control_status": "auto",
                             "temp_threshold": 21,
                             "mois_min_threshold": 41,
                             "mois_max_threshold": 54,
@@ -129,11 +146,15 @@
                                 "Pump": {
                                     "pumpID": 1,
                                     "pumpName": "PMDC-12v-25w",
-                                    "power": 25,
+                                    "power": 0.025,
                                     "status": "off"
                                 }
                             },
-                            "TS_ChannelID": "2077714"
+                            "TS_ChannelID": "2077714",
+                            "manual_schedul": {
+                                "timers": [],
+                                "settings": {}
+                            }
                         }
                     }
                 }
