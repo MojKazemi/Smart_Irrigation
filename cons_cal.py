@@ -46,7 +46,7 @@ class consumption_calc:
             time_on = _first_t - start_time
             time_on_seconds = time_on_seconds + time_on.total_seconds()
     
-        power_cons = round(time_on_seconds/60 * self.cost,2)  # cost is energy usage in minutes
+        power_cons = round(time_on_seconds/3600 * self.cost,2)  # 1 KW/h * Elec_price (Euro)
 
         return time_on_seconds, power_cons
 
