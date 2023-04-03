@@ -94,22 +94,22 @@ class consumption_calc:
 if __name__ == "__main__":
 
     IDs = {
-    'farmID': 'Farm1',
+    'farmID': 'Farm_1',
     'sectionID': 'Section1'
     }
 
     cost = 0.12 #cost per min 
 
     cons = consumption_calc('./pump_status.json', IDs, cost)
-    on_sec, power_cons = cons.selective_time(start='25/03/2023 00:00:00',end='01/04/2023 23:59:59')
+    # on_sec, power_cons = cons.selective_time(start='25/03/2023 00:00:00',end='01/04/2023 23:59:59')
 
+    # print(f'on_sec: {on_sec}\npower cons: {power_cons}')
+
+    # on_sec, power_cons = cons.daily_usage('25/03/2023')
+    # print(f'on_sec: {on_sec}\npower cons: {power_cons}')
+
+    on_sec, power_cons = cons.monthly_usage(month_year = '4/2023')
     print(f'on_sec: {on_sec}\npower cons: {power_cons}')
 
-    on_sec, power_cons = cons.daily_usage('25/03/2023')
-    print(f'on_sec: {on_sec}\npower cons: {power_cons}')
-
-    on_sec, power_cons = cons.monthly_usage(month_year = '2/2023')
-    print(f'on_sec: {on_sec}\npower cons: {power_cons}')
-
-    _dict = cons.yearly(year = '2024')
-    print(_dict)
+    # _dict = cons.yearly(year = '2024')
+    # print(_dict)
