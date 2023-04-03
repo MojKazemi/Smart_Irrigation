@@ -101,14 +101,14 @@ class catalogAPI:
                 # Day should be present as %d/%m/%Y
                 _, power_cons = consumption.daily_usage(day=params['day'])
 
-                return json.dumps(pump_power * power_cons)
+                return json.dumps(round(pump_power * power_cons,2))
 
             elif uri[1] == 'month':
                 # Month should be present as '01/2023'
 
                  _, power_cons = consumption.monthly_usage(month_year = params['month'])
 
-                 return json.dumps(pump_power * power_cons)
+                 return json.dumps(round(pump_power * power_cons,2))
 
             elif uri[1] == 'year':
 
@@ -121,6 +121,61 @@ class catalogAPI:
             return 'Your request is not valid'
 
     def POST(self,*uri,**params):
+        if uri[0] == "catalog":
+
+            with open('./catalog.json') as file:
+                catalog = json.load(file)
+            
+            if uri[1] == 'add_user':
+                
+                for _, val in catalog['Users'].items():
+                    if params['new_user'] == val['userID']:
+                        raise cherrypy.HTTPError(500, "The username is taken. Try another")
+                        
+                user_key = 'user'+ str(len(catalog['Users'])+1)
+                catalog['Users'][user_key]={
+                    "userID":params['new_user'],
+                    "pass":params['pass'],
+                    "farm_list" : []
+                }
+
+            elif uri[1] == 'add_farm':
+                
+                for _,val in catalog['Farms'].items():
+                    if params['farmID'] == val['farmID']:
+                        raise cherrypy.HTTPError(500, "The farm ID is taken. Try another")
+
+                _key = 'farm' + str(len(catalog['Farms'])+1)
+                catalog['Farms'][_key]={
+                    "farmID": params['farmID'],
+                    "Sections": {}
+                }
+
+            elif uri[1] == 'add_section':
+                user = self.check_user_pass(catalog, params)
+                for key,val in catalog['Farms']:
+                    if val["farmID"] == params['farmID']:
+                        farm = key
+
+                for key, val in catalog['Farms'][farm]['Sections'].items():
+                    if params['new_section'] == val['sectionID']:
+                        raise cherrypy.HTTPError(500, "The section name is taken. Try another")
+
+                _key = 'section' + str(len(catalog["Farms"][farm]["Sections"])+1)
+                catalog["Farms"][farm]["Sections"][_key] = {
+                    "sectionID":params['new_section'],
+                    "control_status": "",
+                    "temp_threshold": None,
+                    "mois_min_threshold": None,
+                    "mois_max_threshold": None,
+                    "Devices":{}
+                }
+            
+
+            jsonFile = open("catalog.json", "w+")
+            jsonFile.write(json.dumps(catalog, indent=4))
+            jsonFile.close()
+                
 
         if uri[0] == "statistics":
 
@@ -184,6 +239,18 @@ class catalogAPI:
 
     def DELETE(self):
         pass
+
+    def check_user_pass(self,catalog, params):
+        for key, vals in catalog['Users'].items():
+            if vals['userID'] == params['userID']:
+                if vals['pass'] == params['pass']:
+                    return key
+                else:
+                    raise cherrypy.HTTPError(500, "Password is not correct")
+            else:
+                raise cherrypy.HTTPError(500, "username is not correct")
+        
+
 
     def find_user_farm(self,catalog, params):
         try:
