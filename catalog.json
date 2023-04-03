@@ -9,6 +9,7 @@
     "Users": {
         "user1": {
             "userID": "Moj",
+            "pass": "1234",
             "farm_list": [
                 "Farm_1",
                 "Farm_2",
@@ -17,9 +18,15 @@
         },
         "user2": {
             "userID": "Hamed",
+            "pass": "4321",
             "farm_list": [
                 "Farm_2"
             ]
+        },
+        "user3": {
+            "userID": "moj_2",
+            "pass": "0000",
+            "farm_list": []
         }
     },
     "Farms": {
