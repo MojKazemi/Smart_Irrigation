@@ -43,10 +43,31 @@
             "8b8a9a9f.71a008",
             "5da5f5b6.5b01d4"
         ],
-        "x": 854,
-        "y": 279,
+        "x": 94,
+        "y": 459,
         "w": 452,
         "h": 182
+    },
+    {
+        "id": "85bdec3d3b38f4c8",
+        "type": "group",
+        "z": "2a5cdca7bbb39636",
+        "name": "",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "c9c0393dce0b831c",
+            "5e1df0da91902ccf",
+            "7a3ad05c3ecf1f51",
+            "a8d72255fd7c0f00",
+            "fb59e967458bb44f",
+            "74933ee654791aad"
+        ],
+        "x": 14,
+        "y": 219,
+        "w": 872,
+        "h": 122
     },
     {
         "id": "f26e18f67ba7d048",
@@ -219,7 +240,7 @@
         "tab": "f5af14529f0caa82",
         "order": 3,
         "disp": true,
-        "width": "8",
+        "width": "9",
         "collapse": false,
         "className": ""
     },
@@ -240,8 +261,8 @@
         "name": "Sensor Live",
         "tab": "f5af14529f0caa82",
         "order": 2,
-        "disp": true,
-        "width": "5",
+        "disp": false,
+        "width": "9",
         "collapse": false,
         "className": ""
     },
@@ -287,167 +308,6 @@
         "hidden": false
     },
     {
-        "id": "e39126f3baeed809",
-        "type": "python3-function",
-        "z": "0998292695b46f5e",
-        "name": "",
-        "func": "import random\nmsg[\"payload\"] = {\n    'bn':'p4IoT/1/1',\n    'e':\n        [{\n            'n':'status',\n            'v':round(random.random()),\n            't':str(msg[\"payload\"]),\n            'unit':'bool'\n        }]\n    }\nreturn msg",
-        "outputs": 1,
-        "x": 410,
-        "y": 140,
-        "wires": [
-            [
-                "9c4814d1863cbf54"
-            ]
-        ]
-    },
-    {
-        "id": "cac2b3ce67839e45",
-        "type": "inject",
-        "z": "0998292695b46f5e",
-        "name": "ts",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "timestamp",
-        "payload": "",
-        "payloadType": "date",
-        "x": 230,
-        "y": 140,
-        "wires": [
-            [
-                "e39126f3baeed809"
-            ]
-        ]
-    },
-    {
-        "id": "9c4814d1863cbf54",
-        "type": "mqtt out",
-        "z": "0998292695b46f5e",
-        "name": "",
-        "topic": "p4IoT/Moj",
-        "qos": "",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "f26e18f67ba7d048",
-        "x": 620,
-        "y": 140,
-        "wires": []
-    },
-    {
-        "id": "99388eb2db8e83a2",
-        "type": "mqtt in",
-        "z": "0998292695b46f5e",
-        "name": "",
-        "topic": "p4IoT/Moj",
-        "qos": "0",
-        "datatype": "auto-detect",
-        "broker": "f26e18f67ba7d048",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 240,
-        "y": 280,
-        "wires": [
-            [
-                "4e9833da42dbdd3f",
-                "19c75a982cefc154"
-            ]
-        ]
-    },
-    {
-        "id": "4e9833da42dbdd3f",
-        "type": "python3-function",
-        "z": "0998292695b46f5e",
-        "name": "",
-        "func": "tmp={}\ntmp[\"topic\"]=\"led status\"\ntmp[\"payload\"]=msg[\"payload\"][\"e\"][0][\"t\"]\nreturn tmp",
-        "outputs": 1,
-        "x": 430,
-        "y": 360,
-        "wires": [
-            [
-                "574482667ffe7f46"
-            ]
-        ]
-    },
-    {
-        "id": "574482667ffe7f46",
-        "type": "ui_chart",
-        "z": "0998292695b46f5e",
-        "d": true,
-        "name": "",
-        "group": "",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "label": "chart",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm:ss",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": 1,
-        "removeOlderPoints": "",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 630,
-        "y": 360,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "19c75a982cefc154",
-        "type": "debug",
-        "z": "0998292695b46f5e",
-        "name": "debug 3",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 400,
-        "y": 220,
-        "wires": []
-    },
-    {
         "id": "4e27f6bfa25e92b6",
         "type": "http request",
         "z": "0998292695b46f5e",
@@ -464,10 +324,10 @@
         "senderr": false,
         "headers": [],
         "x": 630,
-        "y": 500,
+        "y": 120,
         "wires": [
             [
-                "6084021616b371ff"
+                "a5b1bab102d9f648"
             ]
         ]
     },
@@ -475,17 +335,17 @@
         "id": "6084021616b371ff",
         "type": "ui_text",
         "z": "0998292695b46f5e",
-        "group": "14586b10d5460e28",
-        "order": 1,
+        "group": "872843d3cbac360c",
+        "order": 4,
         "width": 0,
         "height": 0,
         "name": "",
         "label": "The status of pump is",
-        "format": "{{msg.payload}}",
+        "format": "<font color={{msg.color}} ><i class=\"fa fa-circle\" style=\"font-size:24px;\"></i></font>   {{msg.payload}}",
         "layout": "row-spread",
         "className": "",
-        "x": 840,
-        "y": 500,
+        "x": 1000,
+        "y": 120,
         "wires": []
     },
     {
@@ -500,7 +360,7 @@
         "finalize": "",
         "libs": [],
         "x": 410,
-        "y": 500,
+        "y": 120,
         "wires": [
             [
                 "4e27f6bfa25e92b6"
@@ -525,7 +385,7 @@
         "payload": "pump_check",
         "payloadType": "global",
         "x": 140,
-        "y": 500,
+        "y": 120,
         "wires": [
             [
                 "df1f5ab443de66ed"
@@ -544,7 +404,7 @@
         "finalize": "",
         "libs": [],
         "x": 410,
-        "y": 460,
+        "y": 80,
         "wires": [
             [
                 "4e27f6bfa25e92b6"
@@ -590,7 +450,7 @@
         "useDifferentColor": false,
         "className": "",
         "x": 900,
-        "y": 680,
+        "y": 300,
         "wires": [
             []
         ]
@@ -600,14 +460,14 @@
         "type": "function",
         "z": "0998292695b46f5e",
         "name": "function 8",
-        "func": "let tmp = {};\nconst s_date = new Date(msg.payload.start);\nlet s_year = s_date.getFullYear();\nconst s_month = s_date.getMonth()+1;\nconst s_day = s_date.getDate();\n\nconst e_date = new Date(msg.payload.end);\nlet e_year = e_date.getFullYear();\nconst e_month = e_date.getMonth()+1;\nconst e_day = e_date.getDate();\n\nconst ch_ID = global.get(\"TS_CH_ID\");\n\ntmp.method = \"GET\";\nlet link = `https://api.thingspeak.com/channels/${ch_ID}/feeds.json?start=${s_year}-${s_month}-${s_day}%2000:00:00&end=${e_year}-${e_month}-${e_day}%2023:59:59`;\ntmp.url = link;\nreturn tmp;",
+        "func": "let tmp = {};\n// const s_date = new Date(msg.payload.start);\nconst s_date = flow.get(\"s_date_live\")\nlet s_year = s_date.getFullYear();\nconst s_month = s_date.getMonth()+1;\nconst s_day = s_date.getDate();\n\n// const e_date = new Date(msg.payload.end);\nconst e_date = flow.get(\"e_date_live\")\nlet e_year = e_date.getFullYear();\nconst e_month = e_date.getMonth()+1;\nconst e_day = e_date.getDate();\n\nconst ch_ID = global.get(\"TS_CH_ID\");\n\ntmp.method = \"GET\";\nlet link = `https://api.thingspeak.com/channels/${ch_ID}/feeds.json?start=${s_year}-${s_month}-${s_day}%2000:00:00&end=${e_year}-${e_month}-${e_day}%2023:59:59`;\ntmp.url = link;\nreturn tmp;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 340,
-        "y": 600,
+        "y": 220,
         "wires": [
             [
                 "442f67f2f3c89d6e"
@@ -629,7 +489,7 @@
         "topicType": "str",
         "className": "",
         "x": 70,
-        "y": 700,
+        "y": 320,
         "wires": [
             [
                 "49fcdf7830ccad57"
@@ -651,7 +511,7 @@
         "topicType": "str",
         "className": "",
         "x": 70,
-        "y": 740,
+        "y": 360,
         "wires": [
             [
                 "49fcdf7830ccad57"
@@ -679,10 +539,10 @@
         "reduceInitType": "",
         "reduceFixup": "",
         "x": 210,
-        "y": 720,
+        "y": 340,
         "wires": [
             [
-                "7f5edf8bedf80540"
+                "74fb20d892629e47"
             ]
         ]
     },
@@ -703,7 +563,7 @@
         "senderr": false,
         "headers": [],
         "x": 490,
-        "y": 600,
+        "y": 220,
         "wires": [
             [
                 "aaebf4e2ddc8a3cc",
@@ -750,7 +610,7 @@
         "useDifferentColor": false,
         "className": "",
         "x": 910,
-        "y": 600,
+        "y": 220,
         "wires": [
             []
         ]
@@ -763,7 +623,7 @@
         "func": "from datetime import datetime\ntmp ={}\nchart = {\"series\":[],\"data\":[],\"labels\":[]}\ndata =[]\n\nimport_data = msg[\"payload\"][\"feeds\"]\nfor val in import_data:\n    datetime_obj = datetime.strptime(val[\"created_at\"], '%Y-%m-%dT%H:%M:%SZ')\n    timestamp = (datetime_obj - datetime(1970, 1, 1)).total_seconds()\n    # timestamp = datetime_obj.timestamp()\n    if val[\"field1\"] != None:\n        data.append({\"x\":val[\"created_at\"],\"y\":float(val[\"field1\"].replace('\"',''))})\n\nchart[\"series\"] = [\"A\"]\nchart[\"labels\"] = [\"\"]\n\nchart[\"data\"] = [data]\ntmp[\"payload\"] = [chart]\nreturn tmp",
         "outputs": 1,
         "x": 690,
-        "y": 600,
+        "y": 220,
         "wires": [
             [
                 "62452781e7e820be"
@@ -778,7 +638,7 @@
         "func": "from datetime import datetime\ntmp ={}\nchart = {\"series\":[],\"data\":[],\"labels\":[]}\ndata =[]\n\nimport_data = msg[\"payload\"][\"feeds\"]\nfor val in import_data:\n    datetime_obj = datetime.strptime(val[\"created_at\"], '%Y-%m-%dT%H:%M:%SZ')\n    timestamp = (datetime_obj - datetime(1970, 1, 1)).total_seconds()\n    # timestamp = datetime_obj.timestamp()\n    if val[\"field2\"] != None:\n        data.append({\"x\":val[\"created_at\"],\"y\":float(val[\"field2\"].replace('\"',''))})\n\nchart[\"series\"] = [\"A\"]\nchart[\"labels\"] = [\"\"]\n\nchart[\"data\"] = [data]\ntmp[\"payload\"] = [chart]\nreturn tmp",
         "outputs": 1,
         "x": 690,
-        "y": 680,
+        "y": 300,
         "wires": [
             [
                 "c17cc24359c14948"
@@ -803,7 +663,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 170,
-        "y": 440,
+        "y": 60,
         "wires": [
             []
         ]
@@ -823,8 +683,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1200,
-        "y": 380,
+        "x": 440,
+        "y": 560,
         "wires": []
     },
     {
@@ -847,8 +707,8 @@
         "sendOnBlur": true,
         "className": "<html> <body>    <form>       <label for=\"meet\">Meeting Time :</label>       <input type=\"time\" id=\"time1\">    </form> </body> </html>",
         "topicType": "msg",
-        "x": 1090,
-        "y": 420,
+        "x": 330,
+        "y": 600,
         "wires": [
             []
         ]
@@ -870,8 +730,8 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 940,
-        "y": 380,
+        "x": 180,
+        "y": 560,
         "wires": [
             [
                 "d8ada153107ff73c"
@@ -895,8 +755,8 @@
         "resendOnRefresh": false,
         "templateScope": "local",
         "className": "",
-        "x": 950,
-        "y": 320,
+        "x": 190,
+        "y": 500,
         "wires": [
             [
                 "5da5f5b6.5b01d4"
@@ -918,9 +778,63 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1190,
-        "y": 320,
+        "x": 430,
+        "y": 500,
         "wires": []
+    },
+    {
+        "id": "a5b1bab102d9f648",
+        "type": "function",
+        "z": "0998292695b46f5e",
+        "name": "function 15",
+        "func": "msg.color = (msg.payload == \"on\")?\"lime\":\"red\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 120,
+        "wires": [
+            [
+                "6084021616b371ff"
+            ]
+        ]
+    },
+    {
+        "id": "850b62b0f4da9fb4",
+        "type": "link in",
+        "z": "0998292695b46f5e",
+        "name": "link in 4",
+        "links": [
+            "d798175cd4eff33c"
+        ],
+        "x": 205,
+        "y": 180,
+        "wires": [
+            [
+                "7f5edf8bedf80540"
+            ]
+        ]
+    },
+    {
+        "id": "74fb20d892629e47",
+        "type": "function",
+        "z": "0998292695b46f5e",
+        "name": "function 18",
+        "func": "const s_date = new Date(msg.payload.start);\nflow.set(\"s_date_live\", s_date);\nconst e_date = new Date(msg.payload.end);\nflow.set(\"e_date_live\", e_date)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 150,
+        "y": 220,
+        "wires": [
+            [
+                "7f5edf8bedf80540"
+            ]
+        ]
     },
     {
         "id": "eeb8137bfe9545a9",
@@ -986,7 +900,7 @@
         "z": "2a5cdca7bbb39636",
         "name": "",
         "group": "872843d3cbac360c",
-        "order": 1,
+        "order": 5,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -1015,7 +929,7 @@
         "z": "2a5cdca7bbb39636",
         "name": "",
         "group": "872843d3cbac360c",
-        "order": 2,
+        "order": 6,
         "width": 0,
         "height": 0,
         "gtype": "gage",
@@ -1101,7 +1015,7 @@
         "z": "2a5cdca7bbb39636",
         "name": "",
         "group": "872843d3cbac360c",
-        "order": 2,
+        "order": 7,
         "width": 0,
         "height": 0,
         "gtype": "gage",
@@ -1127,15 +1041,17 @@
         "id": "c9c0393dce0b831c",
         "type": "function",
         "z": "2a5cdca7bbb39636",
+        "d": true,
+        "g": "85bdec3d3b38f4c8",
         "name": "function 11",
-        "func": "let tmp = {};\nconst s_date = new Date(msg.payload.start);\nlet s_year = s_date.getFullYear();\nconst s_month = s_date.getMonth()+1;\nconst s_day = s_date.getDate();\n\nconst e_date = new Date(msg.payload.end);\nlet e_year = e_date.getFullYear();\nconst e_month = e_date.getMonth()+1;\nconst e_day = e_date.getDate();\n\nconst ch_ID = global.get(\"TS_CH_ID\");\n\ntmp.method = \"GET\";\nlet link = `https://api.thingspeak.com/channels/${ch_ID}/feeds.json?start=${s_year}-${s_month}-${s_day}%2000:00:00&end=${e_year}-${e_month}-${e_day}%2023:59:59`;\ntmp.url = link;\nreturn tmp;",
+        "func": "let tmp = {};\nconst s_date = new Date(msg.payload.start);\nlet s_year = s_date.getFullYear();\nconst s_month = s_date.getMonth()+1;\nconst s_day = s_date.getDate();\n\nconst e_date = new Date(msg.payload.end);\nlet e_year = e_date.getFullYear();\nconst e_month = e_date.getMonth()+1;\nconst e_day = e_date.getDate();\n\ntmp.method = \"GET\";\nlet link = `http://127.0.0.1:8080/statistic/period?userID=${global.get(\"user\")}&farmID=${global.get(\"farm\")}&sectionID=${global.get(\"section\")}&start=${s_day}/${s_month}/${s_year} 00:00:00&end=${e_day}/${e_month}/${e_year} 23:59:59`\ntmp.url = link;\nreturn tmp;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 220,
-        "y": 360,
+        "x": 390,
+        "y": 280,
         "wires": [
             [
                 "fb59e967458bb44f"
@@ -1146,6 +1062,8 @@
         "id": "5e1df0da91902ccf",
         "type": "ui_date_picker",
         "z": "2a5cdca7bbb39636",
+        "d": true,
+        "g": "85bdec3d3b38f4c8",
         "name": "",
         "label": "From",
         "group": "70fb6f524aecfe93",
@@ -1168,6 +1086,8 @@
         "id": "7a3ad05c3ecf1f51",
         "type": "ui_date_picker",
         "z": "2a5cdca7bbb39636",
+        "d": true,
+        "g": "85bdec3d3b38f4c8",
         "name": "",
         "label": "To",
         "group": "70fb6f524aecfe93",
@@ -1190,6 +1110,7 @@
         "id": "a8d72255fd7c0f00",
         "type": "join",
         "z": "2a5cdca7bbb39636",
+        "g": "85bdec3d3b38f4c8",
         "name": "",
         "mode": "custom",
         "build": "object",
@@ -1218,6 +1139,7 @@
         "id": "fb59e967458bb44f",
         "type": "http request",
         "z": "2a5cdca7bbb39636",
+        "g": "85bdec3d3b38f4c8",
         "name": "",
         "method": "use",
         "ret": "obj",
@@ -1230,33 +1152,156 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 390,
-        "y": 360,
+        "x": 560,
+        "y": 280,
         "wires": [
             [
-                "cf5ae3d357cc53bc"
+                "74933ee654791aad"
             ]
         ]
     },
     {
-        "id": "106b8b2e17bfc0db",
+        "id": "74933ee654791aad",
+        "type": "ui_gauge",
+        "z": "2a5cdca7bbb39636",
+        "d": true,
+        "g": "85bdec3d3b38f4c8",
+        "name": "",
+        "group": "70fb6f524aecfe93",
+        "order": 3,
+        "width": "7",
+        "height": "4",
+        "gtype": "gage",
+        "title": "Enegy Consumption",
+        "label": "€",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 760,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "a17d8e1f3b5abc43",
+        "type": "function",
+        "z": "2a5cdca7bbb39636",
+        "name": "function 12",
+        "func": "let tmp = {};\nlet s_date = flow.get(\"date_cons\")\n// const s_date = new Date(pre_Date)\n// const s_date = new Date(msg.payload);\nlet s_year = s_date.getFullYear();\nconst s_month = s_date.getMonth()+1;\nconst s_day = s_date.getDate();\n\ntmp.method = \"GET\";\nlet link = `http://127.0.0.1:8080/statistic/day?userID=${global.get(\"user\")}&farmID=${global.get(\"farm\")}&sectionID=${global.get(\"section\")}&day=${s_day}/${s_month}/${s_year}`\ntmp.url = link;\nreturn tmp;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 400,
+        "wires": [
+            [
+                "9aa11a7eb914d5e5"
+            ]
+        ]
+    },
+    {
+        "id": "646e42af03621026",
+        "type": "ui_date_picker",
+        "z": "2a5cdca7bbb39636",
+        "name": "",
+        "label": "Date",
+        "group": "70fb6f524aecfe93",
+        "order": 4,
+        "width": "4",
+        "height": "1",
+        "passthru": false,
+        "topic": "start",
+        "topicType": "str",
+        "className": "",
+        "x": 70,
+        "y": 400,
+        "wires": [
+            [
+                "ca986fc75e03f601"
+            ]
+        ]
+    },
+    {
+        "id": "9aa11a7eb914d5e5",
+        "type": "http request",
+        "z": "2a5cdca7bbb39636",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": true,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 560,
+        "y": 400,
+        "wires": [
+            [
+                "9bde3388bea2dfdd"
+            ]
+        ]
+    },
+    {
+        "id": "9bde3388bea2dfdd",
+        "type": "ui_gauge",
+        "z": "2a5cdca7bbb39636",
+        "name": "",
+        "group": "70fb6f524aecfe93",
+        "order": 5,
+        "width": "0",
+        "height": "0",
+        "gtype": "donut",
+        "title": "Daily Enegy Consumption",
+        "label": "€",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 770,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "d48927479cadd3c7",
         "type": "ui_chart",
         "z": "2a5cdca7bbb39636",
         "name": "",
         "group": "70fb6f524aecfe93",
-        "order": 3,
+        "order": 7,
         "width": 0,
         "height": 0,
-        "label": "Energy Consumption",
-        "chartType": "line",
+        "label": "Monthly usage",
+        "chartType": "horizontalBar",
         "legend": "false",
-        "xformat": "dd HH:mm",
+        "xformat": "HH:mm:ss",
         "interpolate": "linear",
         "nodata": "",
         "dot": false,
         "ymin": "",
         "ymax": "",
-        "removeOlder": "",
+        "removeOlder": 1,
         "removeOlderPoints": "",
         "removeOlderUnit": "3600",
         "cutout": 0,
@@ -1276,24 +1321,221 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 780,
-        "y": 360,
+        "x": 920,
+        "y": 620,
         "wires": [
             []
         ]
     },
     {
-        "id": "cf5ae3d357cc53bc",
+        "id": "af2751c6ef37a274",
+        "type": "function",
+        "z": "2a5cdca7bbb39636",
+        "name": "function 14",
+        "func": "let tmp={}\nlet selected_year = flow.get(\"year_selected\")\n\ntmp.method = \"GET\";\nlet link = `http://127.0.0.1:8080/statistic/year?userID=${global.get(\"user\")}&farmID=${global.get(\"farm\")}&sectionID=${global.get(\"section\")}&year=${selected_year}`\ntmp.url = link;\nreturn tmp;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 620,
+        "wires": [
+            [
+                "67402b92556bc563"
+            ]
+        ]
+    },
+    {
+        "id": "67402b92556bc563",
+        "type": "http request",
+        "z": "2a5cdca7bbb39636",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": true,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 510,
+        "y": 620,
+        "wires": [
+            [
+                "0fcf19bdf0a69dcb"
+            ]
+        ]
+    },
+    {
+        "id": "0fcf19bdf0a69dcb",
         "type": "python3-function",
         "z": "2a5cdca7bbb39636",
         "name": "",
-        "func": "from datetime import datetime\ntmp ={}\nchart = {\"series\":[],\"data\":[],\"labels\":[]}\ndata =[]\n\nimport_data = msg[\"payload\"][\"feeds\"]\nfor val in import_data:\n    datetime_obj = datetime.strptime(val[\"created_at\"], '%Y-%m-%dT%H:%M:%SZ')\n    timestamp = (datetime_obj - datetime(1970, 1, 1)).total_seconds()\n    # timestamp = datetime_obj.timestamp()\n    if val[\"field1\"] != None:\n        data.append({\"x\":val[\"created_at\"],\"y\":float(val[\"field1\"].replace('\"',''))})\n\nchart[\"series\"] = [\"A\"]\nchart[\"labels\"] = [\"\"]\n\nchart[\"data\"] = [data]\ntmp[\"payload\"] = [chart]\nreturn tmp",
+        "func": "tmp = {}\n# tmp[\"payload\"] = [{\n#     \"series\": [\"temp1\"],\n#     \"data\": [],\n#     \"labels\": []\n# }];\n_cons = []\n_month = []\n_dict = msg[\"payload\"]\nfor key, value in _dict.items():\n    _cons.append(value)\n    _month.append(key)\n    \ntmp['payload'] = [{\n    \"series\": [\"temp1\"],\n    \"data\": [_cons],\n    \"labels\": _month\n}];\n    \ntmp[\"cons\"] = _cons\ntmp[\"month\"] = _month\nreturn tmp",
         "outputs": 1,
-        "x": 570,
+        "x": 730,
+        "y": 620,
+        "wires": [
+            [
+                "d48927479cadd3c7"
+            ]
+        ]
+    },
+    {
+        "id": "1637510783772718",
+        "type": "ui_dropdown",
+        "z": "2a5cdca7bbb39636",
+        "name": "",
+        "label": "Select Year",
+        "tooltip": "",
+        "place": "",
+        "group": "70fb6f524aecfe93",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "var startYear = moment().subtract(10, 'years').year(); // ten years ago var endYear = moment().year(); var yearOptions = []; for (var year = startYear; year <= endYear; year++) {     yearOptions.push({         \"value\": year,         \"label\": year.toString()     }); } return yearOptions;Select option",
+        "x": 530,
+        "y": 520,
+        "wires": [
+            [
+                "87731338f3453fed"
+            ]
+        ]
+    },
+    {
+        "id": "eeeb3715341ae164",
+        "type": "python3-function",
+        "z": "2a5cdca7bbb39636",
+        "name": "",
+        "func": "from datetime import datetime\nyear = datetime.now().year\nyears =[]\nfor i in range(10):\n    years.append(year - i)\nmsg[\"options\"] = years\nreturn msg",
+        "outputs": 1,
+        "x": 310,
+        "y": 520,
+        "wires": [
+            [
+                "1637510783772718"
+            ]
+        ]
+    },
+    {
+        "id": "52baa92c3b23500c",
+        "type": "inject",
+        "z": "2a5cdca7bbb39636",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 520,
+        "wires": [
+            [
+                "eeeb3715341ae164"
+            ]
+        ]
+    },
+    {
+        "id": "c60bfc084123f182",
+        "type": "link in",
+        "z": "2a5cdca7bbb39636",
+        "name": "link in 1",
+        "links": [
+            "d798175cd4eff33c"
+        ],
+        "x": 265,
         "y": 360,
         "wires": [
             [
-                "106b8b2e17bfc0db"
+                "a17d8e1f3b5abc43"
+            ]
+        ]
+    },
+    {
+        "id": "ca986fc75e03f601",
+        "type": "function",
+        "z": "2a5cdca7bbb39636",
+        "name": "function 16",
+        "func": "const s_date = new Date(msg.payload)\nflow.set(\"date_cons\", s_date);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 210,
+        "y": 400,
+        "wires": [
+            [
+                "a17d8e1f3b5abc43"
+            ]
+        ]
+    },
+    {
+        "id": "87731338f3453fed",
+        "type": "function",
+        "z": "2a5cdca7bbb39636",
+        "name": "function 17",
+        "func": "flow.set(\"year_selected\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 130,
+        "y": 620,
+        "wires": [
+            [
+                "af2751c6ef37a274"
+            ]
+        ]
+    },
+    {
+        "id": "83052337058ff6cd",
+        "type": "link in",
+        "z": "2a5cdca7bbb39636",
+        "name": "link in 2",
+        "links": [
+            "d798175cd4eff33c"
+        ],
+        "x": 185,
+        "y": 660,
+        "wires": [
+            [
+                "af2751c6ef37a274"
+            ]
+        ]
+    },
+    {
+        "id": "f0696bfdd0678e17",
+        "type": "link in",
+        "z": "2a5cdca7bbb39636",
+        "name": "link in 3",
+        "links": [
+            "d798175cd4eff33c"
+        ],
+        "x": 115,
+        "y": 160,
+        "wires": [
+            [
+                "eeb8137bfe9545a9",
+                "3b355525932c851b"
             ]
         ]
     },
@@ -1521,7 +1763,8 @@
         "y": 140,
         "wires": [
             [
-                "603e47a486dd8b74"
+                "603e47a486dd8b74",
+                "c3ef2fd6fcaff129"
             ]
         ]
     },
@@ -1600,7 +1843,8 @@
         "y": 220,
         "wires": [
             [
-                "46d79109dbf6bf78"
+                "46d79109dbf6bf78",
+                "20322f36e7f41515"
             ]
         ]
     },
@@ -1627,7 +1871,8 @@
         "y": 300,
         "wires": [
             [
-                "beb2f8624e316192"
+                "beb2f8624e316192",
+                "aeb5c322c094a05a"
             ]
         ]
     },
@@ -1703,7 +1948,8 @@
         "y": 300,
         "wires": [
             [
-                "23d078eef54b8950"
+                "23d078eef54b8950",
+                "d798175cd4eff33c"
             ]
         ]
     },
@@ -1916,5 +2162,103 @@
                 "c16df478e57b360c"
             ]
         ]
+    },
+    {
+        "id": "21f8dd6ead2a6b2d",
+        "type": "ui_time_scheduler",
+        "z": "5e6383022ba901b9",
+        "group": "916344f8e027fd93",
+        "name": "",
+        "startDay": 0,
+        "refresh": 60,
+        "devices": [
+            "Device 1"
+        ],
+        "singleOff": false,
+        "onlySendChange": false,
+        "customPayload": false,
+        "eventMode": false,
+        "eventOptions": [],
+        "sendTopic": false,
+        "lat": "",
+        "lon": "",
+        "customContextStore": "",
+        "outputs": 2,
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "x": 370,
+        "y": 660,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "c3ef2fd6fcaff129",
+        "type": "ui_text",
+        "z": "5e6383022ba901b9",
+        "group": "872843d3cbac360c",
+        "order": 1,
+        "width": "3",
+        "height": "1",
+        "name": "",
+        "label": "User: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "x": 510,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "20322f36e7f41515",
+        "type": "ui_text",
+        "z": "5e6383022ba901b9",
+        "group": "872843d3cbac360c",
+        "order": 2,
+        "width": "3",
+        "height": "1",
+        "name": "",
+        "label": "Farm: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "x": 690,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "aeb5c322c094a05a",
+        "type": "ui_text",
+        "z": "5e6383022ba901b9",
+        "group": "872843d3cbac360c",
+        "order": 3,
+        "width": "3",
+        "height": "1",
+        "name": "",
+        "label": "Section: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "x": 740,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "d798175cd4eff33c",
+        "type": "link out",
+        "z": "5e6383022ba901b9",
+        "name": "link out 1",
+        "mode": "link",
+        "links": [
+            "83052337058ff6cd",
+            "c60bfc084123f182",
+            "f0696bfdd0678e17",
+            "850b62b0f4da9fb4"
+        ],
+        "x": 845,
+        "y": 300,
+        "wires": []
     }
 ]

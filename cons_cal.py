@@ -6,7 +6,7 @@ class consumption_calc:
     def __init__(self,status_file, IDs, cost):
         with open(status_file) as file:
             self.statis = json.load(file)
-        self._root = f"{IDs['userID']}/{IDs['farmID']}/{IDs['sectionID']}"
+        self._root = f"{IDs['farmID']}/{IDs['sectionID']}"
         
         self.cost = cost
 
@@ -94,7 +94,6 @@ class consumption_calc:
 if __name__ == "__main__":
 
     IDs = {
-    'userID': 'Moj',
     'farmID': 'Farm1',
     'sectionID': 'Section1'
     }

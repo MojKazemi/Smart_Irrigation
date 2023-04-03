@@ -9,153 +9,174 @@
     "Users": {
         "user1": {
             "userID": "Moj",
-            "Farms": {
-                "farm1": {
-                    "farmID": "Farm1",
-                    "Sections": {
-                        "section1": {
-                            "sectionID": "Section1",
-                            "control_status": "manual",
-                            "temp_threshold": 6,
-                            "mois_min_threshold": 57,
-                            "mois_max_threshold": 81,
-                            "Devices": {
-                                "Sensors": {
-                                    "sensor1": {
-                                        "SensorID": 1,
-                                        "SensorName": "DHT11",
-                                        "SensorType": "Temperature"
-                                    },
-                                    "sensor2": {
-                                        "SensorID": 2,
-                                        "SensorName": "SEN-13322",
-                                        "SensorType": "Soil_Moisture"
-                                    }
-                                },
-                                "Pump": {
-                                    "pumpID": 1,
-                                    "pumpName": "PMDC-12v-25w",
-                                    "power": 0.025,
-                                    "status": "off"
-                                }
+            "farm_list": [
+                "Farm_1",
+                "Farm_2",
+                "Farm_3"
+            ]
+        },
+        "user2": {
+            "userID": "Hamed",
+            "farm_list": [
+                "Farm_2"
+            ]
+        }
+    },
+    "Farms": {
+        "farm1": {
+            "farmID": "Farm_1",
+            "Sections": {
+                "section1": {
+                    "sectionID": "Section1",
+                    "control_status": "auto",
+                    "temp_threshold": 6,
+                    "mois_min_threshold": 57,
+                    "mois_max_threshold": 81,
+                    "Devices": {
+                        "Sensors": {
+                            "sensor1": {
+                                "SensorID": 1,
+                                "SensorName": "DHT11",
+                                "SensorType": "Temperature"
                             },
-                            "TS_ChannelID": "2073420",
-                            "manual_schedul": {
-                                "timers": [],
-                                "settings": {}
+                            "sensor2": {
+                                "SensorID": 2,
+                                "SensorName": "SEN-13322",
+                                "SensorType": "Soil_Moisture"
                             }
+                        },
+                        "Pump": {
+                            "pumpID": 1,
+                            "pumpName": "PMDC-12v-25w",
+                            "power": 0.025,
+                            "status": "on"
                         }
+                    },
+                    "TS_ChannelID": "2073420",
+                    "manual_schedul": {
+                        "timers": [],
+                        "settings": {}
                     }
                 }
             }
         },
-        "user2": {
-            "userID": "Hamed",
-            "Farms": {
-                "farm1": {
-                    "farmID": "Farm1",
-                    "Sections": {
-                        "section1": {
-                            "sectionID": "Section1",
-                            "control_status": "auto",
-                            "temp_threshold": 13,
-                            "mois_min_threshold": 12,
-                            "mois_max_threshold": 72,
-                            "Devices": {
-                                "Sensors": {
-                                    "sensor1": {
-                                        "SensorID": 1,
-                                        "SensorName": "DHT11",
-                                        "SensorType": "Temperature"
-                                    },
-                                    "sensor2": {
-                                        "SensorID": 2,
-                                        "SensorName": "SEN-13322",
-                                        "SensorType": "Soil_Moisture"
-                                    }
-                                },
-                                "Pump": {
-                                    "pumpID": 1,
-                                    "pumpName": "PMDC-12v-25w",
-                                    "power": 0.025,
-                                    "status": "on"
-                                }
+        "farm2": {
+            "farmID": "Farm_2",
+            "Sections": {
+                "section1": {
+                    "sectionID": "Section1",
+                    "control_status": "manual",
+                    "temp_threshold": 13,
+                    "mois_min_threshold": 79,
+                    "mois_max_threshold": 72,
+                    "Devices": {
+                        "Sensors": {
+                            "sensor1": {
+                                "SensorID": 1,
+                                "SensorName": "DHT11",
+                                "SensorType": "Temperature"
                             },
-                            "TS_ChannelID": "2077771",
-                            "manual_schedul": {
-                                "timers": [],
-                                "settings": {}
-                            }
-                        }
-                    }
-                },
-                "farm2": {
-                    "farmID": "Farm2",
-                    "Sections": {
-                        "section1": {
-                            "sectionID": "Section1",
-                            "control_status": "auto",
-                            "temp_threshold": 17,
-                            "mois_min_threshold": 11,
-                            "mois_max_threshold": 35,
-                            "Devices": {
-                                "Sensors": {
-                                    "sensor1": {
-                                        "SensorID": 1,
-                                        "SensorName": "DHT11",
-                                        "SensorType": "Temperature"
-                                    },
-                                    "sensor2": {
-                                        "SensorID": 2,
-                                        "SensorName": "SEN-13322",
-                                        "SensorType": "Soil_Moisture"
-                                    }
-                                },
-                                "Pump": {
-                                    "pumpID": 1,
-                                    "pumpName": "PMDC-12v-25w",
-                                    "power": 0.025,
-                                    "status": "off"
-                                }
-                            },
-                            "TS_ChannelID": "2077507",
-                            "manual_schedul": {
-                                "timers": [],
-                                "settings": {}
+                            "sensor2": {
+                                "SensorID": 2,
+                                "SensorName": "SEN-13322",
+                                "SensorType": "Soil_Moisture"
                             }
                         },
-                        "section2": {
-                            "sectionID": "Section2",
-                            "control_status": "auto",
-                            "temp_threshold": 21,
-                            "mois_min_threshold": 41,
-                            "mois_max_threshold": 54,
-                            "Devices": {
-                                "Sensors": {
-                                    "sensor1": {
-                                        "SensorID": 1,
-                                        "SensorName": "DHT11",
-                                        "SensorType": "Temperature"
-                                    },
-                                    "sensor2": {
-                                        "SensorID": 2,
-                                        "SensorName": "SEN-13322",
-                                        "SensorType": "Soil_Moisture"
-                                    }
-                                },
-                                "Pump": {
-                                    "pumpID": 1,
-                                    "pumpName": "PMDC-12v-25w",
-                                    "power": 0.025,
-                                    "status": "off"
-                                }
-                            },
-                            "TS_ChannelID": "2077714",
-                            "manual_schedul": {
-                                "timers": [],
-                                "settings": {}
-                            }
+                        "Pump": {
+                            "pumpID": 1,
+                            "pumpName": "PMDC-12v-25w",
+                            "power": 0.025,
+                            "status": "on"
                         }
+                    },
+                    "TS_ChannelID": "2077771",
+                    "manual_schedul": {
+                        "timers": [
+                            {
+                                "starttime": 1680363300000,
+                                "days": [
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    1
+                                ],
+                                "output": "0",
+                                "endtime": 1680363600000
+                            }
+                        ],
+                        "settings": {}
+                    }
+                }
+            }
+        },
+        "farm3": {
+            "farmID": "Farm_3",
+            "Sections": {
+                "section1": {
+                    "sectionID": "Section1",
+                    "control_status": "auto",
+                    "temp_threshold": 17,
+                    "mois_min_threshold": 11,
+                    "mois_max_threshold": 35,
+                    "Devices": {
+                        "Sensors": {
+                            "sensor1": {
+                                "SensorID": 1,
+                                "SensorName": "DHT11",
+                                "SensorType": "Temperature"
+                            },
+                            "sensor2": {
+                                "SensorID": 2,
+                                "SensorName": "SEN-13322",
+                                "SensorType": "Soil_Moisture"
+                            }
+                        },
+                        "Pump": {
+                            "pumpID": 1,
+                            "pumpName": "PMDC-12v-25w",
+                            "power": 0.025,
+                            "status": "off"
+                        }
+                    },
+                    "TS_ChannelID": "2077507",
+                    "manual_schedul": {
+                        "timers": [],
+                        "settings": {}
+                    }
+                },
+                "section2": {
+                    "sectionID": "Section2",
+                    "control_status": "auto",
+                    "temp_threshold": 21,
+                    "mois_min_threshold": 41,
+                    "mois_max_threshold": 54,
+                    "Devices": {
+                        "Sensors": {
+                            "sensor1": {
+                                "SensorID": 1,
+                                "SensorName": "DHT11",
+                                "SensorType": "Temperature"
+                            },
+                            "sensor2": {
+                                "SensorID": 2,
+                                "SensorName": "SEN-13322",
+                                "SensorType": "Soil_Moisture"
+                            }
+                        },
+                        "Pump": {
+                            "pumpID": 1,
+                            "pumpName": "PMDC-12v-25w",
+                            "power": 0.025,
+                            "status": "off"
+                        }
+                    },
+                    "TS_ChannelID": "2077714",
+                    "manual_schedul": {
+                        "timers": [],
+                        "settings": {}
                     }
                 }
             }

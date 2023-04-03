@@ -25,18 +25,22 @@ class catalogAPI:
                 details = {}
                 details['Users'] = catalog['Users']
                 return json.dumps(details)
+
+            elif uri[1] == 'farm_details':
+                details = {}
+                details['Farms'] = catalog['Farms']
+                return json.dumps(details)
                 
             elif uri[1] == 'pump_status': 
                 user,farm,section = self.find_user_farm(catalog,params)                      
-                vals = catalog['Users'][user]['Farms'][farm]['Sections'][section]
-                pump_status = vals["Devices"]["Pump"]["status"]
+                pump_status = catalog['Farms'][farm]['Sections'][section]["Devices"]["Pump"]["status"]
                 
                 return json.dumps(pump_status)
 
             elif uri[1] == 'threshold':
                 thresh = {'temp':'','mois_min':'','mois_max':''}
                 user,farm,section = self.find_user_farm(catalog,params)                  
-                vals = catalog['Users'][user]['Farms'][farm]['Sections'][section]
+                vals = catalog['Farms'][farm]['Sections'][section]
                 thresh['temp'] = vals["temp_threshold"]
                 thresh['mois_min'] = vals["mois_min_threshold"]
                 thresh['mois_max'] = vals["mois_max_threshold"]
@@ -46,14 +50,14 @@ class catalogAPI:
             elif uri[1] == 'channelID':
                 ch_ID = {}
                 user,farm,section = self.find_user_farm(catalog,params)                  
-                vals = catalog['Users'][user]['Farms'][farm]['Sections'][section]
+                vals = catalog['Farms'][farm]['Sections'][section]
                 ch_ID['ch_ID'] = vals["TS_ChannelID"]
             
                 return json.dumps(ch_ID)
                 
             elif uri[1] == 'control_status':
                 user,farm,section = self.find_user_farm(catalog,params)                  
-                vals = catalog['Users'][user]['Farms'][farm]['Sections'][section]
+                vals = catalog['Farms'][farm]['Sections'][section]
 
                 contorl_status = vals["control_status"]
             
@@ -64,7 +68,7 @@ class catalogAPI:
 
             elif uri[1] == 'manual_schedul':
                 user, farm, section = self.find_user_farm(catalog, params)
-                manual_schedul = catalog['Users'][user]['Farms'][farm]['Sections'][section]['manual_schedul']
+                manual_schedul = catalog['Farms'][farm]['Sections'][section]['manual_schedul']
                 
                 return json.dumps(manual_schedul)
             
@@ -73,7 +77,6 @@ class catalogAPI:
         elif uri[0] == 'statistic':
                         
             IDs = {
-                'userID': params['userID'],
                 'farmID': params['farmID'],
                 'sectionID': params['sectionID']
                 }
@@ -83,7 +86,7 @@ class catalogAPI:
             cost = catalog['electrical_cost'] 
 
             user,farm,section = self.find_user_farm(catalog,params)                  
-            vals = catalog['Users'][user]['Farms'][farm]['Sections'][section]
+            vals = catalog['Farms'][farm]['Sections'][section]
             pump_power = vals['Devices']['Pump']['power']
 
             consumption = cons_cal('./pump_status.json',IDs, cost)
@@ -125,7 +128,7 @@ class catalogAPI:
                     statis = json.load(file)
 
             timestamp = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
-            _root = f"{params['userID']}/{params['farmID']}/{params['sectionID']}"
+            _root = f"{params['farmID']}/{params['sectionID']}"
 
             if uri[1] == "pump_status":
                 statis["pump_status"].append({"t": str(timestamp),
@@ -146,26 +149,26 @@ class catalogAPI:
                 user, farm, section = self.find_user_farm(catalog, params)
                 if uri[1] == 'pump_status':
                     if params['status'] == 'on' or params['status'] == 'off':
-                        catalog['Users'][user]['Farms'][farm]['Sections'][section]["Devices"]['Pump']['status'] = params['status']
+                        catalog['Farms'][farm]['Sections'][section]["Devices"]['Pump']['status'] = params['status']
 
                 elif uri[1] == 'Temp_thresh':
                     if 0 < int(params['value']) < 100:
-                        catalog['Users'][user]['Farms'][farm]['Sections'][section]["temp_threshold"] = int(params['value'])
+                        catalog['Farms'][farm]['Sections'][section]["temp_threshold"] = int(params['value'])
 
                 elif uri[1] == 'Mois_min_thresh':
                     if 0 < int(params['value']) < 100:
-                        catalog['Users'][user]['Farms'][farm]['Sections'][section]["mois_min_threshold"] = int(params['value'])
+                        catalog['Farms'][farm]['Sections'][section]["mois_min_threshold"] = int(params['value'])
                          
                 elif uri[1] == 'Mois_max_thresh':
                     if 0 < int(params['value']) < 100:
-                        catalog['Users'][user]['Farms'][farm]['Sections'][section]["mois_max_threshold"] = int(params['value'])
+                        catalog['Farms'][farm]['Sections'][section]["mois_max_threshold"] = int(params['value'])
                                                                
                 elif uri[1] == 'control_status':
                     if params['value'] == 'auto' or params['value'] == 'manual':
-                        catalog['Users'][user]['Farms'][farm]['Sections'][section]["control_status"] = params['value']
+                        catalog['Farms'][farm]['Sections'][section]["control_status"] = params['value']
                            
                 elif uri[1]== 'manual_schedul':
-                    catalog['Users'][user]['Farms'][farm]['Sections'][section]["manual_schedul"] = json.loads(params["value"])
+                    catalog['Farms'][farm]['Sections'][section]["manual_schedul"] = json.loads(params["value"])
 
                 else:
                     raise cherrypy.HTTPError(500, "Please enter a valid request")
@@ -187,13 +190,16 @@ class catalogAPI:
             for key,vals in catalog['Users'].items():
                 if vals['userID'] == params['userID']:
                     user = key
-                    
-            for key, vals in catalog['Users'][user]['Farms'].items():
-                if vals['farmID'] == params['farmID']:
-                    farm = key
-            for key,vals in catalog['Users'][user]['Farms'][farm]['Sections'].items():
-                if vals['sectionID'] == params['sectionID']:
-                    section = key
+            
+            if params['farmID'] in catalog["Users"][user]["farm_list"]:
+                for key, vals in catalog['Farms'].items():
+                    if vals['farmID'] == params['farmID']:
+                        farm = key
+                for key,vals in catalog['Farms'][farm]['Sections'].items():
+                    if vals['sectionID'] == params['sectionID']:
+                        section = key
+            else:
+                raise cherrypy.HTTPError(500, "user do not have access to the farm")
         except:
             raise cherrypy.HTTPError(500,"Please enter a valid request for parameters like: ?userID=Moj&farmID=Farm1&sectionID=Section1")
         return user, farm, section
