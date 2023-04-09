@@ -130,7 +130,9 @@ class catalogAPI:
                 
                 for _, val in catalog['Users'].items():
                     if params['new_user'] == val['userID']:
-                        raise cherrypy.HTTPError(500, "The username is taken. Try another")
+                        # raise cherrypy.HTTPError(500, "The username is taken. Try another")
+                        msg = "The username is taken. Try another"
+                        return json.dumps(msg)
                         
                 user_key = 'user'+ str(len(catalog['Users'])+1)
                 catalog['Users'][user_key]={
@@ -138,6 +140,12 @@ class catalogAPI:
                     "pass":params['pass'],
                     "farm_list" : []
                 }
+                jsonFile = open("catalog.json", "w+")
+                jsonFile.write(json.dumps(catalog, indent=4))
+                jsonFile.close()
+                msg = "The user is added"
+                return json.dumps(msg)
+                
 
             elif uri[1] == 'add_farm':
                 
@@ -160,6 +168,7 @@ class catalogAPI:
                 for key, val in catalog['Farms'][farm]['Sections'].items():
                     if params['new_section'] == val['sectionID']:
                         raise cherrypy.HTTPError(500, "The section name is taken. Try another")
+                        
 
                 _key = 'section' + str(len(catalog["Farms"][farm]["Sections"])+1)
                 catalog["Farms"][farm]["Sections"][_key] = {
@@ -175,6 +184,7 @@ class catalogAPI:
             jsonFile = open("catalog.json", "w+")
             jsonFile.write(json.dumps(catalog, indent=4))
             jsonFile.close()
+            
                 
 
         if uri[0] == "statistics":
