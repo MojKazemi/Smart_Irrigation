@@ -5,7 +5,10 @@
         "port": 1883
     },
     "baseTopic": "Irrigation",
+    "telegramToken": "5597846803:AAEVCVRtc4__Rl6lqjuhyMTV4M-Vw80Idys",
     "electrical_cost": 0.12,
+    "user_admin": "admin",
+    "admin_pass": "0000",
     "Users": {
         "user1": {
             "userID": "Moj",
@@ -23,10 +26,12 @@
                 "Farm_2"
             ]
         },
-        "user3": {
-            "userID": "moj_2",
-            "pass": "0000",
-            "farm_list": []
+        "moji-23": {
+            "userID": "moji-23",
+            "pass": "1234",
+            "farm_list": [
+                "farm-m23"
+            ]
         }
     },
     "Farms": {
@@ -35,10 +40,10 @@
             "Sections": {
                 "section1": {
                     "sectionID": "Section1",
-                    "control_status": "auto",
-                    "temp_threshold": 6,
-                    "mois_min_threshold": 57,
-                    "mois_max_threshold": 81,
+                    "control_status": "manual",
+                    "temp_threshold": 12,
+                    "mois_min_threshold": 11,
+                    "mois_max_threshold": 54,
                     "Devices": {
                         "Sensors": {
                             "sensor1": {
@@ -157,9 +162,9 @@
                 "section2": {
                     "sectionID": "Section2",
                     "control_status": "auto",
-                    "temp_threshold": 21,
-                    "mois_min_threshold": 41,
-                    "mois_max_threshold": 54,
+                    "temp_threshold": 7,
+                    "mois_min_threshold": 19,
+                    "mois_max_threshold": 40,
                     "Devices": {
                         "Sensors": {
                             "sensor1": {

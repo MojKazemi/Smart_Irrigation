@@ -71,33 +71,37 @@ class MyRequest:
         catalog_user = requests.get(f'{self._root}/catalog/user_details').json()
         return catalog_user
 
+    def get_catalog_farm(self):
+        catalog_farm = requests.get(f'{self._root}/catalog/farm_details').json()
+        return catalog_farm
+
     def get_threshold(self,IDs):
 
         thresh = requests.get(
-            f'{self._root}/catalog/threshold?userID={IDs["user"]}&farmID={IDs["farm"]}&sectionID={IDs["section"]}').json() 
+            f'{self._root}/catalog/threshold?farmID={IDs["farm"]}&sectionID={IDs["section"]}').json() 
         return thresh
 
     def get_status(self,IDs):
-        status = requests.get(f'{self._root}/catalog/pump_status/?userID={IDs["user"]}&farmID={IDs["farm"]}&sectionID={IDs["section"]}').json()
+        status = requests.get(f'{self._root}/catalog/pump_status/?farmID={IDs["farm"]}&sectionID={IDs["section"]}').json()
         return status
 
     def put_status(self,IDs, status):
-        requests.put(f'{self._root}/catalog/pump_status/?userID={IDs["user"]}&farmID={IDs["farm"]}&sectionID={IDs["section"]}&status={status}')
+        requests.put(f'{self._root}/catalog/pump_status/?farmID={IDs["farm"]}&sectionID={IDs["section"]}&status={status}')
     
-    def get_TS_chID(self,userID,farmID,secID):
-        chID = requests.get(f'{self._root}/catalog/channelID?userID={userID}&farmID={farmID}&sectionID={secID}').json()
+    def get_TS_chID(self,farmID,secID):
+        chID = requests.get(f'{self._root}/catalog/channelID?farmID={farmID}&sectionID={secID}').json()
         _chID = chID['ch_ID']
         return _chID
 
     def get_control_status(self,IDs):
-        _status = requests.get(f'{self._root}/catalog/control_status/?userID={IDs["user"]}&farmID={IDs["farm"]}&sectionID={IDs["section"]}').json()
+        _status = requests.get(f'{self._root}/catalog/control_status/?farmID={IDs["farm"]}&sectionID={IDs["section"]}').json()
         return _status
 
     def post_status(self,IDs, status):
-        requests.post(f'{self._root}/statistics/pump_status?userID={IDs["user"]}&farmID={IDs["farm"]}&sectionID={IDs["section"]}&status={status}')
+        requests.post(f'{self._root}/statistics/pump_status?farmID={IDs["farm"]}&sectionID={IDs["section"]}&status={status}')
 
     def get_manual_schedul(self,IDs):
-        _schedul = requests.get(f'{self._root}/catalog/manual_schedul/?userID={IDs["user"]}&farmID={IDs["farm"]}&sectionID={IDs["section"]}').json()
+        _schedul = requests.get(f'{self._root}/catalog/manual_schedul/?farmID={IDs["farm"]}&sectionID={IDs["section"]}').json()
         return _schedul
 
 class ts_publish:

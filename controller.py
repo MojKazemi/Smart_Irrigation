@@ -26,7 +26,7 @@ class MoistController:
     def notify(self, topic, message):
         msg = json.loads(message)
         
-        self.IDs['user'] = msg['userID']
+        # self.IDs['user'] = msg['userID']
         self.IDs['farm'] = msg['farmID']
         self.IDs['section'] = msg['sectionID']
 
@@ -106,11 +106,10 @@ class MoistController:
             self.sendActStatus(self.status)
 
     def sendActStatus(self, pump_state):
-        topic = '/'.join([self.baseTopic, self.IDs['user'], self.IDs['farm'],
+        topic = '/'.join([self.baseTopic, self.IDs['farm'],
                               self.IDs['section'], 'Devices', 'Pump_status'])
         print(topic)
         __message = {
-            'userID': self.IDs['user'],
             'farmID': self.IDs['farm'],
             'sectionID': self.IDs['section'],
             'bn': '',

@@ -10,16 +10,14 @@ from MyMQTT_Reqs import MyMQTT, MyRequest, ts_publish
 class Sensor:
     """docstring for Sensor"""     #baseTopic,userID,farmID,secID,senID
 
-    def __init__(self, baseTopic, userID, farmID, secID, senID ,SensorType, broker, port, TS_channelID=''):
+    def __init__(self, baseTopic, farmID, secID, senID ,SensorType, broker, port, TS_channelID=''):
         self.baseTopic = baseTopic
-        self.userID,  self.farmID, self.secID = userID, farmID, secID
+        self.farmID, self.secID = farmID, secID
         self.sensorID = str(senID)
-        self.topic = '/'.join([self.baseTopic, self.userID, self.farmID,
-                              self.secID, self.sensorID])
+        self.topic = '/'.join([self.baseTopic, self.farmID, self.secID, self.sensorID])
         self.client = MyMQTT(self.sensorID, broker, port, None)
         sensorunit = {'Temperature':'C', 'Soil_Moisture':'%'}
         self.__message = {
-            'userID': self.userID,
             'farmID': self.farmID,
             'sectionID': self.secID,
             'bn': self.sensorID,
@@ -57,20 +55,21 @@ if __name__ == '__main__':
     my_req = MyRequest()
     broker, port, baseTopic = my_req.get_broker()
     catalog_user = my_req.get_catalog()
+    catalog_farm = my_req.get_catalog_farm()
 
     Sensors = []
-    for val in catalog_user['Users'].values():
-        userID = val['userID']
-        for val_f in val['Farms'].values():
-            farmID = val_f['farmID']
-            for val_s in val_f['Sections'].values():
-                secID = val_s['sectionID']
-                ch_ID = my_req.get_TS_chID(userID,farmID,secID)
-                for sen in val_s['Devices']['Sensors'].values():
-                    senID = sen['SensorID']
-                    SensorType = sen['SensorType']
-                    sensor = Sensor(baseTopic,userID,farmID,secID,senID,SensorType,broker,port,ch_ID)
-                    Sensors.append(sensor)
+    # for val in catalog_user['Users'].values():
+    #     userID = val['userID']
+    for val_f in catalog_farm['Farms'].values():
+        farmID = val_f['farmID']
+        for val_s in val_f['Sections'].values():
+            secID = val_s['sectionID']
+            ch_ID = my_req.get_TS_chID(farmID,secID)
+            for sen in val_s['Devices']['Sensors'].values():
+                senID = sen['SensorID']
+                SensorType = sen['SensorType']
+                sensor = Sensor(baseTopic,farmID,secID,senID,SensorType,broker,port,ch_ID)
+                Sensors.append(sensor)
 
 
     
@@ -79,5 +78,5 @@ if __name__ == '__main__':
     while True:
         for sensor in Sensors:
             sensor.sendData()
-            print(sensor.userID,sensor.farmID,sensor.secID, sensor.ts_chID)
+            print(sensor.farmID,sensor.secID, sensor.ts_chID)
             time.sleep(5)
