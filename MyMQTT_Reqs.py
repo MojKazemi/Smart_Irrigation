@@ -68,8 +68,7 @@ class MyRequest:
         return catalog_broker['broker'], catalog_broker['port'], catalog_broker['baseTopic']
 
     def get_catalog(self):
-        catalog_user = requests.get(f'{self._root}/catalog/user_details').json()
-        return catalog_user
+        return requests.get(f'{self._root}/catalog/user_details').json()
 
     def get_catalog_farm(self):
         catalog_farm = requests.get(f'{self._root}/catalog/farm_details').json()
@@ -104,6 +103,18 @@ class MyRequest:
         _schedul = requests.get(f'{self._root}/catalog/manual_schedul/?farmID={IDs["farm"]}&sectionID={IDs["section"]}').json()
         return _schedul
 
+    def get_sen_val(self, IDs, sn_type):
+        val = requests.get(f'{self._root}/catalog/sen_val/?farmID={IDs["farm"]}&sectionID={IDs["section"]}&type={sn_type}').json()
+        return val
+
+    def put_sen_val(self, IDs, sn_type, value):
+        requests.put(f'{self._root}/catalog/sen_val/?farmID={IDs["farm"]}&sectionID={IDs["section"]}&type={sn_type}&value={value}')
+
+    def put_control_status(self,IDs, value):
+        requests.put(f'{self._root}/catalog/control_status/?farmID={IDs["farm"]}&sectionID={IDs["section"]}&value={value}')
+
+    def get_telegram_setting(self):
+        return requests.get("http://127.0.0.1:8080/catalog/telegram_setting").json()
 class ts_publish:
     def __init__(self, channel_ID = "2073420", ts_conf = 'ts_conf.json'):
         self.channel_ID = channel_ID

@@ -7,15 +7,16 @@ class MoistController:
         self.my_req = MyRequest()
         broker, port, baseTopic = self.my_req.get_broker()
         self.baseTopic = baseTopic
-        self.topic = f'{baseTopic}/#'
+        self.topic = f'{baseTopic}/data/#'
         self.temp_values = []
         self.mois_values = []
         self.pre_times = 5
         self.status = ''
         self.IDs={'user':'','farm':'','section':''}
         self.client = MyMQTT(userID,broker, port,notifier=self)
+        self.telegram_message={"alert":"", "farm":"", "section":""}
+        self.alarm_topic = f'{baseTopic}/alarm/'
         
-    
     def start(self):
         self.client.start()
         self.client.mySubscribe(self.topic)       
@@ -29,6 +30,7 @@ class MoistController:
         # self.IDs['user'] = msg['userID']
         self.IDs['farm'] = msg['farmID']
         self.IDs['section'] = msg['sectionID']
+        self.my_req.put_sen_val(self.IDs, msg['e']['n'], msg['e']['value'])
 
         control_status = self.my_req.get_control_status(self.IDs)
         if control_status == 'auto':
@@ -43,6 +45,7 @@ class MoistController:
                 self.ControlServo(self.temp_values, self.mois_values)
 
         elif control_status == 'manual':
+            self.checkalarm(msg)
             self.manual_control()
             
     def manual_control(self):
@@ -72,8 +75,6 @@ class MoistController:
                             self.my_req.put_status(self.IDs,self.status)
                             print(f'------>>>> become {self.status} <<<<<--------')
                             self.sendActStatus(self.status)
-
-        
 
     def ControlServo(self,temp_values, mois_values):
         if len(temp_values) > self.pre_times:
@@ -124,8 +125,17 @@ class MoistController:
         self.client.myPublish(topic, __message)
       
         self.my_req.post_status(self.IDs, pump_state)
-        
 
+    def checkalarm(self, msg):
+        if msg['e']['n'] == 'Soil_Moisture':
+            thresh_min_mois = self.my_req.get_threshold(self.IDs)['mois_min']
+            if msg['e']['value'] < thresh_min_mois:
+                print(f"alarm {msg['farmID']} {msg['sectionID']}")
+                self.telegram_message['alert'] = 'The sensor of Soil Moisture is under the threshold'
+                self.telegram_message['farm'] = msg['farmID']
+                self.telegram_message['section'] = msg['sectionID']
+                self.client.myPublish(self.alarm_topic, self.telegram_message)
+                
 if __name__ == "__main__":
     
     test = MoistController("hh")

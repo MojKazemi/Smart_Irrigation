@@ -5,7 +5,14 @@
         "port": 1883
     },
     "baseTopic": "Irrigation",
-    "telegramToken": "5597846803:AAEVCVRtc4__Rl6lqjuhyMTV4M-Vw80Idys",
+    "telegram_setting": {
+        "telegramToken": "6241647357:AAFjoNKFcc56RZJLsyeyjcNL8SOE1RyhcHw",
+        "chat_ids": [
+            1617816025,
+            109184040
+        ],
+        "alarm_topics": "Irrigation/alarm"
+    },
     "electrical_cost": 0.12,
     "user_admin": "admin",
     "admin_pass": "0000",
@@ -49,19 +56,23 @@
                             "sensor1": {
                                 "SensorID": 1,
                                 "SensorName": "DHT11",
-                                "SensorType": "Temperature"
+                                "SensorType": "Temperature",
+                                "value": 17,
+                                "topic": "Irrigation/Farm_1/Section1/1"
                             },
                             "sensor2": {
                                 "SensorID": 2,
                                 "SensorName": "SEN-13322",
-                                "SensorType": "Soil_Moisture"
+                                "SensorType": "Soil_Moisture",
+                                "value": 61,
+                                "topic": "Irrigation/Farm_1/Section1/2"
                             }
                         },
                         "Pump": {
                             "pumpID": 1,
                             "pumpName": "PMDC-12v-25w",
                             "power": 0.025,
-                            "status": "on"
+                            "status": "off"
                         }
                     },
                     "TS_ChannelID": "2073420",
@@ -79,19 +90,23 @@
                     "sectionID": "Section1",
                     "control_status": "manual",
                     "temp_threshold": 13,
-                    "mois_min_threshold": 79,
+                    "mois_min_threshold": 10,
                     "mois_max_threshold": 72,
                     "Devices": {
                         "Sensors": {
                             "sensor1": {
                                 "SensorID": 1,
                                 "SensorName": "DHT11",
-                                "SensorType": "Temperature"
+                                "SensorType": "Temperature",
+                                "value": 12,
+                                "topic": "Irrigation/Farm_2/Section1/1"
                             },
                             "sensor2": {
                                 "SensorID": 2,
                                 "SensorName": "SEN-13322",
-                                "SensorType": "Soil_Moisture"
+                                "SensorType": "Soil_Moisture",
+                                "value": 61,
+                                "topic": "Irrigation/Farm_2/Section1/2"
                             }
                         },
                         "Pump": {
@@ -129,7 +144,7 @@
             "Sections": {
                 "section1": {
                     "sectionID": "Section1",
-                    "control_status": "auto",
+                    "control_status": "manual",
                     "temp_threshold": 17,
                     "mois_min_threshold": 11,
                     "mois_max_threshold": 35,
@@ -138,19 +153,23 @@
                             "sensor1": {
                                 "SensorID": 1,
                                 "SensorName": "DHT11",
-                                "SensorType": "Temperature"
+                                "SensorType": "Temperature",
+                                "value": 24,
+                                "topic": "Irrigation/Farm_3/Section1/1"
                             },
                             "sensor2": {
                                 "SensorID": 2,
                                 "SensorName": "SEN-13322",
-                                "SensorType": "Soil_Moisture"
+                                "SensorType": "Soil_Moisture",
+                                "value": 94,
+                                "topic": "Irrigation/Farm_3/Section1/2"
                             }
                         },
                         "Pump": {
                             "pumpID": 1,
                             "pumpName": "PMDC-12v-25w",
                             "power": 0.025,
-                            "status": "off"
+                            "status": "on"
                         }
                     },
                     "TS_ChannelID": "2077507",
@@ -161,7 +180,7 @@
                 },
                 "section2": {
                     "sectionID": "Section2",
-                    "control_status": "auto",
+                    "control_status": "manual",
                     "temp_threshold": 7,
                     "mois_min_threshold": 19,
                     "mois_max_threshold": 40,
@@ -170,12 +189,16 @@
                             "sensor1": {
                                 "SensorID": 1,
                                 "SensorName": "DHT11",
-                                "SensorType": "Temperature"
+                                "SensorType": "Temperature",
+                                "value": 18,
+                                "topic": "Irrigation/Farm_3/Section2/1"
                             },
                             "sensor2": {
                                 "SensorID": 2,
                                 "SensorName": "SEN-13322",
-                                "SensorType": "Soil_Moisture"
+                                "SensorType": "Soil_Moisture",
+                                "value": 52,
+                                "topic": "Irrigation/Farm_3/Section2/2"
                             }
                         },
                         "Pump": {

@@ -72,8 +72,25 @@ class catalogAPI:
                 
                 return json.dumps(manual_schedul)
 
-            elif uri[1] == 'telegram_token':
-                return json.dumps(catalog['telegramToken'])
+            elif uri[1] == 'telegram_setting':
+                return json.dumps(catalog['telegram_setting'])
+
+            elif uri[1] == 'all_topics':
+                topics = []
+                for user in catalog['Users'].values():
+                    topics.append(user['topics'][params['type']])
+                
+                return json.dumps({"value":topics})
+
+            elif uri[1] == 'sen_val':
+                farm, sec = self.find_farm_sec(catalog, params)
+                if params['type'] == 'Temperature':
+                    sn_type = 'sensor1'
+                elif params['type'] == 'Soil_Moisture':
+                    sn_type = 'sensor2'
+                else:
+                    return json.dumps('The type of sensor is not valid')
+                return json.dumps(str(catalog['Farms'][farm]['Sections'][sec]['Devices']['Sensors'][sn_type]['value']))
             
 
 
@@ -216,7 +233,6 @@ class catalogAPI:
                 jsonFile.write(json.dumps(statis, indent=4))
                 jsonFile.close()
         
-
     def PUT(self,*uri,**params):
         # Modify information
         try:
@@ -249,6 +265,17 @@ class catalogAPI:
                 elif uri[1]== 'manual_schedul':
                     catalog['Farms'][farm]['Sections'][section]["manual_schedul"] = json.loads(params["value"])
 
+                elif uri[1] == 'sen_val':
+                    farm, sec = self.find_farm_sec(catalog, params)
+                    if params['type'] == 'Temperature':
+                        sn_type = 'sensor1'
+                    elif params['type'] == 'Soil_Moisture':
+                        sn_type = 'sensor2'
+                    else:
+                        return json.dumps('The type of sensor is not valid')
+
+                    catalog['Farms'][farm]['Sections'][sec]['Devices']['Sensors'][sn_type]['value'] = int(params['value'])
+                    
                 else:
                     raise cherrypy.HTTPError(500, "Please enter a valid request")
                 #Now modify info in the catalog...
@@ -260,7 +287,6 @@ class catalogAPI:
         except :
             raise cherrypy.HTTPError(500, "Please enter a valid request")
         
-
     def DELETE(self,*uri,**params):
 
         if uri[0] == "catalog":
@@ -317,10 +343,7 @@ class catalogAPI:
                                 return json.dumps("The farm has already deleted")
                     return json.dumps("The admin's password is incorrect")
                 return json.dumps("The user of admin is incorrect")
-
-
-        
-
+   
     def check_user_pass(self,catalog, params):
         for key, vals in catalog['Users'].items():
             if vals['userID'] == params['userID']:
@@ -331,14 +354,8 @@ class catalogAPI:
             
         return json.dumps("username is not correct")
         
-
     def find_farm_sec(self,catalog, params):
         try:
-            # for key,vals in catalog['Users'].items():
-            #     if vals['userID'] == params['userID']:
-            #         user = key
-            
-            # if params['farmID'] in catalog["Users"][user]["farm_list"]:
             for key, vals in catalog['Farms'].items():
                 if vals['farmID'] == params['farmID']:
                     farm = key
