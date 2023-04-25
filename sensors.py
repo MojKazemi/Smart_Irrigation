@@ -14,7 +14,7 @@ class Sensor:
         self.baseTopic = baseTopic
         self.farmID, self.secID = farmID, secID
         self.sensorID = str(senID)
-        self.topic = '/'.join([self.baseTopic, self.farmID, self.secID, self.sensorID])
+        self.topic = '/'.join([self.baseTopic,'data' ,self.farmID, self.secID, self.sensorID])
         self.client = MyMQTT(self.sensorID, broker, port, None)
         sensorunit = {'Temperature':'C', 'Soil_Moisture':'%'}
         self.__message = {
