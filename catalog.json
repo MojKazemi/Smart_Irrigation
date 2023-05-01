@@ -21,9 +21,9 @@
             "userID": "Moj",
             "pass": "1234",
             "farm_list": [
-                "Farm_1",
+                "Orange",
                 "Farm_2",
-                "Farm_3"
+                "Apple"
             ]
         },
         "user2": {
@@ -37,16 +37,16 @@
             "userID": "moji-23",
             "pass": "1234",
             "farm_list": [
-                "farm-m23"
+                "Apple"
             ]
         }
     },
     "Farms": {
         "farm1": {
-            "farmID": "Farm_1",
+            "farmID": "Orange",
             "Sections": {
                 "section1": {
-                    "sectionID": "Section1",
+                    "sectionID": "Orange_1",
                     "control_status": "manual",
                     "temp_threshold": 12,
                     "mois_min_threshold": 11,
@@ -57,14 +57,14 @@
                                 "SensorID": 1,
                                 "SensorName": "DHT11",
                                 "SensorType": "Temperature",
-                                "value": 17,
+                                "value": 15,
                                 "topic": "Irrigation/Farm_1/Section1/1"
                             },
                             "sensor2": {
                                 "SensorID": 2,
                                 "SensorName": "SEN-13322",
                                 "SensorType": "Soil_Moisture",
-                                "value": 61,
+                                "value": 24,
                                 "topic": "Irrigation/Farm_1/Section1/2"
                             }
                         },
@@ -88,7 +88,7 @@
             "Sections": {
                 "section1": {
                     "sectionID": "Section1",
-                    "control_status": "manual",
+                    "control_status": "auto",
                     "temp_threshold": 13,
                     "mois_min_threshold": 10,
                     "mois_max_threshold": 72,
@@ -98,15 +98,13 @@
                                 "SensorID": 1,
                                 "SensorName": "DHT11",
                                 "SensorType": "Temperature",
-                                "value": 12,
-                                "topic": "Irrigation/Farm_2/Section1/1"
+                                "value": 12
                             },
                             "sensor2": {
                                 "SensorID": 2,
                                 "SensorName": "SEN-13322",
                                 "SensorType": "Soil_Moisture",
-                                "value": 61,
-                                "topic": "Irrigation/Farm_2/Section1/2"
+                                "value": 52
                             }
                         },
                         "Pump": {
@@ -140,36 +138,34 @@
             }
         },
         "farm3": {
-            "farmID": "Farm_3",
+            "farmID": "Apple",
             "Sections": {
                 "section1": {
-                    "sectionID": "Section1",
-                    "control_status": "manual",
-                    "temp_threshold": 17,
-                    "mois_min_threshold": 11,
-                    "mois_max_threshold": 35,
+                    "sectionID": "Red_apple",
+                    "control_status": "auto",
+                    "temp_threshold": 19,
+                    "mois_min_threshold": 1,
+                    "mois_max_threshold": 10,
                     "Devices": {
                         "Sensors": {
                             "sensor1": {
                                 "SensorID": 1,
                                 "SensorName": "DHT11",
                                 "SensorType": "Temperature",
-                                "value": 24,
-                                "topic": "Irrigation/Farm_3/Section1/1"
+                                "value": 25
                             },
                             "sensor2": {
                                 "SensorID": 2,
                                 "SensorName": "SEN-13322",
                                 "SensorType": "Soil_Moisture",
-                                "value": 94,
-                                "topic": "Irrigation/Farm_3/Section1/2"
+                                "value": 41
                             }
                         },
                         "Pump": {
                             "pumpID": 1,
                             "pumpName": "PMDC-12v-25w",
                             "power": 0.025,
-                            "status": "on"
+                            "status": "off"
                         }
                     },
                     "TS_ChannelID": "2077507",
@@ -179,8 +175,8 @@
                     }
                 },
                 "section2": {
-                    "sectionID": "Section2",
-                    "control_status": "manual",
+                    "sectionID": "Yellow_apple",
+                    "control_status": "auto",
                     "temp_threshold": 7,
                     "mois_min_threshold": 19,
                     "mois_max_threshold": 40,
@@ -190,15 +186,13 @@
                                 "SensorID": 1,
                                 "SensorName": "DHT11",
                                 "SensorType": "Temperature",
-                                "value": 18,
-                                "topic": "Irrigation/Farm_3/Section2/1"
+                                "value": 10
                             },
                             "sensor2": {
                                 "SensorID": 2,
                                 "SensorName": "SEN-13322",
                                 "SensorType": "Soil_Moisture",
-                                "value": 52,
-                                "topic": "Irrigation/Farm_3/Section2/2"
+                                "value": 76
                             }
                         },
                         "Pump": {
