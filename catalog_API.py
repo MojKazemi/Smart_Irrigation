@@ -205,7 +205,29 @@ class catalogAPI:
                     "temp_threshold": None,
                     "mois_min_threshold": None,
                     "mois_max_threshold": None,
-                    "Devices":{}
+                    "Devices":{
+
+                        "Sensors": {
+                            "sensor1": {
+                                "SensorID": 1,
+                                "SensorName": "DHT11",
+                                "SensorType": "Temperature",
+                                "value": None
+                            },
+                            "sensor2": {
+                                "SensorID": 2,
+                                "SensorName": "SEN-13322",
+                                "SensorType": "Soil_Moisture",
+                                "value": None
+                            }
+                        },
+                        "Pump": {
+                            "pumpID": 1,
+                            "pumpName": "PMDC-12v-25w",
+                            "power": 0.025,
+                            "status": ""
+                        }
+                    }
                 }
             
 
@@ -318,7 +340,7 @@ class catalogAPI:
 
             if uri[1] == 'delete_sec_of_farm':
                 user = self.check_user_pass(catalog, params)
-                user,farm, sec = self.find_user_farm(catalog,params)
+                farm, sec = self.find_farm_sec(catalog,params)
 
                 del catalog['Farms'][farm]['Sections'][sec]
 
