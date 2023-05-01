@@ -200,14 +200,14 @@ class IrrigationBot:
                 _msg.append(f'{sn_type} : {sen}')
             self.bot.sendMessage(
                 chat_ID,
-                text=f"Live value of sensors in {self.init_dict[chat_ID]['IDs']['farm']} - {self.init_dict[chat_ID]['IDs']['section']}\n{_msg[0]}\n{_msg[1]}"
+                text=f"Live value of sensors in {self.init_dict[chat_ID]['IDs']['farm']} - {self.init_dict[chat_ID]['IDs']['section']}\n{_msg[0]} C\n{_msg[1]} %"
                 )
 
         elif query_data == 'thresh': 
             thresh = self.my_req.get_threshold(self.init_dict[chat_ID]['IDs'])
             self.bot.sendMessage(
                 chat_ID,
-                text=f"Thresholds of {self.init_dict[chat_ID]['IDs']['farm']} - {self.init_dict[chat_ID]['IDs']['section']}\n🌡 Temprature is: {thresh['temp']}\n💧 Minium Moisture is: {thresh['mois_min']}\n💧 Maximum Moisture is: {thresh['mois_max']}"
+                text=f"Thresholds of {self.init_dict[chat_ID]['IDs']['farm']} - {self.init_dict[chat_ID]['IDs']['section']}\n🌡 Temprature is: {thresh['temp']} C\n💧 Minium Moisture is: {thresh['mois_min']} %\n💧 Maximum Moisture is: {thresh['mois_max']} %"
                 )
 
         elif query_data == 'switch_pump':
