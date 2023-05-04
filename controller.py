@@ -52,9 +52,9 @@ class MoistController:
         _schedul = self.my_req.get_manual_schedul(self.IDs)
         if _schedul["timers"] != []:
             for period in _schedul["timers"]:
-                print(period["days"])
+                # print(period["days"])
                 days = period["days"][1:] + [period["days"][0]]
-                print(days)
+                # print(days)
                 weekday = [i for i in range(len(days)) if days[i] == 1]
                 for i in weekday:
                     _time_now = datetime.datetime.now()
@@ -73,7 +73,7 @@ class MoistController:
 
                         if self.status != prev_status:
                             self.my_req.put_status(self.IDs,self.status)
-                            print(f'------>>>> become {self.status} <<<<<--------')
+                            # print(f'------>>>> become {self.status} <<<<<--------')
                             self.sendActStatus(self.status)
 
     def ControlServo(self,temp_values, mois_values):
@@ -85,8 +85,8 @@ class MoistController:
 
         thresh = self.my_req.get_threshold(self.IDs)
         thresh['temp'], thresh['mois_min'], thresh['mois_max']
-        print(f'Temp Thresh:{thresh["temp"]}  Mois min Thresh:{thresh["mois_min"]} Mois max Thresh:{thresh["mois_max"]}')
-        print(f'mean Temp:{mean_temp}   mean Mois: {mean_mois}')
+        # print(f'Temp Thresh:{thresh["temp"]}  Mois min Thresh:{thresh["mois_min"]} Mois max Thresh:{thresh["mois_max"]}')
+        # print(f'mean Temp:{mean_temp}   mean Mois: {mean_mois}')
 
         if mean_mois > thresh["mois_min"]:
             if mean_mois < thresh["mois_max"]:
@@ -103,13 +103,13 @@ class MoistController:
 
         if self.status != prev_status:
             self.my_req.put_status(self.IDs,self.status)
-            print(f'------>>>> become {self.status} <<<<<--------')
+            # print(f'------>>>> become {self.status} <<<<<--------')
             self.sendActStatus(self.status)
 
     def sendActStatus(self, pump_state):
         topic = '/'.join([self.baseTopic, self.IDs['farm'],
                               self.IDs['section'], 'Devices', 'Pump_status'])
-        print(topic)
+        # print(topic)
         __message = {
             'farmID': self.IDs['farm'],
             'sectionID': self.IDs['section'],
@@ -130,7 +130,7 @@ class MoistController:
         if msg['e']['n'] == 'Soil_Moisture':
             thresh_min_mois = self.my_req.get_threshold(self.IDs)['mois_min']
             if msg['e']['value'] < thresh_min_mois:
-                print(f"alarm {msg['farmID']} {msg['sectionID']}")
+                # print(f"alarm {msg['farmID']} {msg['sectionID']}")
                 self.telegram_message['alert'] = 'The sensor of Soil Moisture is under the threshold'
                 self.telegram_message['farm'] = msg['farmID']
                 self.telegram_message['section'] = msg['sectionID']

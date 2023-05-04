@@ -236,20 +236,11 @@ class IrrigationBot:
         
             
 if __name__ == "__main__":
-    # Echo bot
+    
     my_req = MyRequest()
     broker, port,_ = my_req.get_broker()
     bot=IrrigationBot(broker, port)
-    # bot.start()
 
     print("Bot started ...")
     while True:
         time.sleep(3)
-
-
-    # test.start()
-    # topic = "orlando/alert/temp"
-    # for i in range(5):
-    #     message={"alert":i,"action":i**2}
-    #     test.myPublish(topic,message)
-    #     time.sleep(3)

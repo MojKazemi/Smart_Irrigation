@@ -1,0 +1,22 @@
+{
+  "name": "smart_irrigation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MojKazemi/Smart_Irrigation.git"
+  },
+  "keywords": [
+    "IoT"
+  ],
+  "author": "Mojtaba - Hamed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MojKazemi/Smart_Irrigation/issues"
+  },
+  "homepage": "https://github.com/MojKazemi/Smart_Irrigation#readme"
+}

@@ -41,7 +41,7 @@ class Sensor:
 
         # Thingspeak Broker
         payload = f"&{TS_field}=" + str(sensor_value)
-        print(payload)
+        # print(payload)
         self.publish_TS.tsPublish(payload)
 
     def start(self):
@@ -78,5 +78,5 @@ if __name__ == '__main__':
     while True:
         for sensor in Sensors:
             sensor.sendData()
-            print(sensor.farmID,sensor.secID, sensor.ts_chID)
+            # print(sensor.farmID,sensor.secID, sensor.ts_chID)
             time.sleep(5)

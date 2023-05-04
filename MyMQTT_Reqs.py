@@ -20,7 +20,8 @@ class MyMQTT:
         self._paho_mqtt.on_message = self.myOnMessageReceived
 
     def myOnConnect(self, paho_mqtt, userdata, flags, rc):
-        print("Connected to %s with result code: %d" % (self.broker, rc))
+        pass
+        # print("Connected to %s with result code: %d" % (self.broker, rc))
 
     def myOnMessageReceived(self, paho_mqtt, userdata, msg):
         # A new message is received
@@ -37,7 +38,7 @@ class MyMQTT:
         # just to remember that it works also as a subscriber
         self._isSubscriber = True
         self._topic = topic
-        print("subscribed to %s" % (topic))
+        # print("subscribed to %s" % (topic))
 
     def start(self):
         # manage connection to broker
@@ -135,7 +136,7 @@ class ts_publish:
 
     def tsSinglePublish(self, payload):
         topic = "channels/" + self.channel_ID + "/publish"
-        print ("Writing Payload = ", payload," to host: ", self.mqtt_host, " clientID= ", self.mqtt_client_ID, " User ", self.mqtt_username, " PWD ", self.mqtt_password)
+        # print ("Writing Payload = ", payload," to host: ", self.mqtt_host, " clientID= ", self.mqtt_client_ID, " User ", self.mqtt_username, " PWD ", self.mqtt_password)
         paho_mqtt_publish.single(topic, payload,
             hostname=self.mqtt_host, transport=self.t_transport,
             port=self.t_port, client_id=self.mqtt_client_ID,
@@ -144,7 +145,7 @@ class ts_publish:
     def tsPublish(self, payload):
         topic = "channels/" + self.channel_ID + "/publish"
         self.client.myPublish(topic,payload)
-        print ("Writing Payload = ", payload," to host: ", self.mqtt_host, " clientID= ", self.mqtt_client_ID)
+        # print ("Writing Payload = ", payload," to host: ", self.mqtt_host, " clientID= ", self.mqtt_client_ID)
 
     def start(self):
         self.client.start()
