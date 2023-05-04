@@ -57,14 +57,14 @@
                                 "SensorID": 1,
                                 "SensorName": "DHT11",
                                 "SensorType": "Temperature",
-                                "value": 30,
+                                "value": 29,
                                 "topic": "Irrigation/Farm_1/Section1/1"
                             },
                             "sensor2": {
                                 "SensorID": 2,
                                 "SensorName": "SEN-13322",
                                 "SensorType": "Soil_Moisture",
-                                "value": 32,
+                                "value": 8,
                                 "topic": "Irrigation/Farm_1/Section1/2"
                             }
                         },
@@ -98,13 +98,13 @@
                                 "SensorID": 1,
                                 "SensorName": "DHT11",
                                 "SensorType": "Temperature",
-                                "value": 11
+                                "value": 29
                             },
                             "sensor2": {
                                 "SensorID": 2,
                                 "SensorName": "SEN-13322",
                                 "SensorType": "Soil_Moisture",
-                                "value": 71
+                                "value": 12
                             }
                         },
                         "Pump": {
@@ -152,13 +152,13 @@
                                 "SensorID": 1,
                                 "SensorName": "DHT11",
                                 "SensorType": "Temperature",
-                                "value": 14
+                                "value": 20
                             },
                             "sensor2": {
                                 "SensorID": 2,
                                 "SensorName": "SEN-13322",
                                 "SensorType": "Soil_Moisture",
-                                "value": 2
+                                "value": 0
                             }
                         },
                         "Pump": {
@@ -186,7 +186,7 @@
                                 "SensorID": 1,
                                 "SensorName": "DHT11",
                                 "SensorType": "Temperature",
-                                "value": 30
+                                "value": 13
                             },
                             "sensor2": {
                                 "SensorID": 2,
@@ -199,7 +199,7 @@
                             "pumpID": 1,
                             "pumpName": "PMDC-12v-25w",
                             "power": 0.025,
-                            "status": "on"
+                            "status": "off"
                         }
                     },
                     "TS_ChannelID": "2077714",

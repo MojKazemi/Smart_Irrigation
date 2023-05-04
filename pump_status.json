@@ -619,6 +619,21 @@
             "t": "02/05/2023 01:11:25",
             "r": "Apple/Yellow_apple",
             "status": "on"
+        },
+        {
+            "t": "04/05/2023 19:05:37",
+            "r": "Apple/Yellow_apple",
+            "status": "off"
+        },
+        {
+            "t": "04/05/2023 19:07:03",
+            "r": "Apple/Yellow_apple",
+            "status": "on"
+        },
+        {
+            "t": "04/05/2023 19:07:42",
+            "r": "Apple/Yellow_apple",
+            "status": "off"
         }
     ]
 }

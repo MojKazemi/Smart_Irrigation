@@ -24,3 +24,6 @@ COPY IoT_Dashboard.json /data/flows.json
 
 # the command that will be executed when the container will start
 CMD ["python3","./smart_Irrigation.py"]
+
+
+#sudo docker save irrigation_iot -o irrigation_iot.tar
