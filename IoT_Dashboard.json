@@ -1,0 +1,5220 @@
+[
+    {
+        "id": "0998292695b46f5e",
+        "type": "tab",
+        "label": "Home",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "2a5cdca7bbb39636",
+        "type": "tab",
+        "label": "Home-Live - consumption",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "5e6383022ba901b9",
+        "type": "tab",
+        "label": "Setting",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "cd21bbe43ddf3792",
+        "type": "tab",
+        "label": "Admin Setting",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "3bab716a8a493dbf",
+        "type": "subflow",
+        "name": "HumidUI (2)",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 140,
+                "y": 140,
+                "wires": [
+                    {
+                        "id": "37193b5976b8907d"
+                    },
+                    {
+                        "id": "8343c4742146fe3f"
+                    }
+                ]
+            }
+        ],
+        "out": [],
+        "env": [
+            {
+                "name": "deviceID",
+                "type": "dev",
+                "value": "",
+                "ui": {
+                    "icon": "font-awesome/fa-server",
+                    "type": "input",
+                    "opts": {
+                        "types": [
+                            "dev",
+                            "file",
+                            "env"
+                        ]
+                    }
+                }
+            }
+        ],
+        "color": "#3FADB5",
+        "icon": "node-red-dashboard/ui_chart.png"
+    },
+    {
+        "id": "2197f9b20e245122",
+        "type": "subflow",
+        "name": "TempUI (2)",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 120,
+                "y": 249,
+                "wires": [
+                    {
+                        "id": "b8f1f2881f690446"
+                    },
+                    {
+                        "id": "b7cc2d5e27f8b491"
+                    }
+                ]
+            }
+        ],
+        "out": [],
+        "env": [
+            {
+                "name": "deviceID",
+                "type": "dev",
+                "value": "",
+                "ui": {
+                    "icon": "font-awesome/fa-server",
+                    "type": "input",
+                    "opts": {
+                        "types": [
+                            "dev",
+                            "file",
+                            "env"
+                        ]
+                    }
+                }
+            }
+        ],
+        "meta": {},
+        "color": "#3FADB5",
+        "icon": "node-red-dashboard/ui_chart.png"
+    },
+    {
+        "id": "85bdec3d3b38f4c8",
+        "type": "group",
+        "z": "2a5cdca7bbb39636",
+        "name": "",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "c9c0393dce0b831c",
+            "5e1df0da91902ccf",
+            "7a3ad05c3ecf1f51",
+            "a8d72255fd7c0f00",
+            "fb59e967458bb44f",
+            "74933ee654791aad"
+        ],
+        "x": 14,
+        "y": 219,
+        "w": 872,
+        "h": 122
+    },
+    {
+        "id": "2cb36a14f2f628cd",
+        "type": "group",
+        "z": "cd21bbe43ddf3792",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "a3a87a98a79a1835",
+            "61b12374ba4d439d",
+            "0a2786e5e54415ee",
+            "a9e689d113ec1966",
+            "904c4f75b5923b52",
+            "9696b0e229ef10b9",
+            "a840ce73969ba91d",
+            "4cbaf9876949ddd7",
+            "0489cf890f9230d6",
+            "6405fba2469076bd",
+            "eeef4170c7889fb7",
+            "196a40421a0623bb"
+        ],
+        "x": 94,
+        "y": 1839,
+        "w": 972,
+        "h": 282
+    },
+    {
+        "id": "f26e18f67ba7d048",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "mqtt.eclipseprojects.io",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "b37b344a9463c1ad",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "0ca708bd9099f601",
+        "type": "ui_group",
+        "name": "User Interface",
+        "tab": "da280d668b2e4eac",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f5af14529f0caa82",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "d6d42a467721bbee",
+        "type": "ui_group",
+        "name": "Threshold",
+        "tab": "da280d668b2e4eac",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "da280d668b2e4eac",
+        "type": "ui_tab",
+        "name": "Setting",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "760d542e0573d812",
+        "type": "ui_group",
+        "name": "sensor history",
+        "tab": "f5af14529f0caa82",
+        "order": 3,
+        "disp": false,
+        "width": "9",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "70fb6f524aecfe93",
+        "type": "ui_group",
+        "name": "Energy Consumption",
+        "tab": "f5af14529f0caa82",
+        "order": 4,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "872843d3cbac360c",
+        "type": "ui_group",
+        "name": "Sensor Live",
+        "tab": "f5af14529f0caa82",
+        "order": 2,
+        "disp": false,
+        "width": "9",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "916344f8e027fd93",
+        "type": "ui_group",
+        "name": "Schedual",
+        "tab": "da280d668b2e4eac",
+        "order": 3,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a8c22ba9.e3a698",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "67b508c8.9e9318",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "67b508c8.9e9318",
+        "type": "ui_tab",
+        "name": "Test-Time",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "083d461c605f29cf",
+        "type": "ui_group",
+        "name": "Header",
+        "tab": "f5af14529f0caa82",
+        "order": 1,
+        "disp": false,
+        "width": "26",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7c5f63df709b2b71",
+        "type": "ui_group",
+        "name": "Manual_schedule",
+        "tab": "da280d668b2e4eac",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5188a4cc66916299",
+        "type": "ui_group",
+        "z": "3bab716a8a493dbf",
+        "name": "Humidity",
+        "tab": "e078c6b.429dd38",
+        "order": 3,
+        "disp": true,
+        "width": 19,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b1b078c3d9f60dd3",
+        "type": "ui_group",
+        "z": "2197f9b20e245122",
+        "name": "Default",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "78467dade0c57cfb",
+        "type": "ui_group",
+        "z": "2197f9b20e245122",
+        "name": "Temperature",
+        "tab": "e078c6b.429dd38",
+        "order": 2,
+        "disp": true,
+        "width": 19,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e078c6b.429dd38",
+        "type": "ui_tab",
+        "name": "Dashboard",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": true,
+        "hidden": true
+    },
+    {
+        "id": "210b3638edc51bb5",
+        "type": "ui_group",
+        "name": "Table",
+        "tab": "e078c6b.429dd38",
+        "order": 4,
+        "disp": true,
+        "width": "19",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c1e6de0d4d0c97f8",
+        "type": "ui_group",
+        "name": "Heading",
+        "tab": "e078c6b.429dd38",
+        "order": 1,
+        "disp": false,
+        "width": 19,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a8ace2a4a1cbed29",
+        "type": "ui_tab",
+        "name": "Admin Setting",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "3d6baf595358e84c",
+        "type": "ui_group",
+        "name": "Add User",
+        "tab": "a8ace2a4a1cbed29",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "3d79b00d87650532",
+        "type": "ui_group",
+        "name": "Add Farm",
+        "tab": "a8ace2a4a1cbed29",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "98725e43d801d2c7",
+        "type": "ui_group",
+        "name": "Add Section",
+        "tab": "a8ace2a4a1cbed29",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5eaa1609f4ba21bd",
+        "type": "ui_group",
+        "name": "Delete",
+        "tab": "a8ace2a4a1cbed29",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7c9cbac3de8fa724",
+        "type": "ui_group",
+        "name": "Admin",
+        "tab": "a8ace2a4a1cbed29",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "37193b5976b8907d",
+        "type": "ui_gauge",
+        "z": "3bab716a8a493dbf",
+        "name": "Humid Gauge",
+        "group": "5188a4cc66916299",
+        "order": 1,
+        "width": 9,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Humidity",
+        "label": "%",
+        "format": "{{value | number:1}}",
+        "min": "60",
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "80",
+        "seg2": "92",
+        "className": "",
+        "x": 440,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "8343c4742146fe3f",
+        "type": "ui_chart",
+        "z": "3bab716a8a493dbf",
+        "name": "Humidity Chart",
+        "group": "5188a4cc66916299",
+        "order": 2,
+        "width": 10,
+        "height": 4,
+        "label": "Humidity (%)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "step",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "20",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#2ca02c",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 440,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b8f1f2881f690446",
+        "type": "ui_gauge",
+        "z": "2197f9b20e245122",
+        "name": "TempGauge",
+        "group": "78467dade0c57cfb",
+        "order": 1,
+        "width": 8,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Temperature",
+        "label": "C",
+        "format": "{{value | number:1}}",
+        "min": "40",
+        "max": "60",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "50",
+        "seg2": "56",
+        "className": "",
+        "x": 330,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "b7cc2d5e27f8b491",
+        "type": "ui_chart",
+        "z": "2197f9b20e245122",
+        "name": "Temp Chart",
+        "group": "78467dade0c57cfb",
+        "order": 2,
+        "width": 11,
+        "height": 4,
+        "label": "Temperature (C)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "step",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "20",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "chart",
+        "x": 330,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4e27f6bfa25e92b6",
+        "type": "http request",
+        "z": "0998292695b46f5e",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": true,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 630,
+        "y": 120,
+        "wires": [
+            [
+                "a5b1bab102d9f648"
+            ]
+        ]
+    },
+    {
+        "id": "6084021616b371ff",
+        "type": "ui_text",
+        "z": "0998292695b46f5e",
+        "group": "083d461c605f29cf",
+        "order": 5,
+        "width": "6",
+        "height": "1",
+        "name": "",
+        "label": "Pump status    ",
+        "format": "<font color={{msg.color}} ><i class=\"fa fa-circle\" style=\"font-size:24px;\"></i></font>   {{msg.payload}}",
+        "layout": "row-center",
+        "className": "",
+        "x": 970,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "df1f5ab443de66ed",
+        "type": "function",
+        "z": "0998292695b46f5e",
+        "name": "Make Link status of pump",
+        "func": "if (msg.payload == \"trig\") {\n    let tmp = {};\n    let user = global.get(\"user\");\n    let farm = global.get(\"farm\");\n    let sec = global.get(\"section\");\n    global.set(\"pump_check\", \"off\");\n    tmp.method = \"GET\";\n    let link = `http://127.0.0.1:8080/catalog/pump_status?userID=${user}&farmID=${farm}&sectionID=${sec}`;\n    tmp.url = link;\n    return tmp;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nlet tmp = {};\nlet user = global.get(\"user\");\nlet farm = global.get(\"farm\");\nlet sec = global.get(\"section\");\ntmp.method = \"GET\";\nlet link = `http://127.0.0.1:8080/catalog/pump_status?userID=${user}&farmID=${farm}&sectionID=${sec}`;\ntmp.url = link;\nreturn tmp;",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 120,
+        "wires": [
+            [
+                "4e27f6bfa25e92b6"
+            ]
+        ]
+    },
+    {
+        "id": "ef5c5e5cfc1580aa",
+        "type": "inject",
+        "z": "0998292695b46f5e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "pump_check",
+        "payloadType": "global",
+        "x": 140,
+        "y": 120,
+        "wires": [
+            [
+                "df1f5ab443de66ed"
+            ]
+        ]
+    },
+    {
+        "id": "2cadd8db8499569f",
+        "type": "function",
+        "z": "0998292695b46f5e",
+        "name": "Make Link status of pump",
+        "func": "let tmp = {};\nlet user = global.get(\"user\");\nlet farm = global.get(\"farm\");\nlet sec = global.get(\"section\");\nglobal.set(\"pump_check\", \"off\");\ntmp.method = \"GET\";\nlet link = `http://127.0.0.1:8080/catalog/pump_status?userID=${user}&farmID=${farm}&sectionID=${sec}`;\ntmp.url = link;\nreturn tmp;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nlet tmp = {};\nlet user = global.get(\"user\");\nlet farm = global.get(\"farm\");\nlet sec = global.get(\"section\");\ntmp.method = \"GET\";\nlet link = `http://127.0.0.1:8080/catalog/pump_status?userID=${user}&farmID=${farm}&sectionID=${sec}`;\ntmp.url = link;\nreturn tmp;",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 80,
+        "wires": [
+            [
+                "4e27f6bfa25e92b6"
+            ]
+        ]
+    },
+    {
+        "id": "c17cc24359c14948",
+        "type": "ui_chart",
+        "z": "0998292695b46f5e",
+        "name": "",
+        "group": "760d542e0573d812",
+        "order": 5,
+        "width": "10",
+        "height": "7",
+        "label": "Moisture History",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "dd HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "3",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 920,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7f5edf8bedf80540",
+        "type": "function",
+        "z": "0998292695b46f5e",
+        "name": "function 8",
+        "func": "let tmp = {};\n// const s_date = new Date(msg.payload.start);\nconst s_date = flow.get(\"s_date_live\")\nlet s_year = s_date.getFullYear();\nconst s_month = s_date.getMonth()+1;\nconst s_day = s_date.getDate();\n\n// const e_date = new Date(msg.payload.end);\nconst e_date = flow.get(\"e_date_live\")\nlet e_year = e_date.getFullYear();\nconst e_month = e_date.getMonth()+1;\nconst e_day = e_date.getDate();\n\nconst ch_ID = global.get(\"TS_CH_ID\");\n\ntmp.method = \"GET\";\nlet link = `https://api.thingspeak.com/channels/${ch_ID}/feeds.json?start=${s_year}-${s_month}-${s_day}%2000:00:00&end=${e_year}-${e_month}-${e_day}%2023:59:59`;\ntmp.url = link;\nreturn tmp;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 220,
+        "wires": [
+            [
+                "442f67f2f3c89d6e"
+            ]
+        ]
+    },
+    {
+        "id": "357beb5e9f6d0e49",
+        "type": "ui_date_picker",
+        "z": "0998292695b46f5e",
+        "name": "",
+        "label": "From",
+        "group": "760d542e0573d812",
+        "order": 2,
+        "width": "4",
+        "height": "1",
+        "passthru": true,
+        "topic": "start",
+        "topicType": "str",
+        "className": "",
+        "x": 70,
+        "y": 320,
+        "wires": [
+            [
+                "49fcdf7830ccad57"
+            ]
+        ]
+    },
+    {
+        "id": "98778549de196ff9",
+        "type": "ui_date_picker",
+        "z": "0998292695b46f5e",
+        "name": "",
+        "label": "To",
+        "group": "760d542e0573d812",
+        "order": 3,
+        "width": "4",
+        "height": "1",
+        "passthru": true,
+        "topic": "end",
+        "topicType": "str",
+        "className": "",
+        "x": 70,
+        "y": 360,
+        "wires": [
+            [
+                "49fcdf7830ccad57"
+            ]
+        ]
+    },
+    {
+        "id": "49fcdf7830ccad57",
+        "type": "join",
+        "z": "0998292695b46f5e",
+        "name": "",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": true,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 210,
+        "y": 340,
+        "wires": [
+            [
+                "74fb20d892629e47"
+            ]
+        ]
+    },
+    {
+        "id": "442f67f2f3c89d6e",
+        "type": "http request",
+        "z": "0998292695b46f5e",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": true,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 490,
+        "y": 220,
+        "wires": [
+            [
+                "aaebf4e2ddc8a3cc",
+                "5edfd25ee61735b3"
+            ]
+        ]
+    },
+    {
+        "id": "62452781e7e820be",
+        "type": "ui_chart",
+        "z": "0998292695b46f5e",
+        "name": "",
+        "group": "760d542e0573d812",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "label": "Temprature History",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "dd HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 930,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aaebf4e2ddc8a3cc",
+        "type": "python3-function",
+        "z": "0998292695b46f5e",
+        "name": "",
+        "func": "from datetime import datetime\ntmp ={}\nchart = {\"series\":[],\"data\":[],\"labels\":[]}\ndata =[]\n\nimport_data = msg[\"payload\"][\"feeds\"]\nfor val in import_data:\n    datetime_obj = datetime.strptime(val[\"created_at\"], '%Y-%m-%dT%H:%M:%SZ')\n    timestamp = (datetime_obj - datetime(1970, 1, 1)).total_seconds()\n    # timestamp = datetime_obj.timestamp()\n    if val[\"field1\"] != None:\n        data.append({\"x\":val[\"created_at\"],\"y\":float(val[\"field1\"].replace('\"',''))})\n\nchart[\"series\"] = [\"A\"]\nchart[\"labels\"] = [\"\"]\n\nchart[\"data\"] = [data]\ntmp[\"payload\"] = [chart]\nreturn tmp",
+        "outputs": 1,
+        "x": 690,
+        "y": 220,
+        "wires": [
+            [
+                "62452781e7e820be"
+            ]
+        ]
+    },
+    {
+        "id": "5edfd25ee61735b3",
+        "type": "python3-function",
+        "z": "0998292695b46f5e",
+        "name": "",
+        "func": "from datetime import datetime\ntmp ={}\nchart = {\"series\":[],\"data\":[],\"labels\":[]}\ndata =[]\n\nimport_data = msg[\"payload\"][\"feeds\"]\nfor val in import_data:\n    datetime_obj = datetime.strptime(val[\"created_at\"], '%Y-%m-%dT%H:%M:%SZ')\n    timestamp = (datetime_obj - datetime(1970, 1, 1)).total_seconds()\n    # timestamp = datetime_obj.timestamp()\n    if val[\"field2\"] != None:\n        data.append({\"x\":val[\"created_at\"],\"y\":float(val[\"field2\"].replace('\"',''))})\n\nchart[\"series\"] = [\"A\"]\nchart[\"labels\"] = [\"\"]\n\nchart[\"data\"] = [data]\ntmp[\"payload\"] = [chart]\nreturn tmp",
+        "outputs": 1,
+        "x": 690,
+        "y": 300,
+        "wires": [
+            [
+                "c17cc24359c14948"
+            ]
+        ]
+    },
+    {
+        "id": "372c17dd8c26d8d8",
+        "type": "inject",
+        "z": "0998292695b46f5e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 60,
+        "wires": [
+            [
+                "2cadd8db8499569f"
+            ]
+        ]
+    },
+    {
+        "id": "a5b1bab102d9f648",
+        "type": "function",
+        "z": "0998292695b46f5e",
+        "name": "function 15",
+        "func": "msg.color = (msg.payload == \"on\")?\"lime\":\"red\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 120,
+        "wires": [
+            [
+                "6084021616b371ff"
+            ]
+        ]
+    },
+    {
+        "id": "850b62b0f4da9fb4",
+        "type": "link in",
+        "z": "0998292695b46f5e",
+        "name": "link in 4",
+        "links": [
+            "d798175cd4eff33c"
+        ],
+        "x": 205,
+        "y": 180,
+        "wires": [
+            [
+                "7f5edf8bedf80540"
+            ]
+        ]
+    },
+    {
+        "id": "74fb20d892629e47",
+        "type": "function",
+        "z": "0998292695b46f5e",
+        "name": "function 18",
+        "func": "const s_date = new Date(msg.payload.start);\nflow.set(\"s_date_live\", s_date);\nconst e_date = new Date(msg.payload.end);\nflow.set(\"e_date_live\", e_date)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 150,
+        "y": 220,
+        "wires": [
+            [
+                "7f5edf8bedf80540"
+            ]
+        ]
+    },
+    {
+        "id": "eeb8137bfe9545a9",
+        "type": "function",
+        "z": "2a5cdca7bbb39636",
+        "name": "function 9",
+        "func": "let tmp = {};\n\nconst ch_ID = global.get(\"TS_CH_ID\");\n\ntmp.method = \"GET\";\nlet link = `https://api.thingspeak.com/channels/${ch_ID}/fields/1/last.json`;\ntmp.url = link;\nreturn tmp;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 260,
+        "y": 100,
+        "wires": [
+            [
+                "33d40c77ce5108a6"
+            ]
+        ]
+    },
+    {
+        "id": "33d40c77ce5108a6",
+        "type": "http request",
+        "z": "2a5cdca7bbb39636",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": true,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 410,
+        "y": 100,
+        "wires": [
+            [
+                "743b46840ee16812"
+            ]
+        ]
+    },
+    {
+        "id": "743b46840ee16812",
+        "type": "python3-function",
+        "z": "2a5cdca7bbb39636",
+        "name": "",
+        "func": "tmp={}\nval = msg['payload']['field1']\n# tmp[\"payload\"] =\ntmp[\"payload\"] = float(val.replace('\"',''))\nreturn tmp",
+        "outputs": 1,
+        "x": 590,
+        "y": 100,
+        "wires": [
+            [
+                "55aab9519eb7f30a"
+            ]
+        ]
+    },
+    {
+        "id": "ec33341ca706a163",
+        "type": "ui_button",
+        "z": "2a5cdca7bbb39636",
+        "name": "",
+        "group": "872843d3cbac360c",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Refresh",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-refresh",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 60,
+        "y": 100,
+        "wires": [
+            [
+                "eeb8137bfe9545a9",
+                "3b355525932c851b"
+            ]
+        ]
+    },
+    {
+        "id": "55aab9519eb7f30a",
+        "type": "ui_gauge",
+        "z": "2a5cdca7bbb39636",
+        "name": "",
+        "group": "872843d3cbac360c",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperature Live",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 810,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "3b355525932c851b",
+        "type": "function",
+        "z": "2a5cdca7bbb39636",
+        "name": "function 10",
+        "func": "let tmp = {};\n\nconst ch_ID = global.get(\"TS_CH_ID\");\n\ntmp.method = \"GET\";\nlet link = `https://api.thingspeak.com/channels/${ch_ID}/fields/2/last.json`;\ntmp.url = link;\nreturn tmp;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 250,
+        "y": 160,
+        "wires": [
+            [
+                "51663efd3b34374d"
+            ]
+        ]
+    },
+    {
+        "id": "51663efd3b34374d",
+        "type": "http request",
+        "z": "2a5cdca7bbb39636",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": true,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 410,
+        "y": 160,
+        "wires": [
+            [
+                "c7b69f69a41cabbe"
+            ]
+        ]
+    },
+    {
+        "id": "c7b69f69a41cabbe",
+        "type": "python3-function",
+        "z": "2a5cdca7bbb39636",
+        "name": "",
+        "func": "tmp={}\nval = msg['payload']['field2']\n# tmp[\"payload\"] =\ntmp[\"payload\"] = float(val.replace('\"',''))\nreturn tmp",
+        "outputs": 1,
+        "x": 580,
+        "y": 160,
+        "wires": [
+            [
+                "dc0bd0517833057f"
+            ]
+        ]
+    },
+    {
+        "id": "dc0bd0517833057f",
+        "type": "ui_gauge",
+        "z": "2a5cdca7bbb39636",
+        "name": "",
+        "group": "872843d3cbac360c",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Soil moisture Live",
+        "label": "units",
+        "format": "{{value}}%",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 800,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "c9c0393dce0b831c",
+        "type": "function",
+        "z": "2a5cdca7bbb39636",
+        "d": true,
+        "g": "85bdec3d3b38f4c8",
+        "name": "function 11",
+        "func": "let tmp = {};\nconst s_date = new Date(msg.payload.start);\nlet s_year = s_date.getFullYear();\nconst s_month = s_date.getMonth()+1;\nconst s_day = s_date.getDate();\n\nconst e_date = new Date(msg.payload.end);\nlet e_year = e_date.getFullYear();\nconst e_month = e_date.getMonth()+1;\nconst e_day = e_date.getDate();\n\ntmp.method = \"GET\";\nlet link = `http://127.0.0.1:8080/statistic/period?userID=${global.get(\"user\")}&farmID=${global.get(\"farm\")}&sectionID=${global.get(\"section\")}&start=${s_day}/${s_month}/${s_year} 00:00:00&end=${e_day}/${e_month}/${e_year} 23:59:59`\ntmp.url = link;\nreturn tmp;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 280,
+        "wires": [
+            [
+                "fb59e967458bb44f"
+            ]
+        ]
+    },
+    {
+        "id": "5e1df0da91902ccf",
+        "type": "ui_date_picker",
+        "z": "2a5cdca7bbb39636",
+        "d": true,
+        "g": "85bdec3d3b38f4c8",
+        "name": "",
+        "label": "From",
+        "group": "70fb6f524aecfe93",
+        "order": 1,
+        "width": "4",
+        "height": "1",
+        "passthru": true,
+        "topic": "start",
+        "topicType": "str",
+        "className": "",
+        "x": 90,
+        "y": 260,
+        "wires": [
+            [
+                "a8d72255fd7c0f00"
+            ]
+        ]
+    },
+    {
+        "id": "7a3ad05c3ecf1f51",
+        "type": "ui_date_picker",
+        "z": "2a5cdca7bbb39636",
+        "d": true,
+        "g": "85bdec3d3b38f4c8",
+        "name": "",
+        "label": "To",
+        "group": "70fb6f524aecfe93",
+        "order": 2,
+        "width": "4",
+        "height": "1",
+        "passthru": true,
+        "topic": "end",
+        "topicType": "str",
+        "className": "",
+        "x": 90,
+        "y": 300,
+        "wires": [
+            [
+                "a8d72255fd7c0f00"
+            ]
+        ]
+    },
+    {
+        "id": "a8d72255fd7c0f00",
+        "type": "join",
+        "z": "2a5cdca7bbb39636",
+        "g": "85bdec3d3b38f4c8",
+        "name": "",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": true,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 230,
+        "y": 280,
+        "wires": [
+            [
+                "c9c0393dce0b831c"
+            ]
+        ]
+    },
+    {
+        "id": "fb59e967458bb44f",
+        "type": "http request",
+        "z": "2a5cdca7bbb39636",
+        "g": "85bdec3d3b38f4c8",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": true,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 560,
+        "y": 280,
+        "wires": [
+            [
+                "74933ee654791aad"
+            ]
+        ]
+    },
+    {
+        "id": "74933ee654791aad",
+        "type": "ui_gauge",
+        "z": "2a5cdca7bbb39636",
+        "d": true,
+        "g": "85bdec3d3b38f4c8",
+        "name": "",
+        "group": "70fb6f524aecfe93",
+        "order": 3,
+        "width": "7",
+        "height": "4",
+        "gtype": "gage",
+        "title": "Enegy Consumption",
+        "label": "€",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 760,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "a17d8e1f3b5abc43",
+        "type": "function",
+        "z": "2a5cdca7bbb39636",
+        "name": "function 12",
+        "func": "let tmp = {};\nlet s_date = flow.get(\"date_cons\")\n// const s_date = new Date(pre_Date)\n// const s_date = new Date(msg.payload);\nlet s_year = s_date.getFullYear();\nconst s_month = s_date.getMonth()+1;\nconst s_day = s_date.getDate();\n\ntmp.method = \"GET\";\nlet link = `http://127.0.0.1:8080/statistic/day?userID=${global.get(\"user\")}&farmID=${global.get(\"farm\")}&sectionID=${global.get(\"section\")}&day=${s_day}/${s_month}/${s_year}`\ntmp.url = link;\nreturn tmp;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 400,
+        "wires": [
+            [
+                "9aa11a7eb914d5e5"
+            ]
+        ]
+    },
+    {
+        "id": "646e42af03621026",
+        "type": "ui_date_picker",
+        "z": "2a5cdca7bbb39636",
+        "name": "",
+        "label": "Date",
+        "group": "70fb6f524aecfe93",
+        "order": 4,
+        "width": "4",
+        "height": "1",
+        "passthru": false,
+        "topic": "start",
+        "topicType": "str",
+        "className": "",
+        "x": 70,
+        "y": 400,
+        "wires": [
+            [
+                "ca986fc75e03f601"
+            ]
+        ]
+    },
+    {
+        "id": "9aa11a7eb914d5e5",
+        "type": "http request",
+        "z": "2a5cdca7bbb39636",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": true,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 560,
+        "y": 400,
+        "wires": [
+            [
+                "9bde3388bea2dfdd"
+            ]
+        ]
+    },
+    {
+        "id": "9bde3388bea2dfdd",
+        "type": "ui_gauge",
+        "z": "2a5cdca7bbb39636",
+        "name": "",
+        "group": "70fb6f524aecfe93",
+        "order": 5,
+        "width": "0",
+        "height": "0",
+        "gtype": "gage",
+        "title": "Daily Enegy Consumption",
+        "label": "€",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "20",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 770,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "d48927479cadd3c7",
+        "type": "ui_chart",
+        "z": "2a5cdca7bbb39636",
+        "name": "",
+        "group": "70fb6f524aecfe93",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "label": "Monthly usage",
+        "chartType": "horizontalBar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 920,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "af2751c6ef37a274",
+        "type": "function",
+        "z": "2a5cdca7bbb39636",
+        "name": "function 14",
+        "func": "let tmp={}\nlet selected_year = flow.get(\"year_selected\")\n\ntmp.method = \"GET\";\nlet link = `http://127.0.0.1:8080/statistic/year?userID=${global.get(\"user\")}&farmID=${global.get(\"farm\")}&sectionID=${global.get(\"section\")}&year=${selected_year}`\ntmp.url = link;\nreturn tmp;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 620,
+        "wires": [
+            [
+                "67402b92556bc563"
+            ]
+        ]
+    },
+    {
+        "id": "67402b92556bc563",
+        "type": "http request",
+        "z": "2a5cdca7bbb39636",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": true,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 510,
+        "y": 620,
+        "wires": [
+            [
+                "0fcf19bdf0a69dcb"
+            ]
+        ]
+    },
+    {
+        "id": "0fcf19bdf0a69dcb",
+        "type": "python3-function",
+        "z": "2a5cdca7bbb39636",
+        "name": "",
+        "func": "tmp = {}\n_cons = []\n_month = ['January', 'February', 'March', 'April', 'May', 'June',\n'July', 'August', 'September', 'October', 'November', 'December']\n\n\n_dict = msg[\"payload\"]\nfor month in _month:\n    _cons.append(_dict[month])\n# for key, value in _dict.items():\n#     _cons.append(value)\n#     _month.append(key)\n    \ntmp['payload'] = [{\n    \"series\": [\"temp1\"],\n    \"data\": [_cons],\n    \"labels\": _month\n}];\n    \ntmp[\"cons\"] = _cons\ntmp[\"month\"] = _month\nreturn tmp",
+        "outputs": 1,
+        "x": 730,
+        "y": 620,
+        "wires": [
+            [
+                "d48927479cadd3c7",
+                "ed74be8df7a63dda"
+            ]
+        ]
+    },
+    {
+        "id": "1637510783772718",
+        "type": "ui_dropdown",
+        "z": "2a5cdca7bbb39636",
+        "name": "",
+        "label": "Select Year",
+        "tooltip": "",
+        "place": "",
+        "group": "70fb6f524aecfe93",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "var startYear = moment().subtract(10, 'years').year(); // ten years ago var endYear = moment().year(); var yearOptions = []; for (var year = startYear; year <= endYear; year++) {     yearOptions.push({         \"value\": year,         \"label\": year.toString()     }); } return yearOptions;Select option",
+        "x": 530,
+        "y": 520,
+        "wires": [
+            [
+                "87731338f3453fed"
+            ]
+        ]
+    },
+    {
+        "id": "eeeb3715341ae164",
+        "type": "python3-function",
+        "z": "2a5cdca7bbb39636",
+        "name": "",
+        "func": "from datetime import datetime\nyear = datetime.now().year\nyears =[]\nfor i in range(10):\n    years.append(year - i)\nmsg[\"options\"] = years\nreturn msg",
+        "outputs": 1,
+        "x": 310,
+        "y": 520,
+        "wires": [
+            [
+                "1637510783772718"
+            ]
+        ]
+    },
+    {
+        "id": "52baa92c3b23500c",
+        "type": "inject",
+        "z": "2a5cdca7bbb39636",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 520,
+        "wires": [
+            [
+                "eeeb3715341ae164"
+            ]
+        ]
+    },
+    {
+        "id": "c60bfc084123f182",
+        "type": "link in",
+        "z": "2a5cdca7bbb39636",
+        "name": "link in 1",
+        "links": [
+            "d798175cd4eff33c"
+        ],
+        "x": 265,
+        "y": 360,
+        "wires": [
+            [
+                "a17d8e1f3b5abc43"
+            ]
+        ]
+    },
+    {
+        "id": "ca986fc75e03f601",
+        "type": "function",
+        "z": "2a5cdca7bbb39636",
+        "name": "function 16",
+        "func": "const s_date = new Date(msg.payload)\nflow.set(\"date_cons\", s_date);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 210,
+        "y": 400,
+        "wires": [
+            [
+                "a17d8e1f3b5abc43"
+            ]
+        ]
+    },
+    {
+        "id": "87731338f3453fed",
+        "type": "function",
+        "z": "2a5cdca7bbb39636",
+        "name": "function 17",
+        "func": "flow.set(\"year_selected\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 130,
+        "y": 620,
+        "wires": [
+            [
+                "af2751c6ef37a274"
+            ]
+        ]
+    },
+    {
+        "id": "83052337058ff6cd",
+        "type": "link in",
+        "z": "2a5cdca7bbb39636",
+        "name": "link in 2",
+        "links": [
+            "d798175cd4eff33c"
+        ],
+        "x": 185,
+        "y": 660,
+        "wires": [
+            [
+                "af2751c6ef37a274"
+            ]
+        ]
+    },
+    {
+        "id": "f0696bfdd0678e17",
+        "type": "link in",
+        "z": "2a5cdca7bbb39636",
+        "name": "link in 3",
+        "links": [
+            "d798175cd4eff33c"
+        ],
+        "x": 115,
+        "y": 160,
+        "wires": [
+            [
+                "eeb8137bfe9545a9",
+                "3b355525932c851b"
+            ]
+        ]
+    },
+    {
+        "id": "ed74be8df7a63dda",
+        "type": "debug",
+        "z": "2a5cdca7bbb39636",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "1272f48a860086ba",
+        "type": "inject",
+        "z": "2a5cdca7bbb39636",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 90,
+        "y": 40,
+        "wires": [
+            [
+                "eeb8137bfe9545a9",
+                "3b355525932c851b"
+            ]
+        ]
+    },
+    {
+        "id": "d79cd6da65ce9dba",
+        "type": "ui_slider",
+        "z": "5e6383022ba901b9",
+        "name": "",
+        "label": "Temprature   ",
+        "tooltip": "",
+        "group": "d6d42a467721bbee",
+        "order": 1,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "outs": "all",
+        "topic": "temp",
+        "topicType": "str",
+        "min": 0,
+        "max": "30",
+        "step": 1,
+        "className": "",
+        "x": 1210,
+        "y": 340,
+        "wires": [
+            [
+                "4ddc932b6f8aa30a",
+                "394468a3d49587cb"
+            ]
+        ]
+    },
+    {
+        "id": "381cfc162991fc4a",
+        "type": "ui_slider",
+        "z": "5e6383022ba901b9",
+        "name": "",
+        "label": "Min Moisture",
+        "tooltip": "",
+        "group": "d6d42a467721bbee",
+        "order": 3,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "x": 1210,
+        "y": 420,
+        "wires": [
+            [
+                "0c19cd5ef4b57023",
+                "cedbd7b05355ab2b"
+            ]
+        ]
+    },
+    {
+        "id": "c16df478e57b360c",
+        "type": "ui_slider",
+        "z": "5e6383022ba901b9",
+        "name": "",
+        "label": "Max Moisture",
+        "tooltip": "",
+        "group": "d6d42a467721bbee",
+        "order": 5,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "x": 1200,
+        "y": 500,
+        "wires": [
+            [
+                "5edae9106f0d2222",
+                "ead796ef243eafe5"
+            ]
+        ]
+    },
+    {
+        "id": "4ddc932b6f8aa30a",
+        "type": "ui_text",
+        "z": "5e6383022ba901b9",
+        "group": "d6d42a467721bbee",
+        "order": 2,
+        "width": "6",
+        "height": "1",
+        "name": "",
+        "label": "Value:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1390,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "5edae9106f0d2222",
+        "type": "ui_text",
+        "z": "5e6383022ba901b9",
+        "group": "d6d42a467721bbee",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Value:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1390,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "0c19cd5ef4b57023",
+        "type": "ui_text",
+        "z": "5e6383022ba901b9",
+        "group": "d6d42a467721bbee",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Value:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1390,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "7d416a8a020a76fa",
+        "type": "http request",
+        "z": "5e6383022ba901b9",
+        "name": "",
+        "method": "use",
+        "ret": "txt",
+        "paytoqs": "body",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1590,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bf1d28b03efe2c52",
+        "type": "http request",
+        "z": "5e6383022ba901b9",
+        "name": "",
+        "method": "use",
+        "ret": "txt",
+        "paytoqs": "body",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1590,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "65c41416cc22108f",
+        "type": "http request",
+        "z": "5e6383022ba901b9",
+        "name": "",
+        "method": "use",
+        "ret": "txt",
+        "paytoqs": "body",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1590,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6f3ae41e230ebeaf",
+        "type": "ui_dropdown",
+        "z": "5e6383022ba901b9",
+        "name": "",
+        "label": "User ID:",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "0ca708bd9099f601",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [],
+        "payload": "",
+        "topic": "user",
+        "topicType": "str",
+        "className": "",
+        "x": 780,
+        "y": 100,
+        "wires": [
+            [
+                "c3ef2fd6fcaff129",
+                "603e47a486dd8b74"
+            ]
+        ]
+    },
+    {
+        "id": "1f13efec79dcab67",
+        "type": "http request",
+        "z": "5e6383022ba901b9",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://127.0.0.1:8080/catalog/user_details",
+        "tls": "",
+        "persist": true,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 270,
+        "y": 100,
+        "wires": [
+            [
+                "b7363c12bad6a529"
+            ]
+        ]
+    },
+    {
+        "id": "f9484e7b274f7dba",
+        "type": "ui_button",
+        "z": "5e6383022ba901b9",
+        "name": "",
+        "group": "0ca708bd9099f601",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Refresh User",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "date",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 90,
+        "y": 100,
+        "wires": [
+            [
+                "1f13efec79dcab67"
+            ]
+        ]
+    },
+    {
+        "id": "a6027178d05d3f16",
+        "type": "ui_dropdown",
+        "z": "5e6383022ba901b9",
+        "name": "",
+        "label": "Farm ID:",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "0ca708bd9099f601",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [],
+        "payload": "",
+        "topic": "farm",
+        "topicType": "str",
+        "className": "",
+        "x": 780,
+        "y": 180,
+        "wires": [
+            [
+                "46d79109dbf6bf78",
+                "20322f36e7f41515"
+            ]
+        ]
+    },
+    {
+        "id": "2baccf92d6fd1e3b",
+        "type": "ui_dropdown",
+        "z": "5e6383022ba901b9",
+        "name": "",
+        "label": "Section ID:",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "0ca708bd9099f601",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [],
+        "payload": "",
+        "topic": "section",
+        "topicType": "str",
+        "className": "",
+        "x": 790,
+        "y": 260,
+        "wires": [
+            [
+                "beb2f8624e316192",
+                "aeb5c322c094a05a"
+            ]
+        ]
+    },
+    {
+        "id": "b7363c12bad6a529",
+        "type": "function",
+        "z": "5e6383022ba901b9",
+        "name": "Def Catalog, Find user",
+        "func": "// catalog = msg.payload;\nglobal.set(\"catalog_users\", msg.payload);\nvar dict = msg.payload;\nvar users = [];\nfor (var user in dict) {\n    for (var val in dict[user]) {\n        users.push(dict[user][val][\"userID\"]);\n    }\n}\n\nvar tmp = {};\ntmp.options = users;\ntmp.payload = msg.payload;\ntmp.topic = \"catalog\";\nreturn tmp;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 100,
+        "wires": [
+            [
+                "6f3ae41e230ebeaf"
+            ]
+        ]
+    },
+    {
+        "id": "5e75839bbe6b9502",
+        "type": "function",
+        "z": "5e6383022ba901b9",
+        "name": "Find farms",
+        "func": "let tmp = {};\nvar catalog = global.get(\"catalog_users\");\nlet farms_list = [];\n\nfor (let user of Object.values(catalog)) {\n    for (let val of Object.values(user)) {\n        if (val.userID == global.get(\"user\")) {\n            if (val.pass == msg.pass){\n                farms_list = val.farm_list;\n            }\n            else{\n                tmp.payload = \"The password is not correct\"\n            }\n        }\n    }\n}\n\ntmp.options = farms_list;\n// msg.payload = global.get(\"user\");\nreturn tmp;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 180,
+        "wires": [
+            [
+                "a6027178d05d3f16",
+                "412c4222cc0e074f"
+            ]
+        ]
+    },
+    {
+        "id": "46d79109dbf6bf78",
+        "type": "function",
+        "z": "5e6383022ba901b9",
+        "name": "Global farm",
+        "func": "global.set(\"farm\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 990,
+        "y": 180,
+        "wires": [
+            [
+                "f66fb98ffb13c3e1"
+            ]
+        ]
+    },
+    {
+        "id": "beb2f8624e316192",
+        "type": "function",
+        "z": "5e6383022ba901b9",
+        "name": "Global sections, TS_ChannelID",
+        "func": "global.set(\"section\", msg.payload);\nglobal.set(\"pump_check\", \"trig\")\n\nvar catalog = global.get(\"catalog\");\nvar sec_list = [];\nfor (var farm in catalog) {\n    for (var val in catalog[farm]) {\n        if (catalog[farm][val][\"farmID\"] == global.get(\"farm\")) {\n            var sections = catalog[farm][val][\"Sections\"];\n                for (var sec in sections) {\n                    if (sections[sec][\"sectionID\"] == msg.payload) {\n                        global.set(\"TS_CH_ID\", sections[sec][\"TS_ChannelID\"])\n                }\n            }\n        }\n    }\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1050,
+        "y": 260,
+        "wires": [
+            [
+                "23d078eef54b8950",
+                "d798175cd4eff33c"
+            ]
+        ]
+    },
+    {
+        "id": "394468a3d49587cb",
+        "type": "function",
+        "z": "5e6383022ba901b9",
+        "name": "function 5",
+        "func": "let tmp = {};\nlet user = global.get(\"user\");\nlet farm = global.get(\"farm\");\nlet sec = global.get(\"section\");\n// var value = msg.payload.temp\n// const str = value.toString()\ntmp.method = \"PUT\";\nlet link = `http://127.0.0.1:8080/catalog/Temp_thresh/?userID=${user}&farmID=${farm}&sectionID=${sec}&value=${String(msg.payload)}`;\ntmp.url = link;\nreturn tmp;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1400,
+        "y": 340,
+        "wires": [
+            [
+                "7d416a8a020a76fa"
+            ]
+        ]
+    },
+    {
+        "id": "cedbd7b05355ab2b",
+        "type": "function",
+        "z": "5e6383022ba901b9",
+        "name": "function 6",
+        "func": "let tmp = {};\nlet user = global.get(\"user\");\nlet farm = global.get(\"farm\");\nlet sec = global.get(\"section\");\n// var value = msg.payload.temp\n// const str = value.toString()\ntmp.method = \"PUT\";\nlet link = `http://127.0.0.1:8080/catalog/Mois_min_thresh/?userID=${user}&farmID=${farm}&sectionID=${sec}&value=${String(msg.payload)}`;\ntmp.url = link;\nreturn tmp;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1400,
+        "y": 420,
+        "wires": [
+            [
+                "bf1d28b03efe2c52"
+            ]
+        ]
+    },
+    {
+        "id": "ead796ef243eafe5",
+        "type": "function",
+        "z": "5e6383022ba901b9",
+        "name": "function 7",
+        "func": "let tmp = {};\nlet user = global.get(\"user\");\nlet farm = global.get(\"farm\");\nlet sec = global.get(\"section\");\n// var value = msg.payload.temp\n// const str = value.toString()\ntmp.method = \"PUT\";\nlet link = `http://127.0.0.1:8080/catalog/Mois_max_thresh/?userID=${user}&farmID=${farm}&sectionID=${sec}&value=${String(msg.payload)}`;\ntmp.url = link;\nreturn tmp;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1400,
+        "y": 500,
+        "wires": [
+            [
+                "65c41416cc22108f"
+            ]
+        ]
+    },
+    {
+        "id": "b86d359f869a3fcf",
+        "type": "function",
+        "z": "5e6383022ba901b9",
+        "name": "Find sections",
+        "func": "var catalog = msg.payload;\nglobal.set(\"catalog\", msg.payload);\nvar sec_list = [];\nlet selected_farm = global.get(\"farm\");\nvar s_farm = null;\nvar farms = catalog.Farms\n\nfor (var key in farms){\n    if (farms[key][\"farmID\"] == selected_farm){\n        for(var sec_key in farms[key]['Sections']){\n            sec_list.push(farms[key]['Sections'][sec_key]['sectionID'])\n        }\n    }\n}\n\nmsg.options = sec_list;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 260,
+        "wires": [
+            [
+                "2baccf92d6fd1e3b"
+            ]
+        ]
+    },
+    {
+        "id": "603e47a486dd8b74",
+        "type": "function",
+        "z": "5e6383022ba901b9",
+        "name": "Global user",
+        "func": "global.set(\"user\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 990,
+        "y": 100,
+        "wires": [
+            [
+                "5e75839bbe6b9502"
+            ]
+        ]
+    },
+    {
+        "id": "de23dd13224bb245",
+        "type": "inject",
+        "z": "5e6383022ba901b9",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 60,
+        "wires": [
+            [
+                "1f13efec79dcab67"
+            ]
+        ]
+    },
+    {
+        "id": "23d078eef54b8950",
+        "type": "function",
+        "z": "5e6383022ba901b9",
+        "name": "Create link Thresh",
+        "func": "// var tmp = {};\nlet user = global.get(\"user\");\nlet farm = global.get(\"farm\");\nlet sec = global.get(\"section\");\nmsg.method = \"GET\";\nmsg.url = `http://127.0.0.1:8080/catalog/threshold?userID=${user}&farmID=${farm}&sectionID=${sec}`\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 340,
+        "wires": [
+            [
+                "29ea5a3c8d86879a"
+            ]
+        ]
+    },
+    {
+        "id": "29ea5a3c8d86879a",
+        "type": "http request",
+        "z": "5e6383022ba901b9",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 790,
+        "y": 340,
+        "wires": [
+            [
+                "d3eec01de2873cf3",
+                "c56e23cba4b4f388",
+                "56fda0b93858fc75"
+            ]
+        ]
+    },
+    {
+        "id": "d3eec01de2873cf3",
+        "type": "python3-function",
+        "z": "5e6383022ba901b9",
+        "name": "",
+        "func": "msg[\"payload\"]  = msg[\"payload\"][\"temp\"]\nreturn msg",
+        "outputs": 1,
+        "x": 1010,
+        "y": 340,
+        "wires": [
+            [
+                "d79cd6da65ce9dba"
+            ]
+        ]
+    },
+    {
+        "id": "c56e23cba4b4f388",
+        "type": "python3-function",
+        "z": "5e6383022ba901b9",
+        "name": "",
+        "func": "msg[\"payload\"]  = msg[\"payload\"][\"mois_min\"]\nreturn msg",
+        "outputs": 1,
+        "x": 1010,
+        "y": 420,
+        "wires": [
+            [
+                "381cfc162991fc4a"
+            ]
+        ]
+    },
+    {
+        "id": "56fda0b93858fc75",
+        "type": "python3-function",
+        "z": "5e6383022ba901b9",
+        "name": "",
+        "func": "msg[\"payload\"]  = msg[\"payload\"][\"mois_max\"]\nreturn msg",
+        "outputs": 1,
+        "x": 1010,
+        "y": 500,
+        "wires": [
+            [
+                "c16df478e57b360c"
+            ]
+        ]
+    },
+    {
+        "id": "c3ef2fd6fcaff129",
+        "type": "ui_text",
+        "z": "5e6383022ba901b9",
+        "group": "083d461c605f29cf",
+        "order": 1,
+        "width": "3",
+        "height": "1",
+        "name": "",
+        "label": "User: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "x": 1150,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "20322f36e7f41515",
+        "type": "ui_text",
+        "z": "5e6383022ba901b9",
+        "group": "083d461c605f29cf",
+        "order": 2,
+        "width": "3",
+        "height": "1",
+        "name": "",
+        "label": "Farm: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "x": 1150,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "aeb5c322c094a05a",
+        "type": "ui_text",
+        "z": "5e6383022ba901b9",
+        "group": "083d461c605f29cf",
+        "order": 3,
+        "width": "4",
+        "height": "1",
+        "name": "",
+        "label": "Section: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "x": 1380,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "d798175cd4eff33c",
+        "type": "link out",
+        "z": "5e6383022ba901b9",
+        "name": "link out 1",
+        "mode": "link",
+        "links": [
+            "83052337058ff6cd",
+            "c60bfc084123f182",
+            "f0696bfdd0678e17",
+            "850b62b0f4da9fb4",
+            "d1fd8982e0b65dc3",
+            "8c06e746ee98d923"
+        ],
+        "x": 1305,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "fbf712da4d14a242",
+        "type": "ui_ui_control",
+        "z": "5e6383022ba901b9",
+        "name": "",
+        "events": "connect",
+        "x": 1280,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5d46460e45103627",
+        "type": "http request",
+        "z": "5e6383022ba901b9",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": true,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 950,
+        "y": 620,
+        "wires": [
+            [
+                "2cc21aaa4a8f9bec"
+            ]
+        ]
+    },
+    {
+        "id": "d11893fb9e208557",
+        "type": "ui_text",
+        "z": "5e6383022ba901b9",
+        "group": "083d461c605f29cf",
+        "order": 4,
+        "width": "8",
+        "height": "1",
+        "name": "",
+        "label": "Controller status    ",
+        "format": "<font color={{msg.color}} ><i class=\"fa fa-circle\" style=\"font-size:24px;\"></i></font>   {{msg.payload}}",
+        "layout": "row-center",
+        "className": "",
+        "x": 1380,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "7b966ebf24b4e403",
+        "type": "function",
+        "z": "5e6383022ba901b9",
+        "name": "Make Link status of pump",
+        "func": "let tmp = {};\nlet user = global.get(\"user\");\nlet farm = global.get(\"farm\");\nlet sec = global.get(\"section\");\ntmp.method = \"GET\";\nlet link = `http://127.0.0.1:8080/catalog/control_status?userID=${user}&farmID=${farm}&sectionID=${sec}`;\ntmp.url = link;\nreturn tmp;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nlet tmp = {};\nlet user = global.get(\"user\");\nlet farm = global.get(\"farm\");\nlet sec = global.get(\"section\");\ntmp.method = \"GET\";\nlet link = `http://127.0.0.1:8080/catalog/pump_status?userID=${user}&farmID=${farm}&sectionID=${sec}`;\ntmp.url = link;\nreturn tmp;",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 620,
+        "wires": [
+            [
+                "5d46460e45103627"
+            ]
+        ]
+    },
+    {
+        "id": "409d846a5bcb363d",
+        "type": "inject",
+        "z": "5e6383022ba901b9",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "pump_check",
+        "payloadType": "global",
+        "x": 330,
+        "y": 620,
+        "wires": [
+            [
+                "7b966ebf24b4e403",
+                "73c637b74e77f745"
+            ]
+        ]
+    },
+    {
+        "id": "2cc21aaa4a8f9bec",
+        "type": "function",
+        "z": "5e6383022ba901b9",
+        "name": "function 19",
+        "func": "msg.color = (msg.payload == \"auto\")?\"lime\":\"red\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1150,
+        "y": 620,
+        "wires": [
+            [
+                "d11893fb9e208557"
+            ]
+        ]
+    },
+    {
+        "id": "d1fd8982e0b65dc3",
+        "type": "link in",
+        "z": "5e6383022ba901b9",
+        "name": "link in 5",
+        "links": [
+            "d798175cd4eff33c"
+        ],
+        "x": 335,
+        "y": 700,
+        "wires": [
+            [
+                "7b966ebf24b4e403",
+                "73c637b74e77f745"
+            ]
+        ]
+    },
+    {
+        "id": "7d6c0fb7786b9134",
+        "type": "ui_switch",
+        "z": "5e6383022ba901b9",
+        "name": "",
+        "label": "Controller",
+        "tooltip": "",
+        "group": "0ca708bd9099f601",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 880,
+        "y": 820,
+        "wires": [
+            [
+                "2b956a93c4334e6c",
+                "93cc4c20dc50a238",
+                "5c1cc0bfdfd08b90"
+            ]
+        ]
+    },
+    {
+        "id": "2b956a93c4334e6c",
+        "type": "function",
+        "z": "5e6383022ba901b9",
+        "name": "Make Link status of pump",
+        "func": "let tmp = {};\nlet user = global.get(\"user\");\nlet farm = global.get(\"farm\");\nlet sec = global.get(\"section\");\nlet link ='';\ntmp.method = \"PUT\";\nif (msg.payload == true){\n    link = `http://127.0.0.1:8080/catalog/control_status?userID=${user}&farmID=${farm}&sectionID=${sec}&value=auto`;\n} else if (msg.payload == false ){\n    link = `http://127.0.0.1:8080/catalog/control_status?userID=${user}&farmID=${farm}&sectionID=${sec}&value=manual`;\n\n}\ntmp.url = link;\nreturn tmp;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nlet tmp = {};\nlet user = global.get(\"user\");\nlet farm = global.get(\"farm\");\nlet sec = global.get(\"section\");\ntmp.method = \"GET\";\nlet link = `http://127.0.0.1:8080/catalog/pump_status?userID=${user}&farmID=${farm}&sectionID=${sec}`;\ntmp.url = link;\nreturn tmp;",
+        "finalize": "",
+        "libs": [],
+        "x": 1150,
+        "y": 820,
+        "wires": [
+            [
+                "db494ddf254745aa"
+            ]
+        ]
+    },
+    {
+        "id": "db494ddf254745aa",
+        "type": "http request",
+        "z": "5e6383022ba901b9",
+        "name": "",
+        "method": "use",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1370,
+        "y": 820,
+        "wires": [
+            [
+                "7b966ebf24b4e403"
+            ]
+        ]
+    },
+    {
+        "id": "fda2200b1d32daf6",
+        "type": "function",
+        "z": "5e6383022ba901b9",
+        "name": "function 20",
+        "func": "if (msg.payload == \"auto\") {\n    msg.payload = true\n} else if (msg.payload == \"manual\") {\n    msg.payload =false\n\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 820,
+        "wires": [
+            [
+                "7d6c0fb7786b9134"
+            ]
+        ]
+    },
+    {
+        "id": "63af029d6f5524ec",
+        "type": "http request",
+        "z": "5e6383022ba901b9",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": true,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 890,
+        "y": 740,
+        "wires": [
+            [
+                "fda2200b1d32daf6"
+            ]
+        ]
+    },
+    {
+        "id": "73c637b74e77f745",
+        "type": "function",
+        "z": "5e6383022ba901b9",
+        "name": "Make Link status of pump",
+        "func": "let tmp = {};\nlet user = global.get(\"user\");\nlet farm = global.get(\"farm\");\nlet sec = global.get(\"section\");\ntmp.method = \"GET\";\nlet link = `http://127.0.0.1:8080/catalog/control_status?userID=${user}&farmID=${farm}&sectionID=${sec}`;\ntmp.url = link;\nreturn tmp;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nlet tmp = {};\nlet user = global.get(\"user\");\nlet farm = global.get(\"farm\");\nlet sec = global.get(\"section\");\ntmp.method = \"GET\";\nlet link = `http://127.0.0.1:8080/catalog/pump_status?userID=${user}&farmID=${farm}&sectionID=${sec}`;\ntmp.url = link;\nreturn tmp;",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 740,
+        "wires": [
+            [
+                "63af029d6f5524ec"
+            ]
+        ]
+    },
+    {
+        "id": "5c1cc0bfdfd08b90",
+        "type": "function",
+        "z": "5e6383022ba901b9",
+        "name": "function 21",
+        "func": "if (msg.payload == true){\n    msg.payload = {\n        \"group\": {\n            \"hide\": [\n                \"Setting_Manual_schedule\", \"Setting_Schedual\"\n            ]\n        }\n    };\n} else{\n    msg.payload = {\n        \"group\": {\n            \"show\": [\n                \"Setting_Schedual\"\n            ]\n        }\n    };\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1090,
+        "y": 860,
+        "wires": [
+            [
+                "fbf712da4d14a242"
+            ]
+        ]
+    },
+    {
+        "id": "93cc4c20dc50a238",
+        "type": "debug",
+        "z": "5e6383022ba901b9",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1140,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "48f380e74b711866",
+        "type": "ui_time_scheduler",
+        "z": "5e6383022ba901b9",
+        "group": "916344f8e027fd93",
+        "name": "",
+        "startDay": "1",
+        "refresh": 60,
+        "devices": [
+            "Device 1"
+        ],
+        "singleOff": false,
+        "onlySendChange": false,
+        "customPayload": false,
+        "eventMode": false,
+        "eventOptions": [],
+        "sendTopic": false,
+        "lat": "",
+        "lon": "",
+        "customContextStore": "",
+        "outputs": 2,
+        "order": 5,
+        "width": "6",
+        "height": "11",
+        "x": 1050,
+        "y": 1040,
+        "wires": [
+            [
+                "38cf5b922b28fc11"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "c098e3c5e77c03fe",
+        "type": "inject",
+        "z": "5e6383022ba901b9",
+        "name": "",
+        "props": [
+            {
+                "p": "pp",
+                "v": "",
+                "vt": "date"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 310,
+        "y": 840,
+        "wires": [
+            [
+                "484d867cff4692b1"
+            ]
+        ]
+    },
+    {
+        "id": "38cf5b922b28fc11",
+        "type": "function",
+        "z": "5e6383022ba901b9",
+        "name": "Make Link status of pump",
+        "func": "let tmp = {};\nlet user = global.get(\"user\");\nlet farm = global.get(\"farm\");\nlet sec = global.get(\"section\");\nlet timejson = msg.payload\ntmp.method = \"PUT\";\nlet link = `http://127.0.0.1:8080/catalog/manual_schedul?userID=${user}&farmID=${farm}&sectionID=${sec}&value=${timejson}`;\ntmp.url = link;\nreturn tmp;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nlet tmp = {};\nlet user = global.get(\"user\");\nlet farm = global.get(\"farm\");\nlet sec = global.get(\"section\");\ntmp.method = \"GET\";\nlet link = `http://127.0.0.1:8080/catalog/pump_status?userID=${user}&farmID=${farm}&sectionID=${sec}`;\ntmp.url = link;\nreturn tmp;",
+        "finalize": "",
+        "libs": [],
+        "x": 1310,
+        "y": 1040,
+        "wires": [
+            [
+                "37e5e2836608b93c"
+            ]
+        ]
+    },
+    {
+        "id": "37e5e2836608b93c",
+        "type": "http request",
+        "z": "5e6383022ba901b9",
+        "name": "",
+        "method": "use",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": true,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1530,
+        "y": 1040,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "484d867cff4692b1",
+        "type": "function",
+        "z": "5e6383022ba901b9",
+        "name": "Make Link status of pump",
+        "func": "let tmp = {};\nlet user = global.get(\"user\");\nlet farm = global.get(\"farm\");\nlet sec = global.get(\"section\");\ntmp.method = \"GET\";\nlet link = `http://127.0.0.1:8080/catalog/manual_schedul?userID=${user}&farmID=${farm}&sectionID=${sec}`;\ntmp.url = link;\nreturn tmp;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nlet tmp = {};\nlet user = global.get(\"user\");\nlet farm = global.get(\"farm\");\nlet sec = global.get(\"section\");\ntmp.method = \"GET\";\nlet link = `http://127.0.0.1:8080/catalog/pump_status?userID=${user}&farmID=${farm}&sectionID=${sec}`;\ntmp.url = link;\nreturn tmp;",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 1040,
+        "wires": [
+            [
+                "28da91feb8a785e5"
+            ]
+        ]
+    },
+    {
+        "id": "28da91feb8a785e5",
+        "type": "http request",
+        "z": "5e6383022ba901b9",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": true,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 630,
+        "y": 1040,
+        "wires": [
+            [
+                "47ee8a22ca534f8e"
+            ]
+        ]
+    },
+    {
+        "id": "47ee8a22ca534f8e",
+        "type": "json",
+        "z": "5e6383022ba901b9",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 830,
+        "y": 1040,
+        "wires": [
+            [
+                "48f380e74b711866"
+            ]
+        ]
+    },
+    {
+        "id": "8c06e746ee98d923",
+        "type": "link in",
+        "z": "5e6383022ba901b9",
+        "name": "link in 6",
+        "links": [
+            "d798175cd4eff33c"
+        ],
+        "x": 335,
+        "y": 780,
+        "wires": [
+            [
+                "484d867cff4692b1"
+            ]
+        ]
+    },
+    {
+        "id": "f66fb98ffb13c3e1",
+        "type": "http request",
+        "z": "5e6383022ba901b9",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://127.0.0.1:8080/catalog/farm_details",
+        "tls": "",
+        "persist": true,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1190,
+        "y": 180,
+        "wires": [
+            [
+                "b86d359f869a3fcf"
+            ]
+        ]
+    },
+    {
+        "id": "1044ea389304c108",
+        "type": "ui_text_input",
+        "z": "5e6383022ba901b9",
+        "name": "",
+        "label": "Password",
+        "tooltip": "",
+        "group": "0ca708bd9099f601",
+        "order": 4,
+        "width": "4",
+        "height": "1",
+        "passthru": true,
+        "mode": "password",
+        "delay": "0",
+        "topic": "pass",
+        "sendOnBlur": false,
+        "className": "",
+        "topicType": "msg",
+        "x": 120,
+        "y": 180,
+        "wires": [
+            [
+                "d757a969356f44f7"
+            ]
+        ]
+    },
+    {
+        "id": "d757a969356f44f7",
+        "type": "change",
+        "z": "5e6383022ba901b9",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "pass",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 350,
+        "y": 180,
+        "wires": [
+            [
+                "5e75839bbe6b9502"
+            ]
+        ]
+    },
+    {
+        "id": "acfb70670ebdbb7d",
+        "type": "ui_text",
+        "z": "5e6383022ba901b9",
+        "group": "0ca708bd9099f601",
+        "order": 3,
+        "width": "2",
+        "height": "1",
+        "name": "",
+        "label": "Password:",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "x": 110,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "412c4222cc0e074f",
+        "type": "ui_toast",
+        "z": "5e6383022ba901b9",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 390,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5235026e1c544d44",
+        "type": "inject",
+        "z": "5e6383022ba901b9",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 410,
+        "y": 560,
+        "wires": [
+            [
+                "7b966ebf24b4e403"
+            ]
+        ]
+    },
+    {
+        "id": "5940c66417605d6a",
+        "type": "ui_text",
+        "z": "cd21bbe43ddf3792",
+        "group": "3d6baf595358e84c",
+        "order": 1,
+        "width": "4",
+        "height": "1",
+        "name": "",
+        "label": "New Username:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 100,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "8ab87c81eaed614d",
+        "type": "ui_text_input",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "3d6baf595358e84c",
+        "order": 2,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "mode": "text",
+        "delay": "0",
+        "topic": "username",
+        "sendOnBlur": false,
+        "className": "",
+        "topicType": "str",
+        "x": 260,
+        "y": 80,
+        "wires": [
+            [
+                "9aee73dec206b922"
+            ]
+        ]
+    },
+    {
+        "id": "b0bebcf8751716f1",
+        "type": "ui_text",
+        "z": "cd21bbe43ddf3792",
+        "group": "3d6baf595358e84c",
+        "order": 3,
+        "width": "4",
+        "height": "1",
+        "name": "",
+        "label": "New Password:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 100,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "62a7997b71d42a42",
+        "type": "ui_text_input",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "3d6baf595358e84c",
+        "order": 4,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "mode": "text",
+        "delay": "0",
+        "topic": "pass",
+        "sendOnBlur": false,
+        "className": "",
+        "topicType": "str",
+        "x": 260,
+        "y": 140,
+        "wires": [
+            [
+                "9aee73dec206b922"
+            ]
+        ]
+    },
+    {
+        "id": "eec07b6b153b1f4d",
+        "type": "ui_text",
+        "z": "cd21bbe43ddf3792",
+        "group": "3d79b00d87650532",
+        "order": 7,
+        "width": "4",
+        "height": "1",
+        "name": "",
+        "label": "New Farm:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 90,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "c51e7420cb1c3d7b",
+        "type": "ui_text_input",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "3d79b00d87650532",
+        "order": 8,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "mode": "text",
+        "delay": "0",
+        "topic": "farm",
+        "sendOnBlur": false,
+        "className": "",
+        "topicType": "str",
+        "x": 260,
+        "y": 460,
+        "wires": [
+            [
+                "2d2df2885c3d4669"
+            ]
+        ]
+    },
+    {
+        "id": "a335314d289f4318",
+        "type": "ui_text",
+        "z": "cd21bbe43ddf3792",
+        "group": "98725e43d801d2c7",
+        "order": 7,
+        "width": "3",
+        "height": "1",
+        "name": "",
+        "label": "New Section:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 330,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "7f6d8b18ad0b2101",
+        "type": "ui_text_input",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "98725e43d801d2c7",
+        "order": 8,
+        "width": "3",
+        "height": "1",
+        "passthru": true,
+        "mode": "text",
+        "delay": "0",
+        "topic": "sec",
+        "sendOnBlur": false,
+        "className": "",
+        "topicType": "str",
+        "x": 500,
+        "y": 940,
+        "wires": [
+            [
+                "38fe65bb12fadd16"
+            ]
+        ]
+    },
+    {
+        "id": "6053e249ebd13219",
+        "type": "ui_button",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "group": "3d79b00d87650532",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Add Farm",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "button",
+        "topicType": "str",
+        "x": 260,
+        "y": 500,
+        "wires": [
+            [
+                "2d2df2885c3d4669"
+            ]
+        ]
+    },
+    {
+        "id": "a05251bcc2be74fc",
+        "type": "ui_button",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "group": "98725e43d801d2c7",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Add Section",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "button",
+        "topicType": "str",
+        "x": 490,
+        "y": 1000,
+        "wires": [
+            [
+                "38fe65bb12fadd16"
+            ]
+        ]
+    },
+    {
+        "id": "e28c591caef9070e",
+        "type": "ui_button",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "group": "3d6baf595358e84c",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Add user",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "button",
+        "topicType": "str",
+        "x": 260,
+        "y": 200,
+        "wires": [
+            [
+                "9aee73dec206b922"
+            ]
+        ]
+    },
+    {
+        "id": "59d1134980b3097a",
+        "type": "ui_text",
+        "z": "cd21bbe43ddf3792",
+        "group": "3d79b00d87650532",
+        "order": 5,
+        "width": "2",
+        "height": "1",
+        "name": "",
+        "label": "Password:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 90,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "afc0f5a920cdcf88",
+        "type": "ui_text_input",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "3d79b00d87650532",
+        "order": 6,
+        "width": "4",
+        "height": "1",
+        "passthru": true,
+        "mode": "password",
+        "delay": "0",
+        "topic": "pass",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 260,
+        "y": 420,
+        "wires": [
+            [
+                "2d2df2885c3d4669"
+            ]
+        ]
+    },
+    {
+        "id": "770fa7cf61bd2303",
+        "type": "ui_text",
+        "z": "cd21bbe43ddf3792",
+        "group": "98725e43d801d2c7",
+        "order": 3,
+        "width": "2",
+        "height": "1",
+        "name": "",
+        "label": "Password:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 270,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "b6d0fcce41fd4a75",
+        "type": "ui_text_input",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "98725e43d801d2c7",
+        "order": 4,
+        "width": "4",
+        "height": "1",
+        "passthru": false,
+        "mode": "password",
+        "delay": "0",
+        "topic": "pass",
+        "sendOnBlur": false,
+        "className": "",
+        "topicType": "str",
+        "x": 480,
+        "y": 860,
+        "wires": [
+            [
+                "0e8f102187518e4c",
+                "38fe65bb12fadd16"
+            ]
+        ]
+    },
+    {
+        "id": "9140bf13e869e4aa",
+        "type": "python3-function",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "func": "tmp ={}\nif msg[\"payload\"][\"button\"]== True:\n    if msg[\"payload\"][\"pass\"] != None:\n        if msg[\"payload\"][\"username\"] != None:\n            tmp[\"method\"] = \"POST\"\n            tmp[\"url\"] = \"http://127.0.0.1:8080/catalog/add_user?new_user=\"+msg['payload']['username']+\"&pass=\"+msg['payload']['pass']\n            tmp[\"Topic\"] = \"The user is added\"\nreturn tmp",
+        "outputs": 1,
+        "x": 610,
+        "y": 140,
+        "wires": [
+            [
+                "a3fe7c63837961f4"
+            ]
+        ]
+    },
+    {
+        "id": "9aee73dec206b922",
+        "type": "join",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "3",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 450,
+        "y": 140,
+        "wires": [
+            [
+                "9140bf13e869e4aa"
+            ]
+        ]
+    },
+    {
+        "id": "a3fe7c63837961f4",
+        "type": "http request",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "method": "use",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 810,
+        "y": 140,
+        "wires": [
+            [
+                "2a2e24c7d5e9f96c"
+            ]
+        ]
+    },
+    {
+        "id": "2a2e24c7d5e9f96c",
+        "type": "ui_toast",
+        "z": "cd21bbe43ddf3792",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 990,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2d2df2885c3d4669",
+        "type": "join",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "4",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 450,
+        "y": 420,
+        "wires": [
+            [
+                "c592461bd46124d2"
+            ]
+        ]
+    },
+    {
+        "id": "c592461bd46124d2",
+        "type": "python3-function",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "func": "tmp ={}\nif msg[\"payload\"][\"button\"]== True:\n    if msg[\"payload\"][\"pass\"] != None:\n        if msg[\"payload\"][\"user\"] != None:\n            if msg[\"payload\"][\"farm\"]!= None:\n                tmp[\"method\"] = \"POST\"\n                tmp[\"url\"] = \"http://127.0.0.1:8080/catalog/add_farm?userID=\"+msg['payload']['user']+\"&pass=\"+msg['payload']['pass']+\"&farmID=\"+msg['payload'][\"farm\"]\n                tmp[\"Topic\"] = \"The farm is added\"\nreturn tmp",
+        "outputs": 1,
+        "x": 630,
+        "y": 420,
+        "wires": [
+            [
+                "244baa695dea6b40"
+            ]
+        ]
+    },
+    {
+        "id": "244baa695dea6b40",
+        "type": "http request",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "method": "use",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 830,
+        "y": 420,
+        "wires": [
+            [
+                "1befbd93298dfb92"
+            ]
+        ]
+    },
+    {
+        "id": "1befbd93298dfb92",
+        "type": "ui_toast",
+        "z": "cd21bbe43ddf3792",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 1030,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e68dd45476e4fcb4",
+        "type": "ui_dropdown",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "label": "User ID:",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "3d79b00d87650532",
+        "order": 3,
+        "width": "5",
+        "height": "1",
+        "passthru": true,
+        "multiple": false,
+        "options": [],
+        "payload": "",
+        "topic": "user",
+        "topicType": "str",
+        "className": "",
+        "x": 720,
+        "y": 300,
+        "wires": [
+            [
+                "2d2df2885c3d4669"
+            ]
+        ]
+    },
+    {
+        "id": "76bdb0cefd9b7053",
+        "type": "http request",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://127.0.0.1:8080/catalog/user_details",
+        "tls": "",
+        "persist": true,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 290,
+        "y": 300,
+        "wires": [
+            [
+                "e4cb72b07e4fbc43"
+            ]
+        ]
+    },
+    {
+        "id": "1af11979db124351",
+        "type": "ui_button",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "group": "3d79b00d87650532",
+        "order": 4,
+        "width": "1",
+        "height": "1",
+        "passthru": false,
+        "label": "",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-refresh",
+        "payload": "",
+        "payloadType": "date",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 90,
+        "y": 300,
+        "wires": [
+            [
+                "76bdb0cefd9b7053"
+            ]
+        ]
+    },
+    {
+        "id": "e4cb72b07e4fbc43",
+        "type": "function",
+        "z": "cd21bbe43ddf3792",
+        "name": "Def Catalog, Find user",
+        "func": "// catalog = msg.payload;\nglobal.set(\"catalog_users\", msg.payload);\nvar dict = msg.payload;\nvar users = [];\nfor (var user in dict) {\n    for (var val in dict[user]) {\n        users.push(dict[user][val][\"userID\"]);\n    }\n}\n\nvar tmp = {};\ntmp.options = users;\ntmp.payload = msg.payload;\ntmp.topic = \"catalog\";\nreturn tmp;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 300,
+        "wires": [
+            [
+                "e68dd45476e4fcb4"
+            ]
+        ]
+    },
+    {
+        "id": "b0b224d42b6d5694",
+        "type": "inject",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 260,
+        "wires": [
+            [
+                "76bdb0cefd9b7053"
+            ]
+        ]
+    },
+    {
+        "id": "cff5eaac59f8e8a6",
+        "type": "ui_dropdown",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "label": "User ID:",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "98725e43d801d2c7",
+        "order": 1,
+        "width": "5",
+        "height": "1",
+        "passthru": true,
+        "multiple": false,
+        "options": [],
+        "payload": "",
+        "topic": "user",
+        "topicType": "str",
+        "className": "",
+        "x": 700,
+        "y": 680,
+        "wires": [
+            [
+                "52582c7915f3b86c",
+                "0e8f102187518e4c",
+                "38fe65bb12fadd16"
+            ]
+        ]
+    },
+    {
+        "id": "43f5b5c7e898c689",
+        "type": "http request",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://127.0.0.1:8080/catalog/user_details",
+        "tls": "",
+        "persist": true,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 270,
+        "y": 680,
+        "wires": [
+            [
+                "b447e9ed14e79e01"
+            ]
+        ]
+    },
+    {
+        "id": "1abfaebf65a654f3",
+        "type": "ui_button",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "group": "98725e43d801d2c7",
+        "order": 2,
+        "width": "1",
+        "height": "1",
+        "passthru": false,
+        "label": "",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-refresh",
+        "payload": "",
+        "payloadType": "date",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 70,
+        "y": 680,
+        "wires": [
+            [
+                "43f5b5c7e898c689"
+            ]
+        ]
+    },
+    {
+        "id": "b447e9ed14e79e01",
+        "type": "function",
+        "z": "cd21bbe43ddf3792",
+        "name": "Def Catalog, Find user",
+        "func": "// catalog = msg.payload;\nglobal.set(\"catalog_users\", msg.payload);\nvar dict = msg.payload;\nvar users = [];\nfor (var user in dict) {\n    for (var val in dict[user]) {\n        users.push(dict[user][val][\"userID\"]);\n    }\n}\n\nvar tmp = {};\ntmp.options = users;\ntmp.payload = msg.payload;\ntmp.topic = \"catalog\";\nreturn tmp;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 680,
+        "wires": [
+            [
+                "cff5eaac59f8e8a6"
+            ]
+        ]
+    },
+    {
+        "id": "9069a6a16fbb649d",
+        "type": "inject",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 640,
+        "wires": [
+            [
+                "43f5b5c7e898c689"
+            ]
+        ]
+    },
+    {
+        "id": "38fe65bb12fadd16",
+        "type": "join",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "5",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 710,
+        "y": 940,
+        "wires": [
+            [
+                "2d2ad55308d0986c"
+            ]
+        ]
+    },
+    {
+        "id": "2d2ad55308d0986c",
+        "type": "python3-function",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "func": "tmp ={}\nif msg[\"payload\"][\"button\"]== True:\n    if msg[\"payload\"][\"pass\"] != None:\n        if msg[\"payload\"][\"user\"] != None:\n            if msg[\"payload\"][\"farm\"]!= None:\n                tmp[\"method\"] = \"POST\"\n                tmp[\"url\"] = \"http://127.0.0.1:8080/catalog/add_section?userID=\"+msg['payload']['user']+\"&pass=\"+msg['payload']['pass']+\"&farmID=\"+msg['payload'][\"farm\"]+\"&new_section=\"+msg[\"payload\"][\"sec\"]\n                tmp[\"Topic\"] = \"The section is added\"\nreturn tmp",
+        "outputs": 1,
+        "x": 890,
+        "y": 940,
+        "wires": [
+            [
+                "db7677d14eb7993e"
+            ]
+        ]
+    },
+    {
+        "id": "db7677d14eb7993e",
+        "type": "http request",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "method": "use",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1090,
+        "y": 940,
+        "wires": [
+            [
+                "4e0fb23e358996b2"
+            ]
+        ]
+    },
+    {
+        "id": "e0c479f380686887",
+        "type": "ui_dropdown",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "label": "Farm ID:",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "98725e43d801d2c7",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [],
+        "payload": "",
+        "topic": "farm",
+        "topicType": "str",
+        "className": "",
+        "x": 1080,
+        "y": 780,
+        "wires": [
+            [
+                "38fe65bb12fadd16"
+            ]
+        ]
+    },
+    {
+        "id": "eed438eef4b301a4",
+        "type": "function",
+        "z": "cd21bbe43ddf3792",
+        "name": "Find farms",
+        "func": "let tmp = {};\nvar catalog = msg.payload.catalog;\nlet farms_list = [];\n\nfor (let user of Object.values(catalog)) {\n    for (let val of Object.values(user)) {\n        if (val.userID == msg.payload.user) {\n            if (val.pass == msg.payload.pass){\n                farms_list = val.farm_list;\n            }\n        }\n    }\n}\n\ntmp.options = farms_list;\n// msg.payload = global.get(\"user\");\nreturn tmp;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 780,
+        "wires": [
+            [
+                "e0c479f380686887"
+            ]
+        ]
+    },
+    {
+        "id": "52582c7915f3b86c",
+        "type": "http request",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://127.0.0.1:8080/catalog/user_details",
+        "tls": "",
+        "persist": true,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 270,
+        "y": 780,
+        "wires": [
+            [
+                "d312155122c2124c"
+            ]
+        ]
+    },
+    {
+        "id": "0e8f102187518e4c",
+        "type": "join",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": true,
+        "timeout": "",
+        "count": "3",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 710,
+        "y": 780,
+        "wires": [
+            [
+                "eed438eef4b301a4"
+            ]
+        ]
+    },
+    {
+        "id": "d312155122c2124c",
+        "type": "change",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "catalog",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 490,
+        "y": 780,
+        "wires": [
+            [
+                "0e8f102187518e4c"
+            ]
+        ]
+    },
+    {
+        "id": "4e0fb23e358996b2",
+        "type": "ui_toast",
+        "z": "cd21bbe43ddf3792",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 1270,
+        "y": 940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "507dc19bc73c262b",
+        "type": "ui_dropdown",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "label": "User ID:",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "5eaa1609f4ba21bd",
+        "order": 1,
+        "width": "5",
+        "height": "1",
+        "passthru": true,
+        "multiple": false,
+        "options": [],
+        "payload": "",
+        "topic": "user",
+        "topicType": "str",
+        "className": "",
+        "x": 780,
+        "y": 1240,
+        "wires": [
+            [
+                "b1d7d08696cc3699",
+                "40c9b83c25d644df",
+                "b4485371927d813e",
+                "86ac84014044eee7",
+                "089bd93215c9f6a5"
+            ]
+        ]
+    },
+    {
+        "id": "d1513f5f93a36c02",
+        "type": "http request",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://127.0.0.1:8080/catalog/user_details",
+        "tls": "",
+        "persist": true,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 330,
+        "y": 1240,
+        "wires": [
+            [
+                "8484a4b61e976595"
+            ]
+        ]
+    },
+    {
+        "id": "8484a4b61e976595",
+        "type": "function",
+        "z": "cd21bbe43ddf3792",
+        "name": "Def Catalog, Find user",
+        "func": "// catalog = msg.payload;\nglobal.set(\"catalog_users\", msg.payload);\nvar dict = msg.payload;\nvar users = [];\nfor (var user in dict) {\n    for (var val in dict[user]) {\n        users.push(dict[user][val][\"userID\"]);\n    }\n}\n\nvar tmp = {};\ntmp.options = users;\ntmp.payload = msg.payload;\ntmp.topic = \"catalog\";\nreturn tmp;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 1240,
+        "wires": [
+            [
+                "507dc19bc73c262b"
+            ]
+        ]
+    },
+    {
+        "id": "b93354cf794288c0",
+        "type": "inject",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 1200,
+        "wires": [
+            [
+                "d1513f5f93a36c02"
+            ]
+        ]
+    },
+    {
+        "id": "1bd8ae5b4fbe89dd",
+        "type": "ui_button",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "group": "5eaa1609f4ba21bd",
+        "order": 2,
+        "width": "1",
+        "height": "1",
+        "passthru": false,
+        "label": "",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-refresh",
+        "payload": "",
+        "payloadType": "date",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 150,
+        "y": 1240,
+        "wires": [
+            [
+                "d1513f5f93a36c02"
+            ]
+        ]
+    },
+    {
+        "id": "0b0475da5a73a05a",
+        "type": "ui_text",
+        "z": "cd21bbe43ddf3792",
+        "group": "5eaa1609f4ba21bd",
+        "order": 3,
+        "width": "2",
+        "height": "1",
+        "name": "",
+        "label": "Password:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 610,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "4399073b3ee60833",
+        "type": "ui_text_input",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "label": "Password",
+        "tooltip": "",
+        "group": "5eaa1609f4ba21bd",
+        "order": 4,
+        "width": "4",
+        "height": "1",
+        "passthru": true,
+        "mode": "password",
+        "delay": "0",
+        "topic": "pass",
+        "sendOnBlur": false,
+        "className": "",
+        "topicType": "str",
+        "x": 780,
+        "y": 1300,
+        "wires": [
+            [
+                "b1d7d08696cc3699",
+                "40c9b83c25d644df",
+                "86ac84014044eee7",
+                "089bd93215c9f6a5"
+            ]
+        ]
+    },
+    {
+        "id": "e293e95c29859cbf",
+        "type": "ui_button",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "group": "5eaa1609f4ba21bd",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Delete user",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "button",
+        "topicType": "str",
+        "x": 770,
+        "y": 1360,
+        "wires": [
+            [
+                "b1d7d08696cc3699"
+            ]
+        ]
+    },
+    {
+        "id": "02a6af94903e0c04",
+        "type": "python3-function",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "func": "tmp ={}\nif msg[\"payload\"][\"button\"]== True:\n    if msg[\"payload\"][\"pass\"] != None:\n        if msg[\"payload\"][\"user\"] != None:\n            tmp[\"method\"] = \"DELETE\"\n            tmp[\"url\"] = \"http://127.0.0.1:8080/catalog/delet_user?userID=\"+msg['payload']['user']+\"&pass=\"+msg['payload']['pass']\n            tmp[\"Topic\"] = \"The user is added\"\nreturn tmp",
+        "outputs": 1,
+        "x": 1190,
+        "y": 1240,
+        "wires": [
+            [
+                "a5a0034489fe214a"
+            ]
+        ]
+    },
+    {
+        "id": "b1d7d08696cc3699",
+        "type": "join",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "3",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 999.765625,
+        "y": 1241,
+        "wires": [
+            [
+                "02a6af94903e0c04"
+            ]
+        ]
+    },
+    {
+        "id": "a5a0034489fe214a",
+        "type": "http request",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "method": "use",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1379.765625,
+        "y": 1241,
+        "wires": [
+            [
+                "bf4454a7cf002234"
+            ]
+        ]
+    },
+    {
+        "id": "bf4454a7cf002234",
+        "type": "ui_toast",
+        "z": "cd21bbe43ddf3792",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 1559.765625,
+        "y": 1241,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c1b55f82dcc1734f",
+        "type": "ui_button",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "group": "5eaa1609f4ba21bd",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Delete farm from user",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "button",
+        "topicType": "str",
+        "x": 800,
+        "y": 1420,
+        "wires": [
+            [
+                "40c9b83c25d644df"
+            ]
+        ]
+    },
+    {
+        "id": "43c6516bfb9b4f0b",
+        "type": "python3-function",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "func": "tmp ={}\nif msg[\"payload\"][\"button\"]== True:\n    if msg[\"payload\"][\"pass\"] != None:\n        if msg[\"payload\"][\"user\"] != None:\n            tmp[\"method\"] = \"DELETE\"\n            tmp[\"url\"] = \"http://127.0.0.1:8080/catalog/delete_farm_of_user?userID=\"+msg['payload']['user']+\"&pass=\"+msg['payload']['pass']+\"&farmID=\"+msg['payload']['farm']\n            tmp[\"Topic\"] = \"The user is added\"\nreturn tmp",
+        "outputs": 1,
+        "x": 1190,
+        "y": 1420,
+        "wires": [
+            [
+                "acebcb4a064c1f12"
+            ]
+        ]
+    },
+    {
+        "id": "40c9b83c25d644df",
+        "type": "join",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "4",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 999.765625,
+        "y": 1421,
+        "wires": [
+            [
+                "43c6516bfb9b4f0b"
+            ]
+        ]
+    },
+    {
+        "id": "acebcb4a064c1f12",
+        "type": "http request",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "method": "use",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1379.765625,
+        "y": 1421,
+        "wires": [
+            [
+                "405903ced029f47f"
+            ]
+        ]
+    },
+    {
+        "id": "405903ced029f47f",
+        "type": "ui_toast",
+        "z": "cd21bbe43ddf3792",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 1559.765625,
+        "y": 1421,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9b17f3befbb9f3ce",
+        "type": "ui_dropdown",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "label": "Farm ID:",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "5eaa1609f4ba21bd",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [],
+        "payload": "",
+        "topic": "farm",
+        "topicType": "str",
+        "className": "",
+        "x": 980,
+        "y": 1500,
+        "wires": [
+            [
+                "40c9b83c25d644df",
+                "1850f406abede305",
+                "089bd93215c9f6a5",
+                "c7302bb62c4d1b8c"
+            ]
+        ]
+    },
+    {
+        "id": "5ff4f20e0fbe00e3",
+        "type": "function",
+        "z": "cd21bbe43ddf3792",
+        "name": "Find farms",
+        "func": "let tmp = {};\nvar catalog = msg.payload.catalog;\nlet farms_list = [];\n\nfor (let user of Object.values(catalog)) {\n    for (let val of Object.values(user)) {\n        if (val.userID == msg.payload.user) {\n            if (val.pass == msg.payload.pass){\n                farms_list = val.farm_list;\n            }\n        }\n    }\n}\n\ntmp.options = farms_list;\n// msg.payload = global.get(\"user\");\nreturn tmp;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 1500,
+        "wires": [
+            [
+                "9b17f3befbb9f3ce"
+            ]
+        ]
+    },
+    {
+        "id": "b4485371927d813e",
+        "type": "http request",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://127.0.0.1:8080/catalog/user_details",
+        "tls": "",
+        "persist": true,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 170,
+        "y": 1500,
+        "wires": [
+            [
+                "76111935e5c9be18"
+            ]
+        ]
+    },
+    {
+        "id": "86ac84014044eee7",
+        "type": "join",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": true,
+        "timeout": "",
+        "count": "3",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 610,
+        "y": 1500,
+        "wires": [
+            [
+                "5ff4f20e0fbe00e3"
+            ]
+        ]
+    },
+    {
+        "id": "76111935e5c9be18",
+        "type": "change",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "catalog",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 390,
+        "y": 1500,
+        "wires": [
+            [
+                "86ac84014044eee7"
+            ]
+        ]
+    },
+    {
+        "id": "2a35442718c78fef",
+        "type": "ui_button",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "group": "5eaa1609f4ba21bd",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Delete Section from farm",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "button",
+        "topicType": "str",
+        "x": 990,
+        "y": 1620,
+        "wires": [
+            [
+                "089bd93215c9f6a5"
+            ]
+        ]
+    },
+    {
+        "id": "1850f406abede305",
+        "type": "http request",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://127.0.0.1:8080/catalog/farm_details",
+        "tls": "",
+        "persist": true,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 430,
+        "y": 1600,
+        "wires": [
+            [
+                "7f2f2de9638d1cd5"
+            ]
+        ]
+    },
+    {
+        "id": "856448b8ca752514",
+        "type": "ui_dropdown",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "label": "Section ID:",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "5eaa1609f4ba21bd",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [],
+        "payload": "",
+        "topic": "section",
+        "topicType": "str",
+        "className": "",
+        "x": 970,
+        "y": 1720,
+        "wires": [
+            [
+                "089bd93215c9f6a5"
+            ]
+        ]
+    },
+    {
+        "id": "92f0c886bb4cd2bc",
+        "type": "function",
+        "z": "cd21bbe43ddf3792",
+        "name": "Find sections",
+        "func": "var catalog = msg.payload.catalog;\n// global.set(\"catalog\", msg.payload);\nvar sec_list = [];\nlet selected_farm = msg.payload.farm;\nvar s_farm = null;\nvar farms = catalog.Farms\n\nfor (var key in farms){\n    if (farms[key][\"farmID\"] == selected_farm){\n        for(var sec_key in farms[key]['Sections']){\n            sec_list.push(farms[key]['Sections'][sec_key]['sectionID'])\n        }\n    }\n}\n\nmsg.options = sec_list;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 1720,
+        "wires": [
+            [
+                "856448b8ca752514"
+            ]
+        ]
+    },
+    {
+        "id": "089bd93215c9f6a5",
+        "type": "join",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "5",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 1250,
+        "y": 1620,
+        "wires": [
+            [
+                "130897109d72d6eb"
+            ]
+        ]
+    },
+    {
+        "id": "130897109d72d6eb",
+        "type": "python3-function",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "func": "tmp ={}\nif msg[\"payload\"][\"button\"]== True:\n    if msg[\"payload\"][\"pass\"] != None:\n        if msg[\"payload\"][\"user\"] != None:\n            tmp[\"method\"] = \"DELETE\"\n            tmp[\"url\"] = \"http://127.0.0.1:8080/catalog/delete_sec_of_farm?userID=\"+msg['payload']['user']+\"&pass=\"+msg['payload']['pass']+\"&farmID=\"+msg['payload']['farm']+\"&sectionID=\"+msg['payload']['section']\n            tmp[\"Topic\"] = \"The user is added\"\nreturn tmp",
+        "outputs": 1,
+        "x": 1430,
+        "y": 1620,
+        "wires": [
+            [
+                "6e97fecc1b10b561"
+            ]
+        ]
+    },
+    {
+        "id": "6e97fecc1b10b561",
+        "type": "http request",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "method": "use",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1599.765625,
+        "y": 1621,
+        "wires": [
+            [
+                "7b3ac4d85426fde1"
+            ]
+        ]
+    },
+    {
+        "id": "7b3ac4d85426fde1",
+        "type": "ui_toast",
+        "z": "cd21bbe43ddf3792",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 1779.765625,
+        "y": 1621,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a3a87a98a79a1835",
+        "type": "ui_text_input",
+        "z": "cd21bbe43ddf3792",
+        "g": "2cb36a14f2f628cd",
+        "name": "",
+        "label": "Admin: ",
+        "tooltip": "",
+        "group": "7c9cbac3de8fa724",
+        "order": 4,
+        "width": "4",
+        "height": "1",
+        "passthru": true,
+        "mode": "text",
+        "delay": "0",
+        "topic": "user",
+        "sendOnBlur": false,
+        "className": "",
+        "topicType": "str",
+        "x": 220,
+        "y": 1940,
+        "wires": [
+            [
+                "0a2786e5e54415ee"
+            ]
+        ]
+    },
+    {
+        "id": "61b12374ba4d439d",
+        "type": "ui_text_input",
+        "z": "cd21bbe43ddf3792",
+        "g": "2cb36a14f2f628cd",
+        "name": "",
+        "label": "Password",
+        "tooltip": "",
+        "group": "7c9cbac3de8fa724",
+        "order": 4,
+        "width": "4",
+        "height": "1",
+        "passthru": true,
+        "mode": "password",
+        "delay": "0",
+        "topic": "pass",
+        "sendOnBlur": false,
+        "className": "",
+        "topicType": "str",
+        "x": 220,
+        "y": 1980,
+        "wires": [
+            [
+                "0a2786e5e54415ee",
+                "0489cf890f9230d6"
+            ]
+        ]
+    },
+    {
+        "id": "0a2786e5e54415ee",
+        "type": "join",
+        "z": "cd21bbe43ddf3792",
+        "g": "2cb36a14f2f628cd",
+        "name": "",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "4",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 410,
+        "y": 1960,
+        "wires": [
+            [
+                "a9e689d113ec1966"
+            ]
+        ]
+    },
+    {
+        "id": "a9e689d113ec1966",
+        "type": "python3-function",
+        "z": "cd21bbe43ddf3792",
+        "g": "2cb36a14f2f628cd",
+        "name": "",
+        "func": "tmp ={}\nif msg[\"payload\"][\"button\"]== True:\n    if msg[\"payload\"][\"pass\"] != None:\n        if msg[\"payload\"][\"user\"] != None:\n            tmp[\"method\"] = \"DELETE\"\n            tmp[\"url\"] = \"http://127.0.0.1:8080/catalog/delete_farm?userID=\"+msg['payload']['user']+\"&pass=\"+msg['payload']['pass']+\"&farmID=\"+msg['payload']['farm']\n            tmp[\"Topic\"] = \"The user is added\"\nreturn tmp",
+        "outputs": 1,
+        "x": 590,
+        "y": 1960,
+        "wires": [
+            [
+                "904c4f75b5923b52"
+            ]
+        ]
+    },
+    {
+        "id": "904c4f75b5923b52",
+        "type": "http request",
+        "z": "cd21bbe43ddf3792",
+        "g": "2cb36a14f2f628cd",
+        "name": "",
+        "method": "use",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 790,
+        "y": 1960,
+        "wires": [
+            [
+                "9696b0e229ef10b9"
+            ]
+        ]
+    },
+    {
+        "id": "9696b0e229ef10b9",
+        "type": "ui_toast",
+        "z": "cd21bbe43ddf3792",
+        "g": "2cb36a14f2f628cd",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 970,
+        "y": 1960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a840ce73969ba91d",
+        "type": "ui_dropdown",
+        "z": "cd21bbe43ddf3792",
+        "g": "2cb36a14f2f628cd",
+        "name": "",
+        "label": "Farm ID:",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "7c9cbac3de8fa724",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [],
+        "payload": "",
+        "topic": "farm",
+        "topicType": "str",
+        "className": "",
+        "x": 760,
+        "y": 2080,
+        "wires": [
+            [
+                "0a2786e5e54415ee"
+            ]
+        ]
+    },
+    {
+        "id": "4cbaf9876949ddd7",
+        "type": "change",
+        "z": "cd21bbe43ddf3792",
+        "g": "2cb36a14f2f628cd",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "catalog",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 370,
+        "y": 2080,
+        "wires": [
+            [
+                "6405fba2469076bd"
+            ]
+        ]
+    },
+    {
+        "id": "0489cf890f9230d6",
+        "type": "http request",
+        "z": "cd21bbe43ddf3792",
+        "g": "2cb36a14f2f628cd",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://127.0.0.1:8080/catalog/farm_details",
+        "tls": "",
+        "persist": true,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 190,
+        "y": 2080,
+        "wires": [
+            [
+                "4cbaf9876949ddd7"
+            ]
+        ]
+    },
+    {
+        "id": "6405fba2469076bd",
+        "type": "python3-function",
+        "z": "cd21bbe43ddf3792",
+        "g": "2cb36a14f2f628cd",
+        "name": "",
+        "func": "tmp ={}\nfarm_list = []\nfor key,val in msg[\"payload\"][\"Farms\"].items():\n    farm_list.append(val[\"farmID\"])\ntmp[\"options\"] = farm_list\nreturn tmp",
+        "outputs": 1,
+        "x": 570,
+        "y": 2080,
+        "wires": [
+            [
+                "a840ce73969ba91d"
+            ]
+        ]
+    },
+    {
+        "id": "eeef4170c7889fb7",
+        "type": "ui_button",
+        "z": "cd21bbe43ddf3792",
+        "g": "2cb36a14f2f628cd",
+        "name": "",
+        "group": "7c9cbac3de8fa724",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Delete farm",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "button",
+        "topicType": "str",
+        "x": 210,
+        "y": 1900,
+        "wires": [
+            [
+                "0a2786e5e54415ee"
+            ]
+        ]
+    },
+    {
+        "id": "4a61232c6910799f",
+        "type": "debug",
+        "z": "cd21bbe43ddf3792",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 1600,
+        "wires": []
+    },
+    {
+        "id": "7f2f2de9638d1cd5",
+        "type": "change",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "catalog",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 350,
+        "y": 1720,
+        "wires": [
+            [
+                "c7302bb62c4d1b8c"
+            ]
+        ]
+    },
+    {
+        "id": "c7302bb62c4d1b8c",
+        "type": "join",
+        "z": "cd21bbe43ddf3792",
+        "name": "",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": true,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 530,
+        "y": 1720,
+        "wires": [
+            [
+                "92f0c886bb4cd2bc",
+                "4a61232c6910799f"
+            ]
+        ]
+    }
+]
