@@ -57,15 +57,13 @@
                                 "SensorID": 1,
                                 "SensorName": "DHT11",
                                 "SensorType": "Temperature",
-                                "value": 18,
-                                "topic": "Irrigation/Farm_1/Section1/1"
+                                "value": 18
                             },
                             "sensor2": {
                                 "SensorID": 2,
                                 "SensorName": "SEN-13322",
                                 "SensorType": "Soil_Moisture",
-                                "value": 7,
-                                "topic": "Irrigation/Farm_1/Section1/2"
+                                "value": 7
                             }
                         },
                         "Pump": {
