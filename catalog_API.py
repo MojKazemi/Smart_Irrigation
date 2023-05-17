@@ -10,6 +10,7 @@ class catalogAPI:
 
     def GET(self,*uri,**params):
         
+        # by this Get function we take data from Catalog.json.
         if len(uri) >= 2 and uri[0] == 'catalog':
             with open('./catalog.json','r') as file:
                 catalog = json.load(file)
@@ -143,6 +144,7 @@ class catalogAPI:
     def POST(self,*uri,**params):
         if uri[0] == "catalog":
 
+            # By this function, data about users and ... will be Created in Catalog.json
             with open('./catalog.json') as file:
                 catalog = json.load(file)
             
@@ -150,11 +152,11 @@ class catalogAPI:
                 
                 for _, val in catalog['Users'].items():
                     if params['new_user'] == val['userID']:
-                        # raise cherrypy.HTTPError(500, "The username is taken. Try another")
+                        
                         msg = "The username has already taken. Try another"
                         return json.dumps(msg)
                         
-                # user_key = 'user'+ str(len(catalog['Users'])+1)
+                
                 catalog['Users'][params['new_user']]={
                     "userID":params['new_user'],
                     "pass":params['pass'],
@@ -174,7 +176,7 @@ class catalogAPI:
                     if params['farmID'] == val['farmID']:
                         return json.dumps("The farm ID has already taken. Try another")
 
-                # _key = 'farm' + str(len(catalog['Farms'])+1)
+                
                 catalog['Farms'][params['farmID']]={
                     "farmID": params['farmID'],
                     "Sections": {}
@@ -198,7 +200,6 @@ class catalogAPI:
                         return json.dumps("The section name has already taken. Try another")
                         
 
-                # _key = 'section' + str(len(catalog["Farms"][farm]["Sections"])+1)
                 catalog["Farms"][farm]["Sections"][params['new_section']] = {
                     "sectionID":params['new_section'],
                     "control_status": "",
@@ -237,7 +238,7 @@ class catalogAPI:
                 return json.dumps("The section has already added")
             
                 
-
+        # In this part, data about Statistics and ... will be Created in pump_status.json
         if uri[0] == "statistics":
 
             with open('./pump_status.json') as file:
@@ -257,6 +258,7 @@ class catalogAPI:
         
     def PUT(self,*uri,**params):
         # Modify information
+        #In this function we can Update data about users, farms and ... will be updated.
         try:
             if uri[0] == 'catalog':
                 with open('./catalog.json','r') as file:
@@ -311,6 +313,7 @@ class catalogAPI:
         
     def DELETE(self,*uri,**params):
 
+        # In this function data about users, farms and ... will be Deleted.
         if uri[0] == "catalog":
             with open('./catalog.json') as file:
                 catalog = json.load(file)
@@ -366,6 +369,7 @@ class catalogAPI:
                     return json.dumps("The admin's password is incorrect")
                 return json.dumps("The user of admin is incorrect")
    
+   # by this Function, User's password will be checked
     def check_user_pass(self,catalog, params):
         for key, vals in catalog['Users'].items():
             if vals['userID'] == params['userID']:

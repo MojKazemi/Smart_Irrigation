@@ -133,9 +133,7 @@
             "74933ee654791aad"
         ],
         "x": 14,
-        "y": 219,
-        "w": 872,
-        "h": 122
+        "y": 219
     },
     {
         "id": "2cb36a14f2f628cd",
@@ -161,13 +159,10 @@
             "4cbaf9876949ddd7",
             "0489cf890f9230d6",
             "6405fba2469076bd",
-            "eeef4170c7889fb7",
-            "196a40421a0623bb"
+            "eeef4170c7889fb7"
         ],
         "x": 94,
-        "y": 1839,
-        "w": 972,
-        "h": 282
+        "y": 1859
     },
     {
         "id": "f26e18f67ba7d048",
@@ -915,7 +910,7 @@
         "joinerType": "str",
         "accumulate": true,
         "timeout": "",
-        "count": "2",
+        "count": "1",
         "reduceRight": false,
         "reduceExp": "",
         "reduceInit": "",
@@ -1058,7 +1053,7 @@
         "type": "function",
         "z": "0998292695b46f5e",
         "name": "function 15",
-        "func": "msg.color = (msg.payload == \"on\")?\"lime\":\"red\";\nreturn msg;",
+        "func": "if (msg.statusCode != 200){\n    msg.payload = \"Not Connected\"\n    msg.color = \"orange\";\n} else{\n    msg.color = (msg.payload == \"on\") ? \"lime\" : \"red\";\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -2359,7 +2354,7 @@
         "y": 100,
         "wires": [
             [
-                "5e75839bbe6b9502"
+                "a4b3e97c81f996a2"
             ]
         ]
     },
@@ -2650,7 +2645,7 @@
         "type": "function",
         "z": "5e6383022ba901b9",
         "name": "function 19",
-        "func": "msg.color = (msg.payload == \"auto\")?\"lime\":\"red\";\nreturn msg;",
+        "func": "if (msg.statusCode != 200) {\n    msg.payload = \"Not Connected\"\n    msg.color = \"orange\";\n} else {\n    msg.color = (msg.payload == \"auto\") ? \"lime\" : \"red\";\n}\n// msg.color = (msg.payload == \"auto\")?\"lime\":\"red\";\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -3074,7 +3069,7 @@
         "sendOnBlur": false,
         "className": "",
         "topicType": "msg",
-        "x": 120,
+        "x": 80,
         "y": 180,
         "wires": [
             [
@@ -3101,7 +3096,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 350,
+        "x": 250,
         "y": 180,
         "wires": [
             [
@@ -3171,6 +3166,23 @@
                 "7b966ebf24b4e403"
             ]
         ]
+    },
+    {
+        "id": "a4b3e97c81f996a2",
+        "type": "debug",
+        "z": "5e6383022ba901b9",
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1260,
+        "y": 100,
+        "wires": []
     },
     {
         "id": "5940c66417605d6a",
