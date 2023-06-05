@@ -544,6 +544,102 @@
         "className": ""
     },
     {
+        "id": "1f87d31a2c761a19",
+        "type": "mui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "m-base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "m-page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "m-page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "m-page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "m-group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "m-group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "m-group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "m-widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "m-widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "m-widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
         "id": "37193b5976b8907d",
         "type": "ui_gauge",
         "z": "3bab716a8a493dbf",
@@ -795,7 +891,7 @@
         "z": "0998292695b46f5e",
         "name": "",
         "group": "760d542e0573d812",
-        "order": 5,
+        "order": 6,
         "width": "10",
         "height": "7",
         "label": "Moisture History",
@@ -838,13 +934,13 @@
         "type": "function",
         "z": "0998292695b46f5e",
         "name": "function 8",
-        "func": "let tmp = {};\n// const s_date = new Date(msg.payload.start);\nconst s_date = flow.get(\"s_date_live\")\nlet s_year = s_date.getFullYear();\nconst s_month = s_date.getMonth()+1;\nconst s_day = s_date.getDate();\n\n// const e_date = new Date(msg.payload.end);\nconst e_date = flow.get(\"e_date_live\")\nlet e_year = e_date.getFullYear();\nconst e_month = e_date.getMonth()+1;\nconst e_day = e_date.getDate();\n\nconst ch_ID = global.get(\"TS_CH_ID\");\n\ntmp.method = \"GET\";\nlet link = `https://api.thingspeak.com/channels/${ch_ID}/feeds.json?start=${s_year}-${s_month}-${s_day}%2000:00:00&end=${e_year}-${e_month}-${e_day}%2023:59:59`;\ntmp.url = link;\nreturn tmp;",
+        "func": "let tmp = {};\n// const s_date = new Date(msg.payload.start);\n// const s_date = flow.get(\"s_date_live\")\nvar s_date = new Date(msg.payload.start);\nlet s_year = s_date.getFullYear();\nconst s_month = s_date.getMonth()+1;\nconst s_day = s_date.getDate();\n\nvar min = msg.payload.f_time / 60000;\nvar s_hh = Math.floor(min / 60).toString();\nvar s_mm = Math.floor(min % 60).toString();\n\nif (s_mm.length < 2) {\n    s_mm = '0' + s_mm;\n}\n\nif (s_hh.length < 2) {\n    s_hh = '0' + s_hh;\n}\n\n// const e_date = new Date(msg.payload.end);\n// const e_date = flow.get(\"e_date_live\")\nconst e_date = new Date(msg.payload.end);\nlet e_year = e_date.getFullYear();\nconst e_month = e_date.getMonth()+1;\nconst e_day = e_date.getDate();\n\nconst e_time = msg.payload.t_time\nvar min = msg.payload.t_time / 60000;\nvar e_hh = Math.floor(min / 60).toString();\nvar e_mm = Math.floor(min % 60).toString();\n\nif (e_mm.length < 2) {\n    e_mm = '0' + e_mm;\n}\n\nif (e_hh.length < 2) {\n    e_hh = '0' + e_hh;\n}\nconst ch_ID = global.get(\"TS_CH_ID\");\n\ntmp.method = \"GET\";\nlet link = `https://api.thingspeak.com/channels/${ch_ID}/feeds.json?start=${s_year}-${s_month}-${s_day}%20${s_hh}:${s_mm}:00&end=${e_year}-${e_month}-${e_day}%20${e_hh}:${e_mm}:59`;\ntmp.url = link;\nreturn tmp;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 340,
+        "x": 320,
         "y": 220,
         "wires": [
             [
@@ -859,7 +955,7 @@
         "name": "",
         "label": "From",
         "group": "760d542e0573d812",
-        "order": 2,
+        "order": 1,
         "width": "4",
         "height": "1",
         "passthru": true,
@@ -910,7 +1006,7 @@
         "joinerType": "str",
         "accumulate": true,
         "timeout": "",
-        "count": "1",
+        "count": "4",
         "reduceRight": false,
         "reduceExp": "",
         "reduceInit": "",
@@ -920,7 +1016,8 @@
         "y": 340,
         "wires": [
             [
-                "74fb20d892629e47"
+                "74fb20d892629e47",
+                "7f5edf8bedf80540"
             ]
         ]
     },
@@ -955,7 +1052,7 @@
         "z": "0998292695b46f5e",
         "name": "",
         "group": "760d542e0573d812",
-        "order": 4,
+        "order": 5,
         "width": 0,
         "height": 0,
         "label": "Temprature History",
@@ -1097,8 +1194,58 @@
         "x": 150,
         "y": 220,
         "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e9a81e5e2d5511a9",
+        "type": "ui_text_input",
+        "z": "0998292695b46f5e",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "760d542e0573d812",
+        "order": 2,
+        "width": "4",
+        "height": "1",
+        "passthru": true,
+        "mode": "time",
+        "delay": 300,
+        "topic": "f_time",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 80,
+        "y": 500,
+        "wires": [
             [
-                "7f5edf8bedf80540"
+                "49fcdf7830ccad57"
+            ]
+        ]
+    },
+    {
+        "id": "b64a057467f0f310",
+        "type": "ui_text_input",
+        "z": "0998292695b46f5e",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "760d542e0573d812",
+        "order": 4,
+        "width": "4",
+        "height": "1",
+        "passthru": true,
+        "mode": "time",
+        "delay": 300,
+        "topic": "t_time",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 100,
+        "y": 580,
+        "wires": [
+            [
+                "49fcdf7830ccad57"
             ]
         ]
     },
@@ -1647,8 +1794,7 @@
         "y": 620,
         "wires": [
             [
-                "d48927479cadd3c7",
-                "ed74be8df7a63dda"
+                "d48927479cadd3c7"
             ]
         ]
     },
@@ -1805,22 +1951,6 @@
                 "3b355525932c851b"
             ]
         ]
-    },
-    {
-        "id": "ed74be8df7a63dda",
-        "type": "debug",
-        "z": "2a5cdca7bbb39636",
-        "name": "debug 9",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 880,
-        "y": 560,
-        "wires": []
     },
     {
         "id": "1272f48a860086ba",

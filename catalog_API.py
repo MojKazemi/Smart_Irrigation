@@ -76,13 +76,6 @@ class catalogAPI:
             elif uri[1] == 'telegram_setting':
                 return json.dumps(catalog['telegram_setting'])
 
-            elif uri[1] == 'all_topics':
-                topics = []
-                for user in catalog['Users'].values():
-                    topics.append(user['topics'][params['type']])
-                
-                return json.dumps({"value":topics})
-
             elif uri[1] == 'sen_val':
                 farm, sec = self.find_farm_sec(catalog, params)
                 if params['type'] == 'Temperature':
