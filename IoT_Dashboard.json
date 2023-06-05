@@ -1,6 +1,6 @@
 [
     {
-        "id": "0998292695b46f5e",
+        "id": "826880ae0edaf3c4",
         "type": "tab",
         "label": "Home",
         "disabled": false,
@@ -8,7 +8,7 @@
         "env": []
     },
     {
-        "id": "2a5cdca7bbb39636",
+        "id": "35d84e1661220e87",
         "type": "tab",
         "label": "Home-Live - consumption",
         "disabled": false,
@@ -16,7 +16,7 @@
         "env": []
     },
     {
-        "id": "5e6383022ba901b9",
+        "id": "e3f466151cefe330",
         "type": "tab",
         "label": "Setting",
         "disabled": false,
@@ -24,7 +24,7 @@
         "env": []
     },
     {
-        "id": "cd21bbe43ddf3792",
+        "id": "19c5158f8e9074e5",
         "type": "tab",
         "label": "Admin Setting",
         "disabled": false,
@@ -117,28 +117,198 @@
         "icon": "node-red-dashboard/ui_chart.png"
     },
     {
-        "id": "85bdec3d3b38f4c8",
+        "id": "5d42028407c8959d",
+        "type": "subflow",
+        "name": "HumidUI (2) (2)",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 140,
+                "y": 140,
+                "wires": [
+                    {
+                        "id": "c989e6f72cf48c76"
+                    },
+                    {
+                        "id": "a784d57a49c142f7"
+                    }
+                ]
+            }
+        ],
+        "out": [],
+        "env": [
+            {
+                "name": "deviceID",
+                "type": "dev",
+                "value": "",
+                "ui": {
+                    "icon": "font-awesome/fa-server",
+                    "type": "input",
+                    "opts": {
+                        "types": [
+                            "dev",
+                            "file",
+                            "env"
+                        ]
+                    }
+                }
+            }
+        ],
+        "color": "#3FADB5",
+        "icon": "node-red-dashboard/ui_chart.png"
+    },
+    {
+        "id": "e29556b61228715b",
+        "type": "subflow",
+        "name": "TempUI (2) (2)",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 120,
+                "y": 249,
+                "wires": [
+                    {
+                        "id": "8fe67abb6594bf4d"
+                    },
+                    {
+                        "id": "1cfaf54834eb426b"
+                    }
+                ]
+            }
+        ],
+        "out": [],
+        "env": [
+            {
+                "name": "deviceID",
+                "type": "dev",
+                "value": "",
+                "ui": {
+                    "icon": "font-awesome/fa-server",
+                    "type": "input",
+                    "opts": {
+                        "types": [
+                            "dev",
+                            "file",
+                            "env"
+                        ]
+                    }
+                }
+            }
+        ],
+        "meta": {},
+        "color": "#3FADB5",
+        "icon": "node-red-dashboard/ui_chart.png"
+    },
+    {
+        "id": "e417f8483103e8b4",
+        "type": "subflow",
+        "name": "HumidUI (2) (3)",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 140,
+                "y": 140,
+                "wires": [
+                    {
+                        "id": "0e3be51ff49ff374"
+                    },
+                    {
+                        "id": "cbc2d4c6bb16bc62"
+                    }
+                ]
+            }
+        ],
+        "out": [],
+        "env": [
+            {
+                "name": "deviceID",
+                "type": "dev",
+                "value": "",
+                "ui": {
+                    "icon": "font-awesome/fa-server",
+                    "type": "input",
+                    "opts": {
+                        "types": [
+                            "dev",
+                            "file",
+                            "env"
+                        ]
+                    }
+                }
+            }
+        ],
+        "color": "#3FADB5",
+        "icon": "node-red-dashboard/ui_chart.png"
+    },
+    {
+        "id": "f2682ee4bcb6e0c7",
+        "type": "subflow",
+        "name": "TempUI (2) (3)",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 120,
+                "y": 249,
+                "wires": [
+                    {
+                        "id": "aa4c65459e64482f"
+                    },
+                    {
+                        "id": "2b7447dcc1d84656"
+                    }
+                ]
+            }
+        ],
+        "out": [],
+        "env": [
+            {
+                "name": "deviceID",
+                "type": "dev",
+                "value": "",
+                "ui": {
+                    "icon": "font-awesome/fa-server",
+                    "type": "input",
+                    "opts": {
+                        "types": [
+                            "dev",
+                            "file",
+                            "env"
+                        ]
+                    }
+                }
+            }
+        ],
+        "meta": {},
+        "color": "#3FADB5",
+        "icon": "node-red-dashboard/ui_chart.png"
+    },
+    {
+        "id": "443be9c85abad5d6",
         "type": "group",
-        "z": "2a5cdca7bbb39636",
+        "z": "35d84e1661220e87",
         "name": "",
         "style": {
             "label": true
         },
         "nodes": [
-            "c9c0393dce0b831c",
-            "5e1df0da91902ccf",
-            "7a3ad05c3ecf1f51",
-            "a8d72255fd7c0f00",
-            "fb59e967458bb44f",
-            "74933ee654791aad"
+            "b60dfc4ac6e17c62",
+            "caced34b02fd86f8",
+            "545ba76f3d838e39",
+            "1e19e81cbbcc02da",
+            "f2571359c99887eb",
+            "b3961f38c1ce9fdb"
         ],
         "x": 14,
         "y": 219
     },
     {
-        "id": "2cb36a14f2f628cd",
+        "id": "45e960f0757d3147",
         "type": "group",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "style": {
             "stroke": "#999999",
             "stroke-opacity": "1",
@@ -149,17 +319,17 @@
             "color": "#a4a4a4"
         },
         "nodes": [
-            "a3a87a98a79a1835",
-            "61b12374ba4d439d",
-            "0a2786e5e54415ee",
-            "a9e689d113ec1966",
-            "904c4f75b5923b52",
-            "9696b0e229ef10b9",
-            "a840ce73969ba91d",
-            "4cbaf9876949ddd7",
-            "0489cf890f9230d6",
-            "6405fba2469076bd",
-            "eeef4170c7889fb7"
+            "62573284d9c7d45c",
+            "af3b3cc7b6854585",
+            "8ee22c6092aa380a",
+            "05890f0d512d362c",
+            "447dca4b8954bb11",
+            "d15a09fda6dc4913",
+            "235d03d7b8d427cf",
+            "d01675d469a0514c",
+            "785883bdca39fc62",
+            "7ace21450d5bb09d",
+            "98b4a4bfa15b15a9"
         ],
         "x": 94,
         "y": 1859
@@ -640,6 +810,78 @@
         }
     },
     {
+        "id": "19568d399c29b2bf",
+        "type": "ui_group",
+        "z": "5d42028407c8959d",
+        "name": "Humidity",
+        "tab": "e078c6b.429dd38",
+        "order": 3,
+        "disp": true,
+        "width": 19,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "14248dd32da0f7dc",
+        "type": "ui_group",
+        "z": "e29556b61228715b",
+        "name": "Default",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7d1dabebdba54fee",
+        "type": "ui_group",
+        "z": "e29556b61228715b",
+        "name": "Temperature",
+        "tab": "e078c6b.429dd38",
+        "order": 2,
+        "disp": true,
+        "width": 19,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c781d8c84bdd41bd",
+        "type": "ui_group",
+        "z": "e417f8483103e8b4",
+        "name": "Humidity",
+        "tab": "e078c6b.429dd38",
+        "order": 3,
+        "disp": true,
+        "width": 19,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5fba9f36d6265103",
+        "type": "ui_group",
+        "z": "f2682ee4bcb6e0c7",
+        "name": "Default",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "fdf4f3b2213003a6",
+        "type": "ui_group",
+        "z": "f2682ee4bcb6e0c7",
+        "name": "Temperature",
+        "tab": "e078c6b.429dd38",
+        "order": 2,
+        "disp": true,
+        "width": 19,
+        "collapse": false,
+        "className": ""
+    },
+    {
         "id": "37193b5976b8907d",
         "type": "ui_gauge",
         "z": "3bab716a8a493dbf",
@@ -782,9 +1024,293 @@
         ]
     },
     {
-        "id": "4e27f6bfa25e92b6",
+        "id": "c989e6f72cf48c76",
+        "type": "ui_gauge",
+        "z": "5d42028407c8959d",
+        "name": "Humid Gauge",
+        "group": "19568d399c29b2bf",
+        "order": 1,
+        "width": 9,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Humidity",
+        "label": "%",
+        "format": "{{value | number:1}}",
+        "min": "60",
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "80",
+        "seg2": "92",
+        "className": "",
+        "x": 440,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "a784d57a49c142f7",
+        "type": "ui_chart",
+        "z": "5d42028407c8959d",
+        "name": "Humidity Chart",
+        "group": "19568d399c29b2bf",
+        "order": 2,
+        "width": 10,
+        "height": 4,
+        "label": "Humidity (%)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "step",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "20",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#2ca02c",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 440,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8fe67abb6594bf4d",
+        "type": "ui_gauge",
+        "z": "e29556b61228715b",
+        "name": "TempGauge",
+        "group": "7d1dabebdba54fee",
+        "order": 1,
+        "width": 8,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Temperature",
+        "label": "C",
+        "format": "{{value | number:1}}",
+        "min": "40",
+        "max": "60",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "50",
+        "seg2": "56",
+        "className": "",
+        "x": 330,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "1cfaf54834eb426b",
+        "type": "ui_chart",
+        "z": "e29556b61228715b",
+        "name": "Temp Chart",
+        "group": "7d1dabebdba54fee",
+        "order": 2,
+        "width": 11,
+        "height": 4,
+        "label": "Temperature (C)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "step",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "20",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "chart",
+        "x": 330,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0e3be51ff49ff374",
+        "type": "ui_gauge",
+        "z": "e417f8483103e8b4",
+        "name": "Humid Gauge",
+        "group": "c781d8c84bdd41bd",
+        "order": 1,
+        "width": 9,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Humidity",
+        "label": "%",
+        "format": "{{value | number:1}}",
+        "min": "60",
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "80",
+        "seg2": "92",
+        "className": "",
+        "x": 440,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "cbc2d4c6bb16bc62",
+        "type": "ui_chart",
+        "z": "e417f8483103e8b4",
+        "name": "Humidity Chart",
+        "group": "c781d8c84bdd41bd",
+        "order": 2,
+        "width": 10,
+        "height": 4,
+        "label": "Humidity (%)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "step",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "20",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#2ca02c",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 440,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aa4c65459e64482f",
+        "type": "ui_gauge",
+        "z": "f2682ee4bcb6e0c7",
+        "name": "TempGauge",
+        "group": "fdf4f3b2213003a6",
+        "order": 1,
+        "width": 8,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Temperature",
+        "label": "C",
+        "format": "{{value | number:1}}",
+        "min": "40",
+        "max": "60",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "50",
+        "seg2": "56",
+        "className": "",
+        "x": 330,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "2b7447dcc1d84656",
+        "type": "ui_chart",
+        "z": "f2682ee4bcb6e0c7",
+        "name": "Temp Chart",
+        "group": "fdf4f3b2213003a6",
+        "order": 2,
+        "width": 11,
+        "height": 4,
+        "label": "Temperature (C)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "step",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "20",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "chart",
+        "x": 330,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "02389dcf34865cb3",
         "type": "http request",
-        "z": "0998292695b46f5e",
+        "z": "826880ae0edaf3c4",
         "name": "",
         "method": "use",
         "ret": "obj",
@@ -801,14 +1327,14 @@
         "y": 120,
         "wires": [
             [
-                "a5b1bab102d9f648"
+                "f7dfd7f201a3c0dd"
             ]
         ]
     },
     {
-        "id": "6084021616b371ff",
+        "id": "37febdee46811633",
         "type": "ui_text",
-        "z": "0998292695b46f5e",
+        "z": "826880ae0edaf3c4",
         "group": "083d461c605f29cf",
         "order": 5,
         "width": "6",
@@ -823,9 +1349,9 @@
         "wires": []
     },
     {
-        "id": "df1f5ab443de66ed",
+        "id": "d4fd033c9b22ae27",
         "type": "function",
-        "z": "0998292695b46f5e",
+        "z": "826880ae0edaf3c4",
         "name": "Make Link status of pump",
         "func": "if (msg.payload == \"trig\") {\n    let tmp = {};\n    let user = global.get(\"user\");\n    let farm = global.get(\"farm\");\n    let sec = global.get(\"section\");\n    global.set(\"pump_check\", \"off\");\n    tmp.method = \"GET\";\n    let link = `http://127.0.0.1:8080/catalog/pump_status?userID=${user}&farmID=${farm}&sectionID=${sec}`;\n    tmp.url = link;\n    return tmp;\n}\n",
         "outputs": 1,
@@ -837,14 +1363,14 @@
         "y": 120,
         "wires": [
             [
-                "4e27f6bfa25e92b6"
+                "02389dcf34865cb3"
             ]
         ]
     },
     {
-        "id": "ef5c5e5cfc1580aa",
+        "id": "cff50fcb45ee4082",
         "type": "inject",
-        "z": "0998292695b46f5e",
+        "z": "826880ae0edaf3c4",
         "name": "",
         "props": [
             {
@@ -862,14 +1388,14 @@
         "y": 120,
         "wires": [
             [
-                "df1f5ab443de66ed"
+                "d4fd033c9b22ae27"
             ]
         ]
     },
     {
-        "id": "2cadd8db8499569f",
+        "id": "edfd41f9205cebcc",
         "type": "function",
-        "z": "0998292695b46f5e",
+        "z": "826880ae0edaf3c4",
         "name": "Make Link status of pump",
         "func": "let tmp = {};\nlet user = global.get(\"user\");\nlet farm = global.get(\"farm\");\nlet sec = global.get(\"section\");\nglobal.set(\"pump_check\", \"off\");\ntmp.method = \"GET\";\nlet link = `http://127.0.0.1:8080/catalog/pump_status?userID=${user}&farmID=${farm}&sectionID=${sec}`;\ntmp.url = link;\nreturn tmp;",
         "outputs": 1,
@@ -881,14 +1407,14 @@
         "y": 80,
         "wires": [
             [
-                "4e27f6bfa25e92b6"
+                "02389dcf34865cb3"
             ]
         ]
     },
     {
-        "id": "c17cc24359c14948",
+        "id": "91edf54a2c938b34",
         "type": "ui_chart",
-        "z": "0998292695b46f5e",
+        "z": "826880ae0edaf3c4",
         "name": "",
         "group": "760d542e0573d812",
         "order": 6,
@@ -930,9 +1456,9 @@
         ]
     },
     {
-        "id": "7f5edf8bedf80540",
+        "id": "dcfb75b566d0bd76",
         "type": "function",
-        "z": "0998292695b46f5e",
+        "z": "826880ae0edaf3c4",
         "name": "function 8",
         "func": "let tmp = {};\n// const s_date = new Date(msg.payload.start);\n// const s_date = flow.get(\"s_date_live\")\nvar s_date = new Date(msg.payload.start);\nlet s_year = s_date.getFullYear();\nconst s_month = s_date.getMonth()+1;\nconst s_day = s_date.getDate();\n\nvar min = msg.payload.f_time / 60000;\nvar s_hh = Math.floor(min / 60).toString();\nvar s_mm = Math.floor(min % 60).toString();\n\nif (s_mm.length < 2) {\n    s_mm = '0' + s_mm;\n}\n\nif (s_hh.length < 2) {\n    s_hh = '0' + s_hh;\n}\n\n// const e_date = new Date(msg.payload.end);\n// const e_date = flow.get(\"e_date_live\")\nconst e_date = new Date(msg.payload.end);\nlet e_year = e_date.getFullYear();\nconst e_month = e_date.getMonth()+1;\nconst e_day = e_date.getDate();\n\nconst e_time = msg.payload.t_time\nvar min = msg.payload.t_time / 60000;\nvar e_hh = Math.floor(min / 60).toString();\nvar e_mm = Math.floor(min % 60).toString();\n\nif (e_mm.length < 2) {\n    e_mm = '0' + e_mm;\n}\n\nif (e_hh.length < 2) {\n    e_hh = '0' + e_hh;\n}\nconst ch_ID = global.get(\"TS_CH_ID\");\n\ntmp.method = \"GET\";\nlet link = `https://api.thingspeak.com/channels/${ch_ID}/feeds.json?start=${s_year}-${s_month}-${s_day}%20${s_hh}:${s_mm}:00&end=${e_year}-${e_month}-${e_day}%20${e_hh}:${e_mm}:59`;\ntmp.url = link;\nreturn tmp;",
         "outputs": 1,
@@ -944,14 +1470,14 @@
         "y": 220,
         "wires": [
             [
-                "442f67f2f3c89d6e"
+                "b6171d0f7b673284"
             ]
         ]
     },
     {
-        "id": "357beb5e9f6d0e49",
+        "id": "ed2193e381f60457",
         "type": "ui_date_picker",
-        "z": "0998292695b46f5e",
+        "z": "826880ae0edaf3c4",
         "name": "",
         "label": "From",
         "group": "760d542e0573d812",
@@ -966,14 +1492,14 @@
         "y": 320,
         "wires": [
             [
-                "49fcdf7830ccad57"
+                "267164679279520f"
             ]
         ]
     },
     {
-        "id": "98778549de196ff9",
+        "id": "dbb3ae3cbe787e29",
         "type": "ui_date_picker",
-        "z": "0998292695b46f5e",
+        "z": "826880ae0edaf3c4",
         "name": "",
         "label": "To",
         "group": "760d542e0573d812",
@@ -988,14 +1514,14 @@
         "y": 360,
         "wires": [
             [
-                "49fcdf7830ccad57"
+                "267164679279520f"
             ]
         ]
     },
     {
-        "id": "49fcdf7830ccad57",
+        "id": "267164679279520f",
         "type": "join",
-        "z": "0998292695b46f5e",
+        "z": "826880ae0edaf3c4",
         "name": "",
         "mode": "custom",
         "build": "object",
@@ -1016,15 +1542,15 @@
         "y": 340,
         "wires": [
             [
-                "74fb20d892629e47",
-                "7f5edf8bedf80540"
+                "7bdc97a986ad6f1a",
+                "dcfb75b566d0bd76"
             ]
         ]
     },
     {
-        "id": "442f67f2f3c89d6e",
+        "id": "b6171d0f7b673284",
         "type": "http request",
-        "z": "0998292695b46f5e",
+        "z": "826880ae0edaf3c4",
         "name": "",
         "method": "use",
         "ret": "obj",
@@ -1041,15 +1567,15 @@
         "y": 220,
         "wires": [
             [
-                "aaebf4e2ddc8a3cc",
-                "5edfd25ee61735b3"
+                "67c529d5546f8211",
+                "88a8942f217a6e42"
             ]
         ]
     },
     {
-        "id": "62452781e7e820be",
+        "id": "5ff829d16bac76ab",
         "type": "ui_chart",
-        "z": "0998292695b46f5e",
+        "z": "826880ae0edaf3c4",
         "name": "",
         "group": "760d542e0573d812",
         "order": 5,
@@ -1091,9 +1617,9 @@
         ]
     },
     {
-        "id": "aaebf4e2ddc8a3cc",
+        "id": "67c529d5546f8211",
         "type": "python3-function",
-        "z": "0998292695b46f5e",
+        "z": "826880ae0edaf3c4",
         "name": "",
         "func": "from datetime import datetime\ntmp ={}\nchart = {\"series\":[],\"data\":[],\"labels\":[]}\ndata =[]\n\nimport_data = msg[\"payload\"][\"feeds\"]\nfor val in import_data:\n    datetime_obj = datetime.strptime(val[\"created_at\"], '%Y-%m-%dT%H:%M:%SZ')\n    timestamp = (datetime_obj - datetime(1970, 1, 1)).total_seconds()\n    # timestamp = datetime_obj.timestamp()\n    if val[\"field1\"] != None:\n        data.append({\"x\":val[\"created_at\"],\"y\":float(val[\"field1\"].replace('\"',''))})\n\nchart[\"series\"] = [\"A\"]\nchart[\"labels\"] = [\"\"]\n\nchart[\"data\"] = [data]\ntmp[\"payload\"] = [chart]\nreturn tmp",
         "outputs": 1,
@@ -1101,14 +1627,14 @@
         "y": 220,
         "wires": [
             [
-                "62452781e7e820be"
+                "5ff829d16bac76ab"
             ]
         ]
     },
     {
-        "id": "5edfd25ee61735b3",
+        "id": "88a8942f217a6e42",
         "type": "python3-function",
-        "z": "0998292695b46f5e",
+        "z": "826880ae0edaf3c4",
         "name": "",
         "func": "from datetime import datetime\ntmp ={}\nchart = {\"series\":[],\"data\":[],\"labels\":[]}\ndata =[]\n\nimport_data = msg[\"payload\"][\"feeds\"]\nfor val in import_data:\n    datetime_obj = datetime.strptime(val[\"created_at\"], '%Y-%m-%dT%H:%M:%SZ')\n    timestamp = (datetime_obj - datetime(1970, 1, 1)).total_seconds()\n    # timestamp = datetime_obj.timestamp()\n    if val[\"field2\"] != None:\n        data.append({\"x\":val[\"created_at\"],\"y\":float(val[\"field2\"].replace('\"',''))})\n\nchart[\"series\"] = [\"A\"]\nchart[\"labels\"] = [\"\"]\n\nchart[\"data\"] = [data]\ntmp[\"payload\"] = [chart]\nreturn tmp",
         "outputs": 1,
@@ -1116,14 +1642,14 @@
         "y": 300,
         "wires": [
             [
-                "c17cc24359c14948"
+                "91edf54a2c938b34"
             ]
         ]
     },
     {
-        "id": "372c17dd8c26d8d8",
+        "id": "a6812b6cb85dde08",
         "type": "inject",
-        "z": "0998292695b46f5e",
+        "z": "826880ae0edaf3c4",
         "name": "",
         "props": [
             {
@@ -1141,14 +1667,14 @@
         "y": 60,
         "wires": [
             [
-                "2cadd8db8499569f"
+                "edfd41f9205cebcc"
             ]
         ]
     },
     {
-        "id": "a5b1bab102d9f648",
+        "id": "f7dfd7f201a3c0dd",
         "type": "function",
-        "z": "0998292695b46f5e",
+        "z": "826880ae0edaf3c4",
         "name": "function 15",
         "func": "if (msg.statusCode != 200){\n    msg.payload = \"Not Connected\"\n    msg.color = \"orange\";\n} else{\n    msg.color = (msg.payload == \"on\") ? \"lime\" : \"red\";\n}\n\nreturn msg;",
         "outputs": 1,
@@ -1160,30 +1686,30 @@
         "y": 120,
         "wires": [
             [
-                "6084021616b371ff"
+                "37febdee46811633"
             ]
         ]
     },
     {
-        "id": "850b62b0f4da9fb4",
+        "id": "2fe87d8fb596a030",
         "type": "link in",
-        "z": "0998292695b46f5e",
+        "z": "826880ae0edaf3c4",
         "name": "link in 4",
         "links": [
-            "d798175cd4eff33c"
+            "20d532843722f3bc"
         ],
         "x": 205,
         "y": 180,
         "wires": [
             [
-                "7f5edf8bedf80540"
+                "dcfb75b566d0bd76"
             ]
         ]
     },
     {
-        "id": "74fb20d892629e47",
+        "id": "7bdc97a986ad6f1a",
         "type": "function",
-        "z": "0998292695b46f5e",
+        "z": "826880ae0edaf3c4",
         "name": "function 18",
         "func": "const s_date = new Date(msg.payload.start);\nflow.set(\"s_date_live\", s_date);\nconst e_date = new Date(msg.payload.end);\nflow.set(\"e_date_live\", e_date)\nreturn msg;",
         "outputs": 1,
@@ -1198,9 +1724,9 @@
         ]
     },
     {
-        "id": "e9a81e5e2d5511a9",
+        "id": "0198ca7a690784d0",
         "type": "ui_text_input",
-        "z": "0998292695b46f5e",
+        "z": "826880ae0edaf3c4",
         "name": "",
         "label": "",
         "tooltip": "",
@@ -1219,14 +1745,14 @@
         "y": 500,
         "wires": [
             [
-                "49fcdf7830ccad57"
+                "267164679279520f"
             ]
         ]
     },
     {
-        "id": "b64a057467f0f310",
+        "id": "df817cd48ccf012b",
         "type": "ui_text_input",
-        "z": "0998292695b46f5e",
+        "z": "826880ae0edaf3c4",
         "name": "",
         "label": "",
         "tooltip": "",
@@ -1245,14 +1771,14 @@
         "y": 580,
         "wires": [
             [
-                "49fcdf7830ccad57"
+                "267164679279520f"
             ]
         ]
     },
     {
-        "id": "eeb8137bfe9545a9",
+        "id": "def8c0b0082e5f1f",
         "type": "function",
-        "z": "2a5cdca7bbb39636",
+        "z": "35d84e1661220e87",
         "name": "function 9",
         "func": "let tmp = {};\n\nconst ch_ID = global.get(\"TS_CH_ID\");\n\ntmp.method = \"GET\";\nlet link = `https://api.thingspeak.com/channels/${ch_ID}/fields/1/last.json`;\ntmp.url = link;\nreturn tmp;",
         "outputs": 1,
@@ -1264,14 +1790,14 @@
         "y": 100,
         "wires": [
             [
-                "33d40c77ce5108a6"
+                "d533e87dacf00bbc"
             ]
         ]
     },
     {
-        "id": "33d40c77ce5108a6",
+        "id": "d533e87dacf00bbc",
         "type": "http request",
-        "z": "2a5cdca7bbb39636",
+        "z": "35d84e1661220e87",
         "name": "",
         "method": "use",
         "ret": "obj",
@@ -1288,14 +1814,14 @@
         "y": 100,
         "wires": [
             [
-                "743b46840ee16812"
+                "8aa97ac5af9338ca"
             ]
         ]
     },
     {
-        "id": "743b46840ee16812",
+        "id": "8aa97ac5af9338ca",
         "type": "python3-function",
-        "z": "2a5cdca7bbb39636",
+        "z": "35d84e1661220e87",
         "name": "",
         "func": "tmp={}\nval = msg['payload']['field1']\n# tmp[\"payload\"] =\ntmp[\"payload\"] = float(val.replace('\"',''))\nreturn tmp",
         "outputs": 1,
@@ -1303,14 +1829,14 @@
         "y": 100,
         "wires": [
             [
-                "55aab9519eb7f30a"
+                "6ec63603ae43adeb"
             ]
         ]
     },
     {
-        "id": "ec33341ca706a163",
+        "id": "ca1848d712fc8607",
         "type": "ui_button",
-        "z": "2a5cdca7bbb39636",
+        "z": "35d84e1661220e87",
         "name": "",
         "group": "872843d3cbac360c",
         "order": 5,
@@ -1331,15 +1857,15 @@
         "y": 100,
         "wires": [
             [
-                "eeb8137bfe9545a9",
-                "3b355525932c851b"
+                "def8c0b0082e5f1f",
+                "afb1221859706d43"
             ]
         ]
     },
     {
-        "id": "55aab9519eb7f30a",
+        "id": "6ec63603ae43adeb",
         "type": "ui_gauge",
-        "z": "2a5cdca7bbb39636",
+        "z": "35d84e1661220e87",
         "name": "",
         "group": "872843d3cbac360c",
         "order": 6,
@@ -1365,9 +1891,9 @@
         "wires": []
     },
     {
-        "id": "3b355525932c851b",
+        "id": "afb1221859706d43",
         "type": "function",
-        "z": "2a5cdca7bbb39636",
+        "z": "35d84e1661220e87",
         "name": "function 10",
         "func": "let tmp = {};\n\nconst ch_ID = global.get(\"TS_CH_ID\");\n\ntmp.method = \"GET\";\nlet link = `https://api.thingspeak.com/channels/${ch_ID}/fields/2/last.json`;\ntmp.url = link;\nreturn tmp;",
         "outputs": 1,
@@ -1379,14 +1905,14 @@
         "y": 160,
         "wires": [
             [
-                "51663efd3b34374d"
+                "4d28015c2d3e0e0b"
             ]
         ]
     },
     {
-        "id": "51663efd3b34374d",
+        "id": "4d28015c2d3e0e0b",
         "type": "http request",
-        "z": "2a5cdca7bbb39636",
+        "z": "35d84e1661220e87",
         "name": "",
         "method": "use",
         "ret": "obj",
@@ -1403,14 +1929,14 @@
         "y": 160,
         "wires": [
             [
-                "c7b69f69a41cabbe"
+                "1652254ba9d8650c"
             ]
         ]
     },
     {
-        "id": "c7b69f69a41cabbe",
+        "id": "1652254ba9d8650c",
         "type": "python3-function",
-        "z": "2a5cdca7bbb39636",
+        "z": "35d84e1661220e87",
         "name": "",
         "func": "tmp={}\nval = msg['payload']['field2']\n# tmp[\"payload\"] =\ntmp[\"payload\"] = float(val.replace('\"',''))\nreturn tmp",
         "outputs": 1,
@@ -1418,14 +1944,14 @@
         "y": 160,
         "wires": [
             [
-                "dc0bd0517833057f"
+                "f42c8a052b3e9613"
             ]
         ]
     },
     {
-        "id": "dc0bd0517833057f",
+        "id": "f42c8a052b3e9613",
         "type": "ui_gauge",
-        "z": "2a5cdca7bbb39636",
+        "z": "35d84e1661220e87",
         "name": "",
         "group": "872843d3cbac360c",
         "order": 7,
@@ -1451,11 +1977,11 @@
         "wires": []
     },
     {
-        "id": "c9c0393dce0b831c",
+        "id": "b60dfc4ac6e17c62",
         "type": "function",
-        "z": "2a5cdca7bbb39636",
+        "z": "35d84e1661220e87",
         "d": true,
-        "g": "85bdec3d3b38f4c8",
+        "g": "443be9c85abad5d6",
         "name": "function 11",
         "func": "let tmp = {};\nconst s_date = new Date(msg.payload.start);\nlet s_year = s_date.getFullYear();\nconst s_month = s_date.getMonth()+1;\nconst s_day = s_date.getDate();\n\nconst e_date = new Date(msg.payload.end);\nlet e_year = e_date.getFullYear();\nconst e_month = e_date.getMonth()+1;\nconst e_day = e_date.getDate();\n\ntmp.method = \"GET\";\nlet link = `http://127.0.0.1:8080/statistic/period?userID=${global.get(\"user\")}&farmID=${global.get(\"farm\")}&sectionID=${global.get(\"section\")}&start=${s_day}/${s_month}/${s_year} 00:00:00&end=${e_day}/${e_month}/${e_year} 23:59:59`\ntmp.url = link;\nreturn tmp;",
         "outputs": 1,
@@ -1467,16 +1993,16 @@
         "y": 280,
         "wires": [
             [
-                "fb59e967458bb44f"
+                "f2571359c99887eb"
             ]
         ]
     },
     {
-        "id": "5e1df0da91902ccf",
+        "id": "caced34b02fd86f8",
         "type": "ui_date_picker",
-        "z": "2a5cdca7bbb39636",
+        "z": "35d84e1661220e87",
         "d": true,
-        "g": "85bdec3d3b38f4c8",
+        "g": "443be9c85abad5d6",
         "name": "",
         "label": "From",
         "group": "70fb6f524aecfe93",
@@ -1491,16 +2017,16 @@
         "y": 260,
         "wires": [
             [
-                "a8d72255fd7c0f00"
+                "1e19e81cbbcc02da"
             ]
         ]
     },
     {
-        "id": "7a3ad05c3ecf1f51",
+        "id": "545ba76f3d838e39",
         "type": "ui_date_picker",
-        "z": "2a5cdca7bbb39636",
+        "z": "35d84e1661220e87",
         "d": true,
-        "g": "85bdec3d3b38f4c8",
+        "g": "443be9c85abad5d6",
         "name": "",
         "label": "To",
         "group": "70fb6f524aecfe93",
@@ -1515,15 +2041,15 @@
         "y": 300,
         "wires": [
             [
-                "a8d72255fd7c0f00"
+                "1e19e81cbbcc02da"
             ]
         ]
     },
     {
-        "id": "a8d72255fd7c0f00",
+        "id": "1e19e81cbbcc02da",
         "type": "join",
-        "z": "2a5cdca7bbb39636",
-        "g": "85bdec3d3b38f4c8",
+        "z": "35d84e1661220e87",
+        "g": "443be9c85abad5d6",
         "name": "",
         "mode": "custom",
         "build": "object",
@@ -1544,15 +2070,15 @@
         "y": 280,
         "wires": [
             [
-                "c9c0393dce0b831c"
+                "b60dfc4ac6e17c62"
             ]
         ]
     },
     {
-        "id": "fb59e967458bb44f",
+        "id": "f2571359c99887eb",
         "type": "http request",
-        "z": "2a5cdca7bbb39636",
-        "g": "85bdec3d3b38f4c8",
+        "z": "35d84e1661220e87",
+        "g": "443be9c85abad5d6",
         "name": "",
         "method": "use",
         "ret": "obj",
@@ -1569,16 +2095,16 @@
         "y": 280,
         "wires": [
             [
-                "74933ee654791aad"
+                "b3961f38c1ce9fdb"
             ]
         ]
     },
     {
-        "id": "74933ee654791aad",
+        "id": "b3961f38c1ce9fdb",
         "type": "ui_gauge",
-        "z": "2a5cdca7bbb39636",
+        "z": "35d84e1661220e87",
         "d": true,
-        "g": "85bdec3d3b38f4c8",
+        "g": "443be9c85abad5d6",
         "name": "",
         "group": "70fb6f524aecfe93",
         "order": 3,
@@ -1604,9 +2130,9 @@
         "wires": []
     },
     {
-        "id": "a17d8e1f3b5abc43",
+        "id": "accc9538fb019aa2",
         "type": "function",
-        "z": "2a5cdca7bbb39636",
+        "z": "35d84e1661220e87",
         "name": "function 12",
         "func": "let tmp = {};\nlet s_date = flow.get(\"date_cons\")\n// const s_date = new Date(pre_Date)\n// const s_date = new Date(msg.payload);\nlet s_year = s_date.getFullYear();\nconst s_month = s_date.getMonth()+1;\nconst s_day = s_date.getDate();\n\ntmp.method = \"GET\";\nlet link = `http://127.0.0.1:8080/statistic/day?userID=${global.get(\"user\")}&farmID=${global.get(\"farm\")}&sectionID=${global.get(\"section\")}&day=${s_day}/${s_month}/${s_year}`\ntmp.url = link;\nreturn tmp;",
         "outputs": 1,
@@ -1618,14 +2144,14 @@
         "y": 400,
         "wires": [
             [
-                "9aa11a7eb914d5e5"
+                "353fb03f7f7bd65c"
             ]
         ]
     },
     {
-        "id": "646e42af03621026",
+        "id": "566a85bf8533b684",
         "type": "ui_date_picker",
-        "z": "2a5cdca7bbb39636",
+        "z": "35d84e1661220e87",
         "name": "",
         "label": "Date",
         "group": "70fb6f524aecfe93",
@@ -1640,14 +2166,14 @@
         "y": 400,
         "wires": [
             [
-                "ca986fc75e03f601"
+                "071c141e9c87d5e0"
             ]
         ]
     },
     {
-        "id": "9aa11a7eb914d5e5",
+        "id": "353fb03f7f7bd65c",
         "type": "http request",
-        "z": "2a5cdca7bbb39636",
+        "z": "35d84e1661220e87",
         "name": "",
         "method": "use",
         "ret": "obj",
@@ -1664,14 +2190,14 @@
         "y": 400,
         "wires": [
             [
-                "9bde3388bea2dfdd"
+                "78df927332746c44"
             ]
         ]
     },
     {
-        "id": "9bde3388bea2dfdd",
+        "id": "78df927332746c44",
         "type": "ui_gauge",
-        "z": "2a5cdca7bbb39636",
+        "z": "35d84e1661220e87",
         "name": "",
         "group": "70fb6f524aecfe93",
         "order": 5,
@@ -1697,9 +2223,9 @@
         "wires": []
     },
     {
-        "id": "d48927479cadd3c7",
+        "id": "f798a663c842fdb0",
         "type": "ui_chart",
-        "z": "2a5cdca7bbb39636",
+        "z": "35d84e1661220e87",
         "name": "",
         "group": "70fb6f524aecfe93",
         "order": 7,
@@ -1741,9 +2267,9 @@
         ]
     },
     {
-        "id": "af2751c6ef37a274",
+        "id": "a01faf4b639ad4a7",
         "type": "function",
-        "z": "2a5cdca7bbb39636",
+        "z": "35d84e1661220e87",
         "name": "function 14",
         "func": "let tmp={}\nlet selected_year = flow.get(\"year_selected\")\n\ntmp.method = \"GET\";\nlet link = `http://127.0.0.1:8080/statistic/year?userID=${global.get(\"user\")}&farmID=${global.get(\"farm\")}&sectionID=${global.get(\"section\")}&year=${selected_year}`\ntmp.url = link;\nreturn tmp;",
         "outputs": 1,
@@ -1755,14 +2281,14 @@
         "y": 620,
         "wires": [
             [
-                "67402b92556bc563"
+                "580587c835d9df29"
             ]
         ]
     },
     {
-        "id": "67402b92556bc563",
+        "id": "580587c835d9df29",
         "type": "http request",
-        "z": "2a5cdca7bbb39636",
+        "z": "35d84e1661220e87",
         "name": "",
         "method": "use",
         "ret": "obj",
@@ -1779,14 +2305,14 @@
         "y": 620,
         "wires": [
             [
-                "0fcf19bdf0a69dcb"
+                "de6450e3326c9a5c"
             ]
         ]
     },
     {
-        "id": "0fcf19bdf0a69dcb",
+        "id": "de6450e3326c9a5c",
         "type": "python3-function",
-        "z": "2a5cdca7bbb39636",
+        "z": "35d84e1661220e87",
         "name": "",
         "func": "tmp = {}\n_cons = []\n_month = ['January', 'February', 'March', 'April', 'May', 'June',\n'July', 'August', 'September', 'October', 'November', 'December']\n\n\n_dict = msg[\"payload\"]\nfor month in _month:\n    _cons.append(_dict[month])\n# for key, value in _dict.items():\n#     _cons.append(value)\n#     _month.append(key)\n    \ntmp['payload'] = [{\n    \"series\": [\"temp1\"],\n    \"data\": [_cons],\n    \"labels\": _month\n}];\n    \ntmp[\"cons\"] = _cons\ntmp[\"month\"] = _month\nreturn tmp",
         "outputs": 1,
@@ -1794,14 +2320,14 @@
         "y": 620,
         "wires": [
             [
-                "d48927479cadd3c7"
+                "f798a663c842fdb0"
             ]
         ]
     },
     {
-        "id": "1637510783772718",
+        "id": "3d3476e0d9ba4f4d",
         "type": "ui_dropdown",
-        "z": "2a5cdca7bbb39636",
+        "z": "35d84e1661220e87",
         "name": "",
         "label": "Select Year",
         "tooltip": "",
@@ -1821,14 +2347,14 @@
         "y": 520,
         "wires": [
             [
-                "87731338f3453fed"
+                "95571ca81b1f1195"
             ]
         ]
     },
     {
-        "id": "eeeb3715341ae164",
+        "id": "8866c0a464f3b317",
         "type": "python3-function",
-        "z": "2a5cdca7bbb39636",
+        "z": "35d84e1661220e87",
         "name": "",
         "func": "from datetime import datetime\nyear = datetime.now().year\nyears =[]\nfor i in range(10):\n    years.append(year - i)\nmsg[\"options\"] = years\nreturn msg",
         "outputs": 1,
@@ -1836,14 +2362,14 @@
         "y": 520,
         "wires": [
             [
-                "1637510783772718"
+                "3d3476e0d9ba4f4d"
             ]
         ]
     },
     {
-        "id": "52baa92c3b23500c",
+        "id": "ee68c2e8f1fbc4dd",
         "type": "inject",
-        "z": "2a5cdca7bbb39636",
+        "z": "35d84e1661220e87",
         "name": "",
         "props": [
             {
@@ -1861,30 +2387,30 @@
         "y": 520,
         "wires": [
             [
-                "eeeb3715341ae164"
+                "8866c0a464f3b317"
             ]
         ]
     },
     {
-        "id": "c60bfc084123f182",
+        "id": "20c43c6632a9fa78",
         "type": "link in",
-        "z": "2a5cdca7bbb39636",
+        "z": "35d84e1661220e87",
         "name": "link in 1",
         "links": [
-            "d798175cd4eff33c"
+            "20d532843722f3bc"
         ],
         "x": 265,
         "y": 360,
         "wires": [
             [
-                "a17d8e1f3b5abc43"
+                "accc9538fb019aa2"
             ]
         ]
     },
     {
-        "id": "ca986fc75e03f601",
+        "id": "071c141e9c87d5e0",
         "type": "function",
-        "z": "2a5cdca7bbb39636",
+        "z": "35d84e1661220e87",
         "name": "function 16",
         "func": "const s_date = new Date(msg.payload)\nflow.set(\"date_cons\", s_date);\n\nreturn msg;",
         "outputs": 1,
@@ -1896,14 +2422,14 @@
         "y": 400,
         "wires": [
             [
-                "a17d8e1f3b5abc43"
+                "accc9538fb019aa2"
             ]
         ]
     },
     {
-        "id": "87731338f3453fed",
+        "id": "95571ca81b1f1195",
         "type": "function",
-        "z": "2a5cdca7bbb39636",
+        "z": "35d84e1661220e87",
         "name": "function 17",
         "func": "flow.set(\"year_selected\", msg.payload);\nreturn msg;",
         "outputs": 1,
@@ -1915,47 +2441,47 @@
         "y": 620,
         "wires": [
             [
-                "af2751c6ef37a274"
+                "a01faf4b639ad4a7"
             ]
         ]
     },
     {
-        "id": "83052337058ff6cd",
+        "id": "049f6f9e4b87586a",
         "type": "link in",
-        "z": "2a5cdca7bbb39636",
+        "z": "35d84e1661220e87",
         "name": "link in 2",
         "links": [
-            "d798175cd4eff33c"
+            "20d532843722f3bc"
         ],
         "x": 185,
         "y": 660,
         "wires": [
             [
-                "af2751c6ef37a274"
+                "a01faf4b639ad4a7"
             ]
         ]
     },
     {
-        "id": "f0696bfdd0678e17",
+        "id": "e154c0cc837655db",
         "type": "link in",
-        "z": "2a5cdca7bbb39636",
+        "z": "35d84e1661220e87",
         "name": "link in 3",
         "links": [
-            "d798175cd4eff33c"
+            "20d532843722f3bc"
         ],
         "x": 115,
         "y": 160,
         "wires": [
             [
-                "eeb8137bfe9545a9",
-                "3b355525932c851b"
+                "def8c0b0082e5f1f",
+                "afb1221859706d43"
             ]
         ]
     },
     {
-        "id": "1272f48a860086ba",
+        "id": "dc059fe7f176c23f",
         "type": "inject",
-        "z": "2a5cdca7bbb39636",
+        "z": "35d84e1661220e87",
         "name": "",
         "props": [
             {
@@ -1973,15 +2499,15 @@
         "y": 40,
         "wires": [
             [
-                "eeb8137bfe9545a9",
-                "3b355525932c851b"
+                "def8c0b0082e5f1f",
+                "afb1221859706d43"
             ]
         ]
     },
     {
-        "id": "d79cd6da65ce9dba",
+        "id": "ddda206ec18debed",
         "type": "ui_slider",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "",
         "label": "Temprature   ",
         "tooltip": "",
@@ -2001,15 +2527,15 @@
         "y": 340,
         "wires": [
             [
-                "4ddc932b6f8aa30a",
-                "394468a3d49587cb"
+                "0fa1558646afe900",
+                "3e6f202504ae74f8"
             ]
         ]
     },
     {
-        "id": "381cfc162991fc4a",
+        "id": "33cf996c5d1b1315",
         "type": "ui_slider",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "",
         "label": "Min Moisture",
         "tooltip": "",
@@ -2029,15 +2555,15 @@
         "y": 420,
         "wires": [
             [
-                "0c19cd5ef4b57023",
-                "cedbd7b05355ab2b"
+                "011125e9d0252ef3",
+                "b618bc53f2ece7b6"
             ]
         ]
     },
     {
-        "id": "c16df478e57b360c",
+        "id": "62fbdc133ea489b7",
         "type": "ui_slider",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "",
         "label": "Max Moisture",
         "tooltip": "",
@@ -2057,15 +2583,15 @@
         "y": 500,
         "wires": [
             [
-                "5edae9106f0d2222",
-                "ead796ef243eafe5"
+                "c57e7dc8f214e517",
+                "5c8e55c2d87d3d42"
             ]
         ]
     },
     {
-        "id": "4ddc932b6f8aa30a",
+        "id": "0fa1558646afe900",
         "type": "ui_text",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "group": "d6d42a467721bbee",
         "order": 2,
         "width": "6",
@@ -2080,9 +2606,9 @@
         "wires": []
     },
     {
-        "id": "5edae9106f0d2222",
+        "id": "c57e7dc8f214e517",
         "type": "ui_text",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "group": "d6d42a467721bbee",
         "order": 6,
         "width": 0,
@@ -2097,9 +2623,9 @@
         "wires": []
     },
     {
-        "id": "0c19cd5ef4b57023",
+        "id": "011125e9d0252ef3",
         "type": "ui_text",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "group": "d6d42a467721bbee",
         "order": 4,
         "width": 0,
@@ -2114,9 +2640,9 @@
         "wires": []
     },
     {
-        "id": "7d416a8a020a76fa",
+        "id": "5abb4f9a68ea7194",
         "type": "http request",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "",
         "method": "use",
         "ret": "txt",
@@ -2136,9 +2662,9 @@
         ]
     },
     {
-        "id": "bf1d28b03efe2c52",
+        "id": "8922867e56a83d08",
         "type": "http request",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "",
         "method": "use",
         "ret": "txt",
@@ -2158,9 +2684,9 @@
         ]
     },
     {
-        "id": "65c41416cc22108f",
+        "id": "aa0bd5253f9ca191",
         "type": "http request",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "",
         "method": "use",
         "ret": "txt",
@@ -2180,9 +2706,9 @@
         ]
     },
     {
-        "id": "6f3ae41e230ebeaf",
+        "id": "120a809893009f75",
         "type": "ui_dropdown",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "",
         "label": "User ID:",
         "tooltip": "",
@@ -2202,15 +2728,15 @@
         "y": 100,
         "wires": [
             [
-                "c3ef2fd6fcaff129",
-                "603e47a486dd8b74"
+                "d81d48f7d3670809",
+                "6504f395df7ef468"
             ]
         ]
     },
     {
-        "id": "1f13efec79dcab67",
+        "id": "d885c7a5d8cddb0b",
         "type": "http request",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "",
         "method": "GET",
         "ret": "obj",
@@ -2227,14 +2753,14 @@
         "y": 100,
         "wires": [
             [
-                "b7363c12bad6a529"
+                "6db17fec20f4bd3e"
             ]
         ]
     },
     {
-        "id": "f9484e7b274f7dba",
+        "id": "887e194f09393f8f",
         "type": "ui_button",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "",
         "group": "0ca708bd9099f601",
         "order": 1,
@@ -2255,14 +2781,14 @@
         "y": 100,
         "wires": [
             [
-                "1f13efec79dcab67"
+                "d885c7a5d8cddb0b"
             ]
         ]
     },
     {
-        "id": "a6027178d05d3f16",
+        "id": "0f053859e07333ef",
         "type": "ui_dropdown",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "",
         "label": "Farm ID:",
         "tooltip": "",
@@ -2282,15 +2808,15 @@
         "y": 180,
         "wires": [
             [
-                "46d79109dbf6bf78",
-                "20322f36e7f41515"
+                "2105f4a629b2fa43",
+                "b709fc6c248e0357"
             ]
         ]
     },
     {
-        "id": "2baccf92d6fd1e3b",
+        "id": "d219ac52cb253eec",
         "type": "ui_dropdown",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "",
         "label": "Section ID:",
         "tooltip": "",
@@ -2310,15 +2836,15 @@
         "y": 260,
         "wires": [
             [
-                "beb2f8624e316192",
-                "aeb5c322c094a05a"
+                "4440a456641f982b",
+                "438a1ca50fbf882c"
             ]
         ]
     },
     {
-        "id": "b7363c12bad6a529",
+        "id": "6db17fec20f4bd3e",
         "type": "function",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "Def Catalog, Find user",
         "func": "// catalog = msg.payload;\nglobal.set(\"catalog_users\", msg.payload);\nvar dict = msg.payload;\nvar users = [];\nfor (var user in dict) {\n    for (var val in dict[user]) {\n        users.push(dict[user][val][\"userID\"]);\n    }\n}\n\nvar tmp = {};\ntmp.options = users;\ntmp.payload = msg.payload;\ntmp.topic = \"catalog\";\nreturn tmp;",
         "outputs": 1,
@@ -2330,14 +2856,14 @@
         "y": 100,
         "wires": [
             [
-                "6f3ae41e230ebeaf"
+                "120a809893009f75"
             ]
         ]
     },
     {
-        "id": "5e75839bbe6b9502",
+        "id": "3de2ca86a05e851f",
         "type": "function",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "Find farms",
         "func": "let tmp = {};\nvar catalog = global.get(\"catalog_users\");\nlet farms_list = [];\n\nfor (let user of Object.values(catalog)) {\n    for (let val of Object.values(user)) {\n        if (val.userID == global.get(\"user\")) {\n            if (val.pass == msg.pass){\n                farms_list = val.farm_list;\n            }\n            else{\n                tmp.payload = \"The password is not correct\"\n            }\n        }\n    }\n}\n\ntmp.options = farms_list;\n// msg.payload = global.get(\"user\");\nreturn tmp;",
         "outputs": 1,
@@ -2349,15 +2875,15 @@
         "y": 180,
         "wires": [
             [
-                "a6027178d05d3f16",
-                "412c4222cc0e074f"
+                "0f053859e07333ef",
+                "175b5e5eaf011f6b"
             ]
         ]
     },
     {
-        "id": "46d79109dbf6bf78",
+        "id": "2105f4a629b2fa43",
         "type": "function",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "Global farm",
         "func": "global.set(\"farm\", msg.payload);\nreturn msg;",
         "outputs": 1,
@@ -2369,14 +2895,14 @@
         "y": 180,
         "wires": [
             [
-                "f66fb98ffb13c3e1"
+                "da3b7dc1662c6f03"
             ]
         ]
     },
     {
-        "id": "beb2f8624e316192",
+        "id": "4440a456641f982b",
         "type": "function",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "Global sections, TS_ChannelID",
         "func": "global.set(\"section\", msg.payload);\nglobal.set(\"pump_check\", \"trig\")\n\nvar catalog = global.get(\"catalog\");\nvar sec_list = [];\nfor (var farm in catalog) {\n    for (var val in catalog[farm]) {\n        if (catalog[farm][val][\"farmID\"] == global.get(\"farm\")) {\n            var sections = catalog[farm][val][\"Sections\"];\n                for (var sec in sections) {\n                    if (sections[sec][\"sectionID\"] == msg.payload) {\n                        global.set(\"TS_CH_ID\", sections[sec][\"TS_ChannelID\"])\n                }\n            }\n        }\n    }\n}\nreturn msg;",
         "outputs": 1,
@@ -2388,15 +2914,15 @@
         "y": 260,
         "wires": [
             [
-                "23d078eef54b8950",
-                "d798175cd4eff33c"
+                "e861bf24442c9ee2",
+                "20d532843722f3bc"
             ]
         ]
     },
     {
-        "id": "394468a3d49587cb",
+        "id": "3e6f202504ae74f8",
         "type": "function",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "function 5",
         "func": "let tmp = {};\nlet user = global.get(\"user\");\nlet farm = global.get(\"farm\");\nlet sec = global.get(\"section\");\n// var value = msg.payload.temp\n// const str = value.toString()\ntmp.method = \"PUT\";\nlet link = `http://127.0.0.1:8080/catalog/Temp_thresh/?userID=${user}&farmID=${farm}&sectionID=${sec}&value=${String(msg.payload)}`;\ntmp.url = link;\nreturn tmp;",
         "outputs": 1,
@@ -2408,14 +2934,14 @@
         "y": 340,
         "wires": [
             [
-                "7d416a8a020a76fa"
+                "5abb4f9a68ea7194"
             ]
         ]
     },
     {
-        "id": "cedbd7b05355ab2b",
+        "id": "b618bc53f2ece7b6",
         "type": "function",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "function 6",
         "func": "let tmp = {};\nlet user = global.get(\"user\");\nlet farm = global.get(\"farm\");\nlet sec = global.get(\"section\");\n// var value = msg.payload.temp\n// const str = value.toString()\ntmp.method = \"PUT\";\nlet link = `http://127.0.0.1:8080/catalog/Mois_min_thresh/?userID=${user}&farmID=${farm}&sectionID=${sec}&value=${String(msg.payload)}`;\ntmp.url = link;\nreturn tmp;",
         "outputs": 1,
@@ -2427,14 +2953,14 @@
         "y": 420,
         "wires": [
             [
-                "bf1d28b03efe2c52"
+                "8922867e56a83d08"
             ]
         ]
     },
     {
-        "id": "ead796ef243eafe5",
+        "id": "5c8e55c2d87d3d42",
         "type": "function",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "function 7",
         "func": "let tmp = {};\nlet user = global.get(\"user\");\nlet farm = global.get(\"farm\");\nlet sec = global.get(\"section\");\n// var value = msg.payload.temp\n// const str = value.toString()\ntmp.method = \"PUT\";\nlet link = `http://127.0.0.1:8080/catalog/Mois_max_thresh/?userID=${user}&farmID=${farm}&sectionID=${sec}&value=${String(msg.payload)}`;\ntmp.url = link;\nreturn tmp;",
         "outputs": 1,
@@ -2446,14 +2972,14 @@
         "y": 500,
         "wires": [
             [
-                "65c41416cc22108f"
+                "aa0bd5253f9ca191"
             ]
         ]
     },
     {
-        "id": "b86d359f869a3fcf",
+        "id": "1bc67a7d72850f06",
         "type": "function",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "Find sections",
         "func": "var catalog = msg.payload;\nglobal.set(\"catalog\", msg.payload);\nvar sec_list = [];\nlet selected_farm = global.get(\"farm\");\nvar s_farm = null;\nvar farms = catalog.Farms\n\nfor (var key in farms){\n    if (farms[key][\"farmID\"] == selected_farm){\n        for(var sec_key in farms[key]['Sections']){\n            sec_list.push(farms[key]['Sections'][sec_key]['sectionID'])\n        }\n    }\n}\n\nmsg.options = sec_list;\nreturn msg;",
         "outputs": 1,
@@ -2465,14 +2991,14 @@
         "y": 260,
         "wires": [
             [
-                "2baccf92d6fd1e3b"
+                "d219ac52cb253eec"
             ]
         ]
     },
     {
-        "id": "603e47a486dd8b74",
+        "id": "6504f395df7ef468",
         "type": "function",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "Global user",
         "func": "global.set(\"user\", msg.payload);\nreturn msg;",
         "outputs": 1,
@@ -2484,14 +3010,14 @@
         "y": 100,
         "wires": [
             [
-                "a4b3e97c81f996a2"
+                "9fb967af5bbacb39"
             ]
         ]
     },
     {
-        "id": "de23dd13224bb245",
+        "id": "322c195ad1ab0843",
         "type": "inject",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "",
         "props": [
             {
@@ -2509,14 +3035,14 @@
         "y": 60,
         "wires": [
             [
-                "1f13efec79dcab67"
+                "d885c7a5d8cddb0b"
             ]
         ]
     },
     {
-        "id": "23d078eef54b8950",
+        "id": "e861bf24442c9ee2",
         "type": "function",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "Create link Thresh",
         "func": "// var tmp = {};\nlet user = global.get(\"user\");\nlet farm = global.get(\"farm\");\nlet sec = global.get(\"section\");\nmsg.method = \"GET\";\nmsg.url = `http://127.0.0.1:8080/catalog/threshold?userID=${user}&farmID=${farm}&sectionID=${sec}`\nreturn msg;",
         "outputs": 1,
@@ -2528,14 +3054,14 @@
         "y": 340,
         "wires": [
             [
-                "29ea5a3c8d86879a"
+                "d62e7f3a2ffa62f0"
             ]
         ]
     },
     {
-        "id": "29ea5a3c8d86879a",
+        "id": "d62e7f3a2ffa62f0",
         "type": "http request",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "",
         "method": "use",
         "ret": "obj",
@@ -2552,16 +3078,16 @@
         "y": 340,
         "wires": [
             [
-                "d3eec01de2873cf3",
-                "c56e23cba4b4f388",
-                "56fda0b93858fc75"
+                "961675db76663184",
+                "3f42c99e4c87f270",
+                "c61f086a13efad17"
             ]
         ]
     },
     {
-        "id": "d3eec01de2873cf3",
+        "id": "961675db76663184",
         "type": "python3-function",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "",
         "func": "msg[\"payload\"]  = msg[\"payload\"][\"temp\"]\nreturn msg",
         "outputs": 1,
@@ -2569,14 +3095,14 @@
         "y": 340,
         "wires": [
             [
-                "d79cd6da65ce9dba"
+                "ddda206ec18debed"
             ]
         ]
     },
     {
-        "id": "c56e23cba4b4f388",
+        "id": "3f42c99e4c87f270",
         "type": "python3-function",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "",
         "func": "msg[\"payload\"]  = msg[\"payload\"][\"mois_min\"]\nreturn msg",
         "outputs": 1,
@@ -2584,14 +3110,14 @@
         "y": 420,
         "wires": [
             [
-                "381cfc162991fc4a"
+                "33cf996c5d1b1315"
             ]
         ]
     },
     {
-        "id": "56fda0b93858fc75",
+        "id": "c61f086a13efad17",
         "type": "python3-function",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "",
         "func": "msg[\"payload\"]  = msg[\"payload\"][\"mois_max\"]\nreturn msg",
         "outputs": 1,
@@ -2599,14 +3125,14 @@
         "y": 500,
         "wires": [
             [
-                "c16df478e57b360c"
+                "62fbdc133ea489b7"
             ]
         ]
     },
     {
-        "id": "c3ef2fd6fcaff129",
+        "id": "d81d48f7d3670809",
         "type": "ui_text",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "group": "083d461c605f29cf",
         "order": 1,
         "width": "3",
@@ -2621,9 +3147,9 @@
         "wires": []
     },
     {
-        "id": "20322f36e7f41515",
+        "id": "b709fc6c248e0357",
         "type": "ui_text",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "group": "083d461c605f29cf",
         "order": 2,
         "width": "3",
@@ -2638,9 +3164,9 @@
         "wires": []
     },
     {
-        "id": "aeb5c322c094a05a",
+        "id": "438a1ca50fbf882c",
         "type": "ui_text",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "group": "083d461c605f29cf",
         "order": 3,
         "width": "4",
@@ -2655,27 +3181,27 @@
         "wires": []
     },
     {
-        "id": "d798175cd4eff33c",
+        "id": "20d532843722f3bc",
         "type": "link out",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "link out 1",
         "mode": "link",
         "links": [
-            "83052337058ff6cd",
-            "c60bfc084123f182",
-            "f0696bfdd0678e17",
-            "850b62b0f4da9fb4",
-            "d1fd8982e0b65dc3",
-            "8c06e746ee98d923"
+            "049f6f9e4b87586a",
+            "20c43c6632a9fa78",
+            "e154c0cc837655db",
+            "2fe87d8fb596a030",
+            "3ffa4740fe0b4a91",
+            "ef7dd2d1661a5e2e"
         ],
         "x": 1305,
         "y": 260,
         "wires": []
     },
     {
-        "id": "fbf712da4d14a242",
+        "id": "b2caad4c021ed932",
         "type": "ui_ui_control",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "",
         "events": "connect",
         "x": 1280,
@@ -2685,9 +3211,9 @@
         ]
     },
     {
-        "id": "5d46460e45103627",
+        "id": "0807a71b65071b04",
         "type": "http request",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "",
         "method": "use",
         "ret": "obj",
@@ -2704,14 +3230,14 @@
         "y": 620,
         "wires": [
             [
-                "2cc21aaa4a8f9bec"
+                "2e3a81648dcaf4e1"
             ]
         ]
     },
     {
-        "id": "d11893fb9e208557",
+        "id": "e86396425c5731f6",
         "type": "ui_text",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "group": "083d461c605f29cf",
         "order": 4,
         "width": "8",
@@ -2726,9 +3252,9 @@
         "wires": []
     },
     {
-        "id": "7b966ebf24b4e403",
+        "id": "0416f859f581088c",
         "type": "function",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "Make Link status of pump",
         "func": "let tmp = {};\nlet user = global.get(\"user\");\nlet farm = global.get(\"farm\");\nlet sec = global.get(\"section\");\ntmp.method = \"GET\";\nlet link = `http://127.0.0.1:8080/catalog/control_status?userID=${user}&farmID=${farm}&sectionID=${sec}`;\ntmp.url = link;\nreturn tmp;",
         "outputs": 1,
@@ -2740,14 +3266,14 @@
         "y": 620,
         "wires": [
             [
-                "5d46460e45103627"
+                "0807a71b65071b04"
             ]
         ]
     },
     {
-        "id": "409d846a5bcb363d",
+        "id": "88cd26f472fd872c",
         "type": "inject",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "",
         "props": [
             {
@@ -2765,15 +3291,15 @@
         "y": 620,
         "wires": [
             [
-                "7b966ebf24b4e403",
-                "73c637b74e77f745"
+                "0416f859f581088c",
+                "36f883f06c433da0"
             ]
         ]
     },
     {
-        "id": "2cc21aaa4a8f9bec",
+        "id": "2e3a81648dcaf4e1",
         "type": "function",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "function 19",
         "func": "if (msg.statusCode != 200) {\n    msg.payload = \"Not Connected\"\n    msg.color = \"orange\";\n} else {\n    msg.color = (msg.payload == \"auto\") ? \"lime\" : \"red\";\n}\n// msg.color = (msg.payload == \"auto\")?\"lime\":\"red\";\nreturn msg;",
         "outputs": 1,
@@ -2785,31 +3311,31 @@
         "y": 620,
         "wires": [
             [
-                "d11893fb9e208557"
+                "e86396425c5731f6"
             ]
         ]
     },
     {
-        "id": "d1fd8982e0b65dc3",
+        "id": "3ffa4740fe0b4a91",
         "type": "link in",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "link in 5",
         "links": [
-            "d798175cd4eff33c"
+            "20d532843722f3bc"
         ],
         "x": 335,
         "y": 700,
         "wires": [
             [
-                "7b966ebf24b4e403",
-                "73c637b74e77f745"
+                "0416f859f581088c",
+                "36f883f06c433da0"
             ]
         ]
     },
     {
-        "id": "7d6c0fb7786b9134",
+        "id": "145e43a65ce0303e",
         "type": "ui_switch",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "",
         "label": "Controller",
         "tooltip": "",
@@ -2836,16 +3362,16 @@
         "y": 820,
         "wires": [
             [
-                "2b956a93c4334e6c",
-                "93cc4c20dc50a238",
-                "5c1cc0bfdfd08b90"
+                "ddef9c62c7069863",
+                "05b23f452d266ef3",
+                "bbe283d285b604d8"
             ]
         ]
     },
     {
-        "id": "2b956a93c4334e6c",
+        "id": "ddef9c62c7069863",
         "type": "function",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "Make Link status of pump",
         "func": "let tmp = {};\nlet user = global.get(\"user\");\nlet farm = global.get(\"farm\");\nlet sec = global.get(\"section\");\nlet link ='';\ntmp.method = \"PUT\";\nif (msg.payload == true){\n    link = `http://127.0.0.1:8080/catalog/control_status?userID=${user}&farmID=${farm}&sectionID=${sec}&value=auto`;\n} else if (msg.payload == false ){\n    link = `http://127.0.0.1:8080/catalog/control_status?userID=${user}&farmID=${farm}&sectionID=${sec}&value=manual`;\n\n}\ntmp.url = link;\nreturn tmp;",
         "outputs": 1,
@@ -2857,14 +3383,14 @@
         "y": 820,
         "wires": [
             [
-                "db494ddf254745aa"
+                "3682bd5c9a05dc82"
             ]
         ]
     },
     {
-        "id": "db494ddf254745aa",
+        "id": "3682bd5c9a05dc82",
         "type": "http request",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "",
         "method": "use",
         "ret": "txt",
@@ -2881,14 +3407,14 @@
         "y": 820,
         "wires": [
             [
-                "7b966ebf24b4e403"
+                "0416f859f581088c"
             ]
         ]
     },
     {
-        "id": "fda2200b1d32daf6",
+        "id": "eb16c540ec4dc216",
         "type": "function",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "function 20",
         "func": "if (msg.payload == \"auto\") {\n    msg.payload = true\n} else if (msg.payload == \"manual\") {\n    msg.payload =false\n\n}\nreturn msg;",
         "outputs": 1,
@@ -2900,14 +3426,14 @@
         "y": 820,
         "wires": [
             [
-                "7d6c0fb7786b9134"
+                "145e43a65ce0303e"
             ]
         ]
     },
     {
-        "id": "63af029d6f5524ec",
+        "id": "1cc5ac1204ecd96e",
         "type": "http request",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "",
         "method": "use",
         "ret": "obj",
@@ -2924,14 +3450,14 @@
         "y": 740,
         "wires": [
             [
-                "fda2200b1d32daf6"
+                "eb16c540ec4dc216"
             ]
         ]
     },
     {
-        "id": "73c637b74e77f745",
+        "id": "36f883f06c433da0",
         "type": "function",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "Make Link status of pump",
         "func": "let tmp = {};\nlet user = global.get(\"user\");\nlet farm = global.get(\"farm\");\nlet sec = global.get(\"section\");\ntmp.method = \"GET\";\nlet link = `http://127.0.0.1:8080/catalog/control_status?userID=${user}&farmID=${farm}&sectionID=${sec}`;\ntmp.url = link;\nreturn tmp;",
         "outputs": 1,
@@ -2943,14 +3469,14 @@
         "y": 740,
         "wires": [
             [
-                "63af029d6f5524ec"
+                "1cc5ac1204ecd96e"
             ]
         ]
     },
     {
-        "id": "5c1cc0bfdfd08b90",
+        "id": "bbe283d285b604d8",
         "type": "function",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "function 21",
         "func": "if (msg.payload == true){\n    msg.payload = {\n        \"group\": {\n            \"hide\": [\n                \"Setting_Manual_schedule\", \"Setting_Schedual\"\n            ]\n        }\n    };\n} else{\n    msg.payload = {\n        \"group\": {\n            \"show\": [\n                \"Setting_Schedual\"\n            ]\n        }\n    };\n}\n\nreturn msg;",
         "outputs": 1,
@@ -2962,14 +3488,14 @@
         "y": 860,
         "wires": [
             [
-                "fbf712da4d14a242"
+                "b2caad4c021ed932"
             ]
         ]
     },
     {
-        "id": "93cc4c20dc50a238",
+        "id": "05b23f452d266ef3",
         "type": "debug",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "debug 7",
         "active": true,
         "tosidebar": true,
@@ -2984,9 +3510,9 @@
         "wires": []
     },
     {
-        "id": "48f380e74b711866",
+        "id": "c044f4cbee9681b1",
         "type": "ui_time_scheduler",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "group": "916344f8e027fd93",
         "name": "",
         "startDay": "1",
@@ -3011,15 +3537,15 @@
         "y": 1040,
         "wires": [
             [
-                "38cf5b922b28fc11"
+                "8ae824dee656b70e"
             ],
             []
         ]
     },
     {
-        "id": "c098e3c5e77c03fe",
+        "id": "03d5867418ce7855",
         "type": "inject",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "",
         "props": [
             {
@@ -3037,14 +3563,14 @@
         "y": 840,
         "wires": [
             [
-                "484d867cff4692b1"
+                "994d436a1c0a7ca8"
             ]
         ]
     },
     {
-        "id": "38cf5b922b28fc11",
+        "id": "8ae824dee656b70e",
         "type": "function",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "Make Link status of pump",
         "func": "let tmp = {};\nlet user = global.get(\"user\");\nlet farm = global.get(\"farm\");\nlet sec = global.get(\"section\");\nlet timejson = msg.payload\ntmp.method = \"PUT\";\nlet link = `http://127.0.0.1:8080/catalog/manual_schedul?userID=${user}&farmID=${farm}&sectionID=${sec}&value=${timejson}`;\ntmp.url = link;\nreturn tmp;",
         "outputs": 1,
@@ -3056,14 +3582,14 @@
         "y": 1040,
         "wires": [
             [
-                "37e5e2836608b93c"
+                "38e48e000770fdfe"
             ]
         ]
     },
     {
-        "id": "37e5e2836608b93c",
+        "id": "38e48e000770fdfe",
         "type": "http request",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "",
         "method": "use",
         "ret": "txt",
@@ -3083,9 +3609,9 @@
         ]
     },
     {
-        "id": "484d867cff4692b1",
+        "id": "994d436a1c0a7ca8",
         "type": "function",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "Make Link status of pump",
         "func": "let tmp = {};\nlet user = global.get(\"user\");\nlet farm = global.get(\"farm\");\nlet sec = global.get(\"section\");\ntmp.method = \"GET\";\nlet link = `http://127.0.0.1:8080/catalog/manual_schedul?userID=${user}&farmID=${farm}&sectionID=${sec}`;\ntmp.url = link;\nreturn tmp;",
         "outputs": 1,
@@ -3097,14 +3623,14 @@
         "y": 1040,
         "wires": [
             [
-                "28da91feb8a785e5"
+                "5b64087e3020cf82"
             ]
         ]
     },
     {
-        "id": "28da91feb8a785e5",
+        "id": "5b64087e3020cf82",
         "type": "http request",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "",
         "method": "use",
         "ret": "obj",
@@ -3121,14 +3647,14 @@
         "y": 1040,
         "wires": [
             [
-                "47ee8a22ca534f8e"
+                "1efe005a722cd0af"
             ]
         ]
     },
     {
-        "id": "47ee8a22ca534f8e",
+        "id": "1efe005a722cd0af",
         "type": "json",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "",
         "property": "payload",
         "action": "",
@@ -3137,30 +3663,30 @@
         "y": 1040,
         "wires": [
             [
-                "48f380e74b711866"
+                "c044f4cbee9681b1"
             ]
         ]
     },
     {
-        "id": "8c06e746ee98d923",
+        "id": "ef7dd2d1661a5e2e",
         "type": "link in",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "link in 6",
         "links": [
-            "d798175cd4eff33c"
+            "20d532843722f3bc"
         ],
         "x": 335,
         "y": 780,
         "wires": [
             [
-                "484d867cff4692b1"
+                "994d436a1c0a7ca8"
             ]
         ]
     },
     {
-        "id": "f66fb98ffb13c3e1",
+        "id": "da3b7dc1662c6f03",
         "type": "http request",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "",
         "method": "GET",
         "ret": "obj",
@@ -3177,14 +3703,14 @@
         "y": 180,
         "wires": [
             [
-                "b86d359f869a3fcf"
+                "1bc67a7d72850f06"
             ]
         ]
     },
     {
-        "id": "1044ea389304c108",
+        "id": "29e367cdc7c4e144",
         "type": "ui_text_input",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "",
         "label": "Password",
         "tooltip": "",
@@ -3203,14 +3729,14 @@
         "y": 180,
         "wires": [
             [
-                "d757a969356f44f7"
+                "c5ab4cbb4509cad2"
             ]
         ]
     },
     {
-        "id": "d757a969356f44f7",
+        "id": "c5ab4cbb4509cad2",
         "type": "change",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "",
         "rules": [
             {
@@ -3230,14 +3756,14 @@
         "y": 180,
         "wires": [
             [
-                "5e75839bbe6b9502"
+                "3de2ca86a05e851f"
             ]
         ]
     },
     {
-        "id": "acfb70670ebdbb7d",
+        "id": "7cd15c1fcc1b63cc",
         "type": "ui_text",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "group": "0ca708bd9099f601",
         "order": 3,
         "width": "2",
@@ -3252,9 +3778,9 @@
         "wires": []
     },
     {
-        "id": "412c4222cc0e074f",
+        "id": "175b5e5eaf011f6b",
         "type": "ui_toast",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "position": "dialog",
         "displayTime": "3",
         "highlight": "",
@@ -3273,9 +3799,9 @@
         ]
     },
     {
-        "id": "5235026e1c544d44",
+        "id": "80cc42157af10c72",
         "type": "inject",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "",
         "props": [
             {
@@ -3293,14 +3819,14 @@
         "y": 560,
         "wires": [
             [
-                "7b966ebf24b4e403"
+                "0416f859f581088c"
             ]
         ]
     },
     {
-        "id": "a4b3e97c81f996a2",
+        "id": "9fb967af5bbacb39",
         "type": "debug",
-        "z": "5e6383022ba901b9",
+        "z": "e3f466151cefe330",
         "name": "debug 13",
         "active": true,
         "tosidebar": true,
@@ -3315,9 +3841,9 @@
         "wires": []
     },
     {
-        "id": "5940c66417605d6a",
+        "id": "14f970fe5c1eb0d3",
         "type": "ui_text",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "group": "3d6baf595358e84c",
         "order": 1,
         "width": "4",
@@ -3332,9 +3858,9 @@
         "wires": []
     },
     {
-        "id": "8ab87c81eaed614d",
+        "id": "68ebb443636b0c6e",
         "type": "ui_text_input",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "label": "",
         "tooltip": "",
@@ -3353,14 +3879,14 @@
         "y": 80,
         "wires": [
             [
-                "9aee73dec206b922"
+                "8a361e1bb234c3c2"
             ]
         ]
     },
     {
-        "id": "b0bebcf8751716f1",
+        "id": "226b58885dd0c710",
         "type": "ui_text",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "group": "3d6baf595358e84c",
         "order": 3,
         "width": "4",
@@ -3375,9 +3901,9 @@
         "wires": []
     },
     {
-        "id": "62a7997b71d42a42",
+        "id": "24012179cce4dd6b",
         "type": "ui_text_input",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "label": "",
         "tooltip": "",
@@ -3396,14 +3922,14 @@
         "y": 140,
         "wires": [
             [
-                "9aee73dec206b922"
+                "8a361e1bb234c3c2"
             ]
         ]
     },
     {
-        "id": "eec07b6b153b1f4d",
+        "id": "ccda457f8c11d8e9",
         "type": "ui_text",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "group": "3d79b00d87650532",
         "order": 7,
         "width": "4",
@@ -3418,9 +3944,9 @@
         "wires": []
     },
     {
-        "id": "c51e7420cb1c3d7b",
+        "id": "6e1ecc1c29221f29",
         "type": "ui_text_input",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "label": "",
         "tooltip": "",
@@ -3439,14 +3965,14 @@
         "y": 460,
         "wires": [
             [
-                "2d2df2885c3d4669"
+                "727268141cda1c65"
             ]
         ]
     },
     {
-        "id": "a335314d289f4318",
+        "id": "d20b00ff8c81394e",
         "type": "ui_text",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "group": "98725e43d801d2c7",
         "order": 7,
         "width": "3",
@@ -3461,9 +3987,9 @@
         "wires": []
     },
     {
-        "id": "7f6d8b18ad0b2101",
+        "id": "06f02c282c1975bc",
         "type": "ui_text_input",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "label": "",
         "tooltip": "",
@@ -3482,14 +4008,14 @@
         "y": 940,
         "wires": [
             [
-                "38fe65bb12fadd16"
+                "01e389380f71dff3"
             ]
         ]
     },
     {
-        "id": "6053e249ebd13219",
+        "id": "10bf8d420024fa19",
         "type": "ui_button",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "group": "3d79b00d87650532",
         "order": 9,
@@ -3510,14 +4036,14 @@
         "y": 500,
         "wires": [
             [
-                "2d2df2885c3d4669"
+                "727268141cda1c65"
             ]
         ]
     },
     {
-        "id": "a05251bcc2be74fc",
+        "id": "d09cbf8e121a2139",
         "type": "ui_button",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "group": "98725e43d801d2c7",
         "order": 9,
@@ -3538,14 +4064,14 @@
         "y": 1000,
         "wires": [
             [
-                "38fe65bb12fadd16"
+                "01e389380f71dff3"
             ]
         ]
     },
     {
-        "id": "e28c591caef9070e",
+        "id": "5c59a70cbe4af1f8",
         "type": "ui_button",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "group": "3d6baf595358e84c",
         "order": 10,
@@ -3566,14 +4092,14 @@
         "y": 200,
         "wires": [
             [
-                "9aee73dec206b922"
+                "8a361e1bb234c3c2"
             ]
         ]
     },
     {
-        "id": "59d1134980b3097a",
+        "id": "f7bf9278bcb9eec3",
         "type": "ui_text",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "group": "3d79b00d87650532",
         "order": 5,
         "width": "2",
@@ -3588,9 +4114,9 @@
         "wires": []
     },
     {
-        "id": "afc0f5a920cdcf88",
+        "id": "2e4beb802b9f1f5d",
         "type": "ui_text_input",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "label": "",
         "tooltip": "",
@@ -3609,14 +4135,14 @@
         "y": 420,
         "wires": [
             [
-                "2d2df2885c3d4669"
+                "727268141cda1c65"
             ]
         ]
     },
     {
-        "id": "770fa7cf61bd2303",
+        "id": "4bf55f96d0bb7120",
         "type": "ui_text",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "group": "98725e43d801d2c7",
         "order": 3,
         "width": "2",
@@ -3631,9 +4157,9 @@
         "wires": []
     },
     {
-        "id": "b6d0fcce41fd4a75",
+        "id": "89df80820281209d",
         "type": "ui_text_input",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "label": "",
         "tooltip": "",
@@ -3652,15 +4178,15 @@
         "y": 860,
         "wires": [
             [
-                "0e8f102187518e4c",
-                "38fe65bb12fadd16"
+                "84802b826ec577dc",
+                "01e389380f71dff3"
             ]
         ]
     },
     {
-        "id": "9140bf13e869e4aa",
+        "id": "3e7ad3b66543c224",
         "type": "python3-function",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "func": "tmp ={}\nif msg[\"payload\"][\"button\"]== True:\n    if msg[\"payload\"][\"pass\"] != None:\n        if msg[\"payload\"][\"username\"] != None:\n            tmp[\"method\"] = \"POST\"\n            tmp[\"url\"] = \"http://127.0.0.1:8080/catalog/add_user?new_user=\"+msg['payload']['username']+\"&pass=\"+msg['payload']['pass']\n            tmp[\"Topic\"] = \"The user is added\"\nreturn tmp",
         "outputs": 1,
@@ -3668,14 +4194,14 @@
         "y": 140,
         "wires": [
             [
-                "a3fe7c63837961f4"
+                "596ec74b60d8432b"
             ]
         ]
     },
     {
-        "id": "9aee73dec206b922",
+        "id": "8a361e1bb234c3c2",
         "type": "join",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "mode": "custom",
         "build": "object",
@@ -3696,14 +4222,14 @@
         "y": 140,
         "wires": [
             [
-                "9140bf13e869e4aa"
+                "3e7ad3b66543c224"
             ]
         ]
     },
     {
-        "id": "a3fe7c63837961f4",
+        "id": "596ec74b60d8432b",
         "type": "http request",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "method": "use",
         "ret": "txt",
@@ -3720,14 +4246,14 @@
         "y": 140,
         "wires": [
             [
-                "2a2e24c7d5e9f96c"
+                "5d417e2fabdd6b80"
             ]
         ]
     },
     {
-        "id": "2a2e24c7d5e9f96c",
+        "id": "5d417e2fabdd6b80",
         "type": "ui_toast",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "position": "dialog",
         "displayTime": "3",
         "highlight": "",
@@ -3746,9 +4272,9 @@
         ]
     },
     {
-        "id": "2d2df2885c3d4669",
+        "id": "727268141cda1c65",
         "type": "join",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "mode": "custom",
         "build": "object",
@@ -3769,14 +4295,14 @@
         "y": 420,
         "wires": [
             [
-                "c592461bd46124d2"
+                "7481b5f7583b8012"
             ]
         ]
     },
     {
-        "id": "c592461bd46124d2",
+        "id": "7481b5f7583b8012",
         "type": "python3-function",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "func": "tmp ={}\nif msg[\"payload\"][\"button\"]== True:\n    if msg[\"payload\"][\"pass\"] != None:\n        if msg[\"payload\"][\"user\"] != None:\n            if msg[\"payload\"][\"farm\"]!= None:\n                tmp[\"method\"] = \"POST\"\n                tmp[\"url\"] = \"http://127.0.0.1:8080/catalog/add_farm?userID=\"+msg['payload']['user']+\"&pass=\"+msg['payload']['pass']+\"&farmID=\"+msg['payload'][\"farm\"]\n                tmp[\"Topic\"] = \"The farm is added\"\nreturn tmp",
         "outputs": 1,
@@ -3784,14 +4310,14 @@
         "y": 420,
         "wires": [
             [
-                "244baa695dea6b40"
+                "4e64145c548c9769"
             ]
         ]
     },
     {
-        "id": "244baa695dea6b40",
+        "id": "4e64145c548c9769",
         "type": "http request",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "method": "use",
         "ret": "txt",
@@ -3808,14 +4334,14 @@
         "y": 420,
         "wires": [
             [
-                "1befbd93298dfb92"
+                "ec6c8aea4c963885"
             ]
         ]
     },
     {
-        "id": "1befbd93298dfb92",
+        "id": "ec6c8aea4c963885",
         "type": "ui_toast",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "position": "dialog",
         "displayTime": "3",
         "highlight": "",
@@ -3834,9 +4360,9 @@
         ]
     },
     {
-        "id": "e68dd45476e4fcb4",
+        "id": "cb1952441bc6cec1",
         "type": "ui_dropdown",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "label": "User ID:",
         "tooltip": "",
@@ -3856,14 +4382,14 @@
         "y": 300,
         "wires": [
             [
-                "2d2df2885c3d4669"
+                "727268141cda1c65"
             ]
         ]
     },
     {
-        "id": "76bdb0cefd9b7053",
+        "id": "fbe03a5fbce6e53c",
         "type": "http request",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "method": "GET",
         "ret": "obj",
@@ -3880,14 +4406,14 @@
         "y": 300,
         "wires": [
             [
-                "e4cb72b07e4fbc43"
+                "39bb620c97877e80"
             ]
         ]
     },
     {
-        "id": "1af11979db124351",
+        "id": "8bdb74fbdf664fed",
         "type": "ui_button",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "group": "3d79b00d87650532",
         "order": 4,
@@ -3908,14 +4434,14 @@
         "y": 300,
         "wires": [
             [
-                "76bdb0cefd9b7053"
+                "fbe03a5fbce6e53c"
             ]
         ]
     },
     {
-        "id": "e4cb72b07e4fbc43",
+        "id": "39bb620c97877e80",
         "type": "function",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "Def Catalog, Find user",
         "func": "// catalog = msg.payload;\nglobal.set(\"catalog_users\", msg.payload);\nvar dict = msg.payload;\nvar users = [];\nfor (var user in dict) {\n    for (var val in dict[user]) {\n        users.push(dict[user][val][\"userID\"]);\n    }\n}\n\nvar tmp = {};\ntmp.options = users;\ntmp.payload = msg.payload;\ntmp.topic = \"catalog\";\nreturn tmp;",
         "outputs": 1,
@@ -3927,14 +4453,14 @@
         "y": 300,
         "wires": [
             [
-                "e68dd45476e4fcb4"
+                "cb1952441bc6cec1"
             ]
         ]
     },
     {
-        "id": "b0b224d42b6d5694",
+        "id": "980fd02ae02e554f",
         "type": "inject",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "props": [
             {
@@ -3952,14 +4478,14 @@
         "y": 260,
         "wires": [
             [
-                "76bdb0cefd9b7053"
+                "fbe03a5fbce6e53c"
             ]
         ]
     },
     {
-        "id": "cff5eaac59f8e8a6",
+        "id": "e430f5b738588199",
         "type": "ui_dropdown",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "label": "User ID:",
         "tooltip": "",
@@ -3979,16 +4505,16 @@
         "y": 680,
         "wires": [
             [
-                "52582c7915f3b86c",
-                "0e8f102187518e4c",
-                "38fe65bb12fadd16"
+                "993429ba5de1c8f0",
+                "84802b826ec577dc",
+                "01e389380f71dff3"
             ]
         ]
     },
     {
-        "id": "43f5b5c7e898c689",
+        "id": "fd0abc8692f6b39e",
         "type": "http request",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "method": "GET",
         "ret": "obj",
@@ -4005,14 +4531,14 @@
         "y": 680,
         "wires": [
             [
-                "b447e9ed14e79e01"
+                "cea5ea2dda3cf20f"
             ]
         ]
     },
     {
-        "id": "1abfaebf65a654f3",
+        "id": "da5ab4837cc3982c",
         "type": "ui_button",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "group": "98725e43d801d2c7",
         "order": 2,
@@ -4033,14 +4559,14 @@
         "y": 680,
         "wires": [
             [
-                "43f5b5c7e898c689"
+                "fd0abc8692f6b39e"
             ]
         ]
     },
     {
-        "id": "b447e9ed14e79e01",
+        "id": "cea5ea2dda3cf20f",
         "type": "function",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "Def Catalog, Find user",
         "func": "// catalog = msg.payload;\nglobal.set(\"catalog_users\", msg.payload);\nvar dict = msg.payload;\nvar users = [];\nfor (var user in dict) {\n    for (var val in dict[user]) {\n        users.push(dict[user][val][\"userID\"]);\n    }\n}\n\nvar tmp = {};\ntmp.options = users;\ntmp.payload = msg.payload;\ntmp.topic = \"catalog\";\nreturn tmp;",
         "outputs": 1,
@@ -4052,14 +4578,14 @@
         "y": 680,
         "wires": [
             [
-                "cff5eaac59f8e8a6"
+                "e430f5b738588199"
             ]
         ]
     },
     {
-        "id": "9069a6a16fbb649d",
+        "id": "fba60670e7cd3db7",
         "type": "inject",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "props": [
             {
@@ -4077,14 +4603,14 @@
         "y": 640,
         "wires": [
             [
-                "43f5b5c7e898c689"
+                "fd0abc8692f6b39e"
             ]
         ]
     },
     {
-        "id": "38fe65bb12fadd16",
+        "id": "01e389380f71dff3",
         "type": "join",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "mode": "custom",
         "build": "object",
@@ -4105,14 +4631,14 @@
         "y": 940,
         "wires": [
             [
-                "2d2ad55308d0986c"
+                "6d10c4bc8ecaeb01"
             ]
         ]
     },
     {
-        "id": "2d2ad55308d0986c",
+        "id": "6d10c4bc8ecaeb01",
         "type": "python3-function",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "func": "tmp ={}\nif msg[\"payload\"][\"button\"]== True:\n    if msg[\"payload\"][\"pass\"] != None:\n        if msg[\"payload\"][\"user\"] != None:\n            if msg[\"payload\"][\"farm\"]!= None:\n                tmp[\"method\"] = \"POST\"\n                tmp[\"url\"] = \"http://127.0.0.1:8080/catalog/add_section?userID=\"+msg['payload']['user']+\"&pass=\"+msg['payload']['pass']+\"&farmID=\"+msg['payload'][\"farm\"]+\"&new_section=\"+msg[\"payload\"][\"sec\"]\n                tmp[\"Topic\"] = \"The section is added\"\nreturn tmp",
         "outputs": 1,
@@ -4120,14 +4646,14 @@
         "y": 940,
         "wires": [
             [
-                "db7677d14eb7993e"
+                "f9c6772f5f492b3b"
             ]
         ]
     },
     {
-        "id": "db7677d14eb7993e",
+        "id": "f9c6772f5f492b3b",
         "type": "http request",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "method": "use",
         "ret": "txt",
@@ -4144,14 +4670,14 @@
         "y": 940,
         "wires": [
             [
-                "4e0fb23e358996b2"
+                "7701305f602fe3cb"
             ]
         ]
     },
     {
-        "id": "e0c479f380686887",
+        "id": "27fa58740d3aefe7",
         "type": "ui_dropdown",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "label": "Farm ID:",
         "tooltip": "",
@@ -4171,14 +4697,14 @@
         "y": 780,
         "wires": [
             [
-                "38fe65bb12fadd16"
+                "01e389380f71dff3"
             ]
         ]
     },
     {
-        "id": "eed438eef4b301a4",
+        "id": "d465a9a90ce5c201",
         "type": "function",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "Find farms",
         "func": "let tmp = {};\nvar catalog = msg.payload.catalog;\nlet farms_list = [];\n\nfor (let user of Object.values(catalog)) {\n    for (let val of Object.values(user)) {\n        if (val.userID == msg.payload.user) {\n            if (val.pass == msg.payload.pass){\n                farms_list = val.farm_list;\n            }\n        }\n    }\n}\n\ntmp.options = farms_list;\n// msg.payload = global.get(\"user\");\nreturn tmp;",
         "outputs": 1,
@@ -4190,14 +4716,14 @@
         "y": 780,
         "wires": [
             [
-                "e0c479f380686887"
+                "27fa58740d3aefe7"
             ]
         ]
     },
     {
-        "id": "52582c7915f3b86c",
+        "id": "993429ba5de1c8f0",
         "type": "http request",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "method": "GET",
         "ret": "obj",
@@ -4214,14 +4740,14 @@
         "y": 780,
         "wires": [
             [
-                "d312155122c2124c"
+                "77ee10b5619f754f"
             ]
         ]
     },
     {
-        "id": "0e8f102187518e4c",
+        "id": "84802b826ec577dc",
         "type": "join",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "mode": "custom",
         "build": "object",
@@ -4242,14 +4768,14 @@
         "y": 780,
         "wires": [
             [
-                "eed438eef4b301a4"
+                "d465a9a90ce5c201"
             ]
         ]
     },
     {
-        "id": "d312155122c2124c",
+        "id": "77ee10b5619f754f",
         "type": "change",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "rules": [
             {
@@ -4269,14 +4795,14 @@
         "y": 780,
         "wires": [
             [
-                "0e8f102187518e4c"
+                "84802b826ec577dc"
             ]
         ]
     },
     {
-        "id": "4e0fb23e358996b2",
+        "id": "7701305f602fe3cb",
         "type": "ui_toast",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "position": "dialog",
         "displayTime": "3",
         "highlight": "",
@@ -4295,9 +4821,9 @@
         ]
     },
     {
-        "id": "507dc19bc73c262b",
+        "id": "46474013382659ab",
         "type": "ui_dropdown",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "label": "User ID:",
         "tooltip": "",
@@ -4317,18 +4843,18 @@
         "y": 1240,
         "wires": [
             [
-                "b1d7d08696cc3699",
-                "40c9b83c25d644df",
-                "b4485371927d813e",
-                "86ac84014044eee7",
-                "089bd93215c9f6a5"
+                "905fe88e9cc30b48",
+                "8a3c17e2f5461115",
+                "1d6b57ef583d7439",
+                "4752c375529e4e9f",
+                "ec7066ff750f3d53"
             ]
         ]
     },
     {
-        "id": "d1513f5f93a36c02",
+        "id": "61d88875808befcc",
         "type": "http request",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "method": "GET",
         "ret": "obj",
@@ -4345,14 +4871,14 @@
         "y": 1240,
         "wires": [
             [
-                "8484a4b61e976595"
+                "0ff3d4d55ec6f811"
             ]
         ]
     },
     {
-        "id": "8484a4b61e976595",
+        "id": "0ff3d4d55ec6f811",
         "type": "function",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "Def Catalog, Find user",
         "func": "// catalog = msg.payload;\nglobal.set(\"catalog_users\", msg.payload);\nvar dict = msg.payload;\nvar users = [];\nfor (var user in dict) {\n    for (var val in dict[user]) {\n        users.push(dict[user][val][\"userID\"]);\n    }\n}\n\nvar tmp = {};\ntmp.options = users;\ntmp.payload = msg.payload;\ntmp.topic = \"catalog\";\nreturn tmp;",
         "outputs": 1,
@@ -4364,14 +4890,14 @@
         "y": 1240,
         "wires": [
             [
-                "507dc19bc73c262b"
+                "46474013382659ab"
             ]
         ]
     },
     {
-        "id": "b93354cf794288c0",
+        "id": "f8dd0623120311e0",
         "type": "inject",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "props": [
             {
@@ -4389,14 +4915,14 @@
         "y": 1200,
         "wires": [
             [
-                "d1513f5f93a36c02"
+                "61d88875808befcc"
             ]
         ]
     },
     {
-        "id": "1bd8ae5b4fbe89dd",
+        "id": "d4f06f2f5ed4ca40",
         "type": "ui_button",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "group": "5eaa1609f4ba21bd",
         "order": 2,
@@ -4417,14 +4943,14 @@
         "y": 1240,
         "wires": [
             [
-                "d1513f5f93a36c02"
+                "61d88875808befcc"
             ]
         ]
     },
     {
-        "id": "0b0475da5a73a05a",
+        "id": "25a3715b8fde7edd",
         "type": "ui_text",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "group": "5eaa1609f4ba21bd",
         "order": 3,
         "width": "2",
@@ -4439,9 +4965,9 @@
         "wires": []
     },
     {
-        "id": "4399073b3ee60833",
+        "id": "98593cb082a260d5",
         "type": "ui_text_input",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "label": "Password",
         "tooltip": "",
@@ -4460,17 +4986,17 @@
         "y": 1300,
         "wires": [
             [
-                "b1d7d08696cc3699",
-                "40c9b83c25d644df",
-                "86ac84014044eee7",
-                "089bd93215c9f6a5"
+                "905fe88e9cc30b48",
+                "8a3c17e2f5461115",
+                "4752c375529e4e9f",
+                "ec7066ff750f3d53"
             ]
         ]
     },
     {
-        "id": "e293e95c29859cbf",
+        "id": "cf4aa06a10defc82",
         "type": "ui_button",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "group": "5eaa1609f4ba21bd",
         "order": 5,
@@ -4491,14 +5017,14 @@
         "y": 1360,
         "wires": [
             [
-                "b1d7d08696cc3699"
+                "905fe88e9cc30b48"
             ]
         ]
     },
     {
-        "id": "02a6af94903e0c04",
+        "id": "ee4d6c914cb5f197",
         "type": "python3-function",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "func": "tmp ={}\nif msg[\"payload\"][\"button\"]== True:\n    if msg[\"payload\"][\"pass\"] != None:\n        if msg[\"payload\"][\"user\"] != None:\n            tmp[\"method\"] = \"DELETE\"\n            tmp[\"url\"] = \"http://127.0.0.1:8080/catalog/delet_user?userID=\"+msg['payload']['user']+\"&pass=\"+msg['payload']['pass']\n            tmp[\"Topic\"] = \"The user is added\"\nreturn tmp",
         "outputs": 1,
@@ -4506,14 +5032,14 @@
         "y": 1240,
         "wires": [
             [
-                "a5a0034489fe214a"
+                "70d973a41e3e099b"
             ]
         ]
     },
     {
-        "id": "b1d7d08696cc3699",
+        "id": "905fe88e9cc30b48",
         "type": "join",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "mode": "custom",
         "build": "object",
@@ -4534,14 +5060,14 @@
         "y": 1241,
         "wires": [
             [
-                "02a6af94903e0c04"
+                "ee4d6c914cb5f197"
             ]
         ]
     },
     {
-        "id": "a5a0034489fe214a",
+        "id": "70d973a41e3e099b",
         "type": "http request",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "method": "use",
         "ret": "txt",
@@ -4558,14 +5084,14 @@
         "y": 1241,
         "wires": [
             [
-                "bf4454a7cf002234"
+                "af0dca9dc872a1af"
             ]
         ]
     },
     {
-        "id": "bf4454a7cf002234",
+        "id": "af0dca9dc872a1af",
         "type": "ui_toast",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "position": "dialog",
         "displayTime": "3",
         "highlight": "",
@@ -4584,9 +5110,9 @@
         ]
     },
     {
-        "id": "c1b55f82dcc1734f",
+        "id": "ef490e19ef507a3d",
         "type": "ui_button",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "group": "5eaa1609f4ba21bd",
         "order": 7,
@@ -4607,14 +5133,14 @@
         "y": 1420,
         "wires": [
             [
-                "40c9b83c25d644df"
+                "8a3c17e2f5461115"
             ]
         ]
     },
     {
-        "id": "43c6516bfb9b4f0b",
+        "id": "222d17c9f0ca1959",
         "type": "python3-function",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "func": "tmp ={}\nif msg[\"payload\"][\"button\"]== True:\n    if msg[\"payload\"][\"pass\"] != None:\n        if msg[\"payload\"][\"user\"] != None:\n            tmp[\"method\"] = \"DELETE\"\n            tmp[\"url\"] = \"http://127.0.0.1:8080/catalog/delete_farm_of_user?userID=\"+msg['payload']['user']+\"&pass=\"+msg['payload']['pass']+\"&farmID=\"+msg['payload']['farm']\n            tmp[\"Topic\"] = \"The user is added\"\nreturn tmp",
         "outputs": 1,
@@ -4622,14 +5148,14 @@
         "y": 1420,
         "wires": [
             [
-                "acebcb4a064c1f12"
+                "d70181276348848c"
             ]
         ]
     },
     {
-        "id": "40c9b83c25d644df",
+        "id": "8a3c17e2f5461115",
         "type": "join",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "mode": "custom",
         "build": "object",
@@ -4650,14 +5176,14 @@
         "y": 1421,
         "wires": [
             [
-                "43c6516bfb9b4f0b"
+                "222d17c9f0ca1959"
             ]
         ]
     },
     {
-        "id": "acebcb4a064c1f12",
+        "id": "d70181276348848c",
         "type": "http request",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "method": "use",
         "ret": "txt",
@@ -4674,14 +5200,14 @@
         "y": 1421,
         "wires": [
             [
-                "405903ced029f47f"
+                "c78d24cc0b19bcb8"
             ]
         ]
     },
     {
-        "id": "405903ced029f47f",
+        "id": "c78d24cc0b19bcb8",
         "type": "ui_toast",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "position": "dialog",
         "displayTime": "3",
         "highlight": "",
@@ -4700,9 +5226,9 @@
         ]
     },
     {
-        "id": "9b17f3befbb9f3ce",
+        "id": "a18f2bbe9bd9cf48",
         "type": "ui_dropdown",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "label": "Farm ID:",
         "tooltip": "",
@@ -4722,17 +5248,17 @@
         "y": 1500,
         "wires": [
             [
-                "40c9b83c25d644df",
-                "1850f406abede305",
-                "089bd93215c9f6a5",
-                "c7302bb62c4d1b8c"
+                "8a3c17e2f5461115",
+                "5b21eea98f1809ee",
+                "ec7066ff750f3d53",
+                "7627b1ba4526137e"
             ]
         ]
     },
     {
-        "id": "5ff4f20e0fbe00e3",
+        "id": "537922c8dde72d16",
         "type": "function",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "Find farms",
         "func": "let tmp = {};\nvar catalog = msg.payload.catalog;\nlet farms_list = [];\n\nfor (let user of Object.values(catalog)) {\n    for (let val of Object.values(user)) {\n        if (val.userID == msg.payload.user) {\n            if (val.pass == msg.payload.pass){\n                farms_list = val.farm_list;\n            }\n        }\n    }\n}\n\ntmp.options = farms_list;\n// msg.payload = global.get(\"user\");\nreturn tmp;",
         "outputs": 1,
@@ -4744,14 +5270,14 @@
         "y": 1500,
         "wires": [
             [
-                "9b17f3befbb9f3ce"
+                "a18f2bbe9bd9cf48"
             ]
         ]
     },
     {
-        "id": "b4485371927d813e",
+        "id": "1d6b57ef583d7439",
         "type": "http request",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "method": "GET",
         "ret": "obj",
@@ -4768,14 +5294,14 @@
         "y": 1500,
         "wires": [
             [
-                "76111935e5c9be18"
+                "c30f627cab54d04b"
             ]
         ]
     },
     {
-        "id": "86ac84014044eee7",
+        "id": "4752c375529e4e9f",
         "type": "join",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "mode": "custom",
         "build": "object",
@@ -4796,14 +5322,14 @@
         "y": 1500,
         "wires": [
             [
-                "5ff4f20e0fbe00e3"
+                "537922c8dde72d16"
             ]
         ]
     },
     {
-        "id": "76111935e5c9be18",
+        "id": "c30f627cab54d04b",
         "type": "change",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "rules": [
             {
@@ -4823,14 +5349,14 @@
         "y": 1500,
         "wires": [
             [
-                "86ac84014044eee7"
+                "4752c375529e4e9f"
             ]
         ]
     },
     {
-        "id": "2a35442718c78fef",
+        "id": "772e2fc59ffd0264",
         "type": "ui_button",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "group": "5eaa1609f4ba21bd",
         "order": 9,
@@ -4851,14 +5377,14 @@
         "y": 1620,
         "wires": [
             [
-                "089bd93215c9f6a5"
+                "ec7066ff750f3d53"
             ]
         ]
     },
     {
-        "id": "1850f406abede305",
+        "id": "5b21eea98f1809ee",
         "type": "http request",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "method": "GET",
         "ret": "obj",
@@ -4875,14 +5401,14 @@
         "y": 1600,
         "wires": [
             [
-                "7f2f2de9638d1cd5"
+                "aec9512932cfdfd7"
             ]
         ]
     },
     {
-        "id": "856448b8ca752514",
+        "id": "6ed2dd2e2515366e",
         "type": "ui_dropdown",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "label": "Section ID:",
         "tooltip": "",
@@ -4902,14 +5428,14 @@
         "y": 1720,
         "wires": [
             [
-                "089bd93215c9f6a5"
+                "ec7066ff750f3d53"
             ]
         ]
     },
     {
-        "id": "92f0c886bb4cd2bc",
+        "id": "d055702cd6f054ae",
         "type": "function",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "Find sections",
         "func": "var catalog = msg.payload.catalog;\n// global.set(\"catalog\", msg.payload);\nvar sec_list = [];\nlet selected_farm = msg.payload.farm;\nvar s_farm = null;\nvar farms = catalog.Farms\n\nfor (var key in farms){\n    if (farms[key][\"farmID\"] == selected_farm){\n        for(var sec_key in farms[key]['Sections']){\n            sec_list.push(farms[key]['Sections'][sec_key]['sectionID'])\n        }\n    }\n}\n\nmsg.options = sec_list;\nreturn msg;",
         "outputs": 1,
@@ -4921,14 +5447,14 @@
         "y": 1720,
         "wires": [
             [
-                "856448b8ca752514"
+                "6ed2dd2e2515366e"
             ]
         ]
     },
     {
-        "id": "089bd93215c9f6a5",
+        "id": "ec7066ff750f3d53",
         "type": "join",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "mode": "custom",
         "build": "object",
@@ -4949,14 +5475,14 @@
         "y": 1620,
         "wires": [
             [
-                "130897109d72d6eb"
+                "4ae8cbad37a01043"
             ]
         ]
     },
     {
-        "id": "130897109d72d6eb",
+        "id": "4ae8cbad37a01043",
         "type": "python3-function",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "func": "tmp ={}\nif msg[\"payload\"][\"button\"]== True:\n    if msg[\"payload\"][\"pass\"] != None:\n        if msg[\"payload\"][\"user\"] != None:\n            tmp[\"method\"] = \"DELETE\"\n            tmp[\"url\"] = \"http://127.0.0.1:8080/catalog/delete_sec_of_farm?userID=\"+msg['payload']['user']+\"&pass=\"+msg['payload']['pass']+\"&farmID=\"+msg['payload']['farm']+\"&sectionID=\"+msg['payload']['section']\n            tmp[\"Topic\"] = \"The user is added\"\nreturn tmp",
         "outputs": 1,
@@ -4964,14 +5490,14 @@
         "y": 1620,
         "wires": [
             [
-                "6e97fecc1b10b561"
+                "e54a4300459147d7"
             ]
         ]
     },
     {
-        "id": "6e97fecc1b10b561",
+        "id": "e54a4300459147d7",
         "type": "http request",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "method": "use",
         "ret": "txt",
@@ -4988,14 +5514,14 @@
         "y": 1621,
         "wires": [
             [
-                "7b3ac4d85426fde1"
+                "2e0266725a8df946"
             ]
         ]
     },
     {
-        "id": "7b3ac4d85426fde1",
+        "id": "2e0266725a8df946",
         "type": "ui_toast",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "position": "dialog",
         "displayTime": "3",
         "highlight": "",
@@ -5014,10 +5540,10 @@
         ]
     },
     {
-        "id": "a3a87a98a79a1835",
+        "id": "62573284d9c7d45c",
         "type": "ui_text_input",
-        "z": "cd21bbe43ddf3792",
-        "g": "2cb36a14f2f628cd",
+        "z": "19c5158f8e9074e5",
+        "g": "45e960f0757d3147",
         "name": "",
         "label": "Admin: ",
         "tooltip": "",
@@ -5036,15 +5562,15 @@
         "y": 1940,
         "wires": [
             [
-                "0a2786e5e54415ee"
+                "8ee22c6092aa380a"
             ]
         ]
     },
     {
-        "id": "61b12374ba4d439d",
+        "id": "af3b3cc7b6854585",
         "type": "ui_text_input",
-        "z": "cd21bbe43ddf3792",
-        "g": "2cb36a14f2f628cd",
+        "z": "19c5158f8e9074e5",
+        "g": "45e960f0757d3147",
         "name": "",
         "label": "Password",
         "tooltip": "",
@@ -5063,16 +5589,16 @@
         "y": 1980,
         "wires": [
             [
-                "0a2786e5e54415ee",
-                "0489cf890f9230d6"
+                "8ee22c6092aa380a",
+                "785883bdca39fc62"
             ]
         ]
     },
     {
-        "id": "0a2786e5e54415ee",
+        "id": "8ee22c6092aa380a",
         "type": "join",
-        "z": "cd21bbe43ddf3792",
-        "g": "2cb36a14f2f628cd",
+        "z": "19c5158f8e9074e5",
+        "g": "45e960f0757d3147",
         "name": "",
         "mode": "custom",
         "build": "object",
@@ -5093,15 +5619,15 @@
         "y": 1960,
         "wires": [
             [
-                "a9e689d113ec1966"
+                "05890f0d512d362c"
             ]
         ]
     },
     {
-        "id": "a9e689d113ec1966",
+        "id": "05890f0d512d362c",
         "type": "python3-function",
-        "z": "cd21bbe43ddf3792",
-        "g": "2cb36a14f2f628cd",
+        "z": "19c5158f8e9074e5",
+        "g": "45e960f0757d3147",
         "name": "",
         "func": "tmp ={}\nif msg[\"payload\"][\"button\"]== True:\n    if msg[\"payload\"][\"pass\"] != None:\n        if msg[\"payload\"][\"user\"] != None:\n            tmp[\"method\"] = \"DELETE\"\n            tmp[\"url\"] = \"http://127.0.0.1:8080/catalog/delete_farm?userID=\"+msg['payload']['user']+\"&pass=\"+msg['payload']['pass']+\"&farmID=\"+msg['payload']['farm']\n            tmp[\"Topic\"] = \"The user is added\"\nreturn tmp",
         "outputs": 1,
@@ -5109,15 +5635,15 @@
         "y": 1960,
         "wires": [
             [
-                "904c4f75b5923b52"
+                "447dca4b8954bb11"
             ]
         ]
     },
     {
-        "id": "904c4f75b5923b52",
+        "id": "447dca4b8954bb11",
         "type": "http request",
-        "z": "cd21bbe43ddf3792",
-        "g": "2cb36a14f2f628cd",
+        "z": "19c5158f8e9074e5",
+        "g": "45e960f0757d3147",
         "name": "",
         "method": "use",
         "ret": "txt",
@@ -5134,15 +5660,15 @@
         "y": 1960,
         "wires": [
             [
-                "9696b0e229ef10b9"
+                "d15a09fda6dc4913"
             ]
         ]
     },
     {
-        "id": "9696b0e229ef10b9",
+        "id": "d15a09fda6dc4913",
         "type": "ui_toast",
-        "z": "cd21bbe43ddf3792",
-        "g": "2cb36a14f2f628cd",
+        "z": "19c5158f8e9074e5",
+        "g": "45e960f0757d3147",
         "position": "dialog",
         "displayTime": "3",
         "highlight": "",
@@ -5161,10 +5687,10 @@
         ]
     },
     {
-        "id": "a840ce73969ba91d",
+        "id": "235d03d7b8d427cf",
         "type": "ui_dropdown",
-        "z": "cd21bbe43ddf3792",
-        "g": "2cb36a14f2f628cd",
+        "z": "19c5158f8e9074e5",
+        "g": "45e960f0757d3147",
         "name": "",
         "label": "Farm ID:",
         "tooltip": "",
@@ -5184,15 +5710,15 @@
         "y": 2080,
         "wires": [
             [
-                "0a2786e5e54415ee"
+                "8ee22c6092aa380a"
             ]
         ]
     },
     {
-        "id": "4cbaf9876949ddd7",
+        "id": "d01675d469a0514c",
         "type": "change",
-        "z": "cd21bbe43ddf3792",
-        "g": "2cb36a14f2f628cd",
+        "z": "19c5158f8e9074e5",
+        "g": "45e960f0757d3147",
         "name": "",
         "rules": [
             {
@@ -5212,15 +5738,15 @@
         "y": 2080,
         "wires": [
             [
-                "6405fba2469076bd"
+                "7ace21450d5bb09d"
             ]
         ]
     },
     {
-        "id": "0489cf890f9230d6",
+        "id": "785883bdca39fc62",
         "type": "http request",
-        "z": "cd21bbe43ddf3792",
-        "g": "2cb36a14f2f628cd",
+        "z": "19c5158f8e9074e5",
+        "g": "45e960f0757d3147",
         "name": "",
         "method": "GET",
         "ret": "obj",
@@ -5237,15 +5763,15 @@
         "y": 2080,
         "wires": [
             [
-                "4cbaf9876949ddd7"
+                "d01675d469a0514c"
             ]
         ]
     },
     {
-        "id": "6405fba2469076bd",
+        "id": "7ace21450d5bb09d",
         "type": "python3-function",
-        "z": "cd21bbe43ddf3792",
-        "g": "2cb36a14f2f628cd",
+        "z": "19c5158f8e9074e5",
+        "g": "45e960f0757d3147",
         "name": "",
         "func": "tmp ={}\nfarm_list = []\nfor key,val in msg[\"payload\"][\"Farms\"].items():\n    farm_list.append(val[\"farmID\"])\ntmp[\"options\"] = farm_list\nreturn tmp",
         "outputs": 1,
@@ -5253,15 +5779,15 @@
         "y": 2080,
         "wires": [
             [
-                "a840ce73969ba91d"
+                "235d03d7b8d427cf"
             ]
         ]
     },
     {
-        "id": "eeef4170c7889fb7",
+        "id": "98b4a4bfa15b15a9",
         "type": "ui_button",
-        "z": "cd21bbe43ddf3792",
-        "g": "2cb36a14f2f628cd",
+        "z": "19c5158f8e9074e5",
+        "g": "45e960f0757d3147",
         "name": "",
         "group": "7c9cbac3de8fa724",
         "order": 9,
@@ -5282,14 +5808,14 @@
         "y": 1900,
         "wires": [
             [
-                "0a2786e5e54415ee"
+                "8ee22c6092aa380a"
             ]
         ]
     },
     {
-        "id": "4a61232c6910799f",
+        "id": "1ffb434d8925cc4f",
         "type": "debug",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "debug 8",
         "active": true,
         "tosidebar": true,
@@ -5304,9 +5830,9 @@
         "wires": []
     },
     {
-        "id": "7f2f2de9638d1cd5",
+        "id": "aec9512932cfdfd7",
         "type": "change",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "rules": [
             {
@@ -5326,14 +5852,14 @@
         "y": 1720,
         "wires": [
             [
-                "c7302bb62c4d1b8c"
+                "7627b1ba4526137e"
             ]
         ]
     },
     {
-        "id": "c7302bb62c4d1b8c",
+        "id": "7627b1ba4526137e",
         "type": "join",
-        "z": "cd21bbe43ddf3792",
+        "z": "19c5158f8e9074e5",
         "name": "",
         "mode": "custom",
         "build": "object",
@@ -5354,8 +5880,8 @@
         "y": 1720,
         "wires": [
             [
-                "92f0c886bb4cd2bc",
-                "4a61232c6910799f"
+                "d055702cd6f054ae",
+                "1ffb434d8925cc4f"
             ]
         ]
     }
