@@ -6,7 +6,8 @@ Smart Irrigation presentation video : https://youtu.be/HcvXbEHz9qw
 Github link : https://github.com/MojKazemi/Smart_Irrigation
 
 How to Use?
-1.Run smart irrigation
+1.Run catalog_API.py
+2.Run sensors.py
 
 Technologies Used:
 Nod-red Dashboard

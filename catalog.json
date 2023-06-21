@@ -47,9 +47,9 @@
             "Sections": {
                 "section1": {
                     "sectionID": "Orange_1",
-                    "control_status": "manual",
-                    "temp_threshold": 12,
-                    "mois_min_threshold": 11,
+                    "control_status": "auto",
+                    "temp_threshold": 4,
+                    "mois_min_threshold": 67,
                     "mois_max_threshold": 54,
                     "Devices": {
                         "Sensors": {
@@ -57,13 +57,13 @@
                                 "SensorID": 1,
                                 "SensorName": "DHT11",
                                 "SensorType": "Temperature",
-                                "value": 13
+                                "value": 24
                             },
                             "sensor2": {
                                 "SensorID": 2,
                                 "SensorName": "SEN-13322",
                                 "SensorType": "Soil_Moisture",
-                                "value": 78
+                                "value": 99
                             }
                         },
                         "Pump": {
@@ -139,13 +139,13 @@
                                 "SensorID": 1,
                                 "SensorName": "DHT11",
                                 "SensorType": "Temperature",
-                                "value": 26
+                                "value": 18
                             },
                             "sensor2": {
                                 "SensorID": 2,
                                 "SensorName": "SEN-13322",
                                 "SensorType": "Soil_Moisture",
-                                "value": 24
+                                "value": 71
                             }
                         },
                         "Pump": {
@@ -207,13 +207,13 @@
                                 "SensorID": 1,
                                 "SensorName": "DHT11",
                                 "SensorType": "Temperature",
-                                "value": 22
+                                "value": 27
                             },
                             "sensor2": {
                                 "SensorID": 2,
                                 "SensorName": "SEN-13322",
                                 "SensorType": "Soil_Moisture",
-                                "value": 55
+                                "value": 76
                             }
                         },
                         "Pump": {
@@ -241,13 +241,13 @@
                                 "SensorID": 1,
                                 "SensorName": "DHT11",
                                 "SensorType": "Temperature",
-                                "value": 16
+                                "value": 27
                             },
                             "sensor2": {
                                 "SensorID": 2,
                                 "SensorName": "SEN-13322",
                                 "SensorType": "Soil_Moisture",
-                                "value": 56
+                                "value": 92
                             }
                         },
                         "Pump": {

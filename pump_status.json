@@ -1399,6 +1399,131 @@
             "t": "29/05/2023 16:14:32",
             "r": "Apple/Yellow_apple",
             "status": "off"
+        },
+        {
+            "t": "19/06/2023 18:52:01",
+            "r": "Farm_2/Section1",
+            "status": "on"
+        },
+        {
+            "t": "19/06/2023 18:52:33",
+            "r": "Orange/Orange_1",
+            "status": "on"
+        },
+        {
+            "t": "19/06/2023 18:55:43",
+            "r": "Apple/Yellow_apple",
+            "status": "on"
+        },
+        {
+            "t": "19/06/2023 18:56:19",
+            "r": "Apple/Yellow_apple",
+            "status": "off"
+        },
+        {
+            "t": "19/06/2023 18:59:02",
+            "r": "Apple/Yellow_apple",
+            "status": "on"
+        },
+        {
+            "t": "19/06/2023 19:01:42",
+            "r": "Apple/Yellow_apple",
+            "status": "off"
+        },
+        {
+            "t": "19/06/2023 19:03:51",
+            "r": "Orange/Orange_1",
+            "status": "off"
+        },
+        {
+            "t": "19/06/2023 19:04:31",
+            "r": "Orange/Orange_1",
+            "status": "on"
+        },
+        {
+            "t": "19/06/2023 19:05:02",
+            "r": "Apple/Yellow_apple",
+            "status": "on"
+        },
+        {
+            "t": "19/06/2023 19:06:24",
+            "r": "Apple/Yellow_apple",
+            "status": "off"
+        },
+        {
+            "t": "19/06/2023 19:07:42",
+            "r": "Apple/Yellow_apple",
+            "status": "on"
+        },
+        {
+            "t": "19/06/2023 19:08:21",
+            "r": "Apple/Yellow_apple",
+            "status": "off"
+        },
+        {
+            "t": "19/06/2023 19:11:52",
+            "r": "Orange/Orange_1",
+            "status": "off"
+        },
+        {
+            "t": "19/06/2023 19:12:32",
+            "r": "Orange/Orange_1",
+            "status": "on"
+        },
+        {
+            "t": "19/06/2023 19:13:00",
+            "r": "Apple/Yellow_apple",
+            "status": "on"
+        },
+        {
+            "t": "19/06/2023 19:14:22",
+            "r": "Apple/Yellow_apple",
+            "status": "off"
+        },
+        {
+            "t": "19/06/2023 19:16:24",
+            "r": "Apple/Yellow_apple",
+            "status": "on"
+        },
+        {
+            "t": "19/06/2023 19:19:45",
+            "r": "Apple/Yellow_apple",
+            "status": "off"
+        },
+        {
+            "t": "19/06/2023 19:21:01",
+            "r": "Apple/Yellow_apple",
+            "status": "on"
+        },
+        {
+            "t": "19/06/2023 19:22:21",
+            "r": "Apple/Yellow_apple",
+            "status": "off"
+        },
+        {
+            "t": "19/06/2023 19:25:01",
+            "r": "Apple/Yellow_apple",
+            "status": "on"
+        },
+        {
+            "t": "19/06/2023 19:25:43",
+            "r": "Apple/Yellow_apple",
+            "status": "off"
+        },
+        {
+            "t": "21/06/2023 10:42:37",
+            "r": "Apple/Yellow_apple",
+            "status": "on"
+        },
+        {
+            "t": "21/06/2023 10:43:21",
+            "r": "Apple/Yellow_apple",
+            "status": "off"
+        },
+        {
+            "t": "21/06/2023 10:45:28",
+            "r": "Orange/Orange_1",
+            "status": "off"
         }
     ]
 }

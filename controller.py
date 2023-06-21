@@ -26,20 +26,22 @@ class MoistController:
 
     def notify(self, topic, message):
         msg = json.loads(message)
+        print(f'Received message :\n{msg}\nfrom topic: {topic}\n')
         
-        # self.IDs['user'] = msg['userID']
         self.IDs['farm'] = msg['farmID']
         self.IDs['section'] = msg['sectionID']
-        self.my_req.put_sen_val(self.IDs, msg['e']['n'], msg['e']['value'])
+        for msg_event in msg['e']:
+            self.my_req.put_sen_val(self.IDs, msg_event['n'], msg_event['value'])
 
         control_status = self.my_req.get_control_status(self.IDs)
         if control_status == 'auto':
-            if msg['e']['n'] == 'Temperature':
-                tmp_value = msg['e']['value']
-                self.temp_values.append(tmp_value)
-            elif msg['e']['n'] == 'Soil_Moisture':
-                mois_value = msg['e']['value']
-                self.mois_values.append(mois_value)
+            for msg_event in msg['e']:
+                if msg_event['n'] == 'Temperature':
+                    tmp_value = msg_event['value']
+                    self.temp_values.append(tmp_value)
+                elif msg_event['n'] == 'Soil_Moisture':
+                    mois_value = msg_event['value']
+                    self.mois_values.append(mois_value)
 
             if len(self.temp_values) == len(self.mois_values) and len(self.mois_values) >1:
                 self.ControlServo(self.temp_values, self.mois_values)
@@ -114,27 +116,28 @@ class MoistController:
             'farmID': self.IDs['farm'],
             'sectionID': self.IDs['section'],
             'bn': '',
-            'e': {'n': '', 'value': '', 'timestamp': '', 'unit': ''}
+            'e': [{'n': '', 'value': '', 'timestamp': '', 'unit': ''}]
         }
-        __message['bn'] = topic
-        __message['e']['n'] = 'pump'
-        __message['e']['value'] = pump_state
-        __message['e']['timestamp'] = str('{:%Y-%m-%d %H:%M:%S}'.format(datetime.datetime.now()))
-        __message['e']['unit'] = 'boolean'
+        __message['bn'] = 'Pump_status'
+        __message['e'][0]['n'] = 'pump'
+        __message['e'][0]['value'] = pump_state
+        __message['e'][0]['timestamp'] = str('{:%Y-%m-%d %H:%M:%S}'.format(datetime.datetime.now()))
+        __message['e'][0]['unit'] = 'boolean'
         
         self.client.myPublish(topic, __message)
       
         self.my_req.post_status(self.IDs, pump_state)
 
     def checkalarm(self, msg):
-        if msg['e']['n'] == 'Soil_Moisture':
-            thresh_min_mois = self.my_req.get_threshold(self.IDs)['mois_min']
-            if msg['e']['value'] < thresh_min_mois:
-                # print(f"alarm {msg['farmID']} {msg['sectionID']}")
-                self.telegram_message['alert'] = 'The sensor of Soil Moisture is under the threshold'
-                self.telegram_message['farm'] = msg['farmID']
-                self.telegram_message['section'] = msg['sectionID']
-                self.client.myPublish(self.alarm_topic, self.telegram_message)
+        for msg_event in msg['e']:
+            if msg_event['n'] == 'Soil_Moisture':
+                thresh_min_mois = self.my_req.get_threshold(self.IDs)['mois_min']
+                if msg_event['value'] < thresh_min_mois:
+                    # print(f"alarm {msg['farmID']} {msg['sectionID']}")
+                    self.telegram_message['alert'] = 'The sensor of Soil Moisture is under the threshold'
+                    self.telegram_message['farm'] = msg['farmID']
+                    self.telegram_message['section'] = msg['sectionID']
+                    self.client.myPublish(self.alarm_topic, self.telegram_message)
                 
 if __name__ == "__main__":
     

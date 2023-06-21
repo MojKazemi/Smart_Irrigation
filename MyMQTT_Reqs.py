@@ -30,6 +30,7 @@ class MyMQTT:
     def myPublish(self, topic, msg):
         # publish a message with a certain topic
         self._paho_mqtt.publish(topic, json.dumps(msg), 2)
+        print(f'Publish the messqage:\n{msg}\nin topic: {topic}\n')
 
     def mySubscribe(self, topic):
 
@@ -117,8 +118,8 @@ class MyRequest:
     def get_telegram_setting(self):
         return requests.get("http://127.0.0.1:8080/catalog/telegram_setting").json()
 class ts_publish:
-    def __init__(self, channel_ID = "2073420", ts_conf = 'ts_conf.json'):
-        self.channel_ID = channel_ID
+    def __init__(self, ts_conf = 'ts_conf.json'):
+        # self.channel_ID = channel_ID
         with open(ts_conf, 'r') as file:
             conf = json.load(file)
         self.mqtt_host = conf['host']
@@ -134,16 +135,16 @@ class ts_publish:
                             password=self.mqtt_password,
                             _transport= self.t_transport)
 
-    def tsSinglePublish(self, payload):
-        topic = "channels/" + self.channel_ID + "/publish"
+    def tsSinglePublish(self, payload, channel_ID= "2073420"):
+        topic = "channels/" + channel_ID + "/publish"
         # print ("Writing Payload = ", payload," to host: ", self.mqtt_host, " clientID= ", self.mqtt_client_ID, " User ", self.mqtt_username, " PWD ", self.mqtt_password)
         paho_mqtt_publish.single(topic, payload,
             hostname=self.mqtt_host, transport=self.t_transport,
             port=self.t_port, client_id=self.mqtt_client_ID,
             auth={'username':self.mqtt_username,'password':self.mqtt_password})
 
-    def tsPublish(self, payload):
-        topic = "channels/" + self.channel_ID + "/publish"
+    def tsPublish(self, payload, channel_ID= "2073420"):
+        topic = "channels/" + channel_ID + "/publish"
         self.client.myPublish(topic,payload)
         # print ("Writing Payload = ", payload," to host: ", self.mqtt_host, " clientID= ", self.mqtt_client_ID)
 
