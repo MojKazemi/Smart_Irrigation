@@ -3,8 +3,16 @@ from MyMQTT_Reqs import MyMQTT, MyRequest
 import requests
 
 class MoistController:
-    def __init__(self,userID):
-        self.my_req = MyRequest()
+    def __init__(self,userID, conf_file = 'controller_conf.json'):
+        with open(conf_file, 'r') as file:
+            conf = json.load(file)
+        rc_add = conf['rc_address']
+        rc_port = conf['rc_port']
+
+        self.my_req = MyRequest(
+            web_server= rc_add,
+            web_server_port=rc_port
+            )
         broker, port, baseTopic = self.my_req.get_broker()
         self.baseTopic = baseTopic
         self.topic = f'{baseTopic}/data/#'
@@ -16,6 +24,8 @@ class MoistController:
         self.client = MyMQTT(userID,broker, port,notifier=self)
         self.telegram_message={"alert":"", "farm":"", "section":""}
         self.alarm_topic = f'{baseTopic}/alarm/'
+
+        self.static_rc = requests.get(f'http://{rc_add}:{rc_port}/services/statis_webserver').json()
         
     def start(self):
         self.client.start()
@@ -26,12 +36,12 @@ class MoistController:
 
     def notify(self, topic, message):
         msg = json.loads(message)
-        print(f'Received message :\n{msg}\nfrom topic: {topic}\n')
+        # print(f'Received message :\n{msg}\nfrom topic: {topic}\n')
         
         self.IDs['farm'] = msg['farmID']
         self.IDs['section'] = msg['sectionID']
-        for msg_event in msg['e']:
-            self.my_req.put_sen_val(self.IDs, msg_event['n'], msg_event['value'])
+        # for msg_event in msg['e']:
+        #     self.my_req.put_sen_val(self.IDs, msg_event['n'], msg_event['value'])
 
         control_status = self.my_req.get_control_status(self.IDs)
         if control_status == 'auto':
@@ -126,7 +136,12 @@ class MoistController:
         
         self.client.myPublish(topic, __message)
       
-        self.my_req.post_status(self.IDs, pump_state)
+        # self.my_req.post_status(self.IDs, pump_state)
+        print('**************************')
+        requests.post(f'http://{self.static_rc["st_address"]}:{int(self.static_rc["st_port"])}/statistic?farmID={self.IDs["farm"]}&sectionID={self.IDs["section"]}&status={pump_state}')
+        
+        print('**********************************')
+        print(f'post :\n http://{self.static_rc["st_address"]}:{int(self.static_rc["st_port"])}/statistic?farmID={self.IDs["farm"]}&sectionID={self.IDs["section"]}&status={pump_state}')
 
     def checkalarm(self, msg):
         for msg_event in msg['e']:
@@ -141,7 +156,7 @@ class MoistController:
                 
 if __name__ == "__main__":
     
-    test = MoistController("hh")
+    test = MoistController("hh", conf_file = 'controller_conf.json')
     test.start()
     
     while True:

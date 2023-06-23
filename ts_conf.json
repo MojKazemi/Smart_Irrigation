@@ -4,5 +4,7 @@
     "username"  : "EDQ8GjQ8KCUHLRMaNxs0CiM",
     "password"  : "6enC7wzkdQs1rvDaPTdcD+6Q",
     "t_transport" : "websockets",
-    "t_port" : 80
+    "t_port" : 80,
+    "rc_address":"127.0.0.1",
+    "rc_port":8080 
 }

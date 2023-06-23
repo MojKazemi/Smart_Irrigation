@@ -1,0 +1,6 @@
+{
+    "rc_address":"127.0.0.1",
+    "rc_port":8080,
+    "Server_soket_host": "127.0.0.1",
+    "Server_soket_port": 8383
+}

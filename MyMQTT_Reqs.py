@@ -25,6 +25,8 @@ class MyMQTT:
 
     def myOnMessageReceived(self, paho_mqtt, userdata, msg):
         # A new message is received
+        _msg = json.loads(msg.payload)
+        print(f'Received message :\n{_msg}\nfrom topic: {msg.topic}\n')
         self.notifier.notify(msg.topic, msg.payload)
 
     def myPublish(self, topic, msg):
@@ -66,7 +68,7 @@ class MyRequest:
         self._root = f'http://{web_server}:{web_server_port}'
 
     def get_broker(self):
-        catalog_broker = requests.get(f'{self._root}/catalog/broker_details').json()
+        catalog_broker = requests.get(f'{self._root}/services/broker').json()
         return catalog_broker['broker'], catalog_broker['port'], catalog_broker['baseTopic']
 
     def get_catalog(self):
@@ -98,8 +100,8 @@ class MyRequest:
         _status = requests.get(f'{self._root}/catalog/control_status/?farmID={IDs["farm"]}&sectionID={IDs["section"]}').json()
         return _status
 
-    def post_status(self,IDs, status):
-        requests.post(f'{self._root}/statistics/pump_status?farmID={IDs["farm"]}&sectionID={IDs["section"]}&status={status}')
+    # def post_status(self,IDs, status):
+    #     requests.post(f'{self._root}/statistics/pump_status?farmID={IDs["farm"]}&sectionID={IDs["section"]}&status={status}')
 
     def get_manual_schedul(self,IDs):
         _schedul = requests.get(f'{self._root}/catalog/manual_schedul/?farmID={IDs["farm"]}&sectionID={IDs["section"]}').json()
@@ -116,38 +118,5 @@ class MyRequest:
         requests.put(f'{self._root}/catalog/control_status/?farmID={IDs["farm"]}&sectionID={IDs["section"]}&value={value}')
 
     def get_telegram_setting(self):
-        return requests.get("http://127.0.0.1:8080/catalog/telegram_setting").json()
-class ts_publish:
-    def __init__(self, ts_conf = 'ts_conf.json'):
-        # self.channel_ID = channel_ID
-        with open(ts_conf, 'r') as file:
-            conf = json.load(file)
-        self.mqtt_host = conf['host']
-        self.mqtt_client_ID = conf['client_ID']
-        self.mqtt_username  = conf['username']
-        self.mqtt_password  = conf['password']
-        self.t_transport = conf['t_transport']
-        self.t_port = conf['t_port'] 
-        self.client = MyMQTT(self.mqtt_client_ID,
-                            self.mqtt_host,
-                            self.t_port,None,
-                            username=self.mqtt_username,
-                            password=self.mqtt_password,
-                            _transport= self.t_transport)
-
-    def tsSinglePublish(self, payload, channel_ID= "2073420"):
-        topic = "channels/" + channel_ID + "/publish"
-        # print ("Writing Payload = ", payload," to host: ", self.mqtt_host, " clientID= ", self.mqtt_client_ID, " User ", self.mqtt_username, " PWD ", self.mqtt_password)
-        paho_mqtt_publish.single(topic, payload,
-            hostname=self.mqtt_host, transport=self.t_transport,
-            port=self.t_port, client_id=self.mqtt_client_ID,
-            auth={'username':self.mqtt_username,'password':self.mqtt_password})
-
-    def tsPublish(self, payload, channel_ID= "2073420"):
-        topic = "channels/" + channel_ID + "/publish"
-        self.client.myPublish(topic,payload)
-        # print ("Writing Payload = ", payload," to host: ", self.mqtt_host, " clientID= ", self.mqtt_client_ID)
-
-    def start(self):
-        self.client.start()
+        return requests.get(f"{self._root}/services/telegram_setting").json()
 

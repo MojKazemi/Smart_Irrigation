@@ -4,7 +4,7 @@ import random
 import time, datetime
 import requests
 
-from MyMQTT_Reqs import MyMQTT, MyRequest
+from MyMQTT_Reqs import MyMQTT
 
 
 class Sensor:
@@ -43,10 +43,27 @@ class Sensor:
         self.client.stop()
 
 if __name__ == '__main__':
-    my_req = MyRequest()
-    broker, port, baseTopic = my_req.get_broker()
-    catalog_user = my_req.get_catalog()
-    catalog_farm = my_req.get_catalog_farm()
+
+    with open('./sensors_conf.json', 'r') as file:
+        se_conf = json.load(file)
+
+    broker_add = se_conf["broker_address"]
+    broker_port = se_conf["broker_port"]
+    bese_topic = se_conf["base_topic"]
+
+    rc_add = se_conf["rc_address"]
+    rc_port = se_conf["rc_port"]
+
+    # broker_conf = requests.get(f'http://{rc_add}:{rc_port}/services/broker').json()
+    
+    # if broker_conf['broker'] != broker_add or broker_conf['port'] != broker_port:
+    requests.put(f'http://{rc_add}:{rc_port}/services/register_broker?address={broker_add}&port={broker_port}')
+
+    # if broker_conf['baseTopic'] != bese_topic:
+    requests.put(f'http://{rc_add}:{rc_port}/services/register_baseTopic?value={bese_topic}')
+    
+    catalog_user = requests.get(f'http://{rc_add}:{rc_port}/catalog/user_details').json()
+    catalog_farm = requests.get(f'http://{rc_add}:{rc_port}/catalog/farm_details').json()
 
     Sensors = []
 
@@ -57,7 +74,13 @@ if __name__ == '__main__':
             for sen in val_s['Devices']['Sensors'].values():
                 senID = sen['SensorID']
                 SensorType = sen['SensorType']
-                sensor = Sensor(baseTopic,farmID,secID,senID,SensorType,broker,port)#,ch_ID)
+
+                sensor = Sensor(
+                    bese_topic,
+                    farmID,secID,senID,SensorType,
+                    broker_add,
+                    broker_port
+                )
                 Sensors.append(sensor)
 
 

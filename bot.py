@@ -10,8 +10,11 @@ import pprint
 
 class IrrigationBot:
 
-    def __init__(self, broker, port):
-        self.my_req = MyRequest()
+    def __init__(self, bot_conf = 'bot_conf.json'):
+        with open(bot_conf,'r') as file:
+            rc_conf = json.load(file)
+        self.my_req = MyRequest(web_server=rc_conf['rc_address'], web_server_port=rc_conf['rc_port'])
+
         _setting = self.my_req.get_telegram_setting()
         self.tokenBot=_setting["telegramToken"]      
         self.list_chat_id = _setting["chat_ids"]
@@ -28,6 +31,7 @@ class IrrigationBot:
         MessageLoop(self.bot, {'chat': self.on_chat_message, 
                                 'callback_query': self.on_callback_query}).run_as_thread()
         
+        broker, port, baseTopic = self.my_req.get_broker()
         self.client = MyMQTT("telegramBotIoT", broker, port, self)
         self.client.start()
         self.topic = f'{_setting["alarm_topics"]}/#'
@@ -36,6 +40,7 @@ class IrrigationBot:
     def notify(self, topic, message):
         msg=json.loads(message)
                 # self.telegram_message={"alert":"", "farm":"", "section":""}
+        
         alert = msg["alert"]
         farm = msg["farm"]
         section = msg["section"]
@@ -237,9 +242,7 @@ class IrrigationBot:
             
 if __name__ == "__main__":
     
-    my_req = MyRequest()
-    broker, port,_ = my_req.get_broker()
-    bot=IrrigationBot(broker, port)
+    bot=IrrigationBot(bot_conf = 'bot_conf.json')
 
     print("Bot started ...")
     while True:

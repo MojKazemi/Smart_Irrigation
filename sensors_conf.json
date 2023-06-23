@@ -1,0 +1,7 @@
+{
+    "broker_address":"mqtt.eclipseprojects.io",
+    "broker_port":1883,
+    "base_topic": "Irrigation",
+    "rc_address":"127.0.0.1",
+    "rc_port":8080
+}
