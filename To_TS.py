@@ -45,6 +45,10 @@ class To_TS:
         self.rc_add = se_conf["rc_address"]
         self.rc_port = se_conf["rc_port"]
 
+        self.TS_API_address = se_conf["TS_api_address"]
+        serviceID = se_conf["serviceID"]
+        requests.put(f'http://{self.rc_add}:{self.rc_port}/services/third_party?serviceID={serviceID}&address={self.TS_API_address}')
+
         broker_conf = requests.get(f'http://{self.rc_add}:{self.rc_port}/services/broker').json()
        
         self.my_req = MyRequest()
@@ -59,6 +63,7 @@ class To_TS:
         # self.ts_chID = TS_channelID
         self.publish_TS = ts_publish(ts_conf=ts_conf)
         self.conv_bool_int = {'on':1,'off':0}
+        # self.hist_pump = {}
 
 
     def start(self):
@@ -73,28 +78,43 @@ class To_TS:
         msg = json.loads(message)
         # print(f'Received message :\n{msg}\nfrom topic: {topic}\n')
         
-        print(topic)
+        # print(topic)
         if topic.split('/')[1] != 'alarm':
-            for msg_event in msg['e']:
-                if msg_event['n'] == 'Temperature':
-                    TS_field = 'field1'
-                    sensor_value = msg_event['value']
-                elif msg_event['n'] == 'Soil_Moisture':
-                    TS_field = 'field2'
-                    sensor_value = msg_event['value']
-                elif msg_event['n'] == 'pump':
-                    TS_field = 'field3'
-                    sensor_value = self.conv_bool_int[msg_event['value']]
-            
-            farmID = msg['farmID']
-            secID  = msg['sectionID']
-            
-            # Thingspeak Broker
-            payload = f"&{TS_field}=" + str(sensor_value)
-            # print(payload)
             try:
-                # ch_ID = my_req.get_TS_chID(farmID,secID)
+                farmID = msg['farmID']
+                secID  = msg['sectionID']
                 ch_ID = requests.get(f'http://{self.rc_add}:{self.rc_port}/catalog/channelID?farmID={farmID}&sectionID={secID}').json()
+
+                value = requests.get(f"{self.TS_API_address}/{ch_ID['ch_ID']}/fields/3.json?results=1").json()
+                
+                pump_status = value["feeds"][-1]["field3"]
+
+                # Publish
+
+                for msg_event in msg['e']:
+                    if msg_event['n'] == 'Temperature':
+                        TS_field = 'field1'
+                        status = 'Temp'
+                        sensor_value = msg_event['value']
+                        # payload = f"&{TS_field}=" + str(sensor_value)
+                    elif msg_event['n'] == 'Soil_Moisture':
+                        TS_field = 'field2'
+                        status = 'Mois'
+                        sensor_value = msg_event['value']
+                        # payload = f"&{TS_field}=" + str(sensor_value)
+                    elif msg_event['n'] == 'pump':
+                        TS_field = 'field3'
+                        status = 'pump'
+                        pump_status = self.conv_bool_int[msg_event['value']]
+                    
+                    # Thingspeak Broker
+                    if TS_field != 'field3':
+                        payload = f"&{TS_field}=" + str(sensor_value) + "&field3=" + str(pump_status) + "&status="+status
+                    else:
+                        payload = "&field3=" + str(pump_status)+ "&status="+status
+            
+            
+            # print(payload)
                 # print(f'ch_ID :{ch_ID}')
                 self.publish_TS.tsPublish(payload, channel_ID = ch_ID['ch_ID'])
             except Exception as e:

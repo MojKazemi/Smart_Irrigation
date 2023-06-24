@@ -17,6 +17,10 @@
                 109184040
             ],
             "alarm_topics": "Irrigation/alarm"
+        },
+        "ThirdPartyService": {
+            "serviceID": "thingspeak",
+            "address": "https://api.thingspeak.com/channels"
         }
     },
     "electrical_cost": 1,
@@ -67,14 +71,12 @@
                             "sensor1": {
                                 "SensorID": 1,
                                 "SensorName": "DHT11",
-                                "SensorType": "Temperature",
-                                "value": 11
+                                "SensorType": "Temperature"
                             },
                             "sensor2": {
                                 "SensorID": 2,
                                 "SensorName": "SEN-13322",
-                                "SensorType": "Soil_Moisture",
-                                "value": 4
+                                "SensorType": "Soil_Moisture"
                             }
                         },
                         "Pump": {
@@ -149,21 +151,18 @@
                             "sensor1": {
                                 "SensorID": 1,
                                 "SensorName": "DHT11",
-                                "SensorType": "Temperature",
-                                "value": 12
+                                "SensorType": "Temperature"
                             },
                             "sensor2": {
                                 "SensorID": 2,
                                 "SensorName": "SEN-13322",
-                                "SensorType": "Soil_Moisture",
-                                "value": 36
+                                "SensorType": "Soil_Moisture"
                             }
                         },
                         "Pump": {
                             "pumpID": 1,
                             "pumpName": "PMDC-12v-25w",
-                            "power": 0.025,
-                            "status": "off"
+                            "power": 0.025
                         }
                     },
                     "TS_ChannelID": "2077771",
@@ -208,7 +207,7 @@
             "Sections": {
                 "section1": {
                     "sectionID": "Red_apple",
-                    "control_status": "manual",
+                    "control_status": "auto",
                     "temp_threshold": 6,
                     "mois_min_threshold": 74,
                     "mois_max_threshold": 39,
@@ -223,15 +222,13 @@
                             "sensor2": {
                                 "SensorID": 2,
                                 "SensorName": "SEN-13322",
-                                "SensorType": "Soil_Moisture",
-                                "value": 63
+                                "SensorType": "Soil_Moisture"
                             }
                         },
                         "Pump": {
                             "pumpID": 1,
                             "pumpName": "PMDC-12v-25w",
-                            "power": 0.025,
-                            "status": "on"
+                            "power": 0.025
                         }
                     },
                     "TS_ChannelID": "2077507",
@@ -242,30 +239,27 @@
                 },
                 "section2": {
                     "sectionID": "Yellow_apple",
-                    "control_status": "auto",
-                    "temp_threshold": 7,
-                    "mois_min_threshold": 19,
-                    "mois_max_threshold": 40,
+                    "control_status": "manual",
+                    "temp_threshold": 18,
+                    "mois_min_threshold": 77,
+                    "mois_max_threshold": 98,
                     "Devices": {
                         "Sensors": {
                             "sensor1": {
                                 "SensorID": 1,
                                 "SensorName": "DHT11",
-                                "SensorType": "Temperature",
-                                "value": 23
+                                "SensorType": "Temperature"
                             },
                             "sensor2": {
                                 "SensorID": 2,
                                 "SensorName": "SEN-13322",
-                                "SensorType": "Soil_Moisture",
-                                "value": 24
+                                "SensorType": "Soil_Moisture"
                             }
                         },
                         "Pump": {
                             "pumpID": 1,
                             "pumpName": "PMDC-12v-25w",
-                            "power": 0.025,
-                            "status": "off"
+                            "power": 0.025
                         }
                     },
                     "TS_ChannelID": "2077714",

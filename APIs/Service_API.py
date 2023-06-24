@@ -26,6 +26,12 @@ class Service_API(object):
         elif uri[0] == 'telegram_setting':
             return json.dumps(catalog['services']['telegram_setting'])
         
+        elif uri[0] == 'third_party':
+            return json.dumps(catalog['services']['ThirdPartyService'])
+        
+        else:
+            raise cherrypy.HTTPError(500, "There is not the services")
+        
     def PUT(self,*uri,**params):
         '''
             /register_broker -->  params : address , port
@@ -45,6 +51,10 @@ class Service_API(object):
         elif uri[0] == 'reg_statis_webserver':
             catalog['services']['Statistic_webserver']['st_address'] = params['address']
             catalog['services']['Statistic_webserver']['st_port'] = int(params['port'])
+
+        elif uri[0] == 'third_party':
+            catalog['services']['ThirdPartyService']['serviceID'] = params['serviceID']
+            catalog['services']['ThirdPartyService']['address'] = params['address']
 
         else:
             raise cherrypy.HTTPError(500, "Please enter a valid request")

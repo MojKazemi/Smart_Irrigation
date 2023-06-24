@@ -5,6 +5,8 @@
     "password"  : "6enC7wzkdQs1rvDaPTdcD+6Q",
     "t_transport" : "websockets",
     "t_port" : 80,
+    "TS_api_address": "https://api.thingspeak.com/channels",
+    "serviceID":"thingspeak",
     "rc_address":"127.0.0.1",
     "rc_port":8080 
 }

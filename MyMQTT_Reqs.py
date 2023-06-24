@@ -84,12 +84,12 @@ class MyRequest:
             f'{self._root}/catalog/threshold?farmID={IDs["farm"]}&sectionID={IDs["section"]}').json() 
         return thresh
 
-    def get_status(self,IDs):
-        status = requests.get(f'{self._root}/catalog/pump_status/?farmID={IDs["farm"]}&sectionID={IDs["section"]}').json()
-        return status
+    # def get_status(self,IDs):
+    #     status = requests.get(f'{self._root}/catalog/pump_status/?farmID={IDs["farm"]}&sectionID={IDs["section"]}').json()
+    #     return status
 
-    def put_status(self,IDs, status):
-        requests.put(f'{self._root}/catalog/pump_status/?farmID={IDs["farm"]}&sectionID={IDs["section"]}&status={status}')
+    # def put_status(self,IDs, status):
+    #     requests.put(f'{self._root}/catalog/pump_status/?farmID={IDs["farm"]}&sectionID={IDs["section"]}&status={status}')
     
     def get_TS_chID(self,farmID,secID):
         chID = requests.get(f'{self._root}/catalog/channelID?farmID={farmID}&sectionID={secID}').json()
@@ -107,9 +107,9 @@ class MyRequest:
         _schedul = requests.get(f'{self._root}/catalog/manual_schedul/?farmID={IDs["farm"]}&sectionID={IDs["section"]}').json()
         return _schedul
 
-    def get_sen_val(self, IDs, sn_type):
-        val = requests.get(f'{self._root}/catalog/sen_val/?farmID={IDs["farm"]}&sectionID={IDs["section"]}&type={sn_type}').json()
-        return val
+    # def get_sen_val(self, IDs, sn_type):
+    #     val = requests.get(f'{self._root}/catalog/sen_val/?farmID={IDs["farm"]}&sectionID={IDs["section"]}&type={sn_type}').json()
+    #     return val
 
     def put_sen_val(self, IDs, sn_type, value):
         requests.put(f'{self._root}/catalog/sen_val/?farmID={IDs["farm"]}&sectionID={IDs["section"]}&type={sn_type}&value={value}')

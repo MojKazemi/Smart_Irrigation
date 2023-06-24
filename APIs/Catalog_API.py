@@ -159,21 +159,18 @@ class catalogAPI(object):
                         "sensor1": {
                             "SensorID": 1,
                             "SensorName": "DHT11",
-                            "SensorType": "Temperature",
-                            "value": None
+                            "SensorType": "Temperature"
                         },
                         "sensor2": {
                             "SensorID": 2,
                             "SensorName": "SEN-13322",
-                            "SensorType": "Soil_Moisture",
-                            "value": None
+                            "SensorType": "Soil_Moisture"
                         }
                     },
                     "Pump": {
                         "pumpID": 1,
                         "pumpName": "PMDC-12v-25w",
-                        "power": 0.025,
-                        "status": ""
+                        "power": 0.025
                     }
                 }
             }

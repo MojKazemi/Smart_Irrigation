@@ -6,12 +6,12 @@ class MoistController:
     def __init__(self,userID, conf_file = 'controller_conf.json'):
         with open(conf_file, 'r') as file:
             conf = json.load(file)
-        rc_add = conf['rc_address']
-        rc_port = conf['rc_port']
+        self.rc_add = conf['rc_address']
+        self.rc_port = conf['rc_port']
 
         self.my_req = MyRequest(
-            web_server= rc_add,
-            web_server_port=rc_port
+            web_server= self.rc_add,
+            web_server_port = self.rc_port
             )
         broker, port, baseTopic = self.my_req.get_broker()
         self.baseTopic = baseTopic
@@ -25,8 +25,12 @@ class MoistController:
         self.telegram_message={"alert":"", "farm":"", "section":""}
         self.alarm_topic = f'{baseTopic}/alarm/'
 
-        self.static_rc = requests.get(f'http://{rc_add}:{rc_port}/services/statis_webserver').json()
+        self.static_rc = requests.get(f'http://{self.rc_add}:{self.rc_port}/services/statis_webserver').json()
+
+        TS_API = requests.get(f'http://{self.rc_add}:{self.rc_port}/services/third_party').json()
+        self.TS_API_address = TS_API['address']
         
+
     def start(self):
         self.client.start()
         self.client.mySubscribe(self.topic)       
@@ -81,10 +85,15 @@ class MoistController:
                         else:
                             self.status = 'off'
 
-                        prev_status = self.my_req.get_status(self.IDs)
+                        # prev_status = self.my_req.get_status(self.IDs)
+                        ch_ID = requests.get(f'http://{self.rc_add}:{self.rc_port}/catalog/channelID?farmID={self.IDs["farm"]}&sectionID={self.IDs["section"]}').json()
+
+                        value = requests.get(f"{self.TS_API_address}/{ch_ID['ch_ID']}/fields/3.json?results=1").json()
+                        
+                        prev_status = value["feeds"][-1]["field3"]
 
                         if self.status != prev_status:
-                            self.my_req.put_status(self.IDs,self.status)
+                            # self.my_req.put_status(self.IDs,self.status)
                             # print(f'------>>>> become {self.status} <<<<<--------')
                             self.sendActStatus(self.status)
 
@@ -111,10 +120,15 @@ class MoistController:
         else:
             self.status = 'on'
 
-        prev_status = self.my_req.get_status(self.IDs)
+        ch_ID = requests.get(f'http://{self.rc_add}:{self.rc_port}/catalog/channelID?farmID={self.IDs["farm"]}&sectionID={self.IDs["section"]}').json()
+
+        value = requests.get(f"{self.TS_API_address}/{ch_ID['ch_ID']}/fields/3.json?results=1").json()
+        
+        prev_status = value["feeds"][-1]["field3"]
+        # prev_status = self.my_req.get_status(self.IDs)
 
         if self.status != prev_status:
-            self.my_req.put_status(self.IDs,self.status)
+            # self.my_req.put_status(self.IDs,self.status)
             # print(f'------>>>> become {self.status} <<<<<--------')
             self.sendActStatus(self.status)
 
