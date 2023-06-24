@@ -334,7 +334,9 @@
             "98b4a4bfa15b15a9"
         ],
         "x": 94,
-        "y": 1859
+        "y": 1859,
+        "w": 972,
+        "h": 262
     },
     {
         "id": "f26e18f67ba7d048",
@@ -1325,10 +1327,12 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 630,
-        "y": 120,
+        "x": 690,
+        "y": 80,
         "wires": [
-            []
+            [
+                "71438f7175401098"
+            ]
         ]
     },
     {
@@ -1344,26 +1348,26 @@
         "format": "<font color={{msg.color}} ><i class=\"fa fa-circle\" style=\"font-size:24px;\"></i></font>   {{msg.payload}}",
         "layout": "row-center",
         "className": "",
-        "x": 970,
-        "y": 120,
+        "x": 1070,
+        "y": 140,
         "wires": []
     },
     {
         "id": "d4fd033c9b22ae27",
         "type": "function",
         "z": "826880ae0edaf3c4",
-        "name": "Make Link status of pump",
-        "func": "if (msg.payload == \"trig\") {\n    let tmp = {};\n    let user = global.get(\"user\");\n    let farm = global.get(\"farm\");\n    let sec = global.get(\"section\");\n    global.set(\"pump_check\", \"off\");\n    tmp.method = \"GET\";\n    let link = `http://127.0.0.1:8080/catalog/pump_status?userID=${user}&farmID=${farm}&sectionID=${sec}`;\n    tmp.url = link;\n    return tmp;\n}\n",
+        "name": "Make Link for TS ch_ID",
+        "func": "if (msg.payload == \"trig\") {\n    let tmp = {};\n    let user = global.get(\"user\");\n    let farm = global.get(\"farm\");\n    let sec = global.get(\"section\");\n    global.set(\"pump_check\", \"off\");\n    tmp.method = \"GET\";\n    let link = `http://127.0.0.1:8080/catalog/channelID?farmID=${farm}&sectionID=${sec}`;\n    tmp.url = link;\n    return tmp;\n}\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "// Code added here will be run once\n// whenever the node is started.\nlet tmp = {};\nlet user = global.get(\"user\");\nlet farm = global.get(\"farm\");\nlet sec = global.get(\"section\");\ntmp.method = \"GET\";\nlet link = `http://127.0.0.1:8080/catalog/pump_status?userID=${user}&farmID=${farm}&sectionID=${sec}`;\ntmp.url = link;\nreturn tmp;",
         "finalize": "",
         "libs": [],
-        "x": 410,
-        "y": 120,
+        "x": 170,
+        "y": 140,
         "wires": [
             [
-                "02389dcf34865cb3"
+                "3e69a9b04edea3fc"
             ]
         ]
     },
@@ -1384,30 +1388,11 @@
         "topic": "",
         "payload": "pump_check",
         "payloadType": "global",
-        "x": 140,
-        "y": 120,
+        "x": 180,
+        "y": 60,
         "wires": [
             [
                 "d4fd033c9b22ae27"
-            ]
-        ]
-    },
-    {
-        "id": "edfd41f9205cebcc",
-        "type": "function",
-        "z": "826880ae0edaf3c4",
-        "name": "Make Link status of pump",
-        "func": "let tmp = {};\nlet user = global.get(\"user\");\nlet farm = global.get(\"farm\");\nlet sec = global.get(\"section\");\nglobal.set(\"pump_check\", \"off\");\ntmp.method = \"GET\";\nlet link = `http://127.0.0.1:8080/catalog/pump_status?userID=${user}&farmID=${farm}&sectionID=${sec}`;\ntmp.url = link;\nreturn tmp;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "// Code added here will be run once\n// whenever the node is started.\nlet tmp = {};\nlet user = global.get(\"user\");\nlet farm = global.get(\"farm\");\nlet sec = global.get(\"section\");\ntmp.method = \"GET\";\nlet link = `http://127.0.0.1:8080/catalog/pump_status?userID=${user}&farmID=${farm}&sectionID=${sec}`;\ntmp.url = link;\nreturn tmp;",
-        "finalize": "",
-        "libs": [],
-        "x": 410,
-        "y": 80,
-        "wires": [
-            [
-                "02389dcf34865cb3"
             ]
         ]
     },
@@ -1624,7 +1609,7 @@
         "type": "python3-function",
         "z": "826880ae0edaf3c4",
         "name": "",
-        "func": "from datetime import datetime\ntmp ={}\nchart = {\"series\":[],\"data\":[],\"labels\":[]}\ndata =[]\n\nimport_data = msg[\"payload\"][\"feeds\"]\nfor val in import_data:\n    datetime_obj = datetime.strptime(val[\"created_at\"], '%Y-%m-%dT%H:%M:%SZ')\n    timestamp = (datetime_obj - datetime(1970, 1, 1)).total_seconds()\n    # timestamp = datetime_obj.timestamp()\n    if val[\"field1\"] != None:\n        data.append({\"x\":val[\"created_at\"],\"y\":float(val[\"field1\"].replace('\"',''))})\n\nchart[\"series\"] = [\"A\"]\nchart[\"labels\"] = [\"\"]\n\nchart[\"data\"] = [data]\ntmp[\"payload\"] = [chart]\nreturn tmp",
+        "func": "from datetime import datetime\ntmp ={}\nchart = {\"series\":[],\"data\":[],\"labels\":[]}\ndata =[]\n\nimport_data = msg[\"payload\"][\"feeds\"]\nfor val in import_data:\n    datetime_obj = datetime.strptime(val[\"created_at\"], '%Y-%m-%dT%H:%M:%SZ')\n    timestamp = (datetime_obj - datetime(1970, 1, 1)).total_seconds()\n    # timestamp = datetime_obj.timestamp()\n    if val[\"field1\"] != None:\n        sen_val = ''.join(filter(unicode.isdigit, val[\"field1\"]))\n        data.append({\"x\":val[\"created_at\"],\"y\":float(sen_val)})\n        \nchart[\"series\"] = [\"A\"]\nchart[\"labels\"] = [\"\"]\n\nchart[\"data\"] = [data]\ntmp[\"payload\"] = [chart]\nreturn tmp",
         "outputs": 1,
         "x": 690,
         "y": 220,
@@ -1639,38 +1624,13 @@
         "type": "python3-function",
         "z": "826880ae0edaf3c4",
         "name": "",
-        "func": "from datetime import datetime\ntmp ={}\nchart = {\"series\":[],\"data\":[],\"labels\":[]}\ndata =[]\n\nimport_data = msg[\"payload\"][\"feeds\"]\nfor val in import_data:\n    datetime_obj = datetime.strptime(val[\"created_at\"], '%Y-%m-%dT%H:%M:%SZ')\n    timestamp = (datetime_obj - datetime(1970, 1, 1)).total_seconds()\n    # timestamp = datetime_obj.timestamp()\n    if val[\"field2\"] != None:\n        data.append({\"x\":val[\"created_at\"],\"y\":float(val[\"field2\"].replace('\"',''))})\n\nchart[\"series\"] = [\"A\"]\nchart[\"labels\"] = [\"\"]\n\nchart[\"data\"] = [data]\ntmp[\"payload\"] = [chart]\nreturn tmp",
+        "func": "from datetime import datetime\ntmp ={}\nchart = {\"series\":[],\"data\":[],\"labels\":[]}\ndata =[]\n\nimport_data = msg[\"payload\"][\"feeds\"]\nfor val in import_data:\n    datetime_obj = datetime.strptime(val[\"created_at\"], '%Y-%m-%dT%H:%M:%SZ')\n    timestamp = (datetime_obj - datetime(1970, 1, 1)).total_seconds()\n    # timestamp = datetime_obj.timestamp()\n    if val[\"field2\"] != None:\n        sen_val = ''.join(filter(unicode.isdigit, val[\"field2\"]))\n        \n        data.append({\"x\":val[\"created_at\"],\"y\":float(sen_val)})\n\nchart[\"series\"] = [\"A\"]\nchart[\"labels\"] = [\"\"]\n\nchart[\"data\"] = [data]\ntmp[\"payload\"] = [chart]\nreturn tmp",
         "outputs": 1,
         "x": 690,
         "y": 300,
         "wires": [
             [
                 "91edf54a2c938b34"
-            ]
-        ]
-    },
-    {
-        "id": "a6812b6cb85dde08",
-        "type": "inject",
-        "z": "826880ae0edaf3c4",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 160,
-        "y": 60,
-        "wires": [
-            [
-                "edfd41f9205cebcc"
             ]
         ]
     },
@@ -1685,8 +1645,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 810,
-        "y": 120,
+        "x": 870,
+        "y": 140,
         "wires": [
             [
                 "37febdee46811633"
@@ -1878,27 +1838,9 @@
         "y": 480,
         "wires": [
             [
-                "e5d03b35a8e34dd1",
-                "e34da9cd955ce0d1"
+                "e5d03b35a8e34dd1"
             ]
         ]
-    },
-    {
-        "id": "01f76d6cd884229d",
-        "type": "debug",
-        "z": "826880ae0edaf3c4",
-        "name": "debug 19",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1040,
-        "y": 400,
-        "wires": []
     },
     {
         "id": "e5d03b35a8e34dd1",
@@ -1915,27 +1857,67 @@
         "y": 480,
         "wires": [
             [
-                "01f76d6cd884229d",
                 "f7dfd7f201a3c0dd"
             ]
         ]
     },
     {
-        "id": "e34da9cd955ce0d1",
-        "type": "debug",
+        "id": "f29de97a422ed2db",
+        "type": "function",
         "z": "826880ae0edaf3c4",
-        "name": "debug 20",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 860,
-        "y": 560,
-        "wires": []
+        "name": "Make Link for TS",
+        "func": "let ch_ID = msg.payload\nlet tmp = {};\nlet user = global.get(\"user\");\nlet farm = global.get(\"farm\");\nlet sec = global.get(\"section\");\nglobal.set(\"pump_check\", \"off\");\ntmp.method = \"GET\";\nlet link = `https://api.thingspeak.com/channels/${ch_ID[\"ch_ID\"]}/fields/3.json?results=1`;\ntmp.url = link;\nreturn tmp;\n\n\n\n// ch_ID = requests.get(f'http://{self.rc_add}:{self.rc_port}/catalog/channelID?farmID={self.IDs[\"farm\"]}&sectionID={self.IDs[\"section\"]}').json()\n\n// value = requests.get(f\"{self.TS_API_address}/{ch_ID['ch_ID']}/fields/3.json?results=1\").json()\n\n// prev_status = value[\"feeds\"][-1][\"field3\"]",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nlet tmp = {};\nlet user = global.get(\"user\");\nlet farm = global.get(\"farm\");\nlet sec = global.get(\"section\");\ntmp.method = \"GET\";\nlet link = `http://127.0.0.1:8080/catalog/pump_status?userID=${user}&farmID=${farm}&sectionID=${sec}`;\ntmp.url = link;\nreturn tmp;",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 80,
+        "wires": [
+            [
+                "02389dcf34865cb3"
+            ]
+        ]
+    },
+    {
+        "id": "3e69a9b04edea3fc",
+        "type": "http request",
+        "z": "826880ae0edaf3c4",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": true,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 390,
+        "y": 140,
+        "wires": [
+            [
+                "f29de97a422ed2db"
+            ]
+        ]
+    },
+    {
+        "id": "71438f7175401098",
+        "type": "python3-function",
+        "z": "826880ae0edaf3c4",
+        "name": "Conv value of pump",
+        "func": "tmp ={}\nval = msg[\"payload\"][\"feeds\"][0][\"field3\"]\nif val == \"0\":\n    tmp[\"payload\"] = \"off\"\nelse:\n    tmp[\"payload\"] = \"on\"\nreturn tmp",
+        "outputs": 1,
+        "x": 900,
+        "y": 80,
+        "wires": [
+            [
+                "f7dfd7f201a3c0dd"
+            ]
+        ]
     },
     {
         "id": "6ec63603ae43adeb",
@@ -2151,7 +2133,7 @@
         "type": "function",
         "z": "35d84e1661220e87",
         "name": "function 12",
-        "func": "let tmp = {};\nlet s_date = flow.get(\"date_cons\")\n// const s_date = new Date(pre_Date)\n// const s_date = new Date(msg.payload);\nlet s_year = s_date.getFullYear();\nconst s_month = s_date.getMonth()+1;\nconst s_day = s_date.getDate();\n\ntmp.method = \"GET\";\nlet link = `http://127.0.0.1:8080/statistic/day?userID=${global.get(\"user\")}&farmID=${global.get(\"farm\")}&sectionID=${global.get(\"section\")}&day=${s_day}/${s_month}/${s_year}`\ntmp.url = link;\nreturn tmp;",
+        "func": "let tmp = {};\nlet s_date = flow.get(\"date_cons\")\n// const s_date = new Date(pre_Date)\n// const s_date = new Date(msg.payload);\nlet s_year = s_date.getFullYear();\nconst s_month = s_date.getMonth()+1;\nconst s_day = s_date.getDate();\n\ntmp.method = \"GET\";\nlet link = `http://127.0.0.1:8383/statistic/day?userID=${global.get(\"user\")}&farmID=${global.get(\"farm\")}&sectionID=${global.get(\"section\")}&day=${s_day}/${s_month}/${s_year}`\ntmp.url = link;\nreturn tmp;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -2235,7 +2217,7 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 770,
+        "x": 850,
         "y": 400,
         "wires": []
     },
@@ -2288,7 +2270,7 @@
         "type": "function",
         "z": "35d84e1661220e87",
         "name": "function 14",
-        "func": "let tmp={}\nlet selected_year = flow.get(\"year_selected\")\n\ntmp.method = \"GET\";\nlet link = `http://127.0.0.1:8080/statistic/year?userID=${global.get(\"user\")}&farmID=${global.get(\"farm\")}&sectionID=${global.get(\"section\")}&year=${selected_year}`\ntmp.url = link;\nreturn tmp;",
+        "func": "let tmp={}\nlet selected_year = flow.get(\"year_selected\")\n\ntmp.method = \"GET\";\nlet link = `http://127.0.0.1:8383/statistic/year?userID=${global.get(\"user\")}&farmID=${global.get(\"farm\")}&sectionID=${global.get(\"section\")}&year=${selected_year}`\ntmp.url = link;\nreturn tmp;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -3551,7 +3533,7 @@
         "type": "debug",
         "z": "e3f466151cefe330",
         "name": "debug 7",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -3882,7 +3864,7 @@
         "type": "debug",
         "z": "e3f466151cefe330",
         "name": "debug 13",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
