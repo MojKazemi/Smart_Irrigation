@@ -59,9 +59,9 @@
                 "section1": {
                     "sectionID": "Orange_1",
                     "control_status": "auto",
-                    "temp_threshold": 16,
-                    "mois_min_threshold": 45,
-                    "mois_max_threshold": 68,
+                    "temp_threshold": 4,
+                    "mois_min_threshold": 17,
+                    "mois_max_threshold": 37,
                     "Devices": {
                         "Sensors": {
                             "sensor1": {
@@ -81,7 +81,7 @@
                             "pumpID": 1,
                             "pumpName": "PMDC-12v-25w",
                             "power": 0.025,
-                            "status": "on"
+                            "status": "off"
                         }
                     },
                     "TS_ChannelID": "2073420",

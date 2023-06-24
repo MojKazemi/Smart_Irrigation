@@ -49,7 +49,7 @@ class To_TS:
        
         self.my_req = MyRequest()
         # broker, port, self.basetopic = self.my_req.get_broker()
-        self.topic = f'{broker_conf["baseTopic"]}/data/#'
+        self.topic = f'{broker_conf["baseTopic"]}/#'
         self.client = MyMQTT(
             userID,
             broker_conf["broker"], 
@@ -58,6 +58,7 @@ class To_TS:
             )
         # self.ts_chID = TS_channelID
         self.publish_TS = ts_publish(ts_conf=ts_conf)
+        self.conv_bool_int = {'on':1,'off':0}
 
 
     def start(self):
@@ -72,26 +73,32 @@ class To_TS:
         msg = json.loads(message)
         # print(f'Received message :\n{msg}\nfrom topic: {topic}\n')
         
-        for msg_event in msg['e']:
-            if msg_event['n'] == 'Temperature':
-                TS_field = 'field1'
-            else:
-                TS_field = 'field2'
-            sensor_value = msg_event['value']
-        
-        farmID = msg['farmID']
-        secID  = msg['sectionID']
-        
-        # Thingspeak Broker
-        payload = f"&{TS_field}=" + str(sensor_value)
-        # print(payload)
-        try:
-            # ch_ID = my_req.get_TS_chID(farmID,secID)
-            ch_ID = requests.get(f'http://{self.rc_add}:{self.rc_port}/catalog/channelID?farmID={farmID}&sectionID={secID}').json()
-            # print(f'ch_ID :{ch_ID}')
-            self.publish_TS.tsPublish(payload, channel_ID = ch_ID['ch_ID'])
-        except Exception as e:
-            print(f'the error is happend {e}')
+        print(topic)
+        if topic.split('/')[1] != 'alarm':
+            for msg_event in msg['e']:
+                if msg_event['n'] == 'Temperature':
+                    TS_field = 'field1'
+                    sensor_value = msg_event['value']
+                elif msg_event['n'] == 'Soil_Moisture':
+                    TS_field = 'field2'
+                    sensor_value = msg_event['value']
+                elif msg_event['n'] == 'pump':
+                    TS_field = 'field3'
+                    sensor_value = self.conv_bool_int[msg_event['value']]
+            
+            farmID = msg['farmID']
+            secID  = msg['sectionID']
+            
+            # Thingspeak Broker
+            payload = f"&{TS_field}=" + str(sensor_value)
+            # print(payload)
+            try:
+                # ch_ID = my_req.get_TS_chID(farmID,secID)
+                ch_ID = requests.get(f'http://{self.rc_add}:{self.rc_port}/catalog/channelID?farmID={farmID}&sectionID={secID}').json()
+                # print(f'ch_ID :{ch_ID}')
+                self.publish_TS.tsPublish(payload, channel_ID = ch_ID['ch_ID'])
+            except Exception as e:
+                print(f'the error is happend {e}')
             
 
 if __name__ == "__main__":

@@ -303,7 +303,9 @@
             "b3961f38c1ce9fdb"
         ],
         "x": 14,
-        "y": 219
+        "y": 219,
+        "w": 872,
+        "h": 122
     },
     {
         "id": "45e960f0757d3147",
@@ -1326,9 +1328,7 @@
         "x": 630,
         "y": 120,
         "wires": [
-            [
-                "f7dfd7f201a3c0dd"
-            ]
+            []
         ]
     },
     {
@@ -1492,7 +1492,8 @@
         "y": 320,
         "wires": [
             [
-                "267164679279520f"
+                "267164679279520f",
+                "97e293c674e9ab9d"
             ]
         ]
     },
@@ -1514,7 +1515,8 @@
         "y": 360,
         "wires": [
             [
-                "267164679279520f"
+                "267164679279520f",
+                "895d411c6ab6c528"
             ]
         ]
     },
@@ -1543,7 +1545,8 @@
         "wires": [
             [
                 "7bdc97a986ad6f1a",
-                "dcfb75b566d0bd76"
+                "dcfb75b566d0bd76",
+                "615b33a8b77eb79d"
             ]
         ]
     },
@@ -1656,14 +1659,14 @@
                 "p": "payload"
             }
         ],
-        "repeat": "10",
+        "repeat": "",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 170,
+        "x": 160,
         "y": 60,
         "wires": [
             [
@@ -1676,7 +1679,7 @@
         "type": "function",
         "z": "826880ae0edaf3c4",
         "name": "function 15",
-        "func": "if (msg.statusCode != 200){\n    msg.payload = \"Not Connected\"\n    msg.color = \"orange\";\n} else{\n    msg.color = (msg.payload == \"on\") ? \"lime\" : \"red\";\n}\n\nreturn msg;",
+        "func": "\nmsg.color = (msg.payload == \"on\") ? \"lime\" : \"red\";\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1745,7 +1748,8 @@
         "y": 500,
         "wires": [
             [
-                "267164679279520f"
+                "267164679279520f",
+                "ad95f9bdd3ea4f1e"
             ]
         ]
     },
@@ -1771,96 +1775,167 @@
         "y": 580,
         "wires": [
             [
-                "267164679279520f"
+                "267164679279520f",
+                "c620220ec99c1b45"
             ]
         ]
     },
     {
-        "id": "def8c0b0082e5f1f",
+        "id": "615b33a8b77eb79d",
+        "type": "debug",
+        "z": "826880ae0edaf3c4",
+        "name": "debug 14",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "ad95f9bdd3ea4f1e",
+        "type": "debug",
+        "z": "826880ae0edaf3c4",
+        "name": "debug 15",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 360,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "c620220ec99c1b45",
+        "type": "debug",
+        "z": "826880ae0edaf3c4",
+        "name": "debug 16",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 360,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "895d411c6ab6c528",
+        "type": "debug",
+        "z": "826880ae0edaf3c4",
+        "name": "debug 17",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 360,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "97e293c674e9ab9d",
+        "type": "debug",
+        "z": "826880ae0edaf3c4",
+        "name": "debug 18",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 360,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "4836f1d39581e5c5",
+        "type": "mqtt in",
+        "z": "826880ae0edaf3c4",
+        "name": "",
+        "topic": "Irrigation/+/+/+/Pump_status",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "f26e18f67ba7d048",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 620,
+        "y": 480,
+        "wires": [
+            [
+                "e5d03b35a8e34dd1",
+                "e34da9cd955ce0d1"
+            ]
+        ]
+    },
+    {
+        "id": "01f76d6cd884229d",
+        "type": "debug",
+        "z": "826880ae0edaf3c4",
+        "name": "debug 19",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1040,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "e5d03b35a8e34dd1",
         "type": "function",
-        "z": "35d84e1661220e87",
-        "name": "function 9",
-        "func": "let tmp = {};\n\nconst ch_ID = global.get(\"TS_CH_ID\");\n\ntmp.method = \"GET\";\nlet link = `https://api.thingspeak.com/channels/${ch_ID}/fields/1/last.json`;\ntmp.url = link;\nreturn tmp;",
+        "z": "826880ae0edaf3c4",
+        "name": "function 24",
+        "func": "var tmp = {};\nvar topic = msg.topic;\nvar farm = topic.split('/')[1];\nvar section = topic.split('/')[2];\nvar glob_farm = global.get(\"farm\");\nvar glob_sec = global.get(\"section\");\nif (glob_farm == farm && glob_sec == section) {\n    tmp.payload = msg.payload.e[0].value;\n}\nreturn tmp;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 260,
-        "y": 100,
+        "x": 870,
+        "y": 480,
         "wires": [
             [
-                "d533e87dacf00bbc"
+                "01f76d6cd884229d",
+                "f7dfd7f201a3c0dd"
             ]
         ]
     },
     {
-        "id": "d533e87dacf00bbc",
-        "type": "http request",
-        "z": "35d84e1661220e87",
-        "name": "",
-        "method": "use",
-        "ret": "obj",
-        "paytoqs": "ignore",
-        "url": "",
-        "tls": "",
-        "persist": true,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "",
-        "senderr": false,
-        "headers": [],
-        "x": 410,
-        "y": 100,
-        "wires": [
-            [
-                "8aa97ac5af9338ca"
-            ]
-        ]
-    },
-    {
-        "id": "8aa97ac5af9338ca",
-        "type": "python3-function",
-        "z": "35d84e1661220e87",
-        "name": "",
-        "func": "tmp={}\nval = msg['payload']['field1']\n# tmp[\"payload\"] =\ntmp[\"payload\"] = float(val.replace('\"',''))\nreturn tmp",
-        "outputs": 1,
-        "x": 590,
-        "y": 100,
-        "wires": [
-            [
-                "6ec63603ae43adeb"
-            ]
-        ]
-    },
-    {
-        "id": "ca1848d712fc8607",
-        "type": "ui_button",
-        "z": "35d84e1661220e87",
-        "name": "",
-        "group": "872843d3cbac360c",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Refresh",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "fa-refresh",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 60,
-        "y": 100,
-        "wires": [
-            [
-                "def8c0b0082e5f1f",
-                "afb1221859706d43"
-            ]
-        ]
+        "id": "e34da9cd955ce0d1",
+        "type": "debug",
+        "z": "826880ae0edaf3c4",
+        "name": "debug 20",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 560,
+        "wires": []
     },
     {
         "id": "6ec63603ae43adeb",
@@ -1889,64 +1964,6 @@
         "x": 810,
         "y": 100,
         "wires": []
-    },
-    {
-        "id": "afb1221859706d43",
-        "type": "function",
-        "z": "35d84e1661220e87",
-        "name": "function 10",
-        "func": "let tmp = {};\n\nconst ch_ID = global.get(\"TS_CH_ID\");\n\ntmp.method = \"GET\";\nlet link = `https://api.thingspeak.com/channels/${ch_ID}/fields/2/last.json`;\ntmp.url = link;\nreturn tmp;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 250,
-        "y": 160,
-        "wires": [
-            [
-                "4d28015c2d3e0e0b"
-            ]
-        ]
-    },
-    {
-        "id": "4d28015c2d3e0e0b",
-        "type": "http request",
-        "z": "35d84e1661220e87",
-        "name": "",
-        "method": "use",
-        "ret": "obj",
-        "paytoqs": "ignore",
-        "url": "",
-        "tls": "",
-        "persist": true,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "",
-        "senderr": false,
-        "headers": [],
-        "x": 410,
-        "y": 160,
-        "wires": [
-            [
-                "1652254ba9d8650c"
-            ]
-        ]
-    },
-    {
-        "id": "1652254ba9d8650c",
-        "type": "python3-function",
-        "z": "35d84e1661220e87",
-        "name": "",
-        "func": "tmp={}\nval = msg['payload']['field2']\n# tmp[\"payload\"] =\ntmp[\"payload\"] = float(val.replace('\"',''))\nreturn tmp",
-        "outputs": 1,
-        "x": 580,
-        "y": 160,
-        "wires": [
-            [
-                "f42c8a052b3e9613"
-            ]
-        ]
     },
     {
         "id": "f42c8a052b3e9613",
@@ -2462,45 +2479,82 @@
         ]
     },
     {
-        "id": "e154c0cc837655db",
-        "type": "link in",
+        "id": "f8cab4789840690e",
+        "type": "mqtt in",
         "z": "35d84e1661220e87",
-        "name": "link in 3",
-        "links": [
-            "20d532843722f3bc"
-        ],
-        "x": 115,
+        "name": "Soil_moisture",
+        "topic": "Irrigation/data/+/+/2",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "f26e18f67ba7d048",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 310,
         "y": 160,
         "wires": [
             [
-                "def8c0b0082e5f1f",
-                "afb1221859706d43"
+                "ba36129b2e8b0f85"
             ]
         ]
     },
     {
-        "id": "dc059fe7f176c23f",
-        "type": "inject",
+        "id": "06833095a1d53387",
+        "type": "function",
         "z": "35d84e1661220e87",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "10",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 90,
-        "y": 40,
+        "name": "function 22",
+        "func": "var tmp = {};\nvar topic = msg.topic;\nvar farm = topic.split('/')[2];\nvar section = topic.split('/')[3];\nvar glob_farm = global.get(\"farm\");\nvar glob_sec = global.get(\"section\");\nif (glob_farm == farm && glob_sec == section) {\n    tmp.payload = msg.payload.e[0].value;\n}\nreturn tmp;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 100,
         "wires": [
             [
-                "def8c0b0082e5f1f",
-                "afb1221859706d43"
+                "6ec63603ae43adeb"
+            ]
+        ]
+    },
+    {
+        "id": "0e3aedd2d9dd76b5",
+        "type": "mqtt in",
+        "z": "35d84e1661220e87",
+        "name": "Temprature",
+        "topic": "Irrigation/data/+/+/1",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "f26e18f67ba7d048",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 290,
+        "y": 80,
+        "wires": [
+            [
+                "06833095a1d53387"
+            ]
+        ]
+    },
+    {
+        "id": "ba36129b2e8b0f85",
+        "type": "function",
+        "z": "35d84e1661220e87",
+        "name": "function 23",
+        "func": "var tmp = {};\nvar topic = msg.topic;\nvar farm = topic.split('/')[2];\nvar section = topic.split('/')[3];\nvar glob_farm = global.get(\"farm\");\nvar glob_sec = global.get(\"section\");\nif (glob_farm == farm && glob_sec == section) {\n    tmp.payload = msg.payload.e[0].value;\n}\nreturn tmp;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 160,
+        "wires": [
+            [
+                "f42c8a052b3e9613"
             ]
         ]
     },
@@ -3808,14 +3862,14 @@
                 "p": "payload"
             }
         ],
-        "repeat": "10",
+        "repeat": "",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 410,
+        "x": 400,
         "y": 560,
         "wires": [
             [
